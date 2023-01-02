@@ -1,0 +1,651 @@
+==============================================================
+File generated on Sun Mar 28 19:03:58 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:09:04 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:10:33 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:19:18 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:20:51 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:26:04 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:34:47 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:36:26 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:41:08 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:44:56 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:45:13 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:46:37 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:46:59 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:48:57 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:50:43 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:51:44 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:52:25 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 19:53:35 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 20:06:11 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 20:08:38 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 20:37:54 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 20:38:08 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 20:38:18 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 20:59:16 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 21:00:46 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 21:03:10 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim file generation done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 21:10:07 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 21:11:14 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+File generated on Sun Mar 28 21:13:23 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'FFR_Reorder_x_num/Reorder_FFT.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 102.660 ; gain = 17.852
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 102.660 ; gain = 17.852
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:13 ; elapsed = 00:00:29 . Memory (MB): peak = 1203.551 ; gain = 1118.742
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:00:30 . Memory (MB): peak = 1203.551 ; gain = 1118.742
+INFO: [XFORM 203-102] Automatically partitioning small array 'sign' (FFR_Reorder_x_num/Reorder_FFT.cpp:31) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'signRE' (FFR_Reorder_x_num/Reorder_FFT.cpp:32) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'signIM' (FFR_Reorder_x_num/Reorder_FFT.cpp:33) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'RE_vec_128_c' (FFR_Reorder_x_num/Reorder_FFT.cpp:46) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'IM_vec_128_c' (FFR_Reorder_x_num/Reorder_FFT.cpp:46) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'RE_vec_128_d' (FFR_Reorder_x_num/Reorder_FFT.cpp:47) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'IM_vec_128_d' (FFR_Reorder_x_num/Reorder_FFT.cpp:47) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'sign' (FFR_Reorder_x_num/Reorder_FFT.cpp:31) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'signRE' (FFR_Reorder_x_num/Reorder_FFT.cpp:32) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'signIM' (FFR_Reorder_x_num/Reorder_FFT.cpp:33) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RE_vec_128_c' (FFR_Reorder_x_num/Reorder_FFT.cpp:46) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'IM_vec_128_c' (FFR_Reorder_x_num/Reorder_FFT.cpp:46) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RE_vec_128_d' (FFR_Reorder_x_num/Reorder_FFT.cpp:47) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'IM_vec_128_d' (FFR_Reorder_x_num/Reorder_FFT.cpp:47) in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (FFR_Reorder_x_num/Reorder_FFT.cpp:123:3) to (FFR_Reorder_x_num/Reorder_FFT.cpp:118:32) in function 'Reorder_fft'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (FFR_Reorder_x_num/Reorder_FFT.cpp:72:5) in function 'Reorder_fft'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:30 . Memory (MB): peak = 1203.551 ; gain = 1118.742
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:30 . Memory (MB): peak = 1203.551 ; gain = 1118.742
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Reorder_fft' ...
+WARNING: [SYN 201-107] Renaming port name 'Reorder_fft/Real' to 'Reorder_fft/Real_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 30.357 seconds; current allocated memory: 82.963 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.519 seconds; current allocated memory: 83.845 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/num_word' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Reorder_fft' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I_1024' to 'Reorder_fft_lut_rbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J_1024' to 'Reorder_fft_lut_rcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I_4096' to 'Reorder_fft_lut_rdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J_4096' to 'Reorder_fft_lut_reOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I_16384' to 'Reorder_fft_lut_rfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J_16384' to 'Reorder_fft_lut_rg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_fadd_32ns_32ns_32_10_full_dsp_1' to 'Reorder_fft_fadd_hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_fmul_32ns_32ns_32_5_max_dsp_1' to 'Reorder_fft_fmul_ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_mux_42_32_1_1' to 'Reorder_fft_mux_4jbC' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_fadd_hbi': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_fmul_ibs': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_mux_4jbC': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Reorder_fft'.
+INFO: [HLS 200-111]  Elapsed time: 0.684 seconds; current allocated memory: 85.212 MB.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rbkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rcud_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rdEe_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_reOg_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rfYi_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rg8j_rom' using auto ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:16 ; elapsed = 00:00:36 . Memory (MB): peak = 1203.551 ; gain = 1118.742
+INFO: [SYSC 207-301] Generating SystemC RTL for Reorder_fft.
+INFO: [VHDL 208-304] Generating VHDL RTL for Reorder_fft.
+INFO: [VLOG 209-307] Generating Verilog RTL for Reorder_fft.
+INFO: [HLS 200-112] Total elapsed time: 36.195 seconds; peak allocated memory: 85.212 MB.
+==============================================================
+File generated on Sun Mar 28 21:14:57 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+==============================================================
+File generated on Sun Mar 28 22:17:21 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xa7a12tcsg325-1q'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'FFR_Reorder_x_num/Reorder_FFT.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 102.809 ; gain = 17.953
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 102.809 ; gain = 17.953
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1203.773 ; gain = 1118.918
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:00:29 . Memory (MB): peak = 1203.773 ; gain = 1118.918
+INFO: [XFORM 203-102] Automatically partitioning small array 'sign' (FFR_Reorder_x_num/Reorder_FFT.cpp:31) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'signRE' (FFR_Reorder_x_num/Reorder_FFT.cpp:32) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'signIM' (FFR_Reorder_x_num/Reorder_FFT.cpp:33) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'RE_vec_128_c' (FFR_Reorder_x_num/Reorder_FFT.cpp:46) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'IM_vec_128_c' (FFR_Reorder_x_num/Reorder_FFT.cpp:46) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'RE_vec_128_d' (FFR_Reorder_x_num/Reorder_FFT.cpp:47) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'IM_vec_128_d' (FFR_Reorder_x_num/Reorder_FFT.cpp:47) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'sign' (FFR_Reorder_x_num/Reorder_FFT.cpp:31) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'signRE' (FFR_Reorder_x_num/Reorder_FFT.cpp:32) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'signIM' (FFR_Reorder_x_num/Reorder_FFT.cpp:33) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RE_vec_128_c' (FFR_Reorder_x_num/Reorder_FFT.cpp:46) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'IM_vec_128_c' (FFR_Reorder_x_num/Reorder_FFT.cpp:46) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RE_vec_128_d' (FFR_Reorder_x_num/Reorder_FFT.cpp:47) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'IM_vec_128_d' (FFR_Reorder_x_num/Reorder_FFT.cpp:47) in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (FFR_Reorder_x_num/Reorder_FFT.cpp:123:3) to (FFR_Reorder_x_num/Reorder_FFT.cpp:118:32) in function 'Reorder_fft'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (FFR_Reorder_x_num/Reorder_FFT.cpp:72:5) in function 'Reorder_fft'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:29 . Memory (MB): peak = 1203.773 ; gain = 1118.918
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:29 . Memory (MB): peak = 1203.773 ; gain = 1118.918
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Reorder_fft' ...
+WARNING: [SYN 201-107] Renaming port name 'Reorder_fft/Real' to 'Reorder_fft/Real_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 29.365 seconds; current allocated memory: 82.947 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.551 seconds; current allocated memory: 83.830 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/num_word' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Reorder_fft' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I_1024' to 'Reorder_fft_lut_rbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J_1024' to 'Reorder_fft_lut_rcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I_4096' to 'Reorder_fft_lut_rdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J_4096' to 'Reorder_fft_lut_reOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I_16384' to 'Reorder_fft_lut_rfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J_16384' to 'Reorder_fft_lut_rg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_fadd_32ns_32ns_32_10_full_dsp_1' to 'Reorder_fft_fadd_hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_fmul_32ns_32ns_32_5_max_dsp_1' to 'Reorder_fft_fmul_ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_mux_42_32_1_1' to 'Reorder_fft_mux_4jbC' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_fadd_hbi': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_fmul_ibs': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_mux_4jbC': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Reorder_fft'.
+INFO: [HLS 200-111]  Elapsed time: 0.696 seconds; current allocated memory: 85.212 MB.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rbkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rcud_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rdEe_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_reOg_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rfYi_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rg8j_rom' using auto ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:16 ; elapsed = 00:00:35 . Memory (MB): peak = 1203.773 ; gain = 1118.918
+INFO: [SYSC 207-301] Generating SystemC RTL for Reorder_fft.
+INFO: [VHDL 208-304] Generating VHDL RTL for Reorder_fft.
+INFO: [VLOG 209-307] Generating Verilog RTL for Reorder_fft.
+INFO: [HLS 200-112] Total elapsed time: 35.131 seconds; peak allocated memory: 85.212 MB.
+==============================================================
+File generated on Sun Mar 28 22:19:31 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z045ffg900-2'
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_bind -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_schedule -effort=medium
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_sdx -optimization_level=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_schedule -relax_ii_for_timing=0
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0.625ns.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty default
+INFO: [HLS 200-10] Analyzing design file 'FFR_Reorder_x_num/Reorder_FFT.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 104.785 ; gain = 20.191
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 104.785 ; gain = 20.191
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1205.230 ; gain = 1120.637
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1205.230 ; gain = 1120.637
+INFO: [XFORM 203-102] Automatically partitioning small array 'sign' (FFR_Reorder_x_num/Reorder_FFT.cpp:31) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'signRE' (FFR_Reorder_x_num/Reorder_FFT.cpp:32) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'signIM' (FFR_Reorder_x_num/Reorder_FFT.cpp:33) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'RE_vec_128_c' (FFR_Reorder_x_num/Reorder_FFT.cpp:46) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'IM_vec_128_c' (FFR_Reorder_x_num/Reorder_FFT.cpp:46) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'RE_vec_128_d' (FFR_Reorder_x_num/Reorder_FFT.cpp:47) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'IM_vec_128_d' (FFR_Reorder_x_num/Reorder_FFT.cpp:47) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'sign' (FFR_Reorder_x_num/Reorder_FFT.cpp:31) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'signRE' (FFR_Reorder_x_num/Reorder_FFT.cpp:32) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'signIM' (FFR_Reorder_x_num/Reorder_FFT.cpp:33) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RE_vec_128_c' (FFR_Reorder_x_num/Reorder_FFT.cpp:46) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'IM_vec_128_c' (FFR_Reorder_x_num/Reorder_FFT.cpp:46) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'RE_vec_128_d' (FFR_Reorder_x_num/Reorder_FFT.cpp:47) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'IM_vec_128_d' (FFR_Reorder_x_num/Reorder_FFT.cpp:47) in dimension 1 completely.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (FFR_Reorder_x_num/Reorder_FFT.cpp:123:3) to (FFR_Reorder_x_num/Reorder_FFT.cpp:118:32) in function 'Reorder_fft'... converting 7 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (FFR_Reorder_x_num/Reorder_FFT.cpp:72:5) in function 'Reorder_fft'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1205.230 ; gain = 1120.637
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:13 ; elapsed = 00:00:28 . Memory (MB): peak = 1205.230 ; gain = 1120.637
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Reorder_fft' ...
+WARNING: [SYN 201-107] Renaming port name 'Reorder_fft/Real' to 'Reorder_fft/Real_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 28.745 seconds; current allocated memory: 83.992 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.507 seconds; current allocated memory: 84.734 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/num_word' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Reorder_fft' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I_1024' to 'Reorder_fft_lut_rbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J_1024' to 'Reorder_fft_lut_rcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I_4096' to 'Reorder_fft_lut_rdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J_4096' to 'Reorder_fft_lut_reOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I_16384' to 'Reorder_fft_lut_rfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J_16384' to 'Reorder_fft_lut_rg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_fadd_32ns_32ns_32_8_full_dsp_1' to 'Reorder_fft_fadd_hbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_fmul_32ns_32ns_32_5_max_dsp_1' to 'Reorder_fft_fmul_ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_mux_42_32_1_1' to 'Reorder_fft_mux_4jbC' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_fadd_hbi': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_fmul_ibs': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_mux_4jbC': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Reorder_fft'.
+INFO: [HLS 200-111]  Elapsed time: 0.645 seconds; current allocated memory: 86.070 MB.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rbkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rcud_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rdEe_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_reOg_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rfYi_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rg8j_rom' using auto ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1205.230 ; gain = 1120.637
+INFO: [SYSC 207-301] Generating SystemC RTL for Reorder_fft.
+INFO: [VHDL 208-304] Generating VHDL RTL for Reorder_fft.
+INFO: [VLOG 209-307] Generating Verilog RTL for Reorder_fft.
+INFO: [HLS 200-112] Total elapsed time: 34.306 seconds; peak allocated memory: 86.070 MB.
+==============================================================
+File generated on Sun Mar 28 22:23:18 -0600 2021
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================

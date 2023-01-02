@@ -1,0 +1,1021 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Mar 24 16:04:09 2021
+# Process ID: 8768
+# Current directory: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6220 C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.xpr
+# Log file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/vivado.log
+# Journal file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj'
+INFO: [Project 1-313] Project file moved from '/home/drichmond/Research/repositories/git/riffa/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'PCIeGen2x4If128_synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.ip_user_files', nor could it be found using path 'C:/home/drichmond/Research/repositories/git/riffa/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx_2018/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'PCIeGen2x4If128' is locked:
+* IP definition '7 Series Integrated Block for PCI Express (3.2)' for IP 'PCIeGen2x4If128' (customized with software release 2015.4) has a newer minor version in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+INFO: [Project 1-230] Project 'ZC706_Gen2x4If128.xpr' upgraded for this version of Vivado.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 741.152 ; gain = 135.031
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+upgrade_ip -srcset PCIeGen2x4If128 -vlnv xilinx.com:ip:pcie_7x:3.3 [get_ips  PCIeGen2x4If128] -log ip_upgrade.log
+Upgrading 'PCIeGen2x4If128'
+INFO: [Project 1-386] Moving file 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/ip/PCIeGen2x4If128.xci' from fileset 'PCIeGen2x4If128' to fileset 'sources_1'.
+INFO: [IP_Flow 19-1972] Upgraded PCIeGen2x4If128 from 7 Series Integrated Block for PCI Express 3.2 to 7 Series Integrated Block for PCI Express 3.3
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'PCIeGen2x4If128'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips PCIeGen2x4If128] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+set_property is_global_include true [get_files  {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/hdl/ZC706_Gen2x4If128.v}}]
+update_compile_order -fileset sources_1
+set_property is_global_include true [get_files  {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v}}]
+update_compile_order -fileset sources_1
+create_bd_design "HLS_FFT"
+Wrote  : <C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.srcs\sources_1\bd\HLS_FFT\HLS_FFT.bd> 
+create_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 909.723 ; gain = 67.352
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  C:/Users/EMILIO/Desktop/HLS/FFT_Reorder/Array_p/impl/ip [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/EMILIO/Desktop/HLS/FFT_Reorder/Array_p/impl/ip'.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:Reorder_fft:1.0 Reorder_fft_0
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins Reorder_fft_0/Real_3_q0] [get_bd_pins Reorder_fft_0/ap_start] [get_bd_pins Reorder_fft_0/Imag_3_we0] [get_bd_pins Reorder_fft_0/Real_1_d0] [get_bd_pins Reorder_fft_0/Imag_0_address0] [get_bd_pins Reorder_fft_0/ap_clk] [get_bd_pins Reorder_fft_0/Real_0_we0] [get_bd_pins Reorder_fft_0/Real_0_d0] [get_bd_pins Reorder_fft_0/Imag_3_address0] [get_bd_pins Reorder_fft_0/Imag_3_d0] [get_bd_pins Reorder_fft_0/Real_3_address0] [get_bd_pins Reorder_fft_0/Real_1_ce0] [get_bd_pins Reorder_fft_0/Real_0_q0] [get_bd_pins Reorder_fft_0/ap_ready] [get_bd_pins Reorder_fft_0/Real_2_d0] [get_bd_pins Reorder_fft_0/Real_3_d0] [get_bd_pins Reorder_fft_0/Imag_1_address0] [get_bd_pins Reorder_fft_0/Real_0_ce0] [get_bd_pins Reorder_fft_0/Real_2_q0] [get_bd_pins Reorder_fft_0/Real_1_q0] [get_bd_pins Reorder_fft_0/Real_2_we0] [get_bd_pins Reorder_fft_0/Imag_1_d0] [get_bd_pins Reorder_fft_0/Real_2_address0] [get_bd_pins Reorder_fft_0/Real_3_ce0] [get_bd_pins Reorder_fft_0/Imag_0_d0] [get_bd_pins Reorder_fft_0/Imag_0_q0] [get_bd_pins Reorder_fft_0/Real_1_we0] [get_bd_pins Reorder_fft_0/Imag_2_we0] [get_bd_pins Reorder_fft_0/Imag_2_d0] [get_bd_pins Reorder_fft_0/Imag_3_ce0] [get_bd_pins Reorder_fft_0/Real_2_ce0] [get_bd_pins Reorder_fft_0/Real_0_address0] [get_bd_pins Reorder_fft_0/Imag_1_we0] [get_bd_pins Reorder_fft_0/Imag_0_we0] [get_bd_pins Reorder_fft_0/Imag_2_q0] [get_bd_pins Reorder_fft_0/Imag_1_ce0] [get_bd_pins Reorder_fft_0/ap_done] [get_bd_pins Reorder_fft_0/Imag_1_q0] [get_bd_pins Reorder_fft_0/Imag_2_ce0] [get_bd_pins Reorder_fft_0/ap_idle] [get_bd_pins Reorder_fft_0/ap_rst] [get_bd_pins Reorder_fft_0/Real_3_we0] [get_bd_pins Reorder_fft_0/Real_1_address0] [get_bd_pins Reorder_fft_0/Imag_3_q0] [get_bd_pins Reorder_fft_0/Imag_0_ce0] [get_bd_pins Reorder_fft_0/Imag_2_address0]
+WARNING: [BD 41-1306] The connection to interface pin /Reorder_fft_0/ap_start is being overridden by the user. This pin will not be connected as a part of interface connection ap_ctrl
+WARNING: [BD 41-1306] The connection to interface pin /Reorder_fft_0/ap_ready is being overridden by the user. This pin will not be connected as a part of interface connection ap_ctrl
+WARNING: [BD 41-1306] The connection to interface pin /Reorder_fft_0/ap_done is being overridden by the user. This pin will not be connected as a part of interface connection ap_ctrl
+WARNING: [BD 41-1306] The connection to interface pin /Reorder_fft_0/ap_idle is being overridden by the user. This pin will not be connected as a part of interface connection ap_ctrl
+endgroup
+validate_bd_design
+WARNING: [BD 41-927] Following properties on pin /Reorder_fft_0/ap_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=HLS_FFT_ap_clk_0 
+make_wrapper -files [get_files {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}}] -top
+INFO: [BD 41-1662] The design 'HLS_FFT.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.srcs\sources_1\bd\HLS_FFT\HLS_FFT.bd> 
+Wrote  : <C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/ui/bd_e7eccfc4.ui> 
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/synth/HLS_FFT.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/sim/HLS_FFT.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hdl/HLS_FFT_wrapper.v
+add_files -norecurse {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hdl/HLS_FFT_wrapper.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'HLS_FFT.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/synth/HLS_FFT.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/sim/HLS_FFT.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hdl/HLS_FFT_wrapper.v
+WARNING: [IP_Flow 19-519] IP 'HLS_FFT_Reorder_fft_0_0' detected a language mismatch between 'VHDL Simulation Wrapper' and 'Verilog Simulation' output products. Please check with the IP provider to see if this is expected.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Reorder_fft_0 .
+Exporting to file C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hw_handoff/HLS_FFT.hwh
+Generated Block Design Tcl file C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hw_handoff/HLS_FFT_bd.tcl
+Generated Hardware Definition File C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/synth/HLS_FFT.hwdef
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'PCIeGen2x4If128'...
+[Wed Mar 24 16:10:53 2021] Launched PCIeGen2x4If128_synth_1, HLS_FFT_Reorder_fft_0_0_synth_1, synth_1...
+Run output will be captured here:
+PCIeGen2x4If128_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/PCIeGen2x4If128_synth_1/runme.log
+HLS_FFT_Reorder_fft_0_0_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Reorder_fft_0_0_synth_1/runme.log
+synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Wed Mar 24 16:10:54 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1087.754 ; gain = 34.863
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 566 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7z045ffg900-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2162.758 ; gain = 12.746
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2162.758 ; gain = 12.746
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2162.758 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 9 instances
+  RAM32X1D => RAM32X1D (RAMD32, RAMD32): 1 instances
+
+open_run: Time (s): cpu = 00:00:42 ; elapsed = 00:00:35 . Memory (MB): peak = 2376.297 ; gain = 1252.148
+open_report: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2494.773 ; gain = 114.188
+report_ip_status -name ip_status 
+open_bd_design {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Enable_32bit_Address {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {9} CONFIG.Write_Depth_A {257} CONFIG.Enable_A {Always_Enabled} CONFIG.Enable_B {Always_Enabled} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Use_RSTA_Pin {false} CONFIG.Use_RSTB_Pin {false} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100} CONFIG.use_bram_block {Stand_Alone} CONFIG.EN_SAFETY_CKT {false}] [get_bd_cells blk_mem_gen_0]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_0_ce0] [get_bd_nets Reorder_fft_0_Real_1_ce0] [get_bd_nets Reorder_fft_0_Real_2_d0] [get_bd_nets Reorder_fft_0_Real_2_we0] [get_bd_nets Real_2_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_1_d0] [get_bd_nets Reorder_fft_0_Imag_0_we0] [get_bd_nets Reorder_fft_0_Imag_1_we0] [get_bd_nets Reorder_fft_0_Imag_2_ce0] [get_bd_nets Reorder_fft_0_Imag_3_ce0] [get_bd_nets Reorder_fft_0_Imag_2_d0] [get_bd_nets Reorder_fft_0_Imag_3_we0] [get_bd_nets Reorder_fft_0_ap_done] [get_bd_nets Reorder_fft_0_ap_ready] [get_bd_nets Reorder_fft_0_Real_3_d0] [get_bd_nets Real_1_q0_0_1] [get_bd_nets Real_3_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_0_d0] [get_bd_nets Reorder_fft_0_Real_1_we0] [get_bd_nets Reorder_fft_0_Real_2_ce0] [get_bd_nets Reorder_fft_0_Imag_2_we0] [get_bd_nets Reorder_fft_0_ap_idle] [get_bd_nets Imag_0_q0_0_1] [get_bd_nets Imag_1_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_2_address0] [get_bd_nets ap_clk_0_1] [get_bd_nets Reorder_fft_0_Real_0_d0] [get_bd_nets Reorder_fft_0_Real_1_d0] [get_bd_nets Imag_2_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_3_address0] [get_bd_nets Imag_3_q0_0_1] [get_bd_nets Reorder_fft_0_Real_3_ce0] [get_bd_nets Reorder_fft_0_Real_2_address0] [get_bd_nets Reorder_fft_0_Real_3_we0] [get_bd_nets Reorder_fft_0_Imag_0_ce0] [get_bd_nets Reorder_fft_0_Real_0_address0] [get_bd_nets Reorder_fft_0_Real_1_address0] [get_bd_nets Reorder_fft_0_Real_0_we0] [get_bd_nets ap_start_0_1] [get_bd_nets Real_0_q0_0_1] [get_bd_nets Reorder_fft_0_Real_3_address0] [get_bd_nets Reorder_fft_0_Imag_0_address0] [get_bd_nets Reorder_fft_0_Imag_1_ce0] [get_bd_nets ap_rst_0_1] [get_bd_nets Reorder_fft_0_Imag_1_address0] [get_bd_nets Reorder_fft_0_Imag_3_d0] [get_bd_cells Reorder_fft_0]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets Reorder_fft_0_Real_0_ce0] [get_bd_nets Reorder_fft_0_Real_1_ce0] [get_bd_nets Reorder_fft_0_Real_2_d0] [get_bd_nets Reorder_fft_0_Real_2_we0] [get_bd_nets Real_2_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_1_d0] [get_bd_nets Reorder_fft_0_Imag_0_we0] [get_bd_nets Reorder_fft_0_Imag_1_we0] [get_bd_nets Reorder_fft_0_Imag_2_ce0] [get_bd_nets Reorder_fft_0_Imag_3_ce0] [get_bd_nets Reorder_fft_0_Imag_2_d0] [get_bd_nets Reorder_fft_0_Imag_3_we0] [get_bd_nets Reorder_fft_0_ap_done] [get_bd_nets Reorder_fft_0_ap_ready] [get_bd_nets Reorder_fft_0_Real_3_d0] [get_bd_nets Real_1_q0_0_1] [get_bd_nets Real_3_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_0_d0] [get_bd_nets Reorder_fft_0_Real_1_we0] [get_bd_nets Reorder_fft_0_Real_2_ce0] [get_bd_nets Reorder_fft_0_Imag_2_we0] [get_bd_nets Reorder_fft_0_ap_idle] [get_bd_nets Imag_0_q0_0_1] [get_bd_nets Imag_1_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_2_address0] [get_bd_nets ap_clk_0_1] [get_bd_nets Reorder_fft_0_Real_0_d0] [get_bd_nets Reorder_fft_0_Real_1_d0] [get_bd_nets Imag_2_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_3_address0] [get_bd_nets Imag_3_q0_0_1] [get_bd_nets Reorder_fft_0_Real_3_ce0] [get_bd_nets Reorder_fft_0_Real_2_address0] [get_bd_nets Reorder_fft_0_Real_3_we0] [get_bd_nets Reorder_fft_0_Imag_0_ce0] [get_bd_nets Reorder_fft_0_Real_0_address0] [get_bd_nets Reorder_fft_0_Real_1_address0] [get_bd_nets Reorder_fft_0_Real_0_we0] [get_bd_nets ap_start_0_1] [get_bd_nets Real_0_q0_0_1] [get_bd_nets Reorder_fft_0_Real_3_address0] [get_bd_nets Reorder_fft_0_Imag_0_address0] [get_bd_nets Reorder_fft_0_Imag_1_ce0] [get_bd_nets ap_rst_0_1] [get_bd_nets Reorder_fft_0_Imag_1_address0] [get_bd_nets Reorder_fft_0_Imag_3_d0] [get_bd_cells Reorder_fft_0]'
+startgroup
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_1_d0] [get_bd_nets Reorder_fft_0_Imag_1_address0] [get_bd_nets Reorder_fft_0_Imag_3_d0] [get_bd_nets Reorder_fft_0_Imag_0_ce0] [get_bd_nets Reorder_fft_0_Real_3_address0] [get_bd_nets ap_start_0_1] [get_bd_nets Reorder_fft_0_Imag_2_d0] [get_bd_nets Imag_2_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_0_d0] [get_bd_nets Reorder_fft_0_ap_ready] [get_bd_nets Reorder_fft_0_Imag_1_d0] [get_bd_nets Reorder_fft_0_Real_2_d0] [get_bd_nets Reorder_fft_0_ap_done] [get_bd_nets Real_0_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_3_ce0] [get_bd_nets Reorder_fft_0_Imag_1_we0] [get_bd_nets Reorder_fft_0_Real_0_d0] [get_bd_nets Reorder_fft_0_Imag_1_ce0] [get_bd_nets Reorder_fft_0_Real_1_ce0] [get_bd_nets Reorder_fft_0_Real_3_ce0] [get_bd_nets Reorder_fft_0_Real_3_we0] [get_bd_nets Real_2_q0_0_1] [get_bd_nets Reorder_fft_0_Real_1_we0] [get_bd_nets Imag_3_q0_0_1] [get_bd_nets Reorder_fft_0_ap_idle] [get_bd_nets Imag_0_q0_0_1] [get_bd_nets Reorder_fft_0_Real_0_we0] [get_bd_nets ap_clk_0_1] [get_bd_nets Reorder_fft_0_Real_0_ce0] [get_bd_nets Reorder_fft_0_Imag_3_we0] [get_bd_nets Real_1_q0_0_1] [get_bd_nets Reorder_fft_0_Real_3_d0] [get_bd_nets Imag_1_q0_0_1] [get_bd_nets Reorder_fft_0_Real_2_address0] [get_bd_nets Reorder_fft_0_Real_2_we0] [get_bd_nets Reorder_fft_0_Imag_2_ce0] [get_bd_nets Reorder_fft_0_Imag_2_address0] [get_bd_nets Reorder_fft_0_Imag_3_address0] [get_bd_nets ap_rst_0_1] [get_bd_nets Reorder_fft_0_Imag_0_address0] [get_bd_nets Reorder_fft_0_Real_0_address0] [get_bd_nets Real_3_q0_0_1] [get_bd_nets Reorder_fft_0_Real_2_ce0] [get_bd_nets Reorder_fft_0_Real_1_address0] [get_bd_nets Reorder_fft_0_Imag_2_we0] [get_bd_nets Reorder_fft_0_Imag_0_we0]
+delete_bd_objs [get_bd_ports Imag_1_we0_0] [get_bd_ports Imag_2_address0_0] [get_bd_ports ap_idle_0] [get_bd_ports Real_2_q0_0] [get_bd_ports Imag_3_ce0_0] [get_bd_ports Real_3_we0_0] [get_bd_ports Real_3_q0_0] [get_bd_ports Imag_1_q0_0] [get_bd_ports ap_done_0] [get_bd_ports Real_0_d0_0] [get_bd_ports Real_3_address0_0] [get_bd_ports Imag_2_q0_0] [get_bd_ports Imag_3_q0_0] [get_bd_ports Imag_3_address0_0] [get_bd_ports Real_1_we0_0] [get_bd_ports Imag_0_we0_0] [get_bd_ports ap_clk_0] [get_bd_ports Imag_1_address0_0] [get_bd_ports Real_1_q0_0] [get_bd_ports Imag_0_d0_0] [get_bd_ports Real_0_address0_0] [get_bd_ports Imag_1_d0_0] [get_bd_ports ap_rst_0] [get_bd_ports Real_2_d0_0] [get_bd_ports Real_2_ce0_0] [get_bd_ports Real_2_address0_0] [get_bd_ports Real_0_q0_0] [get_bd_ports Imag_2_ce0_0] [get_bd_ports Real_1_ce0_0] [get_bd_ports Imag_1_ce0_0] [get_bd_ports Real_1_d0_0] [get_bd_ports ap_ready_0] [get_bd_ports Imag_2_we0_0] [get_bd_ports Real_2_we0_0] [get_bd_ports Real_3_d0_0] [get_bd_ports ap_start_0] [get_bd_ports Real_3_ce0_0] [get_bd_ports Imag_0_ce0_0] [get_bd_ports Real_1_address0_0] [get_bd_ports Imag_0_address0_0] [get_bd_ports Real_0_we0_0] [get_bd_ports Imag_3_d0_0] [get_bd_ports Imag_2_d0_0] [get_bd_ports Imag_3_we0_0] [get_bd_ports Real_0_ce0_0] [get_bd_ports Imag_0_q0_0]
+endgroup
+set_property location {2.5 640 -896} [get_bd_cells blk_mem_gen_0]
+set_property name Real_0 [get_bd_cells blk_mem_gen_0]
+copy_bd_objs /  [get_bd_cells {Real_0}]
+copy_bd_objs /  [get_bd_cells {Real_0}]
+copy_bd_objs /  [get_bd_cells {Real_0}]
+set_property location {4 717 -679} [get_bd_cells Real_1]
+set_property location {3 734 -377} [get_bd_cells Real_2]
+set_property location {3 714 -255} [get_bd_cells Real_3]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.Assume_Synchronous_Clk {true}] [get_bd_cells Real_0]
+connect_bd_net [get_bd_pins Real_0/clkb] [get_bd_pins Real_0/clka]
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins Real_0/clkb] [get_bd_pins Real_0/clka]'
+startgroup
+make_bd_pins_external  [get_bd_pins Reorder_fft_0/ap_start] [get_bd_pins Reorder_fft_0/ap_clk] [get_bd_pins Reorder_fft_0/ap_ready] [get_bd_pins Reorder_fft_0/ap_done] [get_bd_pins Reorder_fft_0/ap_idle] [get_bd_pins Reorder_fft_0/ap_rst]
+WARNING: [BD 41-1306] The connection to interface pin /Reorder_fft_0/ap_start is being overridden by the user. This pin will not be connected as a part of interface connection ap_ctrl
+WARNING: [BD 41-1306] The connection to interface pin /Reorder_fft_0/ap_ready is being overridden by the user. This pin will not be connected as a part of interface connection ap_ctrl
+WARNING: [BD 41-1306] The connection to interface pin /Reorder_fft_0/ap_done is being overridden by the user. This pin will not be connected as a part of interface connection ap_ctrl
+WARNING: [BD 41-1306] The connection to interface pin /Reorder_fft_0/ap_idle is being overridden by the user. This pin will not be connected as a part of interface connection ap_ctrl
+endgroup
+set_property location {1 96 -752} [get_bd_cells Reorder_fft_0]
+undo
+INFO: [Common 17-17] undo 'set_property location {1 96 -752} [get_bd_cells Reorder_fft_0]'
+regenerate_bd_layout
+regenerate_bd_layout
+set_property location {1 232 302} [get_bd_cells Reorder_fft_0]
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_we0] [get_bd_pins Real_1/wea]
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/wea is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_0_we0]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_we0] [get_bd_pins Real_0/wea]
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/wea is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_1_we0] [get_bd_pins Real_1/wea]
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/wea is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_2_we0] [get_bd_pins Real_2/wea]
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/wea is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Real_3/wea] [get_bd_pins Reorder_fft_0/Real_3_we0]
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/wea is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_address0] [get_bd_pins Real_1/addra]
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/addra is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_d0] [get_bd_pins Real_1/dina]
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/dina is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_1_address0] [get_bd_pins Real_0/addra]
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/addra is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Real_1/clka] [get_bd_pins Real_1/clkb]
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+connect_bd_net [get_bd_pins Real_1/clkb] [get_bd_pins Real_0/clka]
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Real_0/clka] [get_bd_pins Real_0/clkb]
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+connect_bd_net [get_bd_pins Real_3/clka] [get_bd_pins Real_2/clka]
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Real_3/clkb] [get_bd_pins Real_2/clkb]
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+connect_bd_net [get_bd_pins Real_2/clkb] [get_bd_pins Real_3/clka]
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Real_2/clka] [get_bd_pins Real_3/clkb]
+WARNING: [BD 41-395] Exec TCL: all ports/pins are already connected to '/Net1'
+ERROR: [BD 5-4] Error: running connect_bd_net.
+ERROR: [Common 17-39] 'connect_bd_net' failed due to earlier errors.
+connect_bd_net [get_bd_pins Real_2/clka] [get_bd_pins Real_1/clka]
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+connect_bd_net [get_bd_ports ap_clk_0] [get_bd_pins Real_1/clka]
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_1_d0] [get_bd_pins Real_0/dina]
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/dina is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_2_address0] [get_bd_pins Real_2/addra]
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/addra is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_2_d0] [get_bd_pins Real_2/dina]
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/dina is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Real_3/addra] [get_bd_pins Reorder_fft_0/Real_3_address0]
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/addra is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_3_d0] [get_bd_pins Real_3/dina]
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/dina is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_3_q0] [get_bd_pins Real_3/douta]
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/douta is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Real_2/douta] [get_bd_pins Reorder_fft_0/Real_2_q0]
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/douta is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Real_1/douta] [get_bd_pins Reorder_fft_0/Real_1_q0]
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/douta is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Real_0/douta] [get_bd_pins Reorder_fft_0/Real_0_q0]
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/douta is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_1_address0]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_1_d0]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_0_address0]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_0_d0]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_address0] [get_bd_pins Real_0/addrb]
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/addrb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_d0] [get_bd_pins Real_0/dinb]
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/dinb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_1_address0] [get_bd_pins Real_1/addrb]
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/addrb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_1_address0]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_1_address0] [get_bd_pins Real_1/addra]
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/addra is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_1_d0] [get_bd_pins Real_1/dina]
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/dina is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+copy_bd_objs /  [get_bd_cells {Real_0}]
+set_property name Imag_0 [get_bd_cells Real_4]
+copy_bd_objs /  [get_bd_cells {Imag_0}]
+copy_bd_objs /  [get_bd_cells {Imag_0}]
+copy_bd_objs /  [get_bd_cells {Imag_0}]
+regenerate_bd_layout
+set_property location {0.5 -564 641} [get_bd_cells Real_2]
+set_property location {0.5 -655 193} [get_bd_cells Real_1]
+set_property location {2 -330 247} [get_bd_cells Real_0]
+set_property location {1.5 -510 1253} [get_bd_cells Real_3]
+set_property location {6 1005 433} [get_bd_cells Imag_0]
+set_property location {4.5 610 534} [get_bd_cells Imag_1]
+set_property location {6 807 545} [get_bd_cells Imag_0]
+set_property location {5 644 898} [get_bd_cells Imag_2]
+set_property location {6 892 898} [get_bd_cells Imag_3]
+set_property location {5.5 723 1053} [get_bd_cells Reorder_fft_0]
+undo
+INFO: [Common 17-17] undo 'set_property location {5.5 723 1053} [get_bd_cells Reorder_fft_0]'
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_0_we0] [get_bd_pins Imag_0/wea]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/wea is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+set_property location {5.5 824 544} [get_bd_cells Imag_0]
+set_property location {6 807 901} [get_bd_cells Imag_3]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_1_we0] [get_bd_pins Imag_1/wea]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/wea is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_2_we0] [get_bd_pins Imag_2/wea]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_2/wea is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_3_we0] [get_bd_pins Imag_3/wea]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_3/wea is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_0_address0] [get_bd_pins Imag_0/addra]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/addra is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_0_d0] [get_bd_pins Imag_0/dina]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/dina is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Imag_0/clka] [get_bd_pins Imag_0/clkb]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+connect_bd_net [get_bd_pins Imag_0/clkb] [get_bd_pins Imag_1/clkb]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Imag_1/clka]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Reorder_fft_0/Imag_0_d0]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1731] Type mismatch between connected pins: /Reorder_fft_0/Imag_0_d0(data) and /Imag_0/clka(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /Reorder_fft_0/Imag_0_d0(data) and /Imag_0/clkb(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /Reorder_fft_0/Imag_0_d0(data) and /Imag_1/clkb(clk)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /Reorder_fft_0/Imag_0_d0(data) and /Imag_1/clka(clk)
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Reorder_fft_0/Imag_0_d0]'
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Imag_1/dinb]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/dinb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Imag_1/dinb]'
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Imag_2/clka]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_2/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Imag_2/clkb]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_2/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Imag_3/clkb]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_3/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Imag_3/clka]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_3/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_ports ap_clk_0] [get_bd_pins Imag_1/clkb]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Imag_2/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+WARNING: [BD 41-1306] The connection to interface pin /Imag_2/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_3/clkb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_3/clka is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_1_address0] [get_bd_pins Imag_1/addra]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/addra is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_1_d0] [get_bd_pins Imag_1/dina]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/dina is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_2_address0] [get_bd_pins Imag_2/addra]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_2/addra is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_2_d0] [get_bd_pins Imag_2/dina]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_2/dina is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_3_address0] [get_bd_pins Imag_3/addra]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_3/addra is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_3_d0] [get_bd_pins Imag_3/dina]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_3/dina is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_0_q0] [get_bd_pins Imag_0/douta]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/douta is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_1_q0] [get_bd_pins Imag_1/douta]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/douta is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_2_q0] [get_bd_pins Imag_2/douta]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_2/douta is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_3_q0] [get_bd_pins Imag_3/douta]
+WARNING: [BD 41-1306] The connection to interface pin /Imag_3/douta is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_0_d0]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_0_address0]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_address0] [get_bd_pins Real_0/addra]
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/addra is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_d0] [get_bd_pins Real_0/dina]
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/dina is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTA
+regenerate_bd_layout
+startgroup
+make_bd_pins_external  [get_bd_pins Real_2/addrb] [get_bd_pins Real_1/dinb] [get_bd_pins Real_3/doutb] [get_bd_pins Real_1/addrb] [get_bd_pins Real_0/dinb] [get_bd_pins Real_2/web] [get_bd_pins Real_2/doutb] [get_bd_pins Real_0/addrb] [get_bd_pins Real_1/web] [get_bd_pins Real_1/doutb] [get_bd_pins Real_0/web] [get_bd_pins Real_0/doutb] [get_bd_pins Imag_2/web] [get_bd_pins Imag_3/dinb] [get_bd_pins Imag_3/doutb] [get_bd_pins Imag_3/addrb] [get_bd_pins Imag_2/doutb] [get_bd_pins Imag_2/addrb] [get_bd_pins Imag_1/web] [get_bd_pins Imag_0/web] [get_bd_pins Imag_1/doutb] [get_bd_pins Imag_1/addrb] [get_bd_pins Imag_2/dinb] [get_bd_pins Imag_3/web] [get_bd_pins Imag_1/dinb] [get_bd_pins Imag_0/doutb] [get_bd_pins Imag_0/addrb] [get_bd_pins Imag_0/dinb] [get_bd_pins Real_3/dinb] [get_bd_pins Real_3/addrb] [get_bd_pins Real_2/dinb] [get_bd_pins Real_3/web]
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/addrb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/dinb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/doutb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/addrb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/dinb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/web is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/doutb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/addrb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/web is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_1/doutb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/web is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_0/doutb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_2/web is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_3/dinb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_3/doutb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_3/addrb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_2/doutb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_2/addrb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/web is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/web is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/doutb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/addrb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_2/dinb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_3/web is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_1/dinb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/doutb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/addrb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Imag_0/dinb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/dinb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/addrb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_2/dinb is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+WARNING: [BD 41-1306] The connection to interface pin /Real_3/web is being overridden by the user. This pin will not be connected as a part of interface connection BRAM_PORTB
+endgroup
+regenerate_bd_layout
+set_property name addrb_Real_0 [get_bd_ports addrb_2]
+set_property name dinb_Real_0 [get_bd_ports dinb_1]
+set_property name web_Real_0 [get_bd_ports web_2]
+set_property name doutb_Real_0 [get_bd_ports doutb_3]
+set_property name doutb_Real_1 [get_bd_ports doutb_2]
+set_property name addrb_Real_1 [get_bd_ports addrb_1]
+set_property name dinb_Real_1 [get_bd_ports dinb_0]
+set_property name web_Real_1 [get_bd_ports web_1]
+set_property name addrb_Real_2 [get_bd_ports addrb_0]
+set_property name dinb_Real_2 [get_bd_ports dinb_7]
+set_property name web_Real_2 [get_bd_ports web_0]
+set_property name doutb_Real_2 [get_bd_ports doutb_1]
+set_property name doutb_Real_3 [get_bd_ports doutb_0]
+set_property name web_Real_3 [get_bd_ports web_7]
+set_property name dinb_Real_3 [get_bd_ports dinb_6]
+set_property name addrb_Real_3 [get_bd_ports addrb_7]
+set_property name web_Imag_3 [get_bd_ports web_6]
+set_property name dinb_Imag_3 [get_bd_ports dinb_2]
+set_property name addrb_Imag_3 [get_bd_ports addrb_3]
+set_property name doutb_Imag_3 [get_bd_ports doutb_4]
+set_property name doutb_Imag_0 [get_bd_ports doutb_7]
+set_property name web_Imag_0 [get_bd_ports web_5]
+set_property name dinb_Imag_0 [get_bd_ports dinb_5]
+set_property name addrb_Imag_0 [get_bd_ports addrb_6]
+set_property name doutb_Imag_2 [get_bd_ports doutb_5]
+set_property name web_Imag_2 [get_bd_ports web_3]
+set_property name dinb_Imag_2 [get_bd_ports dinb_3]
+set_property name addrb_Imag_2 [get_bd_ports addrb_4]
+set_property name addrb_Imag_1 [get_bd_ports addrb_5]
+set_property name dinb_Imag_1 [get_bd_ports dinb_4]
+set_property name web_Imag_1 [get_bd_ports web_4]
+set_property name doutb_Imag_1 [get_bd_ports doutb_6]
+regenerate_bd_layout
+validate_bd_design
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_0> to default.
+WARNING: [BD 41-927] Following properties on pin /Reorder_fft_0/ap_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=HLS_FFT_ap_clk_0 
+make_wrapper -files [get_files {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}}] -top
+INFO: [BD 41-1662] The design 'HLS_FFT.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_0> to default.
+Wrote  : <C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.srcs\sources_1\bd\HLS_FFT\HLS_FFT.bd> 
+Wrote  : <C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/ui/bd_e7eccfc4.ui> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_2/addra'(9) to net 'Reorder_fft_0_Real_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_3/addra'(9) to net 'Reorder_fft_0_Real_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_1/addra'(9) to net 'Reorder_fft_0_Real_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_0/addra'(9) to net 'Reorder_fft_0_Imag_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_1/addra'(9) to net 'Reorder_fft_0_Imag_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_2/addra'(9) to net 'Reorder_fft_0_Imag_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_3/addra'(9) to net 'Reorder_fft_0_Imag_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/addra'(9) to net 'Reorder_fft_0_Real_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/synth/HLS_FFT.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_2/addra'(9) to net 'Reorder_fft_0_Real_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_3/addra'(9) to net 'Reorder_fft_0_Real_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_1/addra'(9) to net 'Reorder_fft_0_Real_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_0/addra'(9) to net 'Reorder_fft_0_Imag_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_1/addra'(9) to net 'Reorder_fft_0_Imag_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_2/addra'(9) to net 'Reorder_fft_0_Imag_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_3/addra'(9) to net 'Reorder_fft_0_Imag_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/addra'(9) to net 'Reorder_fft_0_Real_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/sim/HLS_FFT.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hdl/HLS_FFT_wrapper.v
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'HLS_FFT.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_0> to default.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_2/addra'(9) to net 'Reorder_fft_0_Real_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_3/addra'(9) to net 'Reorder_fft_0_Real_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_1/addra'(9) to net 'Reorder_fft_0_Real_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_0/addra'(9) to net 'Reorder_fft_0_Imag_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_1/addra'(9) to net 'Reorder_fft_0_Imag_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_2/addra'(9) to net 'Reorder_fft_0_Imag_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_3/addra'(9) to net 'Reorder_fft_0_Imag_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/addra'(9) to net 'Reorder_fft_0_Real_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/synth/HLS_FFT.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_2/addra'(9) to net 'Reorder_fft_0_Real_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_3/addra'(9) to net 'Reorder_fft_0_Real_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_1/addra'(9) to net 'Reorder_fft_0_Real_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_0/addra'(9) to net 'Reorder_fft_0_Imag_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_1/addra'(9) to net 'Reorder_fft_0_Imag_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_2/addra'(9) to net 'Reorder_fft_0_Imag_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_3/addra'(9) to net 'Reorder_fft_0_Imag_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/addra'(9) to net 'Reorder_fft_0_Real_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/sim/HLS_FFT.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hdl/HLS_FFT_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Reorder_fft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Real_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Real_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Real_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Real_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Imag_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Imag_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Imag_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Imag_3 .
+Exporting to file C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hw_handoff/HLS_FFT.hwh
+Generated Block Design Tcl file C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hw_handoff/HLS_FFT_bd.tcl
+Generated Hardware Definition File C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/synth/HLS_FFT.hwdef
+[Wed Mar 24 17:01:34 2021] Launched HLS_FFT_Real_0_1_synth_1, HLS_FFT_blk_mem_gen_0_0_synth_1, HLS_FFT_Real_0_2_synth_1, HLS_FFT_Real_0_0_synth_1, HLS_FFT_Imag_0_1_synth_1, HLS_FFT_Imag_0_0_synth_1, HLS_FFT_Imag_0_2_synth_1, HLS_FFT_Real_0_3_synth_1, synth_1...
+Run output will be captured here:
+HLS_FFT_Real_0_1_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_1_synth_1/runme.log
+HLS_FFT_blk_mem_gen_0_0_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_blk_mem_gen_0_0_synth_1/runme.log
+HLS_FFT_Real_0_2_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_2_synth_1/runme.log
+HLS_FFT_Real_0_0_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_0_synth_1/runme.log
+HLS_FFT_Imag_0_1_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_1_synth_1/runme.log
+HLS_FFT_Imag_0_0_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_0_synth_1/runme.log
+HLS_FFT_Imag_0_2_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_2_synth_1/runme.log
+HLS_FFT_Real_0_3_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_3_synth_1/runme.log
+synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Wed Mar 24 17:01:35 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 2698.297 ; gain = 40.305
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}}]
+refresh_design
+INFO: [Netlist 29-17] Analyzing 13614 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 3142.711 ; gain = 106.414
+Restored from archive | CPU: 15.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 3142.711 ; gain = 106.414
+refresh_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:41 . Memory (MB): peak = 3384.895 ; gain = 664.426
+open_report: Time (s): cpu = 00:00:23 ; elapsed = 00:00:10 . Memory (MB): peak = 3820.816 ; gain = 146.211
+report_ip_status -name ip_status 
+report_utilization -name utilization_1
+report_utilization: Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 5043.098 ; gain = 0.000
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251840302
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 5043.098 ; gain = 0.000
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+current_hw_device [get_hw_devices xc7z045_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1435] Device xc7z045 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 5043.098 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210251840302
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251840302
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z045 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 5043.098 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/EMILIO/Desktop/Nueva carpeta/MEM_INIT_32_bits_1.ceo' provided. It will be converted relative to IP Instance files '../../../../../../../../../../MEM_INIT_32_bits_1.ceo'
+startgroup
+set_property -dict [list CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/EMILIO/Desktop/Nueva carpeta/MEM_INIT_32_bits_1.ceo}] [get_bd_cells Imag_0]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/EMILIO/Desktop/Nueva carpeta/MEM_INIT_32_bits_1.ceo' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../MEM_INIT_32_bits_1.ceo'
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/EMILIO/Desktop/Nueva carpeta/MEM_INIT_32_bits_1.ceo' provided. It will be converted relative to IP Instance files '../../../../../../../../../../MEM_INIT_32_bits_1.ceo'
+startgroup
+set_property -dict [list CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/EMILIO/Desktop/Nueva carpeta/MEM_INIT_32_bits_1.ceo}] [get_bd_cells Imag_1]
+INFO: [IP_Flow 19-3484] Absolute path of file 'c:/Users/EMILIO/Desktop/Nueva carpeta/MEM_INIT_32_bits_1.ceo' provided. It will be converted relative to IP Instance files '../../../../../../../../../../../../MEM_INIT_32_bits_1.ceo'
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Load_Init_File {false} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {1}] [get_bd_cells Imag_2]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Use_Byte_Write_Enable {false} CONFIG.Write_Width_A {18} CONFIG.Read_Width_A {18} CONFIG.Write_Width_B {18} CONFIG.Read_Width_B {18} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {1}] [get_bd_cells Real_0]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {1}] [get_bd_cells Real_1]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {1}] [get_bd_cells Real_2]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {1}] [get_bd_cells Imag_3]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {1}] [get_bd_cells Real_3]
+endgroup
+validate_bd_design
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_0> to default.
+WARNING: [BD 41-927] Following properties on pin /Reorder_fft_0/ap_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=HLS_FFT_ap_clk_0 
+make_wrapper -files [get_files {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}}] -top
+INFO: [BD 41-1662] The design 'HLS_FFT.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_0> to default.
+Wrote  : <C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.srcs\sources_1\bd\HLS_FFT\HLS_FFT.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_2/addra'(9) to net 'Reorder_fft_0_Real_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_3/addra'(9) to net 'Reorder_fft_0_Real_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Reorder_fft_0/Real_0_q0'(32) to net 'Real_0_douta'(18) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_1/addra'(9) to net 'Reorder_fft_0_Real_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_0/addra'(9) to net 'Reorder_fft_0_Imag_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_1/addra'(9) to net 'Reorder_fft_0_Imag_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_2/addra'(9) to net 'Reorder_fft_0_Imag_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_3/addra'(9) to net 'Reorder_fft_0_Imag_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/addra'(9) to net 'Reorder_fft_0_Real_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/dina'(18) to net 'Reorder_fft_0_Real_0_d0'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/dinb'(18) to net 'dinb_1_1'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/synth/HLS_FFT.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_2/addra'(9) to net 'Reorder_fft_0_Real_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_3/addra'(9) to net 'Reorder_fft_0_Real_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Reorder_fft_0/Real_0_q0'(32) to net 'Real_0_douta'(18) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_1/addra'(9) to net 'Reorder_fft_0_Real_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_0/addra'(9) to net 'Reorder_fft_0_Imag_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_1/addra'(9) to net 'Reorder_fft_0_Imag_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_2/addra'(9) to net 'Reorder_fft_0_Imag_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_3/addra'(9) to net 'Reorder_fft_0_Imag_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/addra'(9) to net 'Reorder_fft_0_Real_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/dina'(18) to net 'Reorder_fft_0_Real_0_d0'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/dinb'(18) to net 'dinb_1_1'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/sim/HLS_FFT.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hdl/HLS_FFT_wrapper.v
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+reset_run HLS_FFT_Real_0_1_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_1_synth_1
+
+reset_run HLS_FFT_blk_mem_gen_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_blk_mem_gen_0_0_synth_1
+
+reset_run HLS_FFT_Real_0_2_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_2_synth_1
+
+reset_run HLS_FFT_Real_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_0_synth_1
+
+reset_run HLS_FFT_Imag_0_1_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_1_synth_1
+
+reset_run HLS_FFT_Imag_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_0_synth_1
+
+reset_run HLS_FFT_Imag_0_2_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_2_synth_1
+
+reset_run HLS_FFT_Real_0_3_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_3_synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'HLS_FFT.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_0> to default.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_2/addra'(9) to net 'Reorder_fft_0_Real_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_3/addra'(9) to net 'Reorder_fft_0_Real_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Reorder_fft_0/Real_0_q0'(32) to net 'Real_0_douta'(18) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_1/addra'(9) to net 'Reorder_fft_0_Real_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_0/addra'(9) to net 'Reorder_fft_0_Imag_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_1/addra'(9) to net 'Reorder_fft_0_Imag_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_2/addra'(9) to net 'Reorder_fft_0_Imag_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_3/addra'(9) to net 'Reorder_fft_0_Imag_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/addra'(9) to net 'Reorder_fft_0_Real_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/dina'(18) to net 'Reorder_fft_0_Real_0_d0'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/dinb'(18) to net 'dinb_1_1'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/synth/HLS_FFT.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_2/addra'(9) to net 'Reorder_fft_0_Real_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_3/addra'(9) to net 'Reorder_fft_0_Real_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Reorder_fft_0/Real_0_q0'(32) to net 'Real_0_douta'(18) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_1/addra'(9) to net 'Reorder_fft_0_Real_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_0/addra'(9) to net 'Reorder_fft_0_Imag_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_1/addra'(9) to net 'Reorder_fft_0_Imag_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_2/addra'(9) to net 'Reorder_fft_0_Imag_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_3/addra'(9) to net 'Reorder_fft_0_Imag_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/addra'(9) to net 'Reorder_fft_0_Real_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/dina'(18) to net 'Reorder_fft_0_Real_0_d0'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/dinb'(18) to net 'dinb_1_1'(32) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/sim/HLS_FFT.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hdl/HLS_FFT_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Reorder_fft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Real_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Real_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Real_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Real_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Imag_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Imag_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Imag_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Imag_3 .
+Exporting to file C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hw_handoff/HLS_FFT.hwh
+Generated Block Design Tcl file C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hw_handoff/HLS_FFT_bd.tcl
+Generated Hardware Definition File C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/synth/HLS_FFT.hwdef
+[Wed Mar 24 19:40:17 2021] Launched HLS_FFT_Real_0_1_synth_1, HLS_FFT_blk_mem_gen_0_0_synth_1, HLS_FFT_Real_0_2_synth_1, HLS_FFT_Real_0_0_synth_1, HLS_FFT_Imag_0_1_synth_1, HLS_FFT_Imag_0_0_synth_1, HLS_FFT_Imag_0_2_synth_1, HLS_FFT_Real_0_3_synth_1, synth_1...
+Run output will be captured here:
+HLS_FFT_Real_0_1_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_1_synth_1/runme.log
+HLS_FFT_blk_mem_gen_0_0_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_blk_mem_gen_0_0_synth_1/runme.log
+HLS_FFT_Real_0_2_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_2_synth_1/runme.log
+HLS_FFT_Real_0_0_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_0_synth_1/runme.log
+HLS_FFT_Imag_0_1_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_1_synth_1/runme.log
+HLS_FFT_Imag_0_0_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_0_synth_1/runme.log
+HLS_FFT_Imag_0_2_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_2_synth_1/runme.log
+HLS_FFT_Real_0_3_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_3_synth_1/runme.log
+synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Wed Mar 24 19:40:18 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 5043.098 ; gain = 0.000
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210251840302
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251840302
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z045 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 5043.098 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 5043.098 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}}]
+refresh_design
+INFO: [Netlist 29-17] Analyzing 12710 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 5043.098 ; gain = 0.000
+Restored from archive | CPU: 15.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 5043.098 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:47 . Memory (MB): peak = 5043.098 ; gain = 0.000
+open_report: Time (s): cpu = 00:00:39 ; elapsed = 00:00:23 . Memory (MB): peak = 5051.930 ; gain = 8.832
+open_bd_design {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Load_Init_File {false} CONFIG.Fill_Remaining_Memory_Locations {false} CONFIG.Remaining_Memory_Locations {0}] [get_bd_cells Imag_2]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Load_Init_File {false} CONFIG.Coe_File {no_coe_file_loaded} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Imag_0]
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'Coe_File' from 'no_coe_file_loaded' to 'no_coe_file_loaded' has been ignored for IP 'Imag_0'
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Load_Init_File {false} CONFIG.Coe_File {no_coe_file_loaded} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Imag_1]
+WARNING: [IP_Flow 19-3374] An attempt to modify the value of disabled parameter 'Coe_File' from 'no_coe_file_loaded' to 'no_coe_file_loaded' has been ignored for IP 'Imag_1'
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Imag_2]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Write_Width_A {32} CONFIG.Read_Width_A {32} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Real_0]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Real_1]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Real_2]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Imag_3]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+set_property -dict [list CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Real_3]
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+save_bd_design
+Wrote  : <C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.srcs\sources_1\bd\HLS_FFT\HLS_FFT.bd> 
+make_wrapper -files [get_files {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}}] -top
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_0> to default.
+WARNING: [BD 41-927] Following properties on pin /Reorder_fft_0/ap_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=HLS_FFT_ap_clk_0 
+Wrote  : <C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.srcs\sources_1\bd\HLS_FFT\HLS_FFT.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_2/addra'(9) to net 'Reorder_fft_0_Real_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_3/addra'(9) to net 'Reorder_fft_0_Real_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_1/addra'(9) to net 'Reorder_fft_0_Real_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_0/addra'(9) to net 'Reorder_fft_0_Imag_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_1/addra'(9) to net 'Reorder_fft_0_Imag_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_2/addra'(9) to net 'Reorder_fft_0_Imag_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_3/addra'(9) to net 'Reorder_fft_0_Imag_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/addra'(9) to net 'Reorder_fft_0_Real_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/synth/HLS_FFT.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_2/addra'(9) to net 'Reorder_fft_0_Real_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_3/addra'(9) to net 'Reorder_fft_0_Real_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_1/addra'(9) to net 'Reorder_fft_0_Real_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_0/addra'(9) to net 'Reorder_fft_0_Imag_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_1/addra'(9) to net 'Reorder_fft_0_Imag_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_2/addra'(9) to net 'Reorder_fft_0_Imag_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_3/addra'(9) to net 'Reorder_fft_0_Imag_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/addra'(9) to net 'Reorder_fft_0_Real_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/sim/HLS_FFT.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hdl/HLS_FFT_wrapper.v
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+reset_run HLS_FFT_Real_0_1_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_1_synth_1
+
+reset_run HLS_FFT_blk_mem_gen_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_blk_mem_gen_0_0_synth_1
+
+reset_run HLS_FFT_Real_0_2_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_2_synth_1
+
+reset_run HLS_FFT_Real_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_0_synth_1
+
+reset_run HLS_FFT_Imag_0_1_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_1_synth_1
+
+reset_run HLS_FFT_Imag_0_0_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_0_synth_1
+
+reset_run HLS_FFT_Imag_0_2_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_2_synth_1
+
+reset_run HLS_FFT_Real_0_3_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_3_synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'HLS_FFT.bd' is already validated. Therefore parameter propagation will not be re-run.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_3> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_0> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Real_2> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_1> to default.
+WARNING: [BD 41-2180] Resetting the memory initialization file of </Imag_0> to default.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_2/addra'(9) to net 'Reorder_fft_0_Real_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_3/addra'(9) to net 'Reorder_fft_0_Real_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_1/addra'(9) to net 'Reorder_fft_0_Real_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_0/addra'(9) to net 'Reorder_fft_0_Imag_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_1/addra'(9) to net 'Reorder_fft_0_Imag_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_2/addra'(9) to net 'Reorder_fft_0_Imag_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_3/addra'(9) to net 'Reorder_fft_0_Imag_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/addra'(9) to net 'Reorder_fft_0_Real_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/synth/HLS_FFT.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_2/addra'(9) to net 'Reorder_fft_0_Real_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_3/addra'(9) to net 'Reorder_fft_0_Real_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_1/addra'(9) to net 'Reorder_fft_0_Real_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_0/addra'(9) to net 'Reorder_fft_0_Imag_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_1/addra'(9) to net 'Reorder_fft_0_Imag_1_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_2/addra'(9) to net 'Reorder_fft_0_Imag_2_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Imag_3/addra'(9) to net 'Reorder_fft_0_Imag_3_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/Real_0/addra'(9) to net 'Reorder_fft_0_Real_0_address0'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/sim/HLS_FFT.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hdl/HLS_FFT_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Reorder_fft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Real_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Real_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Real_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Real_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Imag_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Imag_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Imag_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Imag_3 .
+Exporting to file C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hw_handoff/HLS_FFT.hwh
+Generated Block Design Tcl file C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hw_handoff/HLS_FFT_bd.tcl
+Generated Hardware Definition File C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/synth/HLS_FFT.hwdef
+[Wed Mar 24 22:51:46 2021] Launched HLS_FFT_Real_0_1_synth_1, HLS_FFT_blk_mem_gen_0_0_synth_1, HLS_FFT_Real_0_2_synth_1, HLS_FFT_Real_0_0_synth_1, HLS_FFT_Imag_0_1_synth_1, HLS_FFT_Imag_0_0_synth_1, HLS_FFT_Imag_0_2_synth_1, HLS_FFT_Real_0_3_synth_1, synth_1...
+Run output will be captured here:
+HLS_FFT_Real_0_1_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_1_synth_1/runme.log
+HLS_FFT_blk_mem_gen_0_0_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_blk_mem_gen_0_0_synth_1/runme.log
+HLS_FFT_Real_0_2_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_2_synth_1/runme.log
+HLS_FFT_Real_0_0_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_0_synth_1/runme.log
+HLS_FFT_Imag_0_1_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_1_synth_1/runme.log
+HLS_FFT_Imag_0_0_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_0_synth_1/runme.log
+HLS_FFT_Imag_0_2_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Imag_0_2_synth_1/runme.log
+HLS_FFT_Real_0_3_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/HLS_FFT_Real_0_3_synth_1/runme.log
+synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Wed Mar 24 22:51:47 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 5109.441 ; gain = 37.379
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 5113.348 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 5113.348 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 5113.348 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210251840302
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 24 23:58:08 2021...

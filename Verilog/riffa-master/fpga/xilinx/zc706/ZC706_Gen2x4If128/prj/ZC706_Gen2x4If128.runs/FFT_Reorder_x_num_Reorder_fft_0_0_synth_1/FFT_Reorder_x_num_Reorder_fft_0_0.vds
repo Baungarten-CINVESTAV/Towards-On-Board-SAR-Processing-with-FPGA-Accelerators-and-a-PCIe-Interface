@@ -1,0 +1,817 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 29 07:08:04 2021
+# Process ID: 11692
+# Current directory: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/FFT_Reorder_x_num_Reorder_fft_0_0_synth_1
+# Command line: vivado.exe -log FFT_Reorder_x_num_Reorder_fft_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FFT_Reorder_x_num_Reorder_fft_0_0.tcl
+# Log file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/FFT_Reorder_x_num_Reorder_fft_0_0_synth_1/FFT_Reorder_x_num_Reorder_fft_0_0.vds
+# Journal file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/FFT_Reorder_x_num_Reorder_fft_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source FFT_Reorder_x_num_Reorder_fft_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/EMILIO/Desktop/HLS/FFR_Reorder_x_num/With_array_P/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx_2018/Vivado/2018.3/data/ip'.
+Command: synth_design -top FFT_Reorder_x_num_Reorder_fft_0_0 -part xc7z045ffg900-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-86] Your Synthesis license expires in 29 day(s)
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5840 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 471.305 ; gain = 98.816
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'FFT_Reorder_x_num_Reorder_fft_0_0' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ip/FFT_Reorder_x_num_Reorder_fft_0_0/synth/FFT_Reorder_x_num_Reorder_fft_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 10'b0000000001 
+	Parameter ap_ST_fsm_state2 bound to: 10'b0000000010 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 10'b0000000100 
+	Parameter ap_ST_fsm_pp0_stage1 bound to: 10'b0000001000 
+	Parameter ap_ST_fsm_state23 bound to: 10'b0000010000 
+	Parameter ap_ST_fsm_pp1_stage0 bound to: 10'b0000100000 
+	Parameter ap_ST_fsm_pp1_stage1 bound to: 10'b0001000000 
+	Parameter ap_ST_fsm_pp1_stage2 bound to: 10'b0010000000 
+	Parameter ap_ST_fsm_pp1_stage3 bound to: 10'b0100000000 
+	Parameter ap_ST_fsm_state30 bound to: 10'b1000000000 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:157]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rbkb' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rbkb.v:42]
+	Parameter DataWidth bound to: 10 - type: integer 
+	Parameter AddressRange bound to: 480 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rbkb_rom' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rbkb.v:9]
+	Parameter DWIDTH bound to: 10 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 480 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './Reorder_fft_lut_rbkb_rom.dat' is read successfully [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rbkb.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rbkb_rom' (1#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rbkb.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rbkb' (2#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rbkb.v:42]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rcud' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rcud.v:42]
+	Parameter DataWidth bound to: 10 - type: integer 
+	Parameter AddressRange bound to: 480 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rcud_rom' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rcud.v:9]
+	Parameter DWIDTH bound to: 10 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 480 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './Reorder_fft_lut_rcud_rom.dat' is read successfully [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rcud.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rcud_rom' (3#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rcud.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rcud' (4#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rcud.v:42]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rdEe' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rdEe.v:42]
+	Parameter DataWidth bound to: 10 - type: integer 
+	Parameter AddressRange bound to: 2016 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rdEe_rom' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rdEe.v:9]
+	Parameter DWIDTH bound to: 10 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 2016 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './Reorder_fft_lut_rdEe_rom.dat' is read successfully [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rdEe.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rdEe_rom' (5#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rdEe.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rdEe' (6#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rdEe.v:42]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_reOg' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_reOg.v:42]
+	Parameter DataWidth bound to: 12 - type: integer 
+	Parameter AddressRange bound to: 2016 - type: integer 
+	Parameter AddressWidth bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_reOg_rom' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_reOg.v:9]
+	Parameter DWIDTH bound to: 12 - type: integer 
+	Parameter AWIDTH bound to: 11 - type: integer 
+	Parameter MEM_SIZE bound to: 2016 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './Reorder_fft_lut_reOg_rom.dat' is read successfully [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_reOg.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_reOg_rom' (7#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_reOg.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_reOg' (8#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_reOg.v:42]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rfYi' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rfYi.v:42]
+	Parameter DataWidth bound to: 9 - type: integer 
+	Parameter AddressRange bound to: 8064 - type: integer 
+	Parameter AddressWidth bound to: 13 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rfYi_rom' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rfYi.v:9]
+	Parameter DWIDTH bound to: 9 - type: integer 
+	Parameter AWIDTH bound to: 13 - type: integer 
+	Parameter MEM_SIZE bound to: 8064 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './Reorder_fft_lut_rfYi_rom.dat' is read successfully [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rfYi.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rfYi_rom' (9#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rfYi.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rfYi' (10#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rfYi.v:42]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rg8j' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rg8j.v:42]
+	Parameter DataWidth bound to: 14 - type: integer 
+	Parameter AddressRange bound to: 8064 - type: integer 
+	Parameter AddressWidth bound to: 13 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rg8j_rom' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rg8j.v:9]
+	Parameter DWIDTH bound to: 14 - type: integer 
+	Parameter AWIDTH bound to: 13 - type: integer 
+	Parameter MEM_SIZE bound to: 8064 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './Reorder_fft_lut_rg8j_rom.dat' is read successfully [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rg8j.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rg8j_rom' (11#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rg8j.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rg8j' (12#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_lut_rg8j.v:42]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_fadd_hbi' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_fadd_hbi.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 8 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Reorder_fft_ap_fadd_6_full_dsp_32' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/ip/Reorder_fft_ap_fadd_6_full_dsp_32.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: virtex7 - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 6 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_7' declared at 'c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/c63e/hdl/floating_point_v7_1_vh_rfs.vhd:91615' bound to instance 'U0' of component 'floating_point_v7_1_7' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/ip/Reorder_fft_ap_fadd_6_full_dsp_32.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'Reorder_fft_ap_fadd_6_full_dsp_32' (30#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/ip/Reorder_fft_ap_fadd_6_full_dsp_32.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_fadd_hbi' (31#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_fadd_hbi.v:11]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_mux_4ibs' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_mux_4ibs.v:11]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter din2_WIDTH bound to: 32 - type: integer 
+	Parameter din3_WIDTH bound to: 32 - type: integer 
+	Parameter din4_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_mux_4ibs' (32#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft_mux_4ibs.v:11]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:1961]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:1965]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:1967]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:1973]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:1977]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:1979]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:1981]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:2009]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:2061]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:2065]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft' (33#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'FFT_Reorder_x_num_Reorder_fft_0_0' (34#1) [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ip/FFT_Reorder_x_num_Reorder_fft_0_0/synth/FFT_Reorder_x_num_Reorder_fft_0_0.v:58]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[31]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[30]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[29]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[28]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[27]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[26]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[25]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[24]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[23]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[22]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[21]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[20]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[19]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[18]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[17]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[16]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[15]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[14]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[13]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[12]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[11]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[10]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[9]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[8]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[7]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[6]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[5]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[4]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[3]
+WARNING: [Synth 8-3331] design Reorder_fft_mux_4ibs has unconnected port din4[2]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized49 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized55 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized53 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized51 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized41 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized3 has unconnected port B[8]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized65 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized65 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized65 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized65 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized65 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized63 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized61 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized61 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized61 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized61 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized61 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized59 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized57 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized57 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized57 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized47 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized45 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized43 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized43 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized43 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized17 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized39 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized39 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized39 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_5_viv__parameterized9 has unconnected port SINIT
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 613.191 ; gain = 240.703
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 613.191 ; gain = 240.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 613.191 ; gain = 240.703
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 664 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z045ffg900-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ip/FFT_Reorder_x_num_Reorder_fft_0_0/constraints/Reorder_fft_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ip/FFT_Reorder_x_num_Reorder_fft_0_0/constraints/Reorder_fft_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/FFT_Reorder_x_num_Reorder_fft_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/FFT_Reorder_x_num_Reorder_fft_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 994.199 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 24 instances were transformed.
+  FDE => FDRE: 24 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 996.500 ; gain = 0.035
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.226 . Memory (MB): peak = 997.770 ; gain = 3.570
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 997.770 ; gain = 625.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z045ffg900-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 997.770 ; gain = 625.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/FFT_Reorder_x_num_Reorder_fft_0_0_synth_1/dont_touch.xdc}, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 997.770 ; gain = 625.281
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "det_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'Imag_1_addr_1_reg_1514_reg[11:0]' into 'Imag_0_addr_1_reg_1509_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:916]
+INFO: [Synth 8-4471] merging register 'Imag_2_addr_1_reg_1519_reg[11:0]' into 'Imag_0_addr_1_reg_1509_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:917]
+INFO: [Synth 8-4471] merging register 'Imag_3_addr_1_reg_1524_reg[11:0]' into 'Imag_0_addr_1_reg_1509_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:918]
+INFO: [Synth 8-4471] merging register 'Real_0_addr_1_reg_1489_reg[11:0]' into 'Imag_0_addr_1_reg_1509_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:919]
+INFO: [Synth 8-4471] merging register 'Real_1_addr_1_reg_1494_reg[11:0]' into 'Imag_0_addr_1_reg_1509_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:920]
+INFO: [Synth 8-4471] merging register 'Real_2_addr_1_reg_1499_reg[11:0]' into 'Imag_0_addr_1_reg_1509_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:921]
+INFO: [Synth 8-4471] merging register 'Real_3_addr_1_reg_1504_reg[11:0]' into 'Imag_0_addr_1_reg_1509_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:922]
+INFO: [Synth 8-4471] merging register 'Imag_1_addr_2_reg_1469_reg[11:0]' into 'Imag_0_addr_2_reg_1464_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:932]
+INFO: [Synth 8-4471] merging register 'Imag_2_addr_2_reg_1474_reg[11:0]' into 'Imag_0_addr_2_reg_1464_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:933]
+INFO: [Synth 8-4471] merging register 'Imag_3_addr_2_reg_1479_reg[11:0]' into 'Imag_0_addr_2_reg_1464_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:934]
+INFO: [Synth 8-4471] merging register 'Real_0_addr_2_reg_1444_reg[11:0]' into 'Imag_0_addr_2_reg_1464_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:935]
+INFO: [Synth 8-4471] merging register 'Real_1_addr_2_reg_1449_reg[11:0]' into 'Imag_0_addr_2_reg_1464_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:936]
+INFO: [Synth 8-4471] merging register 'Real_2_addr_2_reg_1454_reg[11:0]' into 'Imag_0_addr_2_reg_1464_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:937]
+INFO: [Synth 8-4471] merging register 'Real_3_addr_2_reg_1459_reg[11:0]' into 'Imag_0_addr_2_reg_1464_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:938]
+INFO: [Synth 8-4471] merging register 'Real_0_addr_reg_1094_reg[11:0]' into 'Imag_0_addr_reg_1124_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:945]
+INFO: [Synth 8-4471] merging register 'Real_0_addr_reg_1094_pp0_iter1_reg_reg[11:0]' into 'Imag_0_addr_reg_1124_pp0_iter1_reg_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:961]
+INFO: [Synth 8-4471] merging register 'Real_0_addr_reg_1094_pp0_iter2_reg_reg[11:0]' into 'Imag_0_addr_reg_1124_pp0_iter2_reg_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:962]
+INFO: [Synth 8-4471] merging register 'Real_0_addr_reg_1094_pp0_iter3_reg_reg[11:0]' into 'Imag_0_addr_reg_1124_pp0_iter3_reg_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:963]
+INFO: [Synth 8-4471] merging register 'Real_0_addr_reg_1094_pp0_iter4_reg_reg[11:0]' into 'Imag_0_addr_reg_1124_pp0_iter4_reg_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:964]
+INFO: [Synth 8-4471] merging register 'Real_0_addr_reg_1094_pp0_iter5_reg_reg[11:0]' into 'Imag_0_addr_reg_1124_pp0_iter5_reg_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:965]
+INFO: [Synth 8-4471] merging register 'Real_0_addr_reg_1094_pp0_iter6_reg_reg[11:0]' into 'Imag_0_addr_reg_1124_pp0_iter6_reg_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:966]
+INFO: [Synth 8-4471] merging register 'Real_0_addr_reg_1094_pp0_iter7_reg_reg[11:0]' into 'Imag_0_addr_reg_1124_pp0_iter7_reg_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:967]
+INFO: [Synth 8-4471] merging register 'Real_0_addr_reg_1094_pp0_iter8_reg_reg[11:0]' into 'Imag_0_addr_reg_1124_pp0_iter8_reg_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:968]
+INFO: [Synth 8-4471] merging register 'Real_0_addr_reg_1094_pp0_iter9_reg_reg[11:0]' into 'Imag_0_addr_reg_1124_pp0_iter9_reg_reg[11:0]' [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:969]
+WARNING: [Synth 8-3936] Found unconnected internal register 'newIndex5_reg_1439_reg' and it is trimmed from '30' to '12' bits. [c:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ipshared/4a4c/hdl/verilog/Reorder_fft.v:1049]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-5545] ROM "tmp_fu_557_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_1_fu_562_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_8_fu_802_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_fu_557_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_1_fu_562_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_8_fu_802_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "ap_NS_fsm" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "p_cast_fu_567_p3" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "leng_reorder_2_reg_1075" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tmp_14_reg_1363" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 997.770 ; gain = 625.281
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'Reorder_fft_fadd_hbi:/Reorder_fft_ap_fadd_6_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'Reorder_fft_fadd_hbi:/Reorder_fft_ap_fadd_6_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'Reorder_fft_fadd_hbi:/Reorder_fft_ap_fadd_6_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'Reorder_fft_fadd_hbi:/Reorder_fft_ap_fadd_6_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'Reorder_fft_fadd_hbi:/Reorder_fft_ap_fadd_6_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'Reorder_fft_fadd_hbi:/Reorder_fft_ap_fadd_6_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 900 (col length:140)
+BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_A/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_zero_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/COND_DET_B/exp_all_one_ip" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/ip_sig" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/exp_over_int" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "data31" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data41" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "tmp_1_fu_562_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_fu_557_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "tmp_8_fu_802_p2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_reg[0]' (FDE) to 'inst/Imag_0_addr_reg_1124_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_reg[1]' (FDE) to 'inst/Imag_0_addr_reg_1124_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_reg[2]' (FDE) to 'inst/Imag_0_addr_reg_1124_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_reg[3]' (FDE) to 'inst/Imag_0_addr_reg_1124_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_reg[4]' (FDE) to 'inst/Imag_0_addr_reg_1124_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_reg[5]' (FDE) to 'inst/Imag_0_addr_reg_1124_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_reg[6]' (FDE) to 'inst/Imag_0_addr_reg_1124_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_reg[7]' (FDE) to 'inst/Imag_0_addr_reg_1124_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_reg[8]' (FDE) to 'inst/Imag_0_addr_reg_1124_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_reg[9]' (FDE) to 'inst/Imag_0_addr_reg_1124_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_reg[10]' (FDE) to 'inst/Imag_0_addr_reg_1124_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_reg[11]' (FDE) to 'inst/Imag_0_addr_reg_1124_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter1_reg_reg[0]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter1_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter1_reg_reg[1]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter1_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter1_reg_reg[2]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter1_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter1_reg_reg[3]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter1_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter1_reg_reg[4]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter1_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter1_reg_reg[5]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter1_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter1_reg_reg[6]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter1_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter1_reg_reg[7]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter1_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter1_reg_reg[8]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter1_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter1_reg_reg[9]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter1_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter1_reg_reg[10]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter1_reg_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter1_reg_reg[11]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter1_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter2_reg_reg[0]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter2_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter2_reg_reg[1]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter2_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter2_reg_reg[2]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter2_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter2_reg_reg[3]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter2_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter2_reg_reg[4]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter2_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter2_reg_reg[5]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter2_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter2_reg_reg[6]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter2_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter2_reg_reg[7]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter2_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter2_reg_reg[8]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter2_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter2_reg_reg[9]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter2_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter2_reg_reg[10]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter2_reg_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter2_reg_reg[11]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter2_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter3_reg_reg[0]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter3_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter3_reg_reg[1]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter3_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter3_reg_reg[2]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter3_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter3_reg_reg[3]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter3_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter3_reg_reg[4]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter3_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter3_reg_reg[5]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter3_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter3_reg_reg[6]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter3_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter3_reg_reg[7]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter3_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter3_reg_reg[8]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter3_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter3_reg_reg[9]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter3_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter3_reg_reg[10]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter3_reg_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter3_reg_reg[11]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter3_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter4_reg_reg[0]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter4_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter4_reg_reg[1]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter4_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter4_reg_reg[2]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter4_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter4_reg_reg[3]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter4_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter4_reg_reg[4]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter4_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter4_reg_reg[5]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter4_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter4_reg_reg[6]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter4_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter4_reg_reg[7]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter4_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter4_reg_reg[8]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter4_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter4_reg_reg[9]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter4_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter4_reg_reg[10]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter4_reg_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter4_reg_reg[11]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter4_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter5_reg_reg[0]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter5_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter5_reg_reg[1]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter5_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter5_reg_reg[2]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter5_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter5_reg_reg[3]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter5_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter5_reg_reg[4]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter5_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter5_reg_reg[5]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter5_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter5_reg_reg[6]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter5_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter5_reg_reg[7]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter5_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter5_reg_reg[8]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter5_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter5_reg_reg[9]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter5_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter5_reg_reg[10]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter5_reg_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter5_reg_reg[11]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter5_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter6_reg_reg[0]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter6_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter6_reg_reg[1]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter6_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter6_reg_reg[2]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter6_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter6_reg_reg[3]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter6_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter6_reg_reg[4]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter6_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter6_reg_reg[5]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter6_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter6_reg_reg[6]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter6_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter6_reg_reg[7]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter6_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter6_reg_reg[8]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter6_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter6_reg_reg[9]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter6_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter6_reg_reg[10]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter6_reg_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter6_reg_reg[11]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter6_reg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter7_reg_reg[0]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter7_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter7_reg_reg[1]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter7_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter7_reg_reg[2]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter7_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter7_reg_reg[3]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter7_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter7_reg_reg[4]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter7_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter7_reg_reg[5]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter7_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter7_reg_reg[6]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter7_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter7_reg_reg[7]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter7_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter7_reg_reg[8]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter7_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter7_reg_reg[9]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter7_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter7_reg_reg[10]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter7_reg_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter7_reg_reg[11]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter7_reg_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\tmp_21_reg_1080_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\tmp_21_reg_1080_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\tmp_14_reg_1363_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\tmp_14_reg_1363_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\tmp_14_reg_1363_reg[2] )
+INFO: [Synth 8-3886] merging instance 'inst/leng_reorder_2_reg_1075_reg[5]' (FDE) to 'inst/tmp_4_reg_1070_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/leng_reorder_2_reg_1075_reg[6]' (FDE) to 'inst/tmp_4_reg_1070_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/leng_reorder_2_reg_1075_reg[9]' (FDE) to 'inst/leng_reorder_2_reg_1075_reg[10]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Reorder_fft_fadd_hbi_U8/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Reorder_fft_fadd_hbi_U6/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Reorder_fft_fadd_hbi_U4/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Reorder_fft_fadd_hbi_U2/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Reorder_fft_fadd_hbi_U7/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Reorder_fft_fadd_hbi_U5/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Reorder_fft_fadd_hbi_U3/ce_r_reg )
+INFO: [Synth 8-3886] merging instance 'inst/newIndex_reg_1089_pp0_iter8_reg_reg[0]' (FDE) to 'inst/Imag_0_addr_reg_1124_pp0_iter8_reg_reg[0]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Reorder_fft_fadd_hbi_U1/ce_r_reg )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\tmp_14_reg_1363_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\tmp_14_reg_1363_reg[4] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\tmp_14_reg_1363_reg[7] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\tmp_14_reg_1363_reg[8] )
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__1.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__2.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__3.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__4.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__5.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__6.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__6.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv__7.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv__7.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_7_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_7_viv.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 997.770 ; gain = 625.281
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/i_2_0/lut_reorder_J_1024_U/Reorder_fft_lut_rcud_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_2_1/lut_reorder_J_4096_U/Reorder_fft_lut_reOg_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_2_2/lut_reorder_J_16384_U/Reorder_fft_lut_rg8j_rom_U/q0_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_2_2/lut_reorder_J_16384_U/Reorder_fft_lut_rg8j_rom_U/q0_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_2_2/lut_reorder_J_16384_U/Reorder_fft_lut_rg8j_rom_U/q0_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_2_2/lut_reorder_J_16384_U/Reorder_fft_lut_rg8j_rom_U/q0_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_2_3/lut_reorder_I_1024_U/Reorder_fft_lut_rbkb_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_2_4/lut_reorder_I_4096_U/Reorder_fft_lut_rdEe_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_2_5/lut_reorder_I_16384_U/Reorder_fft_lut_rfYi_rom_U/q0_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_2_5/lut_reorder_I_16384_U/Reorder_fft_lut_rfYi_rom_U/q0_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_2_5/lut_reorder_I_16384_U/Reorder_fft_lut_rfYi_rom_U/q0_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:33 ; elapsed = 00:01:38 . Memory (MB): peak = 1048.996 ; gain = 676.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 1079.234 ; gain = 706.746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/lut_reorder_J_1024_U/Reorder_fft_lut_rcud_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/lut_reorder_J_4096_U/Reorder_fft_lut_reOg_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/lut_reorder_J_16384_U/Reorder_fft_lut_rg8j_rom_U/q0_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/lut_reorder_J_16384_U/Reorder_fft_lut_rg8j_rom_U/q0_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/lut_reorder_J_16384_U/Reorder_fft_lut_rg8j_rom_U/q0_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/lut_reorder_J_16384_U/Reorder_fft_lut_rg8j_rom_U/q0_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:39 ; elapsed = 00:01:44 . Memory (MB): peak = 1085.164 ; gain = 712.676
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:41 ; elapsed = 00:01:46 . Memory (MB): peak = 1085.164 ; gain = 712.676
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:41 ; elapsed = 00:01:47 . Memory (MB): peak = 1085.164 ; gain = 712.676
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:42 ; elapsed = 00:01:48 . Memory (MB): peak = 1085.164 ; gain = 712.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:42 ; elapsed = 00:01:48 . Memory (MB): peak = 1085.164 ; gain = 712.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:43 ; elapsed = 00:01:48 . Memory (MB): peak = 1085.164 ; gain = 712.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:43 ; elapsed = 00:01:48 . Memory (MB): peak = 1085.164 ; gain = 712.676
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    65|
+|2     |DSP48E1    |     8|
+|3     |DSP48E1_1  |     8|
+|4     |LUT1       |   111|
+|5     |LUT2       |   309|
+|6     |LUT3       |   527|
+|7     |LUT4       |   952|
+|8     |LUT5       |   778|
+|9     |LUT6       |   544|
+|10    |MUXCY      |   464|
+|11    |RAMB18E1   |     1|
+|12    |RAMB18E1_1 |     1|
+|13    |RAMB18E1_4 |     1|
+|14    |RAMB18E1_5 |     1|
+|15    |RAMB36E1   |     1|
+|16    |RAMB36E1_1 |     1|
+|17    |RAMB36E1_2 |     1|
+|18    |RAMB36E1_3 |     1|
+|19    |RAMB36E1_7 |     1|
+|20    |RAMB36E1_8 |     1|
+|21    |RAMB36E1_9 |     1|
+|22    |SRL16E     |    38|
+|23    |XORCY      |   136|
+|24    |FDE        |    24|
+|25    |FDRE       |  3655|
+|26    |FDSE       |     1|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:43 ; elapsed = 00:01:48 . Memory (MB): peak = 1085.164 ; gain = 712.676
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 84 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:19 ; elapsed = 00:01:37 . Memory (MB): peak = 1085.164 ; gain = 328.098
+Synthesis Optimization Complete : Time (s): cpu = 00:01:43 ; elapsed = 00:01:49 . Memory (MB): peak = 1085.164 ; gain = 712.676
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 716 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1088.039 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 152 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 128 instances
+  FDE => FDRE: 24 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+310 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:49 ; elapsed = 00:01:56 . Memory (MB): peak = 1088.039 ; gain = 727.020
+INFO: [Coretcl 2-1174] Renamed 653 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1088.039 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/FFT_Reorder_x_num_Reorder_fft_0_0_synth_1/FFT_Reorder_x_num_Reorder_fft_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file FFT_Reorder_x_num_Reorder_fft_0_0_utilization_synth.rpt -pb FFT_Reorder_x_num_Reorder_fft_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 29 07:10:20 2021...

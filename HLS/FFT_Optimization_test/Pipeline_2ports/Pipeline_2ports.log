@@ -1,0 +1,502 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'FFT_test_3/Reorder_FFT.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 175.109 ; gain = 84.895
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:15 . Memory (MB): peak = 175.109 ; gain = 84.895
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:16 . Memory (MB): peak = 175.109 ; gain = 84.895
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 175.109 ; gain = 84.895
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (FFT_test_3/Reorder_FFT.cpp:42) in function 'Reorder_fft' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-1.1' (FFT_test_3/Reorder_FFT.cpp:66) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (FFT_test_3/Reorder_FFT.cpp:66) in function 'Reorder_fft' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'sign' (FFT_test_3/Reorder_FFT.cpp:26) automatically.
+INFO: [XFORM 203-102] Partitioning array 'signRE' (FFT_test_3/Reorder_FFT.cpp:27) automatically.
+INFO: [XFORM 203-102] Partitioning array 'signIM' (FFT_test_3/Reorder_FFT.cpp:28) automatically.
+INFO: [XFORM 203-102] Partitioning array 'RE_vec_128_c' (FFT_test_3/Reorder_FFT.cpp:36) automatically.
+INFO: [XFORM 203-102] Partitioning array 'IM_vec_128_c' (FFT_test_3/Reorder_FFT.cpp:36) automatically.
+INFO: [XFORM 203-102] Partitioning array 'RE_vec_128_d' (FFT_test_3/Reorder_FFT.cpp:37) automatically.
+INFO: [XFORM 203-102] Partitioning array 'IM_vec_128_d' (FFT_test_3/Reorder_FFT.cpp:37) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 175.109 ; gain = 84.895
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 175.109 ; gain = 84.895
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Reorder_fft' ...
+WARNING: [SYN 201-107] Renaming port name 'Reorder_fft/Real' to 'Reorder_fft/Real_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('Real_load', FFT_test_3/Reorder_FFT.cpp:50) on array 'Real_r' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'Real_r'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('Imag_load_4', FFT_test_3/Reorder_FFT.cpp:59) on array 'Imag' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'Imag'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 20.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('Imag_addr_4_write_ln103', FFT_test_3/Reorder_FFT.cpp:103) of variable 'Imag_load_7', FFT_test_3/Reorder_FFT.cpp:103 on array 'Imag' and 'load' operation ('tempi', FFT_test_3/Reorder_FFT.cpp:101) on array 'Imag'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('Imag_addr_5_write_ln105', FFT_test_3/Reorder_FFT.cpp:105) of variable 'tempi', FFT_test_3/Reorder_FFT.cpp:101 on array 'Imag' and 'load' operation ('Imag_load_7', FFT_test_3/Reorder_FFT.cpp:103) on array 'Imag'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.576 seconds; current allocated memory: 98.505 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.383 seconds; current allocated memory: 99.063 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_r' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Reorder_fft' to 's_axilite & ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I' to 'Reorder_fft_lut_rbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J' to 'Reorder_fft_lut_rcud' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_fadd_32ns_32ns_32_5_full_dsp_1' to 'Reorder_fft_fadd_dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_fadd_dEe': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Reorder_fft'.
+INFO: [HLS 200-111]  Elapsed time: 0.564 seconds; current allocated memory: 100.140 MB.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rbkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rcud_rom' using auto ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:21 . Memory (MB): peak = 175.109 ; gain = 84.895
+INFO: [VHDL 208-304] Generating VHDL RTL for Reorder_fft.
+INFO: [VLOG 209-307] Generating Verilog RTL for Reorder_fft.
+INFO: [HLS 200-112] Total elapsed time: 20.625 seconds; peak allocated memory: 100.140 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'FFT_test_3/Reorder_FFT.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 175.715 ; gain = 85.273
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 175.715 ; gain = 85.273
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 175.715 ; gain = 85.273
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 175.715 ; gain = 85.273
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (FFT_test_3/Reorder_FFT.cpp:44) in function 'Reorder_fft' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-1.1' (FFT_test_3/Reorder_FFT.cpp:68) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (FFT_test_3/Reorder_FFT.cpp:68) in function 'Reorder_fft' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'sign' (FFT_test_3/Reorder_FFT.cpp:28) automatically.
+INFO: [XFORM 203-102] Partitioning array 'signRE' (FFT_test_3/Reorder_FFT.cpp:29) automatically.
+INFO: [XFORM 203-102] Partitioning array 'signIM' (FFT_test_3/Reorder_FFT.cpp:30) automatically.
+INFO: [XFORM 203-102] Partitioning array 'RE_vec_128_c' (FFT_test_3/Reorder_FFT.cpp:38) automatically.
+INFO: [XFORM 203-102] Partitioning array 'IM_vec_128_c' (FFT_test_3/Reorder_FFT.cpp:38) automatically.
+INFO: [XFORM 203-102] Partitioning array 'RE_vec_128_d' (FFT_test_3/Reorder_FFT.cpp:39) automatically.
+INFO: [XFORM 203-102] Partitioning array 'IM_vec_128_d' (FFT_test_3/Reorder_FFT.cpp:39) automatically.
+INFO: [XFORM 203-101] Partitioning array 'Imag' (FFT_test_3/Reorder_FFT.cpp:6) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'Real' (FFT_test_3/Reorder_FFT.cpp:6) in dimension 1 with a cyclic factor 4.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 175.715 ; gain = 85.273
+WARNING: [XFORM 203-631] Renaming function 'aesl_mux_load.4[256 x float]P.i32.i64' to 'aesl_mux_load.4[256 ' (aesl_mux_load.4[256 x float]P.i32.i64:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 175.715 ; gain = 85.273
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Reorder_fft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aesl_mux_load_4_256_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'aesl_mux_load_4_256_s'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.084 seconds; current allocated memory: 108.498 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.111 seconds; current allocated memory: 108.625 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('Real_1_addr_1_write_ln87', FFT_test_3/Reorder_FFT.cpp:87) of variable 'tmp_5_1', FFT_test_3/Reorder_FFT.cpp:79 on array 'Real_1' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'Real_1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 14.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('Imag_0_addr_1_write_ln105', FFT_test_3/Reorder_FFT.cpp:105) of variable 'tmp_s', FFT_test_3/Reorder_FFT.cpp:105 on array 'Imag_0' and 'call' operation ('tempi', FFT_test_3/Reorder_FFT.cpp:103) to 'aesl_mux_load_4_256_s'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('Imag_0_addr_1_write_ln105', FFT_test_3/Reorder_FFT.cpp:105) of variable 'tmp_s', FFT_test_3/Reorder_FFT.cpp:105 on array 'Imag_0' and 'call' operation ('tempi', FFT_test_3/Reorder_FFT.cpp:103) to 'aesl_mux_load_4_256_s'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('Imag_0_addr_1_write_ln105', FFT_test_3/Reorder_FFT.cpp:105) of variable 'tmp_s', FFT_test_3/Reorder_FFT.cpp:105 on array 'Imag_0' and 'call' operation ('tempi', FFT_test_3/Reorder_FFT.cpp:103) to 'aesl_mux_load_4_256_s'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('Imag_0_addr_1_write_ln105', FFT_test_3/Reorder_FFT.cpp:105) of variable 'tmp_s', FFT_test_3/Reorder_FFT.cpp:105 on array 'Imag_0' and 'call' operation ('tempi', FFT_test_3/Reorder_FFT.cpp:103) to 'aesl_mux_load_4_256_s'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'store' operation ('Imag_0_addr_2_write_ln107', FFT_test_3/Reorder_FFT.cpp:107) of variable 'tempi', FFT_test_3/Reorder_FFT.cpp:103 on array 'Imag_0' and 'call' operation ('tempi', FFT_test_3/Reorder_FFT.cpp:103) to 'aesl_mux_load_4_256_s'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 6, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.356 seconds; current allocated memory: 109.177 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.343 seconds; current allocated memory: 109.925 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aesl_mux_load_4_256_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_6_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_6_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_7_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_7_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_8_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_8_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_9_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_9_Din_A' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aesl_mux_load_4_256_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.449 seconds; current allocated memory: 110.197 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_0' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_1' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_2' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_3' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag_0' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag_1' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag_2' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag_3' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Reorder_fft' to 's_axilite & ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I' to 'Reorder_fft_lut_rbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J' to 'Reorder_fft_lut_rcud' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_fadd_32ns_32ns_32_5_full_dsp_1' to 'Reorder_fft_fadd_dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_fadd_dEe': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Reorder_fft'.
+INFO: [HLS 200-111]  Elapsed time: 0.48 seconds; current allocated memory: 111.770 MB.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rbkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rcud_rom' using auto ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 175.715 ; gain = 85.273
+INFO: [VHDL 208-304] Generating VHDL RTL for Reorder_fft.
+INFO: [VLOG 209-307] Generating Verilog RTL for Reorder_fft.
+INFO: [HLS 200-112] Total elapsed time: 21.5 seconds; peak allocated memory: 111.770 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'FFT_test_3/Reorder_FFT.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 175.527 ; gain = 85.371
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 175.527 ; gain = 85.371
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 175.527 ; gain = 85.371
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 175.527 ; gain = 85.371
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (FFT_test_3/Reorder_FFT.cpp:42) in function 'Reorder_fft' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-1.1' (FFT_test_3/Reorder_FFT.cpp:66) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (FFT_test_3/Reorder_FFT.cpp:66) in function 'Reorder_fft' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'sign' (FFT_test_3/Reorder_FFT.cpp:26) automatically.
+INFO: [XFORM 203-102] Partitioning array 'signRE' (FFT_test_3/Reorder_FFT.cpp:27) automatically.
+INFO: [XFORM 203-102] Partitioning array 'signIM' (FFT_test_3/Reorder_FFT.cpp:28) automatically.
+INFO: [XFORM 203-102] Partitioning array 'RE_vec_128_c' (FFT_test_3/Reorder_FFT.cpp:36) automatically.
+INFO: [XFORM 203-102] Partitioning array 'IM_vec_128_c' (FFT_test_3/Reorder_FFT.cpp:36) automatically.
+INFO: [XFORM 203-102] Partitioning array 'RE_vec_128_d' (FFT_test_3/Reorder_FFT.cpp:37) automatically.
+INFO: [XFORM 203-102] Partitioning array 'IM_vec_128_d' (FFT_test_3/Reorder_FFT.cpp:37) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 175.527 ; gain = 85.371
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:16 . Memory (MB): peak = 175.527 ; gain = 85.371
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Reorder_fft' ...
+WARNING: [SYN 201-107] Renaming port name 'Reorder_fft/Real' to 'Reorder_fft/Real_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('Real_load', FFT_test_3/Reorder_FFT.cpp:50) on array 'Real_r' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'Real_r'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('Imag_load_4', FFT_test_3/Reorder_FFT.cpp:59) on array 'Imag' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'Imag'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 20.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('Imag_addr_4_write_ln103', FFT_test_3/Reorder_FFT.cpp:103) of variable 'Imag_load_7', FFT_test_3/Reorder_FFT.cpp:103 on array 'Imag' and 'load' operation ('tempi', FFT_test_3/Reorder_FFT.cpp:101) on array 'Imag'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('Imag_addr_5_write_ln105', FFT_test_3/Reorder_FFT.cpp:105) of variable 'tempi', FFT_test_3/Reorder_FFT.cpp:101 on array 'Imag' and 'load' operation ('Imag_load_7', FFT_test_3/Reorder_FFT.cpp:103) on array 'Imag'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.035 seconds; current allocated memory: 98.536 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.333 seconds; current allocated memory: 99.079 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_r' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Reorder_fft' to 's_axilite & ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I' to 'Reorder_fft_lut_rbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J' to 'Reorder_fft_lut_rcud' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_fadd_32ns_32ns_32_5_full_dsp_1' to 'Reorder_fft_fadd_dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_fadd_dEe': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Reorder_fft'.
+INFO: [HLS 200-111]  Elapsed time: 0.466 seconds; current allocated memory: 100.156 MB.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rbkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rcud_rom' using auto ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:20 . Memory (MB): peak = 175.527 ; gain = 85.371
+INFO: [VHDL 208-304] Generating VHDL RTL for Reorder_fft.
+INFO: [VLOG 209-307] Generating Verilog RTL for Reorder_fft.
+INFO: [HLS 200-112] Total elapsed time: 19.682 seconds; peak allocated memory: 100.156 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'FFT_test_3/Reorder_FFT.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 176.324 ; gain = 84.809
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:19 . Memory (MB): peak = 176.324 ; gain = 84.809
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 176.324 ; gain = 84.809
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 176.324 ; gain = 84.809
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (FFT_test_3/Reorder_FFT.cpp:43) in function 'Reorder_fft' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-1.1' (FFT_test_3/Reorder_FFT.cpp:67) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (FFT_test_3/Reorder_FFT.cpp:67) in function 'Reorder_fft' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'sign' (FFT_test_3/Reorder_FFT.cpp:27) automatically.
+INFO: [XFORM 203-102] Partitioning array 'signRE' (FFT_test_3/Reorder_FFT.cpp:28) automatically.
+INFO: [XFORM 203-102] Partitioning array 'signIM' (FFT_test_3/Reorder_FFT.cpp:29) automatically.
+INFO: [XFORM 203-102] Partitioning array 'RE_vec_128_c' (FFT_test_3/Reorder_FFT.cpp:37) automatically.
+INFO: [XFORM 203-102] Partitioning array 'IM_vec_128_c' (FFT_test_3/Reorder_FFT.cpp:37) automatically.
+INFO: [XFORM 203-102] Partitioning array 'RE_vec_128_d' (FFT_test_3/Reorder_FFT.cpp:38) automatically.
+INFO: [XFORM 203-102] Partitioning array 'IM_vec_128_d' (FFT_test_3/Reorder_FFT.cpp:38) automatically.
+INFO: [XFORM 203-101] Partitioning array 'Imag' (FFT_test_3/Reorder_FFT.cpp:6) in dimension 1 with a cyclic factor 4.
+INFO: [XFORM 203-101] Partitioning array 'Real' (FFT_test_3/Reorder_FFT.cpp:6) in dimension 1 with a cyclic factor 4.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 176.324 ; gain = 84.809
+WARNING: [XFORM 203-631] Renaming function 'aesl_mux_load.4[256 x float]P.i32.i64' to 'aesl_mux_load.4[256 ' (aesl_mux_load.4[256 x float]P.i32.i64:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:20 . Memory (MB): peak = 176.324 ; gain = 84.809
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Reorder_fft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'aesl_mux_load_4_256_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'aesl_mux_load_4_256_s'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 20.605 seconds; current allocated memory: 108.529 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.311 seconds; current allocated memory: 108.657 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('Real_1_addr_1_write_ln86', FFT_test_3/Reorder_FFT.cpp:86) of variable 'tmp_5_1', FFT_test_3/Reorder_FFT.cpp:78 on array 'Real_1' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'Real_1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 14.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('Imag_0_addr_1_write_ln104', FFT_test_3/Reorder_FFT.cpp:104) of variable 'tmp_s', FFT_test_3/Reorder_FFT.cpp:104 on array 'Imag_0' and 'call' operation ('tempi', FFT_test_3/Reorder_FFT.cpp:102) to 'aesl_mux_load_4_256_s'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('Imag_0_addr_1_write_ln104', FFT_test_3/Reorder_FFT.cpp:104) of variable 'tmp_s', FFT_test_3/Reorder_FFT.cpp:104 on array 'Imag_0' and 'call' operation ('tempi', FFT_test_3/Reorder_FFT.cpp:102) to 'aesl_mux_load_4_256_s'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('Imag_0_addr_1_write_ln104', FFT_test_3/Reorder_FFT.cpp:104) of variable 'tmp_s', FFT_test_3/Reorder_FFT.cpp:104 on array 'Imag_0' and 'call' operation ('tempi', FFT_test_3/Reorder_FFT.cpp:102) to 'aesl_mux_load_4_256_s'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('Imag_0_addr_1_write_ln104', FFT_test_3/Reorder_FFT.cpp:104) of variable 'tmp_s', FFT_test_3/Reorder_FFT.cpp:104 on array 'Imag_0' and 'call' operation ('tempi', FFT_test_3/Reorder_FFT.cpp:102) to 'aesl_mux_load_4_256_s'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1)
+   between 'store' operation ('Imag_0_addr_2_write_ln106', FFT_test_3/Reorder_FFT.cpp:106) of variable 'tempi', FFT_test_3/Reorder_FFT.cpp:102 on array 'Imag_0' and 'call' operation ('tempi', FFT_test_3/Reorder_FFT.cpp:102) to 'aesl_mux_load_4_256_s'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 6, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.383 seconds; current allocated memory: 109.209 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 109.956 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'aesl_mux_load_4_256_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_6_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_6_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_7_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_7_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_8_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_8_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_9_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'aesl_mux_load_4_256_s/empty_9_Din_A' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'aesl_mux_load_4_256_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.439 seconds; current allocated memory: 110.229 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_0' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_1' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_2' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_3' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag_0' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag_1' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag_2' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag_3' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Reorder_fft' to 's_axilite & ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I' to 'Reorder_fft_lut_rbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J' to 'Reorder_fft_lut_rcud' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_fadd_32ns_32ns_32_5_full_dsp_1' to 'Reorder_fft_fadd_dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_fadd_dEe': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Reorder_fft'.
+INFO: [HLS 200-111]  Elapsed time: 0.507 seconds; current allocated memory: 111.802 MB.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rbkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rcud_rom' using auto ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:05 ; elapsed = 00:00:26 . Memory (MB): peak = 176.324 ; gain = 84.809
+INFO: [VHDL 208-304] Generating VHDL RTL for Reorder_fft.
+INFO: [VLOG 209-307] Generating Verilog RTL for Reorder_fft.
+INFO: [HLS 200-112] Total elapsed time: 26.362 seconds; peak allocated memory: 111.802 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'FFT_test_3/Reorder_FFT.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 175.332 ; gain = 85.344
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 175.332 ; gain = 85.344
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 175.332 ; gain = 85.344
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 175.332 ; gain = 85.344
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (FFT_test_3/Reorder_FFT.cpp:41) in function 'Reorder_fft' for pipelining.
+WARNING: [XFORM 203-505] Ignored pipeline directive for loop 'Loop-1.1' (FFT_test_3/Reorder_FFT.cpp:65) because its parent loop or function is pipelined.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (FFT_test_3/Reorder_FFT.cpp:65) in function 'Reorder_fft' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'sign' (FFT_test_3/Reorder_FFT.cpp:25) automatically.
+INFO: [XFORM 203-102] Partitioning array 'signRE' (FFT_test_3/Reorder_FFT.cpp:26) automatically.
+INFO: [XFORM 203-102] Partitioning array 'signIM' (FFT_test_3/Reorder_FFT.cpp:27) automatically.
+INFO: [XFORM 203-102] Partitioning array 'RE_vec_128_c' (FFT_test_3/Reorder_FFT.cpp:35) automatically.
+INFO: [XFORM 203-102] Partitioning array 'IM_vec_128_c' (FFT_test_3/Reorder_FFT.cpp:35) automatically.
+INFO: [XFORM 203-102] Partitioning array 'RE_vec_128_d' (FFT_test_3/Reorder_FFT.cpp:36) automatically.
+INFO: [XFORM 203-102] Partitioning array 'IM_vec_128_d' (FFT_test_3/Reorder_FFT.cpp:36) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 175.332 ; gain = 85.344
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 175.332 ; gain = 85.344
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'Reorder_fft' ...
+WARNING: [SYN 201-107] Renaming port name 'Reorder_fft/Real' to 'Reorder_fft/Real_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('Real_load', FFT_test_3/Reorder_FFT.cpp:49) on array 'Real_r' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'Real_r'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('Imag_load_4', FFT_test_3/Reorder_FFT.cpp:58) on array 'Imag' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'Imag'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 20.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('Imag_addr_4_write_ln102', FFT_test_3/Reorder_FFT.cpp:102) of variable 'Imag_load_7', FFT_test_3/Reorder_FFT.cpp:102 on array 'Imag' and 'load' operation ('tempi', FFT_test_3/Reorder_FFT.cpp:100) on array 'Imag'.
+WARNING: [SCHED 204-68] The II Violation in module 'Reorder_fft' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('Imag_addr_5_write_ln104', FFT_test_3/Reorder_FFT.cpp:104) of variable 'tempi', FFT_test_3/Reorder_FFT.cpp:100 on array 'Imag' and 'load' operation ('Imag_load_7', FFT_test_3/Reorder_FFT.cpp:102) on array 'Imag'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 3, Depth = 4.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 15.491 seconds; current allocated memory: 98.552 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.323 seconds; current allocated memory: 99.095 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Reorder_fft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Real_r' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'Reorder_fft/Imag' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'Reorder_fft' to 's_axilite & ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_I' to 'Reorder_fft_lut_rbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_lut_reorder_J' to 'Reorder_fft_lut_rcud' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port AXILiteS.
+INFO: [SYN 201-210] Renamed object name 'Reorder_fft_fadd_32ns_32ns_32_5_full_dsp_1' to 'Reorder_fft_fadd_dEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'Reorder_fft_fadd_dEe': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Reorder_fft'.
+INFO: [HLS 200-111]  Elapsed time: 0.514 seconds; current allocated memory: 100.172 MB.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rbkb_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'Reorder_fft_lut_rcud_rom' using auto ROMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:04 ; elapsed = 00:00:19 . Memory (MB): peak = 175.332 ; gain = 85.344
+INFO: [VHDL 208-304] Generating VHDL RTL for Reorder_fft.
+INFO: [VLOG 209-307] Generating Verilog RTL for Reorder_fft.
+INFO: [HLS 200-112] Total elapsed time: 18.97 seconds; peak allocated memory: 100.172 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1.3 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...

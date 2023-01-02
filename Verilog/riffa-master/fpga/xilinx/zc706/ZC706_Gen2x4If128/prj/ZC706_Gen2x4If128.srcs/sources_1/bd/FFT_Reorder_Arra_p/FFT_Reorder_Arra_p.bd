@@ -1,0 +1,680 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xFE117D4157DB804F",
+      "device": "xc7z045ffg900-2",
+      "name": "FFT_Reorder_Arra_p",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Reorder_fft_0": ""
+    },
+    "ports": {
+      "ap_start_0": {
+        "direction": "I"
+      },
+      "Imag_3_we0_0": {
+        "direction": "O"
+      },
+      "Real_1_d0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Real_3_q0_0": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}"
+          }
+        }
+      },
+      "ap_clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "ap_rst_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "FFT_Reorder_Arra_p_ap_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "Imag_0_address0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Imag_3_address0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Real_0_d0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Real_0_we0_0": {
+        "direction": "O"
+      },
+      "Imag_3_d0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Real_0_q0_0": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}"
+          }
+        }
+      },
+      "Real_1_ce0_0": {
+        "direction": "O"
+      },
+      "Real_3_address0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Real_2_d0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Real_3_d0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Imag_1_address0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Real_0_ce0_0": {
+        "direction": "O"
+      },
+      "Real_2_q0_0": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}"
+          }
+        }
+      },
+      "Imag_1_d0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Real_1_q0_0": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}"
+          }
+        }
+      },
+      "Real_2_we0_0": {
+        "direction": "O"
+      },
+      "Imag_0_d0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Real_2_address0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Real_3_ce0_0": {
+        "direction": "O"
+      },
+      "Imag_0_q0_0": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}"
+          }
+        }
+      },
+      "Imag_2_we0_0": {
+        "direction": "O"
+      },
+      "Real_1_we0_0": {
+        "direction": "O"
+      },
+      "Imag_2_d0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Imag_3_ce0_0": {
+        "direction": "O"
+      },
+      "Real_2_ce0_0": {
+        "direction": "O"
+      },
+      "Imag_0_we0_0": {
+        "direction": "O"
+      },
+      "Imag_1_we0_0": {
+        "direction": "O"
+      },
+      "Imag_2_q0_0": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}"
+          }
+        }
+      },
+      "Real_0_address0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Imag_1_ce0_0": {
+        "direction": "O"
+      },
+      "Imag_1_q0_0": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}"
+          }
+        }
+      },
+      "Imag_2_ce0_0": {
+        "direction": "O"
+      },
+      "ap_done_0": {
+        "direction": "O"
+      },
+      "ap_idle_0": {
+        "direction": "O"
+      },
+      "ap_rst_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "Imag_2_address0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "Real_3_we0_0": {
+        "direction": "O"
+      },
+      "Imag_0_ce0_0": {
+        "direction": "O"
+      },
+      "Imag_3_q0_0": {
+        "type": "data",
+        "direction": "I",
+        "left": "31",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {float {sigwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24}}}}}}"
+          }
+        }
+      },
+      "Real_1_address0_0": {
+        "type": "data",
+        "direction": "O",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}",
+            "value_src": "const_prop"
+          }
+        }
+      },
+      "ap_ready_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "Reorder_fft_0": {
+        "vlnv": "xilinx.com:hls:Reorder_fft:1.0",
+        "xci_name": "FFT_Reorder_Arra_p_Reorder_fft_0_0"
+      }
+    },
+    "nets": {
+      "ap_start_0_1": {
+        "ports": [
+          "ap_start_0",
+          "Reorder_fft_0/ap_start"
+        ]
+      },
+      "Reorder_fft_0_Imag_3_we0": {
+        "ports": [
+          "Reorder_fft_0/Imag_3_we0",
+          "Imag_3_we0_0"
+        ]
+      },
+      "Reorder_fft_0_Real_1_d0": {
+        "ports": [
+          "Reorder_fft_0/Real_1_d0",
+          "Real_1_d0_0"
+        ]
+      },
+      "Real_3_q0_0_1": {
+        "ports": [
+          "Real_3_q0_0",
+          "Reorder_fft_0/Real_3_q0"
+        ]
+      },
+      "ap_clk_0_1": {
+        "ports": [
+          "ap_clk_0",
+          "Reorder_fft_0/ap_clk"
+        ]
+      },
+      "Reorder_fft_0_Imag_0_address0": {
+        "ports": [
+          "Reorder_fft_0/Imag_0_address0",
+          "Imag_0_address0_0"
+        ]
+      },
+      "Reorder_fft_0_Imag_3_address0": {
+        "ports": [
+          "Reorder_fft_0/Imag_3_address0",
+          "Imag_3_address0_0"
+        ]
+      },
+      "Reorder_fft_0_Real_0_d0": {
+        "ports": [
+          "Reorder_fft_0/Real_0_d0",
+          "Real_0_d0_0"
+        ]
+      },
+      "Reorder_fft_0_Real_0_we0": {
+        "ports": [
+          "Reorder_fft_0/Real_0_we0",
+          "Real_0_we0_0"
+        ]
+      },
+      "Reorder_fft_0_Imag_3_d0": {
+        "ports": [
+          "Reorder_fft_0/Imag_3_d0",
+          "Imag_3_d0_0"
+        ]
+      },
+      "Real_0_q0_0_1": {
+        "ports": [
+          "Real_0_q0_0",
+          "Reorder_fft_0/Real_0_q0"
+        ]
+      },
+      "Reorder_fft_0_Real_1_ce0": {
+        "ports": [
+          "Reorder_fft_0/Real_1_ce0",
+          "Real_1_ce0_0"
+        ]
+      },
+      "Reorder_fft_0_Real_3_address0": {
+        "ports": [
+          "Reorder_fft_0/Real_3_address0",
+          "Real_3_address0_0"
+        ]
+      },
+      "Reorder_fft_0_Real_2_d0": {
+        "ports": [
+          "Reorder_fft_0/Real_2_d0",
+          "Real_2_d0_0"
+        ]
+      },
+      "Reorder_fft_0_Real_3_d0": {
+        "ports": [
+          "Reorder_fft_0/Real_3_d0",
+          "Real_3_d0_0"
+        ]
+      },
+      "Reorder_fft_0_Imag_1_address0": {
+        "ports": [
+          "Reorder_fft_0/Imag_1_address0",
+          "Imag_1_address0_0"
+        ]
+      },
+      "Reorder_fft_0_Real_0_ce0": {
+        "ports": [
+          "Reorder_fft_0/Real_0_ce0",
+          "Real_0_ce0_0"
+        ]
+      },
+      "Real_2_q0_0_1": {
+        "ports": [
+          "Real_2_q0_0",
+          "Reorder_fft_0/Real_2_q0"
+        ]
+      },
+      "Reorder_fft_0_Imag_1_d0": {
+        "ports": [
+          "Reorder_fft_0/Imag_1_d0",
+          "Imag_1_d0_0"
+        ]
+      },
+      "Real_1_q0_0_1": {
+        "ports": [
+          "Real_1_q0_0",
+          "Reorder_fft_0/Real_1_q0"
+        ]
+      },
+      "Reorder_fft_0_Real_2_we0": {
+        "ports": [
+          "Reorder_fft_0/Real_2_we0",
+          "Real_2_we0_0"
+        ]
+      },
+      "Reorder_fft_0_Imag_0_d0": {
+        "ports": [
+          "Reorder_fft_0/Imag_0_d0",
+          "Imag_0_d0_0"
+        ]
+      },
+      "Reorder_fft_0_Real_2_address0": {
+        "ports": [
+          "Reorder_fft_0/Real_2_address0",
+          "Real_2_address0_0"
+        ]
+      },
+      "Reorder_fft_0_Real_3_ce0": {
+        "ports": [
+          "Reorder_fft_0/Real_3_ce0",
+          "Real_3_ce0_0"
+        ]
+      },
+      "Imag_0_q0_0_1": {
+        "ports": [
+          "Imag_0_q0_0",
+          "Reorder_fft_0/Imag_0_q0"
+        ]
+      },
+      "Reorder_fft_0_Imag_2_we0": {
+        "ports": [
+          "Reorder_fft_0/Imag_2_we0",
+          "Imag_2_we0_0"
+        ]
+      },
+      "Reorder_fft_0_Real_1_we0": {
+        "ports": [
+          "Reorder_fft_0/Real_1_we0",
+          "Real_1_we0_0"
+        ]
+      },
+      "Reorder_fft_0_Imag_2_d0": {
+        "ports": [
+          "Reorder_fft_0/Imag_2_d0",
+          "Imag_2_d0_0"
+        ]
+      },
+      "Reorder_fft_0_Imag_3_ce0": {
+        "ports": [
+          "Reorder_fft_0/Imag_3_ce0",
+          "Imag_3_ce0_0"
+        ]
+      },
+      "Reorder_fft_0_Real_2_ce0": {
+        "ports": [
+          "Reorder_fft_0/Real_2_ce0",
+          "Real_2_ce0_0"
+        ]
+      },
+      "Reorder_fft_0_Imag_0_we0": {
+        "ports": [
+          "Reorder_fft_0/Imag_0_we0",
+          "Imag_0_we0_0"
+        ]
+      },
+      "Reorder_fft_0_Imag_1_we0": {
+        "ports": [
+          "Reorder_fft_0/Imag_1_we0",
+          "Imag_1_we0_0"
+        ]
+      },
+      "Imag_2_q0_0_1": {
+        "ports": [
+          "Imag_2_q0_0",
+          "Reorder_fft_0/Imag_2_q0"
+        ]
+      },
+      "Reorder_fft_0_Real_0_address0": {
+        "ports": [
+          "Reorder_fft_0/Real_0_address0",
+          "Real_0_address0_0"
+        ]
+      },
+      "Reorder_fft_0_Imag_1_ce0": {
+        "ports": [
+          "Reorder_fft_0/Imag_1_ce0",
+          "Imag_1_ce0_0"
+        ]
+      },
+      "Imag_1_q0_0_1": {
+        "ports": [
+          "Imag_1_q0_0",
+          "Reorder_fft_0/Imag_1_q0"
+        ]
+      },
+      "Reorder_fft_0_Imag_2_ce0": {
+        "ports": [
+          "Reorder_fft_0/Imag_2_ce0",
+          "Imag_2_ce0_0"
+        ]
+      },
+      "Reorder_fft_0_ap_done": {
+        "ports": [
+          "Reorder_fft_0/ap_done",
+          "ap_done_0"
+        ]
+      },
+      "Reorder_fft_0_ap_idle": {
+        "ports": [
+          "Reorder_fft_0/ap_idle",
+          "ap_idle_0"
+        ]
+      },
+      "ap_rst_0_1": {
+        "ports": [
+          "ap_rst_0",
+          "Reorder_fft_0/ap_rst"
+        ]
+      },
+      "Reorder_fft_0_Imag_2_address0": {
+        "ports": [
+          "Reorder_fft_0/Imag_2_address0",
+          "Imag_2_address0_0"
+        ]
+      },
+      "Reorder_fft_0_Real_3_we0": {
+        "ports": [
+          "Reorder_fft_0/Real_3_we0",
+          "Real_3_we0_0"
+        ]
+      },
+      "Reorder_fft_0_Imag_0_ce0": {
+        "ports": [
+          "Reorder_fft_0/Imag_0_ce0",
+          "Imag_0_ce0_0"
+        ]
+      },
+      "Imag_3_q0_0_1": {
+        "ports": [
+          "Imag_3_q0_0",
+          "Reorder_fft_0/Imag_3_q0"
+        ]
+      },
+      "Reorder_fft_0_Real_1_address0": {
+        "ports": [
+          "Reorder_fft_0/Real_1_address0",
+          "Real_1_address0_0"
+        ]
+      },
+      "Reorder_fft_0_ap_ready": {
+        "ports": [
+          "Reorder_fft_0/ap_ready",
+          "ap_ready_0"
+        ]
+      }
+    }
+  }
+}

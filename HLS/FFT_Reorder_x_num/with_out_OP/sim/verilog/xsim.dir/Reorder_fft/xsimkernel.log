@@ -1,0 +1,4 @@
+Running: xsim.dir/Reorder_fft/xsimk.exe -simmode gui -wdb Reorder_fft.wdb -simrunnum 0 -socket 50958
+Design successfully loaded
+Design Loading Memory Usage: 9596 KB (Peak: 9596 KB)
+Design Loading CPU Usage: 31 ms

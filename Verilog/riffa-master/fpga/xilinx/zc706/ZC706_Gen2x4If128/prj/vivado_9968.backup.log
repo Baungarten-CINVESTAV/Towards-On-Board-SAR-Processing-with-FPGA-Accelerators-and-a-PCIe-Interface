@@ -1,0 +1,100 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Mar 25 08:42:10 2021
+# Process ID: 9968
+# Current directory: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent500 C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.xpr
+# Log file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/vivado.log
+# Journal file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj'
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/EMILIO/Desktop/HLS/FFT_Reorder/Array_p/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx_2018/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 797.379 ; gain = 162.988
+update_compile_order -fileset sources_1
+file mkdir C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new
+can't create directory "C:/Users/EMILIO/Desktop/Nueva": file already exists
+file mkdir C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new
+can't create directory "C:/Users/EMILIO/Desktop/Nueva": file already exists
+file mkdir C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new
+can't create directory "C:/Users/EMILIO/Desktop/Nueva": file already exists
+file mkdir C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new
+can't create directory "C:/Users/EMILIO/Desktop/Nueva": file already exists
+file mkdir C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new
+can't create directory "C:/Users/EMILIO/Desktop/Nueva": file already exists
+file mkdir C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new
+can't create directory "C:/Users/EMILIO/Desktop/Nueva": file already exists
+file mkdir {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new}
+close [ open {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new/test_HLS_fft.v} w ]
+add_files {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new/test_HLS_fft.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+create_fileset -simset sim_2
+set_property SOURCE_SET sources_1 [get_filesets sim_2]
+ERROR: [Common 17-180] Spawn failed: No error
+current_fileset -simset [ get_filesets sim_2 ]
+set_property top ZC706_Gen2x4If128 [get_filesets sim_2]
+set_property top_lib xil_defaultlib [get_filesets sim_2]
+set_property SOURCE_SET sources_1 [get_filesets sim_2]
+set_property top test_HLS_fft [current_fileset]
+update_compile_order -fileset sources_1
+launch_simulation -simset [get_filesets sim_2 ]
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'PCIeGen2x4If128'...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.sim/sim_2/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_2'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx_2018/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.sim/sim_2/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'ZC706_Gen2x4If128' in fileset 'sim_2'...
+INFO: [SIM-utils-43] Exported 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.sim/sim_2/behav/xsim/Reorder_fft_lut_rbkb_rom.dat'
+INFO: [SIM-utils-43] Exported 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.sim/sim_2/behav/xsim/Reorder_fft_lut_rcud_rom.dat'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_2'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.sim/sim_2/behav/xsim'
+"xvlog --incr --relax -prj ZC706_Gen2x4If128_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v" into library xil_defaultlib
+ERROR: [VRFC 10-1342] root scope declaration is not allowed in verilog 95/2K mode [../../../../../../../../riffa_hdl/functions.vh:44]
+ERROR: [VRFC 10-1342] root scope declaration is not allowed in verilog 95/2K mode [../../../../../../../../riffa_hdl/functions.vh:60]
+ERROR: [VRFC 10-1342] root scope declaration is not allowed in verilog 95/2K mode [../../../../../../../../riffa_hdl/ultrascale.vh:348]
+ERROR: [VRFC 10-1342] root scope declaration is not allowed in verilog 95/2K mode [../../../../../../../../riffa_hdl/ultrascale.vh:363]
+INFO: [VRFC 10-311] analyzing module riffa_wrapper_zc706
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:144]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:147]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:162]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:165]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:181]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:183]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:205]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:207]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:303]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:305]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:326]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:328]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:378]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:381]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:395]
+INFO: [#UNDEF] Sorry, too many errors..
+"xvhdl --incr --relax -prj ZC706_Gen2x4If128_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/ipshared/00df/hdl/ip/Reorder_fft_ap_fadd_6_full_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Reorder_fft_ap_fadd_6_full_dsp_32'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.ip_user_files/bd/HLS_FFT/ip/HLS_FFT_Reorder_fft_0_0/sim/HLS_FFT_Reorder_fft_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'HLS_FFT_Reorder_fft_0_0'
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.sim/sim_2/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.sim/sim_2/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1373.547 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 25 16:57:22 2021...

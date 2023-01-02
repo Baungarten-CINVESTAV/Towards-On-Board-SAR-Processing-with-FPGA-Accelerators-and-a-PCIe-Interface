@@ -1,0 +1,1148 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB2718EBD37A7413A",
+      "device": "xc7z045ffg900-2",
+      "name": "HLS_FFT",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Real_0": "",
+      "Reorder_fft_0": "",
+      "Real_1": "",
+      "Real_2": "",
+      "Real_3": "",
+      "Imag_0": "",
+      "Imag_1": "",
+      "Imag_2": "",
+      "Imag_3": ""
+    },
+    "ports": {
+      "ap_start_0": {
+        "direction": "I"
+      },
+      "ap_clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "ap_rst_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "HLS_FFT_ap_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "ap_ready_0": {
+        "direction": "O"
+      },
+      "ap_done_0": {
+        "direction": "O"
+      },
+      "ap_idle_0": {
+        "direction": "O"
+      },
+      "ap_rst_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "addrb_Real_2": {
+        "direction": "I",
+        "left": "8",
+        "right": "0"
+      },
+      "dinb_Real_1": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "doutb_Real_3": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "addrb_Real_1": {
+        "direction": "I",
+        "left": "8",
+        "right": "0"
+      },
+      "dinb_Real_0": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "web_Real_2": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "doutb_Real_2": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "addrb_Real_0": {
+        "direction": "I",
+        "left": "8",
+        "right": "0"
+      },
+      "web_Real_1": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "doutb_Real_1": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "web_Real_0": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "doutb_Real_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "web_Imag_2": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "dinb_Imag_3": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "doutb_Imag_3": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "addrb_Imag_3": {
+        "direction": "I",
+        "left": "8",
+        "right": "0"
+      },
+      "doutb_Imag_2": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "addrb_Imag_2": {
+        "direction": "I",
+        "left": "8",
+        "right": "0"
+      },
+      "web_Imag_1": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "web_Imag_0": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "doutb_Imag_1": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "addrb_Imag_1": {
+        "direction": "I",
+        "left": "8",
+        "right": "0"
+      },
+      "dinb_Imag_2": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "web_Imag_3": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "dinb_Imag_1": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "doutb_Imag_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "addrb_Imag_0": {
+        "direction": "I",
+        "left": "8",
+        "right": "0"
+      },
+      "dinb_Imag_0": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "dinb_Real_3": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "addrb_Real_3": {
+        "direction": "I",
+        "left": "8",
+        "right": "0"
+      },
+      "dinb_Real_2": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "web_Real_3": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      }
+    },
+    "components": {
+      "Real_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "HLS_FFT_blk_mem_gen_0_0",
+        "parameters": {
+          "Assume_Synchronous_Clk": {
+            "value": "true"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Read_Width_A": {
+            "value": "32"
+          },
+          "Read_Width_B": {
+            "value": "32"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Remaining_Memory_Locations": {
+            "value": "40400000"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Use_RSTB_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "257"
+          },
+          "Write_Width_A": {
+            "value": "32"
+          },
+          "Write_Width_B": {
+            "value": "32"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "Reorder_fft_0": {
+        "vlnv": "xilinx.com:hls:Reorder_fft:1.0",
+        "xci_name": "HLS_FFT_Reorder_fft_0_0"
+      },
+      "Real_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "HLS_FFT_Real_0_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Enable_B": {
+            "value": "Always_Enabled"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Remaining_Memory_Locations": {
+            "value": "40400000"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Use_RSTB_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "257"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "Real_2": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "HLS_FFT_Real_0_1",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Enable_B": {
+            "value": "Always_Enabled"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Remaining_Memory_Locations": {
+            "value": "40400000"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Use_RSTB_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "257"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "Real_3": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "HLS_FFT_Real_0_2",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Enable_B": {
+            "value": "Always_Enabled"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Remaining_Memory_Locations": {
+            "value": "40400000"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Use_RSTB_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "257"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "Imag_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "HLS_FFT_Real_0_3",
+        "parameters": {
+          "Assume_Synchronous_Clk": {
+            "value": "true"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Enable_B": {
+            "value": "Always_Enabled"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Load_Init_File": {
+            "value": "false"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Remaining_Memory_Locations": {
+            "value": "40400000"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Use_RSTB_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "257"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "Imag_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "HLS_FFT_Imag_0_0",
+        "parameters": {
+          "Assume_Synchronous_Clk": {
+            "value": "true"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Enable_B": {
+            "value": "Always_Enabled"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Load_Init_File": {
+            "value": "false"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Remaining_Memory_Locations": {
+            "value": "40400000"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Use_RSTB_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "257"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "Imag_2": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "HLS_FFT_Imag_0_1",
+        "parameters": {
+          "Assume_Synchronous_Clk": {
+            "value": "true"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Enable_B": {
+            "value": "Always_Enabled"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Load_Init_File": {
+            "value": "false"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Remaining_Memory_Locations": {
+            "value": "40400000"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Use_RSTB_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "257"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "Imag_3": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "HLS_FFT_Imag_0_2",
+        "parameters": {
+          "Assume_Synchronous_Clk": {
+            "value": "true"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_A": {
+            "value": "Always_Enabled"
+          },
+          "Enable_B": {
+            "value": "Always_Enabled"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Remaining_Memory_Locations": {
+            "value": "40400000"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Use_RSTB_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "257"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      }
+    },
+    "nets": {
+      "ap_start_0_1": {
+        "ports": [
+          "ap_start_0",
+          "Reorder_fft_0/ap_start"
+        ]
+      },
+      "ap_clk_0_1": {
+        "ports": [
+          "ap_clk_0",
+          "Reorder_fft_0/ap_clk",
+          "Real_3/clkb",
+          "Real_2/clkb",
+          "Real_3/clka",
+          "Real_2/clka",
+          "Real_1/clka",
+          "Real_1/clkb",
+          "Real_0/clka",
+          "Real_0/clkb",
+          "Imag_0/clka",
+          "Imag_0/clkb",
+          "Imag_1/clkb",
+          "Imag_1/clka",
+          "Imag_2/clka",
+          "Imag_2/clkb",
+          "Imag_3/clkb",
+          "Imag_3/clka"
+        ]
+      },
+      "Reorder_fft_0_ap_ready": {
+        "ports": [
+          "Reorder_fft_0/ap_ready",
+          "ap_ready_0"
+        ]
+      },
+      "Reorder_fft_0_ap_done": {
+        "ports": [
+          "Reorder_fft_0/ap_done",
+          "ap_done_0"
+        ]
+      },
+      "Reorder_fft_0_ap_idle": {
+        "ports": [
+          "Reorder_fft_0/ap_idle",
+          "ap_idle_0"
+        ]
+      },
+      "ap_rst_0_1": {
+        "ports": [
+          "ap_rst_0",
+          "Reorder_fft_0/ap_rst"
+        ]
+      },
+      "Reorder_fft_0_Real_0_we0": {
+        "ports": [
+          "Reorder_fft_0/Real_0_we0",
+          "Real_0/wea"
+        ]
+      },
+      "Reorder_fft_0_Real_1_we0": {
+        "ports": [
+          "Reorder_fft_0/Real_1_we0",
+          "Real_1/wea"
+        ]
+      },
+      "Reorder_fft_0_Real_2_we0": {
+        "ports": [
+          "Reorder_fft_0/Real_2_we0",
+          "Real_2/wea"
+        ]
+      },
+      "Reorder_fft_0_Real_3_we0": {
+        "ports": [
+          "Reorder_fft_0/Real_3_we0",
+          "Real_3/wea"
+        ]
+      },
+      "Reorder_fft_0_Real_2_address0": {
+        "ports": [
+          "Reorder_fft_0/Real_2_address0",
+          "Real_2/addra"
+        ]
+      },
+      "Reorder_fft_0_Real_2_d0": {
+        "ports": [
+          "Reorder_fft_0/Real_2_d0",
+          "Real_2/dina"
+        ]
+      },
+      "Reorder_fft_0_Real_3_address0": {
+        "ports": [
+          "Reorder_fft_0/Real_3_address0",
+          "Real_3/addra"
+        ]
+      },
+      "Reorder_fft_0_Real_3_d0": {
+        "ports": [
+          "Reorder_fft_0/Real_3_d0",
+          "Real_3/dina"
+        ]
+      },
+      "Real_3_douta": {
+        "ports": [
+          "Real_3/douta",
+          "Reorder_fft_0/Real_3_q0"
+        ]
+      },
+      "Real_2_douta": {
+        "ports": [
+          "Real_2/douta",
+          "Reorder_fft_0/Real_2_q0"
+        ]
+      },
+      "Real_1_douta": {
+        "ports": [
+          "Real_1/douta",
+          "Reorder_fft_0/Real_1_q0"
+        ]
+      },
+      "Real_0_douta": {
+        "ports": [
+          "Real_0/douta",
+          "Reorder_fft_0/Real_0_q0"
+        ]
+      },
+      "Reorder_fft_0_Real_1_address0": {
+        "ports": [
+          "Reorder_fft_0/Real_1_address0",
+          "Real_1/addra"
+        ]
+      },
+      "Reorder_fft_0_Real_1_d0": {
+        "ports": [
+          "Reorder_fft_0/Real_1_d0",
+          "Real_1/dina"
+        ]
+      },
+      "Reorder_fft_0_Imag_0_we0": {
+        "ports": [
+          "Reorder_fft_0/Imag_0_we0",
+          "Imag_0/wea"
+        ]
+      },
+      "Reorder_fft_0_Imag_1_we0": {
+        "ports": [
+          "Reorder_fft_0/Imag_1_we0",
+          "Imag_1/wea"
+        ]
+      },
+      "Reorder_fft_0_Imag_2_we0": {
+        "ports": [
+          "Reorder_fft_0/Imag_2_we0",
+          "Imag_2/wea"
+        ]
+      },
+      "Reorder_fft_0_Imag_3_we0": {
+        "ports": [
+          "Reorder_fft_0/Imag_3_we0",
+          "Imag_3/wea"
+        ]
+      },
+      "Reorder_fft_0_Imag_0_address0": {
+        "ports": [
+          "Reorder_fft_0/Imag_0_address0",
+          "Imag_0/addra"
+        ]
+      },
+      "Reorder_fft_0_Imag_0_d0": {
+        "ports": [
+          "Reorder_fft_0/Imag_0_d0",
+          "Imag_0/dina"
+        ]
+      },
+      "Reorder_fft_0_Imag_1_address0": {
+        "ports": [
+          "Reorder_fft_0/Imag_1_address0",
+          "Imag_1/addra"
+        ]
+      },
+      "Reorder_fft_0_Imag_1_d0": {
+        "ports": [
+          "Reorder_fft_0/Imag_1_d0",
+          "Imag_1/dina"
+        ]
+      },
+      "Reorder_fft_0_Imag_2_address0": {
+        "ports": [
+          "Reorder_fft_0/Imag_2_address0",
+          "Imag_2/addra"
+        ]
+      },
+      "Reorder_fft_0_Imag_2_d0": {
+        "ports": [
+          "Reorder_fft_0/Imag_2_d0",
+          "Imag_2/dina"
+        ]
+      },
+      "Reorder_fft_0_Imag_3_address0": {
+        "ports": [
+          "Reorder_fft_0/Imag_3_address0",
+          "Imag_3/addra"
+        ]
+      },
+      "Reorder_fft_0_Imag_3_d0": {
+        "ports": [
+          "Reorder_fft_0/Imag_3_d0",
+          "Imag_3/dina"
+        ]
+      },
+      "Imag_0_douta": {
+        "ports": [
+          "Imag_0/douta",
+          "Reorder_fft_0/Imag_0_q0"
+        ]
+      },
+      "Imag_1_douta": {
+        "ports": [
+          "Imag_1/douta",
+          "Reorder_fft_0/Imag_1_q0"
+        ]
+      },
+      "Imag_2_douta": {
+        "ports": [
+          "Imag_2/douta",
+          "Reorder_fft_0/Imag_2_q0"
+        ]
+      },
+      "Imag_3_douta": {
+        "ports": [
+          "Imag_3/douta",
+          "Reorder_fft_0/Imag_3_q0"
+        ]
+      },
+      "Reorder_fft_0_Real_0_address0": {
+        "ports": [
+          "Reorder_fft_0/Real_0_address0",
+          "Real_0/addra"
+        ]
+      },
+      "Reorder_fft_0_Real_0_d0": {
+        "ports": [
+          "Reorder_fft_0/Real_0_d0",
+          "Real_0/dina"
+        ]
+      },
+      "addrb_0_1": {
+        "ports": [
+          "addrb_Real_2",
+          "Real_2/addrb"
+        ]
+      },
+      "dinb_0_1": {
+        "ports": [
+          "dinb_Real_1",
+          "Real_1/dinb"
+        ]
+      },
+      "Real_3_doutb": {
+        "ports": [
+          "Real_3/doutb",
+          "doutb_Real_3"
+        ]
+      },
+      "addrb_1_1": {
+        "ports": [
+          "addrb_Real_1",
+          "Real_1/addrb"
+        ]
+      },
+      "dinb_1_1": {
+        "ports": [
+          "dinb_Real_0",
+          "Real_0/dinb"
+        ]
+      },
+      "web_0_1": {
+        "ports": [
+          "web_Real_2",
+          "Real_2/web"
+        ]
+      },
+      "Real_2_doutb": {
+        "ports": [
+          "Real_2/doutb",
+          "doutb_Real_2"
+        ]
+      },
+      "addrb_2_1": {
+        "ports": [
+          "addrb_Real_0",
+          "Real_0/addrb"
+        ]
+      },
+      "web_1_1": {
+        "ports": [
+          "web_Real_1",
+          "Real_1/web"
+        ]
+      },
+      "Real_1_doutb": {
+        "ports": [
+          "Real_1/doutb",
+          "doutb_Real_1"
+        ]
+      },
+      "web_2_1": {
+        "ports": [
+          "web_Real_0",
+          "Real_0/web"
+        ]
+      },
+      "Real_0_doutb": {
+        "ports": [
+          "Real_0/doutb",
+          "doutb_Real_0"
+        ]
+      },
+      "web_3_1": {
+        "ports": [
+          "web_Imag_2",
+          "Imag_2/web"
+        ]
+      },
+      "dinb_2_1": {
+        "ports": [
+          "dinb_Imag_3",
+          "Imag_3/dinb"
+        ]
+      },
+      "Imag_3_doutb": {
+        "ports": [
+          "Imag_3/doutb",
+          "doutb_Imag_3"
+        ]
+      },
+      "addrb_3_1": {
+        "ports": [
+          "addrb_Imag_3",
+          "Imag_3/addrb"
+        ]
+      },
+      "Imag_2_doutb": {
+        "ports": [
+          "Imag_2/doutb",
+          "doutb_Imag_2"
+        ]
+      },
+      "addrb_4_1": {
+        "ports": [
+          "addrb_Imag_2",
+          "Imag_2/addrb"
+        ]
+      },
+      "web_4_1": {
+        "ports": [
+          "web_Imag_1",
+          "Imag_1/web"
+        ]
+      },
+      "web_5_1": {
+        "ports": [
+          "web_Imag_0",
+          "Imag_0/web"
+        ]
+      },
+      "Imag_1_doutb": {
+        "ports": [
+          "Imag_1/doutb",
+          "doutb_Imag_1"
+        ]
+      },
+      "addrb_5_1": {
+        "ports": [
+          "addrb_Imag_1",
+          "Imag_1/addrb"
+        ]
+      },
+      "dinb_3_1": {
+        "ports": [
+          "dinb_Imag_2",
+          "Imag_2/dinb"
+        ]
+      },
+      "web_6_1": {
+        "ports": [
+          "web_Imag_3",
+          "Imag_3/web"
+        ]
+      },
+      "dinb_4_1": {
+        "ports": [
+          "dinb_Imag_1",
+          "Imag_1/dinb"
+        ]
+      },
+      "Imag_0_doutb": {
+        "ports": [
+          "Imag_0/doutb",
+          "doutb_Imag_0"
+        ]
+      },
+      "addrb_6_1": {
+        "ports": [
+          "addrb_Imag_0",
+          "Imag_0/addrb"
+        ]
+      },
+      "dinb_5_1": {
+        "ports": [
+          "dinb_Imag_0",
+          "Imag_0/dinb"
+        ]
+      },
+      "dinb_6_1": {
+        "ports": [
+          "dinb_Real_3",
+          "Real_3/dinb"
+        ]
+      },
+      "addrb_7_1": {
+        "ports": [
+          "addrb_Real_3",
+          "Real_3/addrb"
+        ]
+      },
+      "dinb_7_1": {
+        "ports": [
+          "dinb_Real_2",
+          "Real_2/dinb"
+        ]
+      },
+      "web_7_1": {
+        "ports": [
+          "web_Real_3",
+          "Real_3/web"
+        ]
+      }
+    }
+  }
+}

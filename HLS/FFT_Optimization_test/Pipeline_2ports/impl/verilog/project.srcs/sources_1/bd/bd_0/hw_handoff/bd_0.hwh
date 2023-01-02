@@ -1,0 +1,761 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Nov 10 09:29:17 2020" VIVADOVERSION="2019.1.3">
+
+  <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="bd_0" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000.0" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="ap_clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="ap_rst_n" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="ap_rst_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="hls_inst_interrupt">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="interrupt"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="Imag_PORTA_clk" SIGIS="clk" SIGNAME="hls_inst_Imag_Clk_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_Clk_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Imag_PORTA_rst" SIGIS="rst" SIGNAME="hls_inst_Imag_Rst_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_Rst_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Imag_PORTA_en" SIGIS="undef" SIGNAME="hls_inst_Imag_EN_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_EN_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="Imag_PORTA_we" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_WEN_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_WEN_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="Imag_PORTA_addr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_Addr_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_Addr_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="Imag_PORTA_din" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_Din_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_Din_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="Imag_PORTA_dout" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_Dout_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_Dout_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="Imag_PORTB_clk" SIGIS="clk" SIGNAME="hls_inst_Imag_Clk_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_Clk_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Imag_PORTB_rst" SIGIS="rst" SIGNAME="hls_inst_Imag_Rst_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_Rst_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Imag_PORTB_en" SIGIS="undef" SIGNAME="hls_inst_Imag_EN_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_EN_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="Imag_PORTB_we" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_WEN_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_WEN_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="Imag_PORTB_addr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_Addr_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_Addr_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="Imag_PORTB_din" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_Din_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_Din_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="Imag_PORTB_dout" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_Dout_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Imag_Dout_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="Real_r_PORTA_clk" SIGIS="clk" SIGNAME="hls_inst_Real_r_Clk_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_Clk_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Real_r_PORTA_rst" SIGIS="rst" SIGNAME="hls_inst_Real_r_Rst_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_Rst_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Real_r_PORTA_en" SIGIS="undef" SIGNAME="hls_inst_Real_r_EN_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_EN_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="Real_r_PORTA_we" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_WEN_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_WEN_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="Real_r_PORTA_addr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_Addr_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_Addr_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="Real_r_PORTA_din" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_Din_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_Din_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="Real_r_PORTA_dout" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_Dout_A">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_Dout_A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="Real_r_PORTB_clk" SIGIS="clk" SIGNAME="hls_inst_Real_r_Clk_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_Clk_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Real_r_PORTB_rst" SIGIS="rst" SIGNAME="hls_inst_Real_r_Rst_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_Rst_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Real_r_PORTB_en" SIGIS="undef" SIGNAME="hls_inst_Real_r_EN_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_EN_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="Real_r_PORTB_we" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_WEN_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_WEN_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="Real_r_PORTB_addr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_Addr_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_Addr_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="Real_r_PORTB_din" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_Din_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_Din_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="Real_r_PORTB_dout" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_Dout_B">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="Real_r_Dout_B"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="s_axi_AXILiteS_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_AWADDR">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_AWADDR"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s_axi_AXILiteS_awvalid" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_AWVALID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_AWVALID"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="s_axi_AXILiteS_awready" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_AWREADY">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_AWREADY"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="s_axi_AXILiteS_wdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_WDATA">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_WDATA"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="s_axi_AXILiteS_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_WSTRB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_WSTRB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s_axi_AXILiteS_wvalid" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_WVALID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_WVALID"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="s_axi_AXILiteS_wready" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_WREADY">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_WREADY"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="s_axi_AXILiteS_bresp" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_BRESP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_BRESP"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="s_axi_AXILiteS_bvalid" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_BVALID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_BVALID"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s_axi_AXILiteS_bready" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_BREADY">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_BREADY"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="s_axi_AXILiteS_araddr" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_ARADDR">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_ARADDR"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s_axi_AXILiteS_arvalid" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_ARVALID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_ARVALID"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="s_axi_AXILiteS_arready" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_ARREADY">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_ARREADY"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="s_axi_AXILiteS_rdata" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_RDATA">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_RDATA"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="s_axi_AXILiteS_rresp" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_RRESP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_RRESP"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="s_axi_AXILiteS_rvalid" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_RVALID">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_RVALID"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s_axi_AXILiteS_rready" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_RREADY">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hls_inst" PORT="s_axi_AXILiteS_RREADY"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES>
+    <BUSINTERFACE BUSNAME="hls_inst_Imag_PORTA" NAME="Imag_PORTA" TYPE="INITIATOR">
+      <PARAMETER NAME="MEM_SIZE" VALUE="4"/>
+      <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+      <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+      <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+      <PARAMETER NAME="READ_WRITE_MODE"/>
+      <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="CLK" PHYSICAL="Imag_PORTA_clk"/>
+        <PORTMAP LOGICAL="RST" PHYSICAL="Imag_PORTA_rst"/>
+        <PORTMAP LOGICAL="EN" PHYSICAL="Imag_PORTA_en"/>
+        <PORTMAP LOGICAL="WE" PHYSICAL="Imag_PORTA_we"/>
+        <PORTMAP LOGICAL="ADDR" PHYSICAL="Imag_PORTA_addr"/>
+        <PORTMAP LOGICAL="DIN" PHYSICAL="Imag_PORTA_din"/>
+        <PORTMAP LOGICAL="DOUT" PHYSICAL="Imag_PORTA_dout"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="hls_inst_Imag_PORTB" NAME="Imag_PORTB" TYPE="INITIATOR">
+      <PARAMETER NAME="MEM_SIZE" VALUE="4"/>
+      <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+      <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+      <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+      <PARAMETER NAME="READ_WRITE_MODE"/>
+      <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="CLK" PHYSICAL="Imag_PORTB_clk"/>
+        <PORTMAP LOGICAL="RST" PHYSICAL="Imag_PORTB_rst"/>
+        <PORTMAP LOGICAL="EN" PHYSICAL="Imag_PORTB_en"/>
+        <PORTMAP LOGICAL="WE" PHYSICAL="Imag_PORTB_we"/>
+        <PORTMAP LOGICAL="ADDR" PHYSICAL="Imag_PORTB_addr"/>
+        <PORTMAP LOGICAL="DIN" PHYSICAL="Imag_PORTB_din"/>
+        <PORTMAP LOGICAL="DOUT" PHYSICAL="Imag_PORTB_dout"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="hls_inst_Real_r_PORTA" NAME="Real_r_PORTA" TYPE="INITIATOR">
+      <PARAMETER NAME="MEM_SIZE" VALUE="4"/>
+      <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+      <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+      <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+      <PARAMETER NAME="READ_WRITE_MODE"/>
+      <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="CLK" PHYSICAL="Real_r_PORTA_clk"/>
+        <PORTMAP LOGICAL="RST" PHYSICAL="Real_r_PORTA_rst"/>
+        <PORTMAP LOGICAL="EN" PHYSICAL="Real_r_PORTA_en"/>
+        <PORTMAP LOGICAL="WE" PHYSICAL="Real_r_PORTA_we"/>
+        <PORTMAP LOGICAL="ADDR" PHYSICAL="Real_r_PORTA_addr"/>
+        <PORTMAP LOGICAL="DIN" PHYSICAL="Real_r_PORTA_din"/>
+        <PORTMAP LOGICAL="DOUT" PHYSICAL="Real_r_PORTA_dout"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="hls_inst_Real_r_PORTB" NAME="Real_r_PORTB" TYPE="INITIATOR">
+      <PARAMETER NAME="MEM_SIZE" VALUE="4"/>
+      <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+      <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+      <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+      <PARAMETER NAME="READ_WRITE_MODE"/>
+      <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="CLK" PHYSICAL="Real_r_PORTB_clk"/>
+        <PORTMAP LOGICAL="RST" PHYSICAL="Real_r_PORTB_rst"/>
+        <PORTMAP LOGICAL="EN" PHYSICAL="Real_r_PORTB_en"/>
+        <PORTMAP LOGICAL="WE" PHYSICAL="Real_r_PORTB_we"/>
+        <PORTMAP LOGICAL="ADDR" PHYSICAL="Real_r_PORTB_addr"/>
+        <PORTMAP LOGICAL="DIN" PHYSICAL="Real_r_PORTB_din"/>
+        <PORTMAP LOGICAL="DOUT" PHYSICAL="Real_r_PORTB_dout"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="External_Interface_s_axi_AXILiteS" DATAWIDTH="32" NAME="s_axi_AXILiteS" TYPE="SLAVE">
+      <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+      <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
+      <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="ADDR_WIDTH" VALUE="12"/>
+      <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+      <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+      <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+      <PARAMETER NAME="HAS_PROT" VALUE="0"/>
+      <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+      <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+      <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+      <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+      <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+      <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+      <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+      <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
+      <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+      <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_0_ap_clk_0"/>
+      <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+      <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+      <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+      <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+      <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+      <PORTMAPS>
+        <PORTMAP LOGICAL="AWADDR" PHYSICAL="s_axi_AXILiteS_awaddr"/>
+        <PORTMAP LOGICAL="AWVALID" PHYSICAL="s_axi_AXILiteS_awvalid"/>
+        <PORTMAP LOGICAL="AWREADY" PHYSICAL="s_axi_AXILiteS_awready"/>
+        <PORTMAP LOGICAL="WDATA" PHYSICAL="s_axi_AXILiteS_wdata"/>
+        <PORTMAP LOGICAL="WSTRB" PHYSICAL="s_axi_AXILiteS_wstrb"/>
+        <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_AXILiteS_wvalid"/>
+        <PORTMAP LOGICAL="WREADY" PHYSICAL="s_axi_AXILiteS_wready"/>
+        <PORTMAP LOGICAL="BRESP" PHYSICAL="s_axi_AXILiteS_bresp"/>
+        <PORTMAP LOGICAL="BVALID" PHYSICAL="s_axi_AXILiteS_bvalid"/>
+        <PORTMAP LOGICAL="BREADY" PHYSICAL="s_axi_AXILiteS_bready"/>
+        <PORTMAP LOGICAL="ARADDR" PHYSICAL="s_axi_AXILiteS_araddr"/>
+        <PORTMAP LOGICAL="ARVALID" PHYSICAL="s_axi_AXILiteS_arvalid"/>
+        <PORTMAP LOGICAL="ARREADY" PHYSICAL="s_axi_AXILiteS_arready"/>
+        <PORTMAP LOGICAL="RDATA" PHYSICAL="s_axi_AXILiteS_rdata"/>
+        <PORTMAP LOGICAL="RRESP" PHYSICAL="s_axi_AXILiteS_rresp"/>
+        <PORTMAP LOGICAL="RVALID" PHYSICAL="s_axi_AXILiteS_rvalid"/>
+        <PORTMAP LOGICAL="RREADY" PHYSICAL="s_axi_AXILiteS_rready"/>
+      </PORTMAPS>
+      <MEMORYMAP>
+        <MEMRANGE ADDRESSBLOCK="Reg" BASENAME="C_S_AXI_AXILITES_BASEADDR" BASEVALUE="0x00000000" HIGHNAME="C_S_AXI_AXILITES_HIGHADDR" HIGHVALUE="0x00000FFF" INSTANCE="hls_inst" IS_DATA="TRUE" IS_INSTRUCTION="TRUE" MASTERBUSINTERFACE="s_axi_AXILiteS" MEMTYPE="REGISTER" SLAVEBUSINTERFACE="s_axi_AXILiteS"/>
+      </MEMORYMAP>
+      <PERIPHERALS>
+        <PERIPHERAL INSTANCE="hls_inst"/>
+      </PERIPHERALS>
+    </BUSINTERFACE>
+  </EXTERNALINTERFACES>
+
+  <MODULES>
+    <MODULE COREREVISION="2011100928" FULLNAME="/hls_inst" HWVERSION="1.0" INSTANCE="hls_inst" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Reorder_fft" VLNV="xilinx.com:hls:Reorder_fft:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_S_AXI_AXILITES_ADDR_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="C_S_AXI_AXILITES_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_0_hls_inst_0"/>
+        <PARAMETER NAME="clk_period" VALUE="10"/>
+        <PARAMETER NAME="machine" VALUE="64"/>
+        <PARAMETER NAME="combinational" VALUE="0"/>
+        <PARAMETER NAME="latency" VALUE="2738"/>
+        <PARAMETER NAME="II" VALUE="x"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="C_S_AXI_AXILITES_BASEADDR" VALUE="0x00000000"/>
+        <PARAMETER NAME="C_S_AXI_AXILITES_HIGHADDR" VALUE="0x00000FFF"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="s_axi_AXILiteS_AWADDR" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_AWADDR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_AXILiteS_AWVALID" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_AWVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_AXILiteS_AWREADY" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_AWREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s_axi_AXILiteS_WDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_WDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s_axi_AXILiteS_WSTRB" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_WSTRB">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_AXILiteS_WVALID" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_WVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_AXILiteS_WREADY" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_WREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_AXILiteS_BRESP" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_BRESP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_AXILiteS_BVALID" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_BVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_AXILiteS_BREADY" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_BREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s_axi_AXILiteS_ARADDR" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_ARADDR">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_AXILiteS_ARVALID" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_ARVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_AXILiteS_ARREADY" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_ARREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="s_axi_AXILiteS_RDATA" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_RDATA">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="s_axi_AXILiteS_RRESP" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_RRESP">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axi_AXILiteS_RVALID" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_RVALID">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_AXILiteS_RREADY" SIGIS="undef" SIGNAME="hls_inst_s_axi_AXILiteS_RREADY">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="s_axi_AXILiteS_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000.0" DIR="I" NAME="ap_clk" SIGIS="clk" SIGNAME="External_Ports_ap_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="ap_rst_n" SIGIS="rst" SIGNAME="External_Ports_ap_rst_n">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="ap_rst_n"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="hls_inst_interrupt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="interrupt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Real_r_Clk_A" SIGIS="clk" SIGNAME="hls_inst_Real_r_Clk_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTA_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Real_r_Rst_A" SIGIS="rst" SIGNAME="hls_inst_Real_r_Rst_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTA_rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Real_r_EN_A" SIGIS="undef" SIGNAME="hls_inst_Real_r_EN_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTA_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Real_r_WEN_A" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_WEN_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTA_we"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Real_r_Addr_A" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_Addr_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTA_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Real_r_Din_A" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_Din_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTA_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="Real_r_Dout_A" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_Dout_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTA_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Real_r_Clk_B" SIGIS="clk" SIGNAME="hls_inst_Real_r_Clk_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTB_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Real_r_Rst_B" SIGIS="rst" SIGNAME="hls_inst_Real_r_Rst_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTB_rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Real_r_EN_B" SIGIS="undef" SIGNAME="hls_inst_Real_r_EN_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTB_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Real_r_WEN_B" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_WEN_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTB_we"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Real_r_Addr_B" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_Addr_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTB_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Real_r_Din_B" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_Din_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTB_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="Real_r_Dout_B" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Real_r_Dout_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Real_r_PORTB_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Imag_Clk_A" SIGIS="clk" SIGNAME="hls_inst_Imag_Clk_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTA_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Imag_Rst_A" SIGIS="rst" SIGNAME="hls_inst_Imag_Rst_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTA_rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Imag_EN_A" SIGIS="undef" SIGNAME="hls_inst_Imag_EN_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTA_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Imag_WEN_A" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_WEN_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTA_we"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Imag_Addr_A" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_Addr_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTA_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Imag_Din_A" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_Din_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTA_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="Imag_Dout_A" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_Dout_A">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTA_dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Imag_Clk_B" SIGIS="clk" SIGNAME="hls_inst_Imag_Clk_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTB_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Imag_Rst_B" SIGIS="rst" SIGNAME="hls_inst_Imag_Rst_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTB_rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Imag_EN_B" SIGIS="undef" SIGNAME="hls_inst_Imag_EN_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTB_en"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Imag_WEN_B" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_WEN_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTB_we"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Imag_Addr_B" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_Addr_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTB_addr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Imag_Din_B" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_Din_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTB_din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="Imag_Dout_B" RIGHT="0" SIGIS="undef" SIGNAME="hls_inst_Imag_Dout_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_0_imp" PORT="Imag_PORTB_dout"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="External_Interface_s_axi_AXILiteS" DATAWIDTH="32" NAME="s_axi_AXILiteS" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="4"/>
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000.0"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="0"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="bd_0_ap_clk_0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="s_axi_AXILiteS_AWADDR"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="s_axi_AXILiteS_AWVALID"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="s_axi_AXILiteS_AWREADY"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="s_axi_AXILiteS_WDATA"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="s_axi_AXILiteS_WSTRB"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_AXILiteS_WVALID"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="s_axi_AXILiteS_WREADY"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="s_axi_AXILiteS_BRESP"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="s_axi_AXILiteS_BVALID"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="s_axi_AXILiteS_BREADY"/>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="s_axi_AXILiteS_ARADDR"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="s_axi_AXILiteS_ARVALID"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="s_axi_AXILiteS_ARREADY"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="s_axi_AXILiteS_RDATA"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="s_axi_AXILiteS_RRESP"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="s_axi_AXILiteS_RVALID"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="s_axi_AXILiteS_RREADY"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="hls_inst_Real_r_PORTA" NAME="Real_r_PORTA" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="4"/>
+          <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="READ_WRITE_MODE"/>
+          <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="Real_r_Clk_A"/>
+            <PORTMAP LOGICAL="RST" PHYSICAL="Real_r_Rst_A"/>
+            <PORTMAP LOGICAL="EN" PHYSICAL="Real_r_EN_A"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="Real_r_WEN_A"/>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="Real_r_Addr_A"/>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="Real_r_Din_A"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="Real_r_Dout_A"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="hls_inst_Real_r_PORTB" NAME="Real_r_PORTB" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="4"/>
+          <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="READ_WRITE_MODE"/>
+          <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="Real_r_Clk_B"/>
+            <PORTMAP LOGICAL="RST" PHYSICAL="Real_r_Rst_B"/>
+            <PORTMAP LOGICAL="EN" PHYSICAL="Real_r_EN_B"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="Real_r_WEN_B"/>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="Real_r_Addr_B"/>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="Real_r_Din_B"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="Real_r_Dout_B"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="hls_inst_Imag_PORTA" NAME="Imag_PORTA" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="4"/>
+          <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="READ_WRITE_MODE"/>
+          <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="Imag_Clk_A"/>
+            <PORTMAP LOGICAL="RST" PHYSICAL="Imag_Rst_A"/>
+            <PORTMAP LOGICAL="EN" PHYSICAL="Imag_EN_A"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="Imag_WEN_A"/>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="Imag_Addr_A"/>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="Imag_Din_A"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="Imag_Dout_A"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="hls_inst_Imag_PORTB" NAME="Imag_PORTB" TYPE="INITIATOR" VLNV="xilinx.com:interface:bram:1.0">
+          <PARAMETER NAME="MEM_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="MEM_SIZE" VALUE="4"/>
+          <PARAMETER NAME="MASTER_TYPE" VALUE="BRAM_CTRL"/>
+          <PARAMETER NAME="MEM_ECC" VALUE="NONE"/>
+          <PARAMETER NAME="READ_WRITE_MODE"/>
+          <PARAMETER NAME="READ_LATENCY" VALUE="1"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="CLK" PHYSICAL="Imag_Clk_B"/>
+            <PORTMAP LOGICAL="RST" PHYSICAL="Imag_Rst_B"/>
+            <PORTMAP LOGICAL="EN" PHYSICAL="Imag_EN_B"/>
+            <PORTMAP LOGICAL="WE" PHYSICAL="Imag_WEN_B"/>
+            <PORTMAP LOGICAL="ADDR" PHYSICAL="Imag_Addr_B"/>
+            <PORTMAP LOGICAL="DIN" PHYSICAL="Imag_Din_B"/>
+            <PORTMAP LOGICAL="DOUT" PHYSICAL="Imag_Dout_B"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

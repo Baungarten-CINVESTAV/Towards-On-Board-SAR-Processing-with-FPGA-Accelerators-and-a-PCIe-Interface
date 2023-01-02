@@ -1,0 +1,1 @@
+Vivado project path: Verilog\riffa-master\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj

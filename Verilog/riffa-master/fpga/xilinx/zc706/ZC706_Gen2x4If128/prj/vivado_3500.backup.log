@@ -1,0 +1,253 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Mar 28 16:10:27 2021
+# Process ID: 3500
+# Current directory: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11072 C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6_v3_2\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.xpr
+# Log file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/vivado.log
+# Journal file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj'
+INFO: [Project 1-313] Project file moved from 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/EMILIO/Desktop/HLS/FFT_Reorder/Array_p/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx_2018/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 777.910 ; gain = 176.402
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251840302
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 1919.867 ; gain = 534.188
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+current_hw_device [get_hw_devices xc7z045_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1435] Device xc7z045 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1944.973 ; gain = 16.879
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 16:23:10 2021] Launched synth_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Sun Mar 28 16:23:10 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 16:31:27 2021] Launched synth_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Sun Mar 28 16:31:27 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2476.285 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 17:05:17 2021] Launched synth_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Sun Mar 28 17:05:17 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+reset_run impl_1 -prev_step 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 17:09:11 2021] Launched synth_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Sun Mar 28 17:09:11 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2476.285 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 17:28:07 2021] Launched synth_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Sun Mar 28 17:28:07 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2476.285 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 17:57:24 2021] Launched synth_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Sun Mar 28 17:57:25 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2476.285 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 18:21:23 2021] Launched synth_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Sun Mar 28 18:21:24 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2476.285 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 18:40:23 2021] Launched synth_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Sun Mar 28 18:40:24 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2476.285 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 19:07:49 2021] Launched synth_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Sun Mar 28 19:07:49 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2476.285 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 19:25:50 2021] Launched synth_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Sun Mar 28 19:25:51 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2476.285 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 19:44:48 2021] Launched synth_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Sun Mar 28 19:44:48 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2476.285 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sun Mar 28 20:02:23 2021] Launched synth_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Sun Mar 28 20:02:23 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2476.285 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210251840302
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251840302
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z045 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2476.285 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 28 22:37:09 2021...

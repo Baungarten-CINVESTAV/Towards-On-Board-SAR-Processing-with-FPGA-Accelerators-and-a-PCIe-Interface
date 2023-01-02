@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="FFT_reorder.h" path="D:\Maestria\Paper_Github\HLS\FFT_reorder.h"/>
+    <originFiles name="Reorder_FFT.cpp" path="D:\Maestria\Paper_Github\HLS\FFT_Optimization_test\Reorder_FFT.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="Reorder_FFT_test.cpp" path="D:\Maestria\Paper_Github\HLS\FFT_Optimization_test\Reorder_FFT_test.cpp"/>
+    <originFiles name="Reales_ordered.txt" path="D:\Maestria\Paper_Github\HLS\Reales_ordered.txt"/>
+    <originFiles name="Reales_bininv.txt" path="D:\Maestria\Paper_Github\HLS\Reales_bininv.txt"/>
+    <originFiles name="Reales.txt" path="D:\Maestria\Paper_Github\HLS\Reales.txt"/>
+    <originFiles name="Imag_ordered.txt" path="D:\Maestria\Paper_Github\HLS\Imag_ordered.txt"/>
+    <originFiles name="Imag_bininv.txt" path="D:\Maestria\Paper_Github\HLS\Imag_bininv.txt"/>
+    <originFiles name="Imag.txt" path="D:\Maestria\Paper_Github\HLS\Imag.txt"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

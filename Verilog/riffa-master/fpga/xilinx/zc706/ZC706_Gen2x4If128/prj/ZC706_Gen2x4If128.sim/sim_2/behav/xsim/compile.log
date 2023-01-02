@@ -1,0 +1,26 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v" into library xil_defaultlib
+ERROR: [VRFC 10-1342] root scope declaration is not allowed in verilog 95/2K mode [../../../../../../../../riffa_hdl/functions.vh:44]
+ERROR: [VRFC 10-1342] root scope declaration is not allowed in verilog 95/2K mode [../../../../../../../../riffa_hdl/functions.vh:60]
+ERROR: [VRFC 10-1342] root scope declaration is not allowed in verilog 95/2K mode [../../../../../../../../riffa_hdl/ultrascale.vh:348]
+ERROR: [VRFC 10-1342] root scope declaration is not allowed in verilog 95/2K mode [../../../../../../../../riffa_hdl/ultrascale.vh:363]
+INFO: [VRFC 10-311] analyzing module riffa_wrapper_zc706
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:144]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:147]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:162]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:165]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:181]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:183]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:205]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:207]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:303]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:305]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:326]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:328]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:378]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:381]
+ERROR: [VRFC 10-1775] range must be bounded by constant expressions [C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v:395]
+INFO: [#UNDEF] Sorry, too many errors..
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/ipshared/00df/hdl/ip/Reorder_fft_ap_fadd_6_full_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Reorder_fft_ap_fadd_6_full_dsp_32'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.ip_user_files/bd/HLS_FFT/ip/HLS_FFT_Reorder_fft_0_0/sim/HLS_FFT_Reorder_fft_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'HLS_FFT_Reorder_fft_0_0'

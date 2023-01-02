@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 29 06:55:47 2021
+# Process ID: 5256
+# Current directory: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5200 C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6_v3_3\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.xpr
+# Log file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/vivado.log
+# Journal file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.xpr}
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  C:/Users/EMILIO/Desktop/HLS/FFR_Reorder_x_num/With_array_P/impl/ip [current_project]
+update_ip_catalog
+create_bd_design "FFT_Reorder_x_num"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:Reorder_fft:1.0 Reorder_fft_0
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins Reorder_fft_0/ap_start] [get_bd_pins Reorder_fft_0/Imag_3_q0] [get_bd_pins Reorder_fft_0/Imag_3_we0] [get_bd_pins Reorder_fft_0/Real_1_address0] [get_bd_pins Reorder_fft_0/Real_3_d0] [get_bd_pins Reorder_fft_0/ap_clk] [get_bd_pins Reorder_fft_0/Imag_2_q0] [get_bd_pins Reorder_fft_0/Real_0_address0] [get_bd_pins Reorder_fft_0/Real_0_we0] [get_bd_pins Reorder_fft_0/Real_3_q0] [get_bd_pins Reorder_fft_0/Imag_3_address0] [get_bd_pins Reorder_fft_0/Real_0_d0] [get_bd_pins Reorder_fft_0/Real_1_ce0] [get_bd_pins Reorder_fft_0/Real_2_q0] [get_bd_pins Reorder_fft_0/Real_2_address0] [get_bd_pins Reorder_fft_0/Real_3_address0] [get_bd_pins Reorder_fft_0/Imag_0_q0] [get_bd_pins Reorder_fft_0/Real_0_ce0] [get_bd_pins Reorder_fft_0/Real_2_d0] [get_bd_pins Reorder_fft_0/Imag_1_address0] [get_bd_pins Reorder_fft_0/Real_1_d0] [get_bd_pins Reorder_fft_0/Real_2_we0] [get_bd_pins Reorder_fft_0/Imag_0_address0] [get_bd_pins Reorder_fft_0/Real_1_q0] [get_bd_pins Reorder_fft_0/Real_3_ce0] [get_bd_pins Reorder_fft_0/Imag_0_d0] [get_bd_pins Reorder_fft_0/Imag_2_we0] [get_bd_pins Reorder_fft_0/Real_1_we0] [get_bd_pins Reorder_fft_0/Imag_2_address0] [get_bd_pins Reorder_fft_0/Imag_3_ce0] [get_bd_pins Reorder_fft_0/Real_2_ce0] [get_bd_pins Reorder_fft_0/Imag_0_we0] [get_bd_pins Reorder_fft_0/Imag_1_we0] [get_bd_pins Reorder_fft_0/Imag_2_d0] [get_bd_pins Reorder_fft_0/num_word] [get_bd_pins Reorder_fft_0/Imag_1_ce0] [get_bd_pins Reorder_fft_0/Imag_1_d0] [get_bd_pins Reorder_fft_0/Imag_2_ce0] [get_bd_pins Reorder_fft_0/ap_done] [get_bd_pins Reorder_fft_0/ap_idle] [get_bd_pins Reorder_fft_0/ap_rst] [get_bd_pins Reorder_fft_0/Imag_1_q0] [get_bd_pins Reorder_fft_0/Real_3_we0] [get_bd_pins Reorder_fft_0/Imag_0_ce0] [get_bd_pins Reorder_fft_0/Imag_3_d0] [get_bd_pins Reorder_fft_0/Real_0_q0] [get_bd_pins Reorder_fft_0/ap_ready]
+endgroup
+validate_bd_design
+make_wrapper -files [get_files {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/FFT_Reorder_x_num.bd}}] -top
+add_files -norecurse {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/hdl/FFT_Reorder_x_num_wrapper.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+current_hw_device [get_hw_devices xc7z045_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z045_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]

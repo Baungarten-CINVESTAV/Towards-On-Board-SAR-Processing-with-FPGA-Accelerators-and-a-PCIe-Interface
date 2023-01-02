@@ -1,0 +1,103 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Mon Mar 29 13:40:34 2021
+| Host         : DESKTOP-9SQCBTG running 64-bit major release  (build 9200)
+| Command      : report_methodology -file ZC706_Gen2x4If128_methodology_drc_routed.rpt -pb ZC706_Gen2x4If128_methodology_drc_routed.pb -rpx ZC706_Gen2x4If128_methodology_drc_routed.rpx
+| Design       : ZC706_Gen2x4If128
+| Device       : xc7z045ffg900-2
+| Speed File   : -2
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 13
++-----------+----------+----------------------------------------------------+------------+
+| Rule      | Severity | Description                                        | Violations |
++-----------+----------+----------------------------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert                       | 7          |
+| TIMING-3  | Warning  | Invalid primary clock on Clock Modifying Block     | 1          |
+| TIMING-17 | Warning  | Non-clocked sequential cell                        | 4          |
+| TIMING-25 | Warning  | Invalid clock waveform on gigabit transceiver (GT) | 1          |
++-----------+----------+----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell PCIeGen2x4If128_i/inst/inst/user_reset_out_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) PCIeGen2x4If128_i/inst/inst/user_reset_int_reg/PRE, PCIeGen2x4If128_i/inst/inst/user_reset_out_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rDir_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/asyncCompare/rDir_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell riffa/riffa_inst/channels[0].channel/channel/rxPort/reader/rRdValid_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[1]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[2]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[3]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[4]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[5]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[6]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[7]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[8]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[0]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[1]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[2]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[3]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[4]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[5]/CLR, riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[6]/CLR (the first 15 of 76 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell riffa/riffa_inst/channels[0].channel/channel/txPort/gate/fifo/rdPtrEmpty/rDir_i_2__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) riffa/riffa_inst/channels[0].channel/channel/txPort/gate/fifo/asyncCompare/rDir_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rDir_i_2__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/asyncCompare/rDir_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell riffa/riffa_inst/channels[1].channel/channel/rxPort/reader/rRdValid_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[1]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[2]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[3]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[4]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[5]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[6]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[7]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBinP1_reg[8]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[0]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[1]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[2]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[3]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[4]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[5]/CLR, riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/rdPtrEmpty/rBin_reg[6]/CLR (the first 15 of 76 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
+LUT drives async reset alert  
+LUT cell riffa/riffa_inst/channels[1].channel/channel/txPort/gate/fifo/rdPtrEmpty/rDir_i_2__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) riffa/riffa_inst/channels[1].channel/channel/txPort/gate/fifo/asyncCompare/rDir_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-3#1 Warning
+Invalid primary clock on Clock Modifying Block  
+A primary clock pcie_refclk is created on the output pin or net refclk_ibuf/O of a Clock Modifying Block
+Related violations: <none>
+
+TIMING-17#1 Warning
+Non-clocked sequential cell  
+The clock pin riffa/riffa_inst/channels[0].channel/channel/rxPort/mainFifo/fifo/asyncCompare/rDir_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Warning
+Non-clocked sequential cell  
+The clock pin riffa/riffa_inst/channels[0].channel/channel/txPort/gate/fifo/asyncCompare/rDir_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Warning
+Non-clocked sequential cell  
+The clock pin riffa/riffa_inst/channels[1].channel/channel/rxPort/mainFifo/fifo/asyncCompare/rDir_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Warning
+Non-clocked sequential cell  
+The clock pin riffa/riffa_inst/channels[1].channel/channel/txPort/gate/fifo/asyncCompare/rDir_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-25#1 Warning
+Invalid clock waveform on gigabit transceiver (GT)  
+The waveform of the user clock txoutclk_x0y0 defined on the transceiver output pin PCIeGen2x4If128_i/inst/inst/gt_top_i/pipe_wrapper_i/pipe_lane[0].gt_wrapper_i/gtx_channel.gtxe2_channel_i/TXOUTCLK or on the net connected to that pin is not consistent with the transceiver settings. The auto-derived clock period is 5.000 and the user-defined clock period is 10.000. The expected clock waveform is computed based on the GT settings and the incoming clock to the transceiver. It is recommended to check that there are no missing clocks to the GT and that all the transceiver settings are correct
+Related violations: <none>
+
+

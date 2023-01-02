@@ -1,0 +1,680 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.3 (64-bit)
+# SW Build 2644227 on Wed Sep  4 09:45:24 MDT 2019
+# IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
+# Start of session at: Wed Oct 28 22:11:39 2020
+# Process ID: 20748
+# Current directory: C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Command line: vivado.exe -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file: C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file: C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source bd_0_hls_inst_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.cache/ip 
+Command: synth_design -top bd_0_hls_inst_0 -part xc7z010clg400-1 -directive sdx_optimization_effort_high -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14908 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 716.859 ; gain = 177.406
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 17'b00000000000000001 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 17'b00000000000000010 
+	Parameter ap_ST_fsm_pp0_stage1 bound to: 17'b00000000000000100 
+	Parameter ap_ST_fsm_pp0_stage2 bound to: 17'b00000000000001000 
+	Parameter ap_ST_fsm_pp0_stage3 bound to: 17'b00000000000010000 
+	Parameter ap_ST_fsm_pp0_stage4 bound to: 17'b00000000000100000 
+	Parameter ap_ST_fsm_pp0_stage5 bound to: 17'b00000000001000000 
+	Parameter ap_ST_fsm_pp0_stage6 bound to: 17'b00000000010000000 
+	Parameter ap_ST_fsm_pp0_stage7 bound to: 17'b00000000100000000 
+	Parameter ap_ST_fsm_pp0_stage8 bound to: 17'b00000001000000000 
+	Parameter ap_ST_fsm_pp0_stage9 bound to: 17'b00000010000000000 
+	Parameter ap_ST_fsm_state29 bound to: 17'b00000100000000000 
+	Parameter ap_ST_fsm_pp1_stage0 bound to: 17'b00001000000000000 
+	Parameter ap_ST_fsm_pp1_stage1 bound to: 17'b00010000000000000 
+	Parameter ap_ST_fsm_pp1_stage2 bound to: 17'b00100000000000000 
+	Parameter ap_ST_fsm_pp1_stage3 bound to: 17'b01000000000000000 
+	Parameter ap_ST_fsm_state35 bound to: 17'b10000000000000000 
+	Parameter C_S_AXI_AXILITES_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:119]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rbkb' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_lut_rbkb.v:39]
+	Parameter DataWidth bound to: 10 - type: integer 
+	Parameter AddressRange bound to: 480 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rbkb_rom' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_lut_rbkb.v:6]
+	Parameter DWIDTH bound to: 10 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 480 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './Reorder_fft_lut_rbkb_rom.dat' is read successfully [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_lut_rbkb.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rbkb_rom' (1#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_lut_rbkb.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rbkb' (2#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_lut_rbkb.v:39]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rcud' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_lut_rcud.v:39]
+	Parameter DataWidth bound to: 10 - type: integer 
+	Parameter AddressRange bound to: 480 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rcud_rom' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_lut_rcud.v:6]
+	Parameter DWIDTH bound to: 10 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 480 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './Reorder_fft_lut_rcud_rom.dat' is read successfully [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_lut_rcud.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rcud_rom' (3#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_lut_rcud.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rcud' (4#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_lut_rcud.v:39]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_AXILiteS_s_axi' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_AXILiteS_s_axi.v:6]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 4'b0000 
+	Parameter ADDR_GIE bound to: 4'b0100 
+	Parameter ADDR_IER bound to: 4'b1000 
+	Parameter ADDR_ISR bound to: 4'b1100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_AXILiteS_s_axi.v:184]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_AXILiteS_s_axi' (5#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_AXILiteS_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_fadd_dEe' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_fadd_dEe.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Reorder_fft_ap_fadd_3_full_dsp_32' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/ip/Reorder_fft_ap_fadd_3_full_dsp_32.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_8' declared at 'c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/83a3/hdl/floating_point_v7_1_vh_rfs.vhd:94214' bound to instance 'U0' of component 'floating_point_v7_1_8' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/ip/Reorder_fft_ap_fadd_3_full_dsp_32.vhd:210]
+INFO: [Synth 8-256] done synthesizing module 'Reorder_fft_ap_fadd_3_full_dsp_32' (23#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/ip/Reorder_fft_ap_fadd_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_fadd_dEe' (24#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft_fadd_dEe.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft' (25#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (26#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:58]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized43 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized43 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized43 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized43 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized43 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized45 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized45 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized45 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized37 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized37 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized37 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized35 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized35 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized35 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized35 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized35 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized3 has unconnected port B[8]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized53 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized53 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized53 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized53 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized53 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized51 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized51 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized51 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized51 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized51 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized31 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized31 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized31 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized41 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized41 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized41 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized39 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized39 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized39 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized17 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized17 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized33 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized33 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized33 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized9 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized9 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized9 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized9 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized9 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[14]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[13]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[12]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[11]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[10]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[9]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[8]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[7]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[6]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[5]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[4]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[3]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[2]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[1]
+WARNING: [Synth 8-3331] design carry_chain__parameterized2 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized1 has unconnected port CARRYS_OUT[2]
+WARNING: [Synth 8-3331] design carry_chain__parameterized1 has unconnected port CARRYS_OUT[1]
+WARNING: [Synth 8-3331] design carry_chain__parameterized1 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized0 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design special_detect has unconnected port A[31]
+WARNING: [Synth 8-3331] design flt_add_exp_sp has unconnected port ZERO_ALIGN
+WARNING: [Synth 8-3331] design flt_add_exp_sp has unconnected port ROUND_EXP_INC
+WARNING: [Synth 8-3331] design flt_add_exp_sp has unconnected port ADD_MANT_MSBS[1]
+WARNING: [Synth 8-3331] design flt_add_exp_sp has unconnected port ADD_MANT_MSBS[0]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port SSET
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 859.789 ; gain = 320.336
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 859.789 ; gain = 320.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 859.789 ; gain = 320.336
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 166 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/Reorder_fft_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/Reorder_fft_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 863.758 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  FDE => FDRE: 6 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 874.516 ; gain = 10.758
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 874.516 ; gain = 335.063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 874.516 ; gain = 335.063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 874.516 ; gain = 335.063
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'Reorder_fft_AXILiteS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'Reorder_fft_AXILiteS_s_axi'
+INFO: [Synth 8-4471] merging register 'Imag_addr_1_reg_519_reg[9:2]' into 'Real_addr_3_reg_514_reg[9:2]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:519]
+INFO: [Synth 8-4471] merging register 'Real_addr_reg_489_reg[9:0]' into 'Imag_addr_2_reg_504_reg[9:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:545]
+INFO: [Synth 8-4471] merging register 'Imag_addr_2_reg_504_reg[9:0]' into 'trunc_ln44_reg_483_reg[9:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:542]
+INFO: [Synth 8-4471] merging register 'Imag_addr_reg_499_reg[9:1]' into 'Real_addr_2_reg_494_reg[9:1]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:543]
+INFO: [Synth 8-4471] merging register 'Real_addr_reg_489_pp0_iter1_reg_reg[9:0]' into 'Imag_addr_2_reg_504_pp0_iter1_reg_reg[9:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:555]
+INFO: [Synth 8-4471] merging register 'Real_addr_4_reg_679_reg[9:0]' into 'Imag_addr_4_reg_684_reg[9:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:565]
+INFO: [Synth 8-4471] merging register 'Real_addr_5_reg_689_reg[9:0]' into 'Imag_addr_5_reg_694_reg[9:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:573]
+INFO: [Synth 8-4471] merging register 'Real_addr_2_reg_494_pp0_iter1_reg_reg[0:0]' into 'Real_addr_2_reg_494_reg[0:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:1405]
+INFO: [Synth 8-4471] merging register 'Imag_addr_reg_499_reg[0:0]' into 'Real_addr_2_reg_494_reg[0:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:1406]
+INFO: [Synth 8-4471] merging register 'Imag_addr_reg_499_pp0_iter1_reg_reg[0:0]' into 'Real_addr_2_reg_494_reg[0:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:1407]
+INFO: [Synth 8-4471] merging register 'Real_addr_3_reg_514_pp0_iter1_reg_reg[1:0]' into 'Real_addr_3_reg_514_reg[1:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:1411]
+INFO: [Synth 8-4471] merging register 'Imag_addr_1_reg_519_reg[1:0]' into 'Real_addr_3_reg_514_reg[1:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:1412]
+INFO: [Synth 8-4471] merging register 'Imag_addr_1_reg_519_pp0_iter1_reg_reg[1:0]' into 'Real_addr_3_reg_514_reg[1:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:1413]
+INFO: [Synth 8-4471] merging register 'Imag_addr_1_reg_519_pp0_iter2_reg_reg[1:0]' into 'Real_addr_3_reg_514_reg[1:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:1414]
+INFO: [Synth 8-4471] merging register 'Imag_addr_1_reg_519_pp0_iter1_reg_reg[9:2]' into 'Real_addr_3_reg_514_pp0_iter1_reg_reg[9:2]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:530]
+INFO: [Synth 8-4471] merging register 'Imag_addr_reg_499_pp0_iter1_reg_reg[9:1]' into 'Real_addr_2_reg_494_pp0_iter1_reg_reg[9:1]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/ffe5/hdl/verilog/Reorder_fft.v:553]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'Reorder_fft_AXILiteS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'Reorder_fft_AXILiteS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 874.516 ; gain = 335.063
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'Reorder_fft_fadd_dEe:/Reorder_fft_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'Reorder_fft_fadd_dEe:/Reorder_fft_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'Reorder_fft_fadd_dEe:/Reorder_fft_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'Reorder_fft_fadd_dEe:/Reorder_fft_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'Reorder_fft_fadd_dEe:/Reorder_fft_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'Reorder_fft_fadd_dEe:/Reorder_fft_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "data11" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data21" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "data31" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_reg[0]' (FDE) to 'inst/Imag_addr_3_reg_524_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_reg[2]' (FDE) to 'inst/Real_addr_3_reg_514_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_reg[3]' (FDE) to 'inst/Real_addr_3_reg_514_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_reg[4]' (FDE) to 'inst/Real_addr_3_reg_514_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_reg[5]' (FDE) to 'inst/Real_addr_3_reg_514_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_reg[6]' (FDE) to 'inst/Real_addr_3_reg_514_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_reg[7]' (FDE) to 'inst/Real_addr_3_reg_514_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_reg[8]' (FDE) to 'inst/Real_addr_3_reg_514_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_reg[9]' (FDE) to 'inst/Real_addr_3_reg_514_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[4]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[5]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[6]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[8]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[9]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[10]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[11]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[12]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[13]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[14]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[15]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[16]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[17]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[18]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[19]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[20]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[21]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[22]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[23]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[24]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[25]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[26]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[27]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[28]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[29]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[30]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Reorder_fft_AXILiteS_s_axi_U/\rdata_reg[31] )
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_pp0_iter1_reg_reg[0]' (FDE) to 'inst/Real_addr_1_reg_509_pp0_iter1_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/trunc_ln44_reg_483_reg[1]' (FDE) to 'inst/Real_addr_2_reg_494_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_reg[1]' (FDS) to 'inst/Real_addr_1_reg_509_pp0_iter1_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_reg[1]' (FDS) to 'inst/Real_addr_1_reg_509_pp0_iter1_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_pp0_iter1_reg_reg[1]' (FDS) to 'inst/Real_addr_1_reg_509_pp0_iter1_reg_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_reg[2]' (FDE) to 'inst/Real_addr_3_reg_514_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_pp0_iter1_reg_reg[2]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_reg[3]' (FDE) to 'inst/Real_addr_3_reg_514_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_pp0_iter1_reg_reg[3]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_reg[4]' (FDE) to 'inst/Real_addr_3_reg_514_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_pp0_iter1_reg_reg[4]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_reg[5]' (FDE) to 'inst/Real_addr_3_reg_514_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_pp0_iter1_reg_reg[5]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_reg[6]' (FDE) to 'inst/Real_addr_3_reg_514_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_pp0_iter1_reg_reg[6]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_reg[7]' (FDE) to 'inst/Real_addr_3_reg_514_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_pp0_iter1_reg_reg[7]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_reg[8]' (FDE) to 'inst/Real_addr_3_reg_514_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_pp0_iter1_reg_reg[8]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_reg[9]' (FDE) to 'inst/Real_addr_3_reg_514_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_3_reg_524_pp0_iter1_reg_reg[9]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_2_reg_494_reg[0]' (FD) to 'inst/Real_addr_3_reg_514_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_3_reg_514_reg[0]' (FD) to 'inst/Real_addr_3_reg_514_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_2_reg_504_pp0_iter1_reg_reg[1]' (FDE) to 'inst/Real_addr_2_reg_494_pp0_iter1_reg_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Real_addr_1_reg_509_pp0_iter1_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Real_addr_3_reg_514_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/trunc_ln44_reg_483_reg[2]' (FDE) to 'inst/Real_addr_2_reg_494_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_2_reg_504_pp0_iter1_reg_reg[2]' (FDE) to 'inst/Real_addr_2_reg_494_pp0_iter1_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_pp0_iter1_reg_reg[2]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/trunc_ln44_reg_483_reg[3]' (FDE) to 'inst/Real_addr_2_reg_494_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_2_reg_504_pp0_iter1_reg_reg[3]' (FDE) to 'inst/Real_addr_2_reg_494_pp0_iter1_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_pp0_iter1_reg_reg[3]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/trunc_ln44_reg_483_reg[4]' (FDE) to 'inst/Real_addr_2_reg_494_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_2_reg_504_pp0_iter1_reg_reg[4]' (FDE) to 'inst/Real_addr_2_reg_494_pp0_iter1_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_pp0_iter1_reg_reg[4]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/trunc_ln44_reg_483_reg[5]' (FDE) to 'inst/Real_addr_2_reg_494_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_2_reg_504_pp0_iter1_reg_reg[5]' (FDE) to 'inst/Real_addr_2_reg_494_pp0_iter1_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_pp0_iter1_reg_reg[5]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/trunc_ln44_reg_483_reg[6]' (FDE) to 'inst/Real_addr_2_reg_494_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_2_reg_504_pp0_iter1_reg_reg[6]' (FDE) to 'inst/Real_addr_2_reg_494_pp0_iter1_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_pp0_iter1_reg_reg[6]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/trunc_ln44_reg_483_reg[7]' (FDE) to 'inst/Real_addr_2_reg_494_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_2_reg_504_pp0_iter1_reg_reg[7]' (FDE) to 'inst/Real_addr_2_reg_494_pp0_iter1_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_pp0_iter1_reg_reg[7]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/trunc_ln44_reg_483_reg[8]' (FDE) to 'inst/Real_addr_2_reg_494_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_2_reg_504_pp0_iter1_reg_reg[8]' (FDE) to 'inst/Real_addr_2_reg_494_pp0_iter1_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_pp0_iter1_reg_reg[8]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/trunc_ln44_reg_483_reg[9]' (FDE) to 'inst/Real_addr_2_reg_494_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_2_reg_504_pp0_iter1_reg_reg[9]' (FDE) to 'inst/Real_addr_2_reg_494_pp0_iter1_reg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_1_reg_509_pp0_iter1_reg_reg[9]' (FDE) to 'inst/Real_addr_3_reg_514_pp0_iter1_reg_reg[9]'
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module Reorder_fft_AXILiteS_s_axi.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused and will be removed from module Reorder_fft_AXILiteS_s_axi.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_8_viv.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/Reorder_fft_fadd_dEe_U1/ce_r_reg)
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/Reorder_fft_fadd_dEe_U2/ce_r_reg)
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 874.516 ; gain = 335.063
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/i_1_0/lut_reorder_J_U/Reorder_fft_lut_rcud_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_1_1/lut_reorder_I_U/Reorder_fft_lut_rbkb_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 947.379 ; gain = 407.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 971.191 ; gain = 431.738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'inst/Real_addr_2_reg_494_reg[1]' (FDE) to 'inst/trunc_ln44_reg_483_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_2_reg_504_pp0_iter1_reg_reg[0]' (FDE) to 'inst/Real_addr_2_reg_494_pp0_iter1_reg_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\trunc_ln44_reg_483_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Imag_addr_3_reg_524_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Real_addr_2_reg_494_pp0_iter1_reg_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\Real_addr_1_reg_509_pp0_iter1_reg_reg[0] )
+INFO: [Synth 8-6837] The timing for the instance inst/lut_reorder_I_U/Reorder_fft_lut_rbkb_rom_U/q0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1018.363 ; gain = 478.910
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 1022.785 ; gain = 483.332
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:51 ; elapsed = 00:00:55 . Memory (MB): peak = 1022.785 ; gain = 483.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1022.785 ; gain = 483.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1022.785 ; gain = 483.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1023.770 ; gain = 484.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1023.770 ; gain = 484.316
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |     6|
+|2     |DSP48E1    |     2|
+|3     |DSP48E1_1  |     2|
+|4     |LUT1       |    10|
+|5     |LUT2       |    75|
+|6     |LUT3       |   230|
+|7     |LUT4       |   152|
+|8     |LUT5       |   185|
+|9     |LUT6       |   785|
+|10    |MUXCY      |   116|
+|11    |MUXF7      |    33|
+|12    |RAMB18E1_1 |     1|
+|13    |RAMB18E1_2 |     1|
+|14    |XORCY      |    34|
+|15    |FDE        |     6|
+|16    |FDRE       |  1194|
+|17    |FDSE       |     1|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1023.770 ; gain = 484.316
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 87 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:52 . Memory (MB): peak = 1023.770 ; gain = 469.590
+Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1023.770 ; gain = 484.316
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 201 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1023.770 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 38 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 32 instances
+  FDE => FDRE: 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+167 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:03 . Memory (MB): peak = 1023.770 ; gain = 729.496
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1023.770 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = 612ecbf92dff470a
+INFO: [Coretcl 2-1174] Renamed 144 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1023.770 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Full_Pipeline/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 28 22:12:51 2020...

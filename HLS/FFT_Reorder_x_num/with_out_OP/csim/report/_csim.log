@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../Reorder_FFT.cpp in debug mode
+   Generating csim.exe
+Test passed 1024 !
+Test passed 4096 !
+Test passed 16384 !
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

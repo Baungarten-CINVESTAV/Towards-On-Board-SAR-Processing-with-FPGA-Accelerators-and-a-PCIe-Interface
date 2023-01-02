@@ -1,0 +1,104 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar 29 06:55:47 2021
+# Process ID: 5256
+# Current directory: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5200 C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6_v3_3\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.xpr
+# Log file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/vivado.log
+# Journal file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj'
+INFO: [Project 1-313] Project file moved from 'C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_2/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/EMILIO/Desktop/HLS/FFT_Reorder/Array_p/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx_2018/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:12 . Memory (MB): peak = 785.207 ; gain = 183.758
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/EMILIO/Desktop/HLS/FFR_Reorder_x_num/With_array_P/impl/ip [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/EMILIO/Desktop/HLS/FFR_Reorder_x_num/With_array_P/impl/ip'.
+create_bd_design "FFT_Reorder_x_num"
+Wrote  : <C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6_v3_3\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.srcs\sources_1\bd\FFT_Reorder_x_num\FFT_Reorder_x_num.bd> 
+create_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1413.391 ; gain = 51.879
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:Reorder_fft:1.0 Reorder_fft_0
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins Reorder_fft_0/ap_start] [get_bd_pins Reorder_fft_0/Imag_3_q0] [get_bd_pins Reorder_fft_0/Imag_3_we0] [get_bd_pins Reorder_fft_0/Real_1_address0] [get_bd_pins Reorder_fft_0/Real_3_d0] [get_bd_pins Reorder_fft_0/ap_clk] [get_bd_pins Reorder_fft_0/Imag_2_q0] [get_bd_pins Reorder_fft_0/Real_0_address0] [get_bd_pins Reorder_fft_0/Real_0_we0] [get_bd_pins Reorder_fft_0/Real_3_q0] [get_bd_pins Reorder_fft_0/Imag_3_address0] [get_bd_pins Reorder_fft_0/Real_0_d0] [get_bd_pins Reorder_fft_0/Real_1_ce0] [get_bd_pins Reorder_fft_0/Real_2_q0] [get_bd_pins Reorder_fft_0/Real_2_address0] [get_bd_pins Reorder_fft_0/Real_3_address0] [get_bd_pins Reorder_fft_0/Imag_0_q0] [get_bd_pins Reorder_fft_0/Real_0_ce0] [get_bd_pins Reorder_fft_0/Real_2_d0] [get_bd_pins Reorder_fft_0/Imag_1_address0] [get_bd_pins Reorder_fft_0/Real_1_d0] [get_bd_pins Reorder_fft_0/Real_2_we0] [get_bd_pins Reorder_fft_0/Imag_0_address0] [get_bd_pins Reorder_fft_0/Real_1_q0] [get_bd_pins Reorder_fft_0/Real_3_ce0] [get_bd_pins Reorder_fft_0/Imag_0_d0] [get_bd_pins Reorder_fft_0/Imag_2_we0] [get_bd_pins Reorder_fft_0/Real_1_we0] [get_bd_pins Reorder_fft_0/Imag_2_address0] [get_bd_pins Reorder_fft_0/Imag_3_ce0] [get_bd_pins Reorder_fft_0/Real_2_ce0] [get_bd_pins Reorder_fft_0/Imag_0_we0] [get_bd_pins Reorder_fft_0/Imag_1_we0] [get_bd_pins Reorder_fft_0/Imag_2_d0] [get_bd_pins Reorder_fft_0/num_word] [get_bd_pins Reorder_fft_0/Imag_1_ce0] [get_bd_pins Reorder_fft_0/Imag_1_d0] [get_bd_pins Reorder_fft_0/Imag_2_ce0] [get_bd_pins Reorder_fft_0/ap_done] [get_bd_pins Reorder_fft_0/ap_idle] [get_bd_pins Reorder_fft_0/ap_rst] [get_bd_pins Reorder_fft_0/Imag_1_q0] [get_bd_pins Reorder_fft_0/Real_3_we0] [get_bd_pins Reorder_fft_0/Imag_0_ce0] [get_bd_pins Reorder_fft_0/Imag_3_d0] [get_bd_pins Reorder_fft_0/Real_0_q0] [get_bd_pins Reorder_fft_0/ap_ready]
+WARNING: [BD 41-1306] The connection to interface pin /Reorder_fft_0/ap_start is being overridden by the user. This pin will not be connected as a part of interface connection ap_ctrl
+WARNING: [BD 41-1306] The connection to interface pin /Reorder_fft_0/ap_done is being overridden by the user. This pin will not be connected as a part of interface connection ap_ctrl
+WARNING: [BD 41-1306] The connection to interface pin /Reorder_fft_0/ap_idle is being overridden by the user. This pin will not be connected as a part of interface connection ap_ctrl
+WARNING: [BD 41-1306] The connection to interface pin /Reorder_fft_0/ap_ready is being overridden by the user. This pin will not be connected as a part of interface connection ap_ctrl
+endgroup
+validate_bd_design
+WARNING: [BD 41-927] Following properties on pin /Reorder_fft_0/ap_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=FFT_Reorder_x_num_ap_clk_0 
+make_wrapper -files [get_files {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/FFT_Reorder_x_num.bd}}] -top
+INFO: [BD 41-1662] The design 'FFT_Reorder_x_num.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6_v3_3\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.srcs\sources_1\bd\FFT_Reorder_x_num\FFT_Reorder_x_num.bd> 
+Wrote  : <C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/ui/bd_a5e34630.ui> 
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/synth/FFT_Reorder_x_num.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/sim/FFT_Reorder_x_num.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/hdl/FFT_Reorder_x_num_wrapper.v
+add_files -norecurse {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/hdl/FFT_Reorder_x_num_wrapper.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'FFT_Reorder_x_num.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/synth/FFT_Reorder_x_num.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/sim/FFT_Reorder_x_num.v
+VHDL Output written to : C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/hdl/FFT_Reorder_x_num_wrapper.v
+WARNING: [IP_Flow 19-519] IP 'FFT_Reorder_x_num_Reorder_fft_0_0' detected a language mismatch between 'VHDL Simulation Wrapper' and 'Verilog Simulation' output products. Please check with the IP provider to see if this is expected.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Reorder_fft_0 .
+Exporting to file C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/hw_handoff/FFT_Reorder_x_num.hwh
+Generated Block Design Tcl file C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/hw_handoff/FFT_Reorder_x_num_bd.tcl
+Generated Hardware Definition File C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/FFT_Reorder_x_num/synth/FFT_Reorder_x_num.hwdef
+[Mon Mar 29 07:08:02 2021] Launched FFT_Reorder_x_num_Reorder_fft_0_0_synth_1, synth_1...
+Run output will be captured here:
+FFT_Reorder_x_num_Reorder_fft_0_0_synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/FFT_Reorder_x_num_Reorder_fft_0_0_synth_1/runme.log
+synth_1: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/synth_1/runme.log
+[Mon Mar 29 07:08:02 2021] Launched impl_1...
+Run output will be captured here: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:14 . Memory (MB): peak = 1413.391 ; gain = 0.000
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210251840302
+open_hw_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2228.133 ; gain = 814.742
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+current_hw_device [get_hw_devices xc7z045_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1435] Device xc7z045 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6_v3_3/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2241.891 ; gain = 0.133
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+INFO: [Labtools 27-1434] Device xc7z045 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 29 10:53:27 2021...

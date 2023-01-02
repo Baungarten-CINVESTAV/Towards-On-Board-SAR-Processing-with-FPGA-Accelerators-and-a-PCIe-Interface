@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Mar 25 08:42:10 2021
+# Process ID: 9968
+# Current directory: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent500 C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.xpr
+# Log file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/vivado.log
+# Journal file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.xpr}
+update_compile_order -fileset sources_1
+file mkdir C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new
+file mkdir C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new
+file mkdir C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new
+file mkdir C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new
+file mkdir C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new
+file mkdir C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new
+file mkdir {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new}
+close [ open {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new/test_HLS_fft.v} w ]
+add_files {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/new/test_HLS_fft.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+create_fileset -simset sim_2
+set_property SOURCE_SET sources_1 [get_filesets sim_2]
+current_fileset -simset [ get_filesets sim_2 ]
+set_property top ZC706_Gen2x4If128 [get_filesets sim_2]
+set_property top_lib xil_defaultlib [get_filesets sim_2]
+set_property SOURCE_SET sources_1 [get_filesets sim_2]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top test_HLS_fft [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+launch_simulation -simset [get_filesets sim_2 ]

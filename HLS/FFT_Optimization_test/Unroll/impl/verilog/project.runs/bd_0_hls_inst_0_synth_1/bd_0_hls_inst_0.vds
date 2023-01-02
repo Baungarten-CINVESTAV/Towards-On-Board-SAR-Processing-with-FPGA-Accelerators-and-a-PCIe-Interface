@@ -1,0 +1,984 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.3 (64-bit)
+# SW Build 2644227 on Wed Sep  4 09:45:24 MDT 2019
+# IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
+# Start of session at: Mon Nov  9 15:27:58 2020
+# Process ID: 21952
+# Current directory: C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Command line: vivado.exe -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file: C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file: C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source bd_0_hls_inst_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.cache/ip 
+Command: synth_design -top bd_0_hls_inst_0 -part xc7z010clg400-1 -directive sdx_optimization_effort_high -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12372 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 717.125 ; gain = 177.898
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:12]
+	Parameter ap_ST_fsm_state1 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000 
+	Parameter ap_ST_fsm_state20 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000 
+	Parameter ap_ST_fsm_state21 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000 
+	Parameter ap_ST_fsm_state22 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000 
+	Parameter ap_ST_fsm_state23 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000 
+	Parameter ap_ST_fsm_state24 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000 
+	Parameter ap_ST_fsm_state25 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000 
+	Parameter ap_ST_fsm_state26 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000 
+	Parameter ap_ST_fsm_state27 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000 
+	Parameter ap_ST_fsm_state28 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000 
+	Parameter ap_ST_fsm_state29 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000 
+	Parameter ap_ST_fsm_state30 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000 
+	Parameter ap_ST_fsm_state31 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000 
+	Parameter ap_ST_fsm_state32 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000 
+	Parameter ap_ST_fsm_state33 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000 
+	Parameter ap_ST_fsm_state34 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state35 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state36 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state37 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state38 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state39 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state40 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state41 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state42 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state43 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state44 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state45 bound to: 107'b00000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state46 bound to: 107'b00000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state47 bound to: 107'b00000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state48 bound to: 107'b00000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state49 bound to: 107'b00000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state50 bound to: 107'b00000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state51 bound to: 107'b00000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state52 bound to: 107'b00000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state53 bound to: 107'b00000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state54 bound to: 107'b00000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state55 bound to: 107'b00000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state56 bound to: 107'b00000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state57 bound to: 107'b00000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state58 bound to: 107'b00000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state59 bound to: 107'b00000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state60 bound to: 107'b00000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state61 bound to: 107'b00000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state62 bound to: 107'b00000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state63 bound to: 107'b00000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state64 bound to: 107'b00000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state65 bound to: 107'b00000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state66 bound to: 107'b00000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state67 bound to: 107'b00000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state68 bound to: 107'b00000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state69 bound to: 107'b00000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state70 bound to: 107'b00000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state71 bound to: 107'b00000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state72 bound to: 107'b00000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state73 bound to: 107'b00000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state74 bound to: 107'b00000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state75 bound to: 107'b00000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state76 bound to: 107'b00000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state77 bound to: 107'b00000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state78 bound to: 107'b00000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state79 bound to: 107'b00000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state80 bound to: 107'b00000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state81 bound to: 107'b00000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state82 bound to: 107'b00000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state83 bound to: 107'b00000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state84 bound to: 107'b00000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state85 bound to: 107'b00000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state86 bound to: 107'b00000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state87 bound to: 107'b00000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state88 bound to: 107'b00000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state89 bound to: 107'b00000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state90 bound to: 107'b00000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state91 bound to: 107'b00000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state92 bound to: 107'b00000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state93 bound to: 107'b00000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state94 bound to: 107'b00000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state95 bound to: 107'b00000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state96 bound to: 107'b00000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state97 bound to: 107'b00000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state98 bound to: 107'b00000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state99 bound to: 107'b00000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state100 bound to: 107'b00000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state101 bound to: 107'b00000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state102 bound to: 107'b00000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state103 bound to: 107'b00001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state104 bound to: 107'b00010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state105 bound to: 107'b00100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state106 bound to: 107'b01000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state107 bound to: 107'b10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_S_AXI_AXILITES_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:209]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rbkb' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_lut_rbkb.v:39]
+	Parameter DataWidth bound to: 10 - type: integer 
+	Parameter AddressRange bound to: 480 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rbkb_rom' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_lut_rbkb.v:6]
+	Parameter DWIDTH bound to: 10 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 480 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './Reorder_fft_lut_rbkb_rom.dat' is read successfully [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_lut_rbkb.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rbkb_rom' (1#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_lut_rbkb.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rbkb' (2#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_lut_rbkb.v:39]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rcud' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_lut_rcud.v:39]
+	Parameter DataWidth bound to: 10 - type: integer 
+	Parameter AddressRange bound to: 480 - type: integer 
+	Parameter AddressWidth bound to: 9 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_lut_rcud_rom' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_lut_rcud.v:6]
+	Parameter DWIDTH bound to: 10 - type: integer 
+	Parameter AWIDTH bound to: 9 - type: integer 
+	Parameter MEM_SIZE bound to: 480 - type: integer 
+INFO: [Synth 8-3876] $readmem data file './Reorder_fft_lut_rcud_rom.dat' is read successfully [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_lut_rcud.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rcud_rom' (3#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_lut_rcud.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_lut_rcud' (4#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_lut_rcud.v:39]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_AXILiteS_s_axi' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_AXILiteS_s_axi.v:6]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 4'b0000 
+	Parameter ADDR_GIE bound to: 4'b0100 
+	Parameter ADDR_IER bound to: 4'b1000 
+	Parameter ADDR_ISR bound to: 4'b1100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_AXILiteS_s_axi.v:184]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_AXILiteS_s_axi' (5#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_AXILiteS_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_fadd_dEe' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_fadd_dEe.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Reorder_fft_ap_fadd_3_full_dsp_32' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/ip/Reorder_fft_ap_fadd_3_full_dsp_32.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_8' declared at 'c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/83a3/hdl/floating_point_v7_1_vh_rfs.vhd:94214' bound to instance 'U0' of component 'floating_point_v7_1_8' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/ip/Reorder_fft_ap_fadd_3_full_dsp_32.vhd:210]
+INFO: [Synth 8-256] done synthesizing module 'Reorder_fft_ap_fadd_3_full_dsp_32' (23#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/ip/Reorder_fft_ap_fadd_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_fadd_dEe' (24#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_fadd_dEe.v:8]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_fmul_eOg' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_fmul_eOg.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'Reorder_fft_ap_fmul_2_max_dsp_32' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/ip/Reorder_fft_ap_fmul_2_max_dsp_32.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 1 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 2 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 3 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_8' declared at 'c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/83a3/hdl/floating_point_v7_1_vh_rfs.vhd:94214' bound to instance 'U0' of component 'floating_point_v7_1_8' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/ip/Reorder_fft_ap_fmul_2_max_dsp_32.vhd:210]
+INFO: [Synth 8-256] done synthesizing module 'Reorder_fft_ap_fmul_2_max_dsp_32' (32#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/ip/Reorder_fft_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_fmul_eOg' (33#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_fmul_eOg.v:8]
+INFO: [Synth 8-6157] synthesizing module 'Reorder_fft_mux_4fYi' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_mux_4fYi.v:8]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter din2_WIDTH bound to: 32 - type: integer 
+	Parameter din3_WIDTH bound to: 32 - type: integer 
+	Parameter din4_WIDTH bound to: 2 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft_mux_4fYi' (34#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft_mux_4fYi.v:8]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2133]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2135]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2137]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2139]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2141]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2143]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2145]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2147]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2149]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2151]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2153]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2155]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2157]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2159]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2161]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2163]
+INFO: [Synth 8-6155] done synthesizing module 'Reorder_fft' (35#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (36#1) [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:58]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized72 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized72 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized72 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized72 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized72 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized70 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized70 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized70 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized70 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized70 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port SINIT
+WARNING: [Synth 8-3331] design dsp48e1_wrapper__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design flt_round_dsp_opt_full has unconnected port SIGN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized60 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized60 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized60 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized60 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized60 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized49 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized47 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized66 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized66 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized66 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized66 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized66 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized33 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized33 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized33 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized64 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized64 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized64 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized31 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized31 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized31 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized62 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized62 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized62 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized17 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized17 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized17 has unconnected port SINIT
+WARNING: [Synth 8-3331] design compare_eq_im__parameterized1 has unconnected port CARRYS_OUT[0]
+WARNING: [Synth 8-3331] design special_detect__parameterized0 has unconnected port A[31]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized55 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized55 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized55 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized55 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized55 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized15 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized9 has unconnected port CLK
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 871.285 ; gain = 332.059
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 871.285 ; gain = 332.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 871.285 ; gain = 332.059
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 440 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/Reorder_fft_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/Reorder_fft_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 951.125 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  FDE => FDRE: 12 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.252 . Memory (MB): peak = 963.848 ; gain = 12.723
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 963.848 ; gain = 424.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 963.848 ; gain = 424.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 963.848 ; gain = 424.621
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'Reorder_fft_AXILiteS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'Reorder_fft_AXILiteS_s_axi'
+INFO: [Synth 8-4471] merging register 'Imag_addr_17_reg_1776_reg[9:4]' into 'Real_addr_19_reg_1771_reg[9:4]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:979]
+INFO: [Synth 8-4471] merging register 'Imag_addr_1_reg_1440_reg[9:2]' into 'Real_addr_3_reg_1435_reg[9:2]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:988]
+INFO: [Synth 8-4471] merging register 'Real_addr_4_reg_1881_reg[9:0]' into 'Imag_addr_4_reg_1886_reg[9:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:998]
+INFO: [Synth 8-4471] merging register 'Real_addr_5_reg_1891_reg[9:0]' into 'Imag_addr_5_reg_1896_reg[9:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:1006]
+INFO: [Synth 8-4471] merging register 'Imag_addr_7_reg_1547_reg[9:3]' into 'Real_addr_9_reg_1542_reg[9:3]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:1025]
+INFO: [Synth 8-4471] merging register 'Imag_addr_reg_1420_reg[9:1]' into 'Real_addr_2_reg_1415_reg[9:1]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:1034]
+INFO: [Synth 8-4471] merging register 'Imag_addr_reg_1420_reg[0:0]' into 'Real_addr_2_reg_1415_reg[0:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2252]
+INFO: [Synth 8-4471] merging register 'Imag_addr_1_reg_1440_reg[1:0]' into 'Real_addr_3_reg_1435_reg[1:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2256]
+INFO: [Synth 8-4471] merging register 'Imag_addr_7_reg_1547_reg[2:0]' into 'Real_addr_9_reg_1542_reg[2:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2267]
+INFO: [Synth 8-4471] merging register 'Imag_addr_17_reg_1776_reg[3:0]' into 'Real_addr_19_reg_1771_reg[3:0]' [c:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/dc17/hdl/verilog/Reorder_fft.v:2294]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'Reorder_fft_AXILiteS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'Reorder_fft_AXILiteS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 963.848 ; gain = 424.621
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'Reorder_fft_fadd_dEe:/Reorder_fft_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'Reorder_fft_fadd_dEe:/Reorder_fft_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'Reorder_fft_fadd_dEe:/Reorder_fft_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'Reorder_fft_fadd_dEe:/Reorder_fft_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'Reorder_fft_fadd_dEe:/Reorder_fft_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'Reorder_fft_fadd_dEe:/Reorder_fft_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'Reorder_fft_fmul_eOg:/Reorder_fft_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'Reorder_fft_fmul_eOg:/Reorder_fft_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'Reorder_fft_fmul_eOg:/Reorder_fft_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'Reorder_fft_fmul_eOg:/Reorder_fft_ap_fmul_2_max_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_reg_1497_reg[0]' (FDE) to 'inst/zext_ln49_1_reg_1502_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_reg_1497_reg[1]' (FDE) to 'inst/zext_ln49_1_reg_1502_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_reg_1497_reg[3]' (FDE) to 'inst/zext_ln49_1_reg_1502_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_reg_1497_reg[4]' (FDE) to 'inst/zext_ln49_1_reg_1502_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_reg_1497_reg[5]' (FDE) to 'inst/zext_ln49_1_reg_1502_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_reg_1497_reg[6]' (FDE) to 'inst/zext_ln49_1_reg_1502_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_reg_1497_reg[7]' (FDE) to 'inst/zext_ln49_1_reg_1502_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_reg_1497_reg[8]' (FDE) to 'inst/zext_ln49_1_reg_1502_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_reg_1497_reg[9]' (FDE) to 'inst/zext_ln49_1_reg_1502_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_2_reg_1726_reg[0]' (FDE) to 'inst/zext_ln49_3_reg_1731_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_2_reg_1726_reg[1]' (FDE) to 'inst/zext_ln49_3_reg_1731_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_2_reg_1726_reg[4]' (FDE) to 'inst/zext_ln49_3_reg_1731_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_2_reg_1726_reg[5]' (FDE) to 'inst/zext_ln49_3_reg_1731_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_2_reg_1726_reg[6]' (FDE) to 'inst/zext_ln49_3_reg_1731_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_2_reg_1726_reg[7]' (FDE) to 'inst/zext_ln49_3_reg_1731_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_2_reg_1726_reg[8]' (FDE) to 'inst/zext_ln49_3_reg_1731_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_2_reg_1726_reg[9]' (FDE) to 'inst/zext_ln49_3_reg_1731_reg[9]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\or_ln43_1_reg_1614_reg[3] )
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_1_reg_1614_reg[4]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_1_reg_1614_reg[5]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_1_reg_1614_reg[6]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_1_reg_1614_reg[7]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_1_reg_1614_reg[8]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_1_reg_1614_reg[9]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[9]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln49_4_reg_1562_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_4_reg_1562_reg[10] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln49_5_reg_1791_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln49_5_reg_1791_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_5_reg_1791_reg[10] )
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[4]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[5]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[6]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[8]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[9]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[10]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[11]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[12]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[13]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[14]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[15]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[16]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[17]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[18]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[19]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[20]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[21]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[22]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[23]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[24]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[25]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[26]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[27]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[28]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[29]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[30]' (FDE) to 'inst/Reorder_fft_AXILiteS_s_axi_U/rdata_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/Reorder_fft_AXILiteS_s_axi_U/\rdata_reg[31] )
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_reg_1405_reg[0]' (FDE) to 'inst/empty_19_reg_1387_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Imag_addr_6_reg_1517_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_1_reg_1614_reg[0]' (FDE) to 'inst/zext_ln49_2_reg_1619_reg[0]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Imag_addr_11_reg_1634_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Imag_addr_12_reg_1664_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Imag_addr_16_reg_1746_reg[0] )
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_reg_1405_reg[1]' (FDE) to 'inst/Real_addr_2_reg_1415_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln50_reg_1425_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_1_reg_1502_reg[1]' (FDE) to 'inst/Real_addr_8_reg_1512_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln50_1_reg_1532_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_6_reg_1517_reg[1]' (FDE) to 'inst/Real_addr_8_reg_1512_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_2_reg_1619_reg[1]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_1_reg_1614_reg[1]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln50_2_reg_1649_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_11_reg_1634_reg[1]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Imag_addr_12_reg_1664_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_3_reg_1731_reg[1]' (FDE) to 'inst/Real_addr_18_reg_1741_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln50_3_reg_1761_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_16_reg_1746_reg[1]' (FDE) to 'inst/Real_addr_18_reg_1741_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_reg_1405_reg[2]' (FDE) to 'inst/Real_addr_2_reg_1415_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_reg_1425_reg[2]' (FDE) to 'inst/Real_addr_3_reg_1435_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln49_1_reg_1502_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln50_1_reg_1532_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Imag_addr_6_reg_1517_reg[2] )
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_2_reg_1619_reg[2]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/or_ln43_1_reg_1614_reg[2]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_2_reg_1649_reg[2]' (FDE) to 'inst/Real_addr_14_reg_1659_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_11_reg_1634_reg[2]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_12_reg_1664_reg[2]' (FDE) to 'inst/Real_addr_14_reg_1659_reg[2]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln49_3_reg_1731_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln50_3_reg_1761_reg[2] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Imag_addr_16_reg_1746_reg[2] )
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_reg_1405_reg[3]' (FDE) to 'inst/Real_addr_2_reg_1415_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_reg_1425_reg[3]' (FDE) to 'inst/Real_addr_3_reg_1435_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_1_reg_1502_reg[3]' (FDE) to 'inst/Real_addr_8_reg_1512_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_1_reg_1532_reg[3]' (FDE) to 'inst/Real_addr_9_reg_1542_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_6_reg_1517_reg[3]' (FDE) to 'inst/Real_addr_8_reg_1512_reg[3]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln49_2_reg_1619_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln50_2_reg_1649_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Imag_addr_11_reg_1634_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Imag_addr_12_reg_1664_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln49_3_reg_1731_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\zext_ln50_3_reg_1761_reg[3] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\Imag_addr_16_reg_1746_reg[3] )
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_reg_1405_reg[4]' (FDE) to 'inst/Real_addr_2_reg_1415_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_reg_1425_reg[4]' (FDE) to 'inst/Real_addr_3_reg_1435_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_1_reg_1502_reg[4]' (FDE) to 'inst/Real_addr_8_reg_1512_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_1_reg_1532_reg[4]' (FDE) to 'inst/Real_addr_9_reg_1542_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_6_reg_1517_reg[4]' (FDE) to 'inst/Real_addr_8_reg_1512_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_2_reg_1619_reg[4]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_2_reg_1649_reg[4]' (FDE) to 'inst/Real_addr_14_reg_1659_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_11_reg_1634_reg[4]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_12_reg_1664_reg[4]' (FDE) to 'inst/Real_addr_14_reg_1659_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_3_reg_1731_reg[4]' (FDE) to 'inst/Real_addr_18_reg_1741_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_3_reg_1761_reg[4]' (FDE) to 'inst/Real_addr_19_reg_1771_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_16_reg_1746_reg[4]' (FDE) to 'inst/Real_addr_18_reg_1741_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_reg_1405_reg[5]' (FDE) to 'inst/Real_addr_2_reg_1415_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_reg_1425_reg[5]' (FDE) to 'inst/Real_addr_3_reg_1435_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_1_reg_1502_reg[5]' (FDE) to 'inst/Real_addr_8_reg_1512_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_1_reg_1532_reg[5]' (FDE) to 'inst/Real_addr_9_reg_1542_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_6_reg_1517_reg[5]' (FDE) to 'inst/Real_addr_8_reg_1512_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_2_reg_1619_reg[5]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_2_reg_1649_reg[5]' (FDE) to 'inst/Real_addr_14_reg_1659_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_11_reg_1634_reg[5]' (FDE) to 'inst/Real_addr_13_reg_1629_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_12_reg_1664_reg[5]' (FDE) to 'inst/Real_addr_14_reg_1659_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_3_reg_1731_reg[5]' (FDE) to 'inst/Real_addr_18_reg_1741_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_3_reg_1761_reg[5]' (FDE) to 'inst/Real_addr_19_reg_1771_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_16_reg_1746_reg[5]' (FDE) to 'inst/Real_addr_18_reg_1741_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_reg_1405_reg[6]' (FDE) to 'inst/Real_addr_2_reg_1415_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_reg_1425_reg[6]' (FDE) to 'inst/Real_addr_3_reg_1435_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln49_1_reg_1502_reg[6]' (FDE) to 'inst/Real_addr_8_reg_1512_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/zext_ln50_1_reg_1532_reg[6]' (FDE) to 'inst/Real_addr_9_reg_1542_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/Imag_addr_6_reg_1517_reg[6]' (FDE) to 'inst/Real_addr_8_reg_1512_reg[6]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_reg_1425_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_1_reg_1502_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_1_reg_1532_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_2_reg_1619_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_2_reg_1649_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_3_reg_1731_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_3_reg_1761_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_reg_1405_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_reg_1425_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_1_reg_1502_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_1_reg_1532_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_2_reg_1619_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_2_reg_1649_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_3_reg_1731_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_3_reg_1761_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_reg_1405_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_reg_1425_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_1_reg_1502_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_1_reg_1532_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_2_reg_1619_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_2_reg_1649_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_3_reg_1731_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_3_reg_1761_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_reg_1405_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_reg_1425_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_1_reg_1502_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_1_reg_1532_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_2_reg_1619_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_2_reg_1649_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_3_reg_1731_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_3_reg_1761_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_reg_1405_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_reg_1425_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_1_reg_1502_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_1_reg_1532_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_2_reg_1619_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_2_reg_1649_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_3_reg_1731_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_3_reg_1761_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_reg_1405_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_reg_1425_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_1_reg_1502_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_1_reg_1532_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_2_reg_1619_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_2_reg_1649_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_3_reg_1731_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_3_reg_1761_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_reg_1405_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_reg_1425_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_1_reg_1502_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_1_reg_1532_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_2_reg_1619_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_2_reg_1649_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_3_reg_1731_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_3_reg_1761_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_reg_1405_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_reg_1425_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_1_reg_1502_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_1_reg_1532_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_2_reg_1619_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_2_reg_1649_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_3_reg_1731_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_3_reg_1761_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_reg_1405_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_reg_1425_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_1_reg_1502_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_1_reg_1532_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_2_reg_1619_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_2_reg_1649_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln49_3_reg_1731_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\zext_ln50_3_reg_1761_reg[18] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_wstate_reg[0]) is unused and will be removed from module Reorder_fft_AXILiteS_s_axi.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_rstate_reg[0]) is unused and will be removed from module Reorder_fft_AXILiteS_s_axi.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_8_viv.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:52 . Memory (MB): peak = 963.848 ; gain = 424.621
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/i_1_0/i_0_reg_554_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/i_1_1/i_0_reg_554_reg_rep (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:06 . Memory (MB): peak = 987.527 ; gain = 448.301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 1015.395 ; gain = 476.168
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:07 ; elapsed = 00:01:11 . Memory (MB): peak = 1027.539 ; gain = 488.313
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1032.152 ; gain = 492.926
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:10 ; elapsed = 00:01:14 . Memory (MB): peak = 1032.152 ; gain = 492.926
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:10 ; elapsed = 00:01:15 . Memory (MB): peak = 1032.152 ; gain = 492.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:10 ; elapsed = 00:01:15 . Memory (MB): peak = 1032.152 ; gain = 492.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 1032.156 ; gain = 492.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 1032.156 ; gain = 492.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    14|
+|2     |DSP48E1    |     4|
+|3     |DSP48E1_1  |     4|
+|4     |DSP48E1_2  |     4|
+|5     |DSP48E1_3  |     4|
+|6     |DSP48E1_4  |     4|
+|7     |LUT1       |    49|
+|8     |LUT2       |   152|
+|9     |LUT3       |   709|
+|10    |LUT4       |   324|
+|11    |LUT5       |   553|
+|12    |LUT6       |   576|
+|13    |MUXCY      |   280|
+|14    |MUXF7      |    11|
+|15    |RAMB18E1_2 |     1|
+|16    |RAMB18E1_3 |     1|
+|17    |XORCY      |   100|
+|18    |FDE        |    12|
+|19    |FDRE       |  2211|
+|20    |FDSE       |     1|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 1032.156 ; gain = 492.930
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 140 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:01:08 . Memory (MB): peak = 1032.156 ; gain = 400.367
+Synthesis Optimization Complete : Time (s): cpu = 00:01:11 ; elapsed = 00:01:15 . Memory (MB): peak = 1032.156 ; gain = 492.930
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 439 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1043.051 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 88 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 76 instances
+  FDE => FDRE: 12 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+273 Infos, 119 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:19 ; elapsed = 00:01:24 . Memory (MB): peak = 1043.051 ; gain = 748.207
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1043.051 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = 944f502b25b53c98
+INFO: [Coretcl 2-1174] Renamed 394 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1043.051 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Unroll/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  9 15:29:33 2020...

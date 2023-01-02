@@ -1,0 +1,329 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Mar 24 16:04:09 2021
+# Process ID: 8768
+# Current directory: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6220 C:\Users\EMILIO\Desktop\Nueva carpeta\riffa-master_6\fpga\xilinx\zc706\ZC706_Gen2x4If128\prj\ZC706_Gen2x4If128.xpr
+# Log file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/vivado.log
+# Journal file: C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.xpr}
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+upgrade_ip -srcset PCIeGen2x4If128 -vlnv xilinx.com:ip:pcie_7x:3.3 [get_ips  PCIeGen2x4If128] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips PCIeGen2x4If128] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+set_property is_global_include true [get_files  {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/hdl/ZC706_Gen2x4If128.v}}]
+update_compile_order -fileset sources_1
+set_property is_global_include true [get_files  {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/riffa_wrapper_zc706.v}}]
+update_compile_order -fileset sources_1
+create_bd_design "HLS_FFT"
+update_compile_order -fileset sources_1
+set_property  ip_repo_paths  C:/Users/EMILIO/Desktop/HLS/FFT_Reorder/Array_p/impl/ip [current_project]
+update_ip_catalog
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:Reorder_fft:1.0 Reorder_fft_0
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins Reorder_fft_0/Real_3_q0] [get_bd_pins Reorder_fft_0/ap_start] [get_bd_pins Reorder_fft_0/Imag_3_we0] [get_bd_pins Reorder_fft_0/Real_1_d0] [get_bd_pins Reorder_fft_0/Imag_0_address0] [get_bd_pins Reorder_fft_0/ap_clk] [get_bd_pins Reorder_fft_0/Real_0_we0] [get_bd_pins Reorder_fft_0/Real_0_d0] [get_bd_pins Reorder_fft_0/Imag_3_address0] [get_bd_pins Reorder_fft_0/Imag_3_d0] [get_bd_pins Reorder_fft_0/Real_3_address0] [get_bd_pins Reorder_fft_0/Real_1_ce0] [get_bd_pins Reorder_fft_0/Real_0_q0] [get_bd_pins Reorder_fft_0/ap_ready] [get_bd_pins Reorder_fft_0/Real_2_d0] [get_bd_pins Reorder_fft_0/Real_3_d0] [get_bd_pins Reorder_fft_0/Imag_1_address0] [get_bd_pins Reorder_fft_0/Real_0_ce0] [get_bd_pins Reorder_fft_0/Real_2_q0] [get_bd_pins Reorder_fft_0/Real_1_q0] [get_bd_pins Reorder_fft_0/Real_2_we0] [get_bd_pins Reorder_fft_0/Imag_1_d0] [get_bd_pins Reorder_fft_0/Real_2_address0] [get_bd_pins Reorder_fft_0/Real_3_ce0] [get_bd_pins Reorder_fft_0/Imag_0_d0] [get_bd_pins Reorder_fft_0/Imag_0_q0] [get_bd_pins Reorder_fft_0/Real_1_we0] [get_bd_pins Reorder_fft_0/Imag_2_we0] [get_bd_pins Reorder_fft_0/Imag_2_d0] [get_bd_pins Reorder_fft_0/Imag_3_ce0] [get_bd_pins Reorder_fft_0/Real_2_ce0] [get_bd_pins Reorder_fft_0/Real_0_address0] [get_bd_pins Reorder_fft_0/Imag_1_we0] [get_bd_pins Reorder_fft_0/Imag_0_we0] [get_bd_pins Reorder_fft_0/Imag_2_q0] [get_bd_pins Reorder_fft_0/Imag_1_ce0] [get_bd_pins Reorder_fft_0/ap_done] [get_bd_pins Reorder_fft_0/Imag_1_q0] [get_bd_pins Reorder_fft_0/Imag_2_ce0] [get_bd_pins Reorder_fft_0/ap_idle] [get_bd_pins Reorder_fft_0/ap_rst] [get_bd_pins Reorder_fft_0/Real_3_we0] [get_bd_pins Reorder_fft_0/Real_1_address0] [get_bd_pins Reorder_fft_0/Imag_3_q0] [get_bd_pins Reorder_fft_0/Imag_0_ce0] [get_bd_pins Reorder_fft_0/Imag_2_address0]
+endgroup
+validate_bd_design
+make_wrapper -files [get_files {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}}] -top
+add_files -norecurse {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/hdl/HLS_FFT_wrapper.v}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_run impl_1
+report_ip_status -name ip_status 
+open_bd_design {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0
+endgroup
+set_property -dict [list CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Enable_32bit_Address {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {9} CONFIG.Write_Depth_A {257} CONFIG.Enable_A {Always_Enabled} CONFIG.Enable_B {Always_Enabled} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Use_RSTA_Pin {false} CONFIG.Use_RSTB_Pin {false} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100} CONFIG.use_bram_block {Stand_Alone} CONFIG.EN_SAFETY_CKT {false}] [get_bd_cells blk_mem_gen_0]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_0_ce0] [get_bd_nets Reorder_fft_0_Real_1_ce0] [get_bd_nets Reorder_fft_0_Real_2_d0] [get_bd_nets Reorder_fft_0_Real_2_we0] [get_bd_nets Real_2_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_1_d0] [get_bd_nets Reorder_fft_0_Imag_0_we0] [get_bd_nets Reorder_fft_0_Imag_1_we0] [get_bd_nets Reorder_fft_0_Imag_2_ce0] [get_bd_nets Reorder_fft_0_Imag_3_ce0] [get_bd_nets Reorder_fft_0_Imag_2_d0] [get_bd_nets Reorder_fft_0_Imag_3_we0] [get_bd_nets Reorder_fft_0_ap_done] [get_bd_nets Reorder_fft_0_ap_ready] [get_bd_nets Reorder_fft_0_Real_3_d0] [get_bd_nets Real_1_q0_0_1] [get_bd_nets Real_3_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_0_d0] [get_bd_nets Reorder_fft_0_Real_1_we0] [get_bd_nets Reorder_fft_0_Real_2_ce0] [get_bd_nets Reorder_fft_0_Imag_2_we0] [get_bd_nets Reorder_fft_0_ap_idle] [get_bd_nets Imag_0_q0_0_1] [get_bd_nets Imag_1_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_2_address0] [get_bd_nets ap_clk_0_1] [get_bd_nets Reorder_fft_0_Real_0_d0] [get_bd_nets Reorder_fft_0_Real_1_d0] [get_bd_nets Imag_2_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_3_address0] [get_bd_nets Imag_3_q0_0_1] [get_bd_nets Reorder_fft_0_Real_3_ce0] [get_bd_nets Reorder_fft_0_Real_2_address0] [get_bd_nets Reorder_fft_0_Real_3_we0] [get_bd_nets Reorder_fft_0_Imag_0_ce0] [get_bd_nets Reorder_fft_0_Real_0_address0] [get_bd_nets Reorder_fft_0_Real_1_address0] [get_bd_nets Reorder_fft_0_Real_0_we0] [get_bd_nets ap_start_0_1] [get_bd_nets Real_0_q0_0_1] [get_bd_nets Reorder_fft_0_Real_3_address0] [get_bd_nets Reorder_fft_0_Imag_0_address0] [get_bd_nets Reorder_fft_0_Imag_1_ce0] [get_bd_nets ap_rst_0_1] [get_bd_nets Reorder_fft_0_Imag_1_address0] [get_bd_nets Reorder_fft_0_Imag_3_d0] [get_bd_cells Reorder_fft_0]
+undo
+startgroup
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_1_d0] [get_bd_nets Reorder_fft_0_Imag_1_address0] [get_bd_nets Reorder_fft_0_Imag_3_d0] [get_bd_nets Reorder_fft_0_Imag_0_ce0] [get_bd_nets Reorder_fft_0_Real_3_address0] [get_bd_nets ap_start_0_1] [get_bd_nets Reorder_fft_0_Imag_2_d0] [get_bd_nets Imag_2_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_0_d0] [get_bd_nets Reorder_fft_0_ap_ready] [get_bd_nets Reorder_fft_0_Imag_1_d0] [get_bd_nets Reorder_fft_0_Real_2_d0] [get_bd_nets Reorder_fft_0_ap_done] [get_bd_nets Real_0_q0_0_1] [get_bd_nets Reorder_fft_0_Imag_3_ce0] [get_bd_nets Reorder_fft_0_Imag_1_we0] [get_bd_nets Reorder_fft_0_Real_0_d0] [get_bd_nets Reorder_fft_0_Imag_1_ce0] [get_bd_nets Reorder_fft_0_Real_1_ce0] [get_bd_nets Reorder_fft_0_Real_3_ce0] [get_bd_nets Reorder_fft_0_Real_3_we0] [get_bd_nets Real_2_q0_0_1] [get_bd_nets Reorder_fft_0_Real_1_we0] [get_bd_nets Imag_3_q0_0_1] [get_bd_nets Reorder_fft_0_ap_idle] [get_bd_nets Imag_0_q0_0_1] [get_bd_nets Reorder_fft_0_Real_0_we0] [get_bd_nets ap_clk_0_1] [get_bd_nets Reorder_fft_0_Real_0_ce0] [get_bd_nets Reorder_fft_0_Imag_3_we0] [get_bd_nets Real_1_q0_0_1] [get_bd_nets Reorder_fft_0_Real_3_d0] [get_bd_nets Imag_1_q0_0_1] [get_bd_nets Reorder_fft_0_Real_2_address0] [get_bd_nets Reorder_fft_0_Real_2_we0] [get_bd_nets Reorder_fft_0_Imag_2_ce0] [get_bd_nets Reorder_fft_0_Imag_2_address0] [get_bd_nets Reorder_fft_0_Imag_3_address0] [get_bd_nets ap_rst_0_1] [get_bd_nets Reorder_fft_0_Imag_0_address0] [get_bd_nets Reorder_fft_0_Real_0_address0] [get_bd_nets Real_3_q0_0_1] [get_bd_nets Reorder_fft_0_Real_2_ce0] [get_bd_nets Reorder_fft_0_Real_1_address0] [get_bd_nets Reorder_fft_0_Imag_2_we0] [get_bd_nets Reorder_fft_0_Imag_0_we0]
+delete_bd_objs [get_bd_ports Imag_1_we0_0] [get_bd_ports Imag_2_address0_0] [get_bd_ports ap_idle_0] [get_bd_ports Real_2_q0_0] [get_bd_ports Imag_3_ce0_0] [get_bd_ports Real_3_we0_0] [get_bd_ports Real_3_q0_0] [get_bd_ports Imag_1_q0_0] [get_bd_ports ap_done_0] [get_bd_ports Real_0_d0_0] [get_bd_ports Real_3_address0_0] [get_bd_ports Imag_2_q0_0] [get_bd_ports Imag_3_q0_0] [get_bd_ports Imag_3_address0_0] [get_bd_ports Real_1_we0_0] [get_bd_ports Imag_0_we0_0] [get_bd_ports ap_clk_0] [get_bd_ports Imag_1_address0_0] [get_bd_ports Real_1_q0_0] [get_bd_ports Imag_0_d0_0] [get_bd_ports Real_0_address0_0] [get_bd_ports Imag_1_d0_0] [get_bd_ports ap_rst_0] [get_bd_ports Real_2_d0_0] [get_bd_ports Real_2_ce0_0] [get_bd_ports Real_2_address0_0] [get_bd_ports Real_0_q0_0] [get_bd_ports Imag_2_ce0_0] [get_bd_ports Real_1_ce0_0] [get_bd_ports Imag_1_ce0_0] [get_bd_ports Real_1_d0_0] [get_bd_ports ap_ready_0] [get_bd_ports Imag_2_we0_0] [get_bd_ports Real_2_we0_0] [get_bd_ports Real_3_d0_0] [get_bd_ports ap_start_0] [get_bd_ports Real_3_ce0_0] [get_bd_ports Imag_0_ce0_0] [get_bd_ports Real_1_address0_0] [get_bd_ports Imag_0_address0_0] [get_bd_ports Real_0_we0_0] [get_bd_ports Imag_3_d0_0] [get_bd_ports Imag_2_d0_0] [get_bd_ports Imag_3_we0_0] [get_bd_ports Real_0_ce0_0] [get_bd_ports Imag_0_q0_0]
+endgroup
+set_property location {2.5 640 -896} [get_bd_cells blk_mem_gen_0]
+set_property name Real_0 [get_bd_cells blk_mem_gen_0]
+copy_bd_objs /  [get_bd_cells {Real_0}]
+copy_bd_objs /  [get_bd_cells {Real_0}]
+copy_bd_objs /  [get_bd_cells {Real_0}]
+set_property location {4 717 -679} [get_bd_cells Real_1]
+set_property location {3 734 -377} [get_bd_cells Real_2]
+set_property location {3 714 -255} [get_bd_cells Real_3]
+set_property -dict [list CONFIG.Assume_Synchronous_Clk {true}] [get_bd_cells Real_0]
+connect_bd_net [get_bd_pins Real_0/clkb] [get_bd_pins Real_0/clka]
+undo
+startgroup
+make_bd_pins_external  [get_bd_pins Reorder_fft_0/ap_start] [get_bd_pins Reorder_fft_0/ap_clk] [get_bd_pins Reorder_fft_0/ap_ready] [get_bd_pins Reorder_fft_0/ap_done] [get_bd_pins Reorder_fft_0/ap_idle] [get_bd_pins Reorder_fft_0/ap_rst]
+endgroup
+set_property location {1 96 -752} [get_bd_cells Reorder_fft_0]
+undo
+regenerate_bd_layout
+regenerate_bd_layout
+set_property location {1 232 302} [get_bd_cells Reorder_fft_0]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_we0] [get_bd_pins Real_1/wea]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_0_we0]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_we0] [get_bd_pins Real_0/wea]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_1_we0] [get_bd_pins Real_1/wea]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_2_we0] [get_bd_pins Real_2/wea]
+connect_bd_net [get_bd_pins Real_3/wea] [get_bd_pins Reorder_fft_0/Real_3_we0]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_address0] [get_bd_pins Real_1/addra]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_d0] [get_bd_pins Real_1/dina]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_1_address0] [get_bd_pins Real_0/addra]
+connect_bd_net [get_bd_pins Real_1/clka] [get_bd_pins Real_1/clkb]
+connect_bd_net [get_bd_pins Real_1/clkb] [get_bd_pins Real_0/clka]
+connect_bd_net [get_bd_pins Real_0/clka] [get_bd_pins Real_0/clkb]
+connect_bd_net [get_bd_pins Real_3/clka] [get_bd_pins Real_2/clka]
+connect_bd_net [get_bd_pins Real_3/clkb] [get_bd_pins Real_2/clkb]
+connect_bd_net [get_bd_pins Real_2/clkb] [get_bd_pins Real_3/clka]
+connect_bd_net [get_bd_pins Real_2/clka] [get_bd_pins Real_3/clkb]
+connect_bd_net [get_bd_pins Real_2/clka] [get_bd_pins Real_1/clka]
+connect_bd_net [get_bd_ports ap_clk_0] [get_bd_pins Real_1/clka]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_1_d0] [get_bd_pins Real_0/dina]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_2_address0] [get_bd_pins Real_2/addra]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_2_d0] [get_bd_pins Real_2/dina]
+connect_bd_net [get_bd_pins Real_3/addra] [get_bd_pins Reorder_fft_0/Real_3_address0]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_3_d0] [get_bd_pins Real_3/dina]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_3_q0] [get_bd_pins Real_3/douta]
+connect_bd_net [get_bd_pins Real_2/douta] [get_bd_pins Reorder_fft_0/Real_2_q0]
+connect_bd_net [get_bd_pins Real_1/douta] [get_bd_pins Reorder_fft_0/Real_1_q0]
+connect_bd_net [get_bd_pins Real_0/douta] [get_bd_pins Reorder_fft_0/Real_0_q0]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_1_address0]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_1_d0]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_0_address0]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_0_d0]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_address0] [get_bd_pins Real_0/addrb]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_d0] [get_bd_pins Real_0/dinb]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_1_address0] [get_bd_pins Real_1/addrb]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_1_address0]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_1_address0] [get_bd_pins Real_1/addra]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_1_d0] [get_bd_pins Real_1/dina]
+copy_bd_objs /  [get_bd_cells {Real_0}]
+set_property name Imag_0 [get_bd_cells Real_4]
+copy_bd_objs /  [get_bd_cells {Imag_0}]
+copy_bd_objs /  [get_bd_cells {Imag_0}]
+copy_bd_objs /  [get_bd_cells {Imag_0}]
+regenerate_bd_layout
+set_property location {0.5 -564 641} [get_bd_cells Real_2]
+set_property location {0.5 -655 193} [get_bd_cells Real_1]
+set_property location {2 -330 247} [get_bd_cells Real_0]
+set_property location {1.5 -510 1253} [get_bd_cells Real_3]
+set_property location {6 1005 433} [get_bd_cells Imag_0]
+set_property location {4.5 610 534} [get_bd_cells Imag_1]
+set_property location {6 807 545} [get_bd_cells Imag_0]
+set_property location {5 644 898} [get_bd_cells Imag_2]
+set_property location {6 892 898} [get_bd_cells Imag_3]
+set_property location {5.5 723 1053} [get_bd_cells Reorder_fft_0]
+undo
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_0_we0] [get_bd_pins Imag_0/wea]
+set_property location {5.5 824 544} [get_bd_cells Imag_0]
+set_property location {6 807 901} [get_bd_cells Imag_3]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_1_we0] [get_bd_pins Imag_1/wea]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_2_we0] [get_bd_pins Imag_2/wea]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_3_we0] [get_bd_pins Imag_3/wea]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_0_address0] [get_bd_pins Imag_0/addra]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_0_d0] [get_bd_pins Imag_0/dina]
+connect_bd_net [get_bd_pins Imag_0/clka] [get_bd_pins Imag_0/clkb]
+connect_bd_net [get_bd_pins Imag_0/clkb] [get_bd_pins Imag_1/clkb]
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Imag_1/clka]
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Reorder_fft_0/Imag_0_d0]
+undo
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Imag_1/dinb]
+undo
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Imag_2/clka]
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Imag_2/clkb]
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Imag_3/clkb]
+connect_bd_net [get_bd_pins Imag_1/clkb] [get_bd_pins Imag_3/clka]
+connect_bd_net [get_bd_ports ap_clk_0] [get_bd_pins Imag_1/clkb]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_1_address0] [get_bd_pins Imag_1/addra]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_1_d0] [get_bd_pins Imag_1/dina]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_2_address0] [get_bd_pins Imag_2/addra]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_2_d0] [get_bd_pins Imag_2/dina]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_3_address0] [get_bd_pins Imag_3/addra]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_3_d0] [get_bd_pins Imag_3/dina]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_0_q0] [get_bd_pins Imag_0/douta]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_1_q0] [get_bd_pins Imag_1/douta]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_2_q0] [get_bd_pins Imag_2/douta]
+connect_bd_net [get_bd_pins Reorder_fft_0/Imag_3_q0] [get_bd_pins Imag_3/douta]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_0_d0]
+delete_bd_objs [get_bd_nets Reorder_fft_0_Real_0_address0]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_address0] [get_bd_pins Real_0/addra]
+connect_bd_net [get_bd_pins Reorder_fft_0/Real_0_d0] [get_bd_pins Real_0/dina]
+regenerate_bd_layout
+startgroup
+make_bd_pins_external  [get_bd_pins Real_2/addrb] [get_bd_pins Real_1/dinb] [get_bd_pins Real_3/doutb] [get_bd_pins Real_1/addrb] [get_bd_pins Real_0/dinb] [get_bd_pins Real_2/web] [get_bd_pins Real_2/doutb] [get_bd_pins Real_0/addrb] [get_bd_pins Real_1/web] [get_bd_pins Real_1/doutb] [get_bd_pins Real_0/web] [get_bd_pins Real_0/doutb] [get_bd_pins Imag_2/web] [get_bd_pins Imag_3/dinb] [get_bd_pins Imag_3/doutb] [get_bd_pins Imag_3/addrb] [get_bd_pins Imag_2/doutb] [get_bd_pins Imag_2/addrb] [get_bd_pins Imag_1/web] [get_bd_pins Imag_0/web] [get_bd_pins Imag_1/doutb] [get_bd_pins Imag_1/addrb] [get_bd_pins Imag_2/dinb] [get_bd_pins Imag_3/web] [get_bd_pins Imag_1/dinb] [get_bd_pins Imag_0/doutb] [get_bd_pins Imag_0/addrb] [get_bd_pins Imag_0/dinb] [get_bd_pins Real_3/dinb] [get_bd_pins Real_3/addrb] [get_bd_pins Real_2/dinb] [get_bd_pins Real_3/web]
+endgroup
+regenerate_bd_layout
+set_property name addrb_Real_0 [get_bd_ports addrb_2]
+set_property name dinb_Real_0 [get_bd_ports dinb_1]
+set_property name web_Real_0 [get_bd_ports web_2]
+set_property name doutb_Real_0 [get_bd_ports doutb_3]
+set_property name doutb_Real_1 [get_bd_ports doutb_2]
+set_property name addrb_Real_1 [get_bd_ports addrb_1]
+set_property name dinb_Real_1 [get_bd_ports dinb_0]
+set_property name web_Real_1 [get_bd_ports web_1]
+set_property name addrb_Real_2 [get_bd_ports addrb_0]
+set_property name dinb_Real_2 [get_bd_ports dinb_7]
+set_property name web_Real_2 [get_bd_ports web_0]
+set_property name doutb_Real_2 [get_bd_ports doutb_1]
+set_property name doutb_Real_3 [get_bd_ports doutb_0]
+set_property name web_Real_3 [get_bd_ports web_7]
+set_property name dinb_Real_3 [get_bd_ports dinb_6]
+set_property name addrb_Real_3 [get_bd_ports addrb_7]
+set_property name web_Imag_3 [get_bd_ports web_6]
+set_property name dinb_Imag_3 [get_bd_ports dinb_2]
+set_property name addrb_Imag_3 [get_bd_ports addrb_3]
+set_property name doutb_Imag_3 [get_bd_ports doutb_4]
+set_property name doutb_Imag_0 [get_bd_ports doutb_7]
+set_property name web_Imag_0 [get_bd_ports web_5]
+set_property name dinb_Imag_0 [get_bd_ports dinb_5]
+set_property name addrb_Imag_0 [get_bd_ports addrb_6]
+set_property name doutb_Imag_2 [get_bd_ports doutb_5]
+set_property name web_Imag_2 [get_bd_ports web_3]
+set_property name dinb_Imag_2 [get_bd_ports dinb_3]
+set_property name addrb_Imag_2 [get_bd_ports addrb_4]
+set_property name addrb_Imag_1 [get_bd_ports addrb_5]
+set_property name dinb_Imag_1 [get_bd_ports dinb_4]
+set_property name web_Imag_1 [get_bd_ports web_4]
+set_property name doutb_Imag_1 [get_bd_ports doutb_6]
+regenerate_bd_layout
+validate_bd_design
+make_wrapper -files [get_files {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}}] -top
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}}]
+refresh_design
+report_ip_status -name ip_status 
+report_utilization -name utilization_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+current_hw_device [get_hw_devices xc7z045_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z045_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+open_bd_design {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}
+startgroup
+set_property -dict [list CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/EMILIO/Desktop/Nueva carpeta/MEM_INIT_32_bits_1.ceo}] [get_bd_cells Imag_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Load_Init_File {true} CONFIG.Coe_File {C:/Users/EMILIO/Desktop/Nueva carpeta/MEM_INIT_32_bits_1.ceo}] [get_bd_cells Imag_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Load_Init_File {false} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {1}] [get_bd_cells Imag_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Use_Byte_Write_Enable {false} CONFIG.Write_Width_A {18} CONFIG.Read_Width_A {18} CONFIG.Write_Width_B {18} CONFIG.Read_Width_B {18} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {1}] [get_bd_cells Real_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {1}] [get_bd_cells Real_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {1}] [get_bd_cells Real_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {1}] [get_bd_cells Imag_3]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {1}] [get_bd_cells Real_3]
+endgroup
+validate_bd_design
+make_wrapper -files [get_files {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}}] -top
+reset_run synth_1
+reset_run HLS_FFT_Real_0_1_synth_1
+reset_run HLS_FFT_blk_mem_gen_0_0_synth_1
+reset_run HLS_FFT_Real_0_2_synth_1
+reset_run HLS_FFT_Real_0_0_synth_1
+reset_run HLS_FFT_Imag_0_1_synth_1
+reset_run HLS_FFT_Imag_0_0_synth_1
+reset_run HLS_FFT_Imag_0_2_synth_1
+reset_run HLS_FFT_Real_0_3_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}}]
+refresh_design
+open_bd_design {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}
+startgroup
+set_property -dict [list CONFIG.Load_Init_File {false} CONFIG.Fill_Remaining_Memory_Locations {false} CONFIG.Remaining_Memory_Locations {0}] [get_bd_cells Imag_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Load_Init_File {false} CONFIG.Coe_File {no_coe_file_loaded} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Imag_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Load_Init_File {false} CONFIG.Coe_File {no_coe_file_loaded} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Imag_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Imag_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Write_Width_A {32} CONFIG.Read_Width_A {32} CONFIG.Write_Width_B {32} CONFIG.Read_Width_B {32} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Real_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Real_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Real_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Imag_3]
+endgroup
+startgroup
+set_property -dict [list CONFIG.Remaining_Memory_Locations {40400000}] [get_bd_cells Real_3]
+endgroup
+save_bd_design
+make_wrapper -files [get_files {{C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}}] -top
+reset_run synth_1
+reset_run HLS_FFT_Real_0_1_synth_1
+reset_run HLS_FFT_blk_mem_gen_0_0_synth_1
+reset_run HLS_FFT_Real_0_2_synth_1
+reset_run HLS_FFT_Real_0_0_synth_1
+reset_run HLS_FFT_Imag_0_1_synth_1
+reset_run HLS_FFT_Imag_0_0_synth_1
+reset_run HLS_FFT_Imag_0_2_synth_1
+reset_run HLS_FFT_Real_0_3_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z045_1]
+set_property PROGRAM.FILE {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.runs/impl_1/ZC706_Gen2x4If128.bit} [get_hw_devices xc7z045_1]
+program_hw_devices [get_hw_devices xc7z045_1]
+refresh_hw_device [lindex [get_hw_devices xc7z045_1] 0]
+open_bd_design {C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/HLS_FFT.bd}

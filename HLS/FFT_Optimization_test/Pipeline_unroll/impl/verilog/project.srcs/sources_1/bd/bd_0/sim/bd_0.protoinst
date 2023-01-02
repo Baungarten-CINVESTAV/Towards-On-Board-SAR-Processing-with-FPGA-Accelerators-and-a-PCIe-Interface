@@ -1,0 +1,33 @@
+{
+	"version": "1.0",
+	"modules": {
+		"bd_0": {
+			"proto_instances": {
+				"/hls_inst/s_axi_AXILiteS": {
+					"interface": "xilinx.com:interface:aximm:1.0",
+					"ports": {
+						"ACLK": { "actual": "ap_clk"},
+						"ARADDR": { "actual": "s_axi_AXILiteS_ARADDR"},
+						"ARESETN": { "actual": "ap_rst_n"},
+						"ARREADY": { "actual": "s_axi_AXILiteS_ARREADY"},
+						"ARVALID": { "actual": "s_axi_AXILiteS_ARVALID"},
+						"AWADDR": { "actual": "s_axi_AXILiteS_AWADDR"},
+						"AWREADY": { "actual": "s_axi_AXILiteS_AWREADY"},
+						"AWVALID": { "actual": "s_axi_AXILiteS_AWVALID"},
+						"BREADY": { "actual": "s_axi_AXILiteS_BREADY"},
+						"BRESP": { "actual": "s_axi_AXILiteS_BRESP"},
+						"BVALID": { "actual": "s_axi_AXILiteS_BVALID"},
+						"RDATA": { "actual": "s_axi_AXILiteS_RDATA"},
+						"RREADY": { "actual": "s_axi_AXILiteS_RREADY"},
+						"RRESP": { "actual": "s_axi_AXILiteS_RRESP"},
+						"RVALID": { "actual": "s_axi_AXILiteS_RVALID"},
+						"WDATA": { "actual": "s_axi_AXILiteS_WDATA"},
+						"WREADY": { "actual": "s_axi_AXILiteS_WREADY"},
+						"WSTRB": { "actual": "s_axi_AXILiteS_WSTRB"},
+						"WVALID": { "actual": "s_axi_AXILiteS_WVALID"}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1680 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1603944436541">
+  <ports id="1" name="Real_r" type="PortType" originalName="Real" coreName="RAM_1P_BRAM" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="1024">
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+  </ports>
+  <ports id="2" name="Imag" type="PortType" originalName="Imag" coreName="RAM_1P_BRAM" bitwidth="32" direction="DirInOut" iftype="IfTypeRegister" arraysize="1024">
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataInputObjs>load</dataInputObjs>
+    <dataInputObjs>store</dataInputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+    <dataOutputObjs>load</dataOutputObjs>
+    <dataOutputObjs>store</dataOutputObjs>
+  </ports>
+  <edges id="136" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="139" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="140" source_obj="//@regions.0/@basic_blocks.1/@node_objs.47" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="141" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="148" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="149" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="150" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.1/@node_objs.0"/>
+  <edges id="202" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="203" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.15"/>
+  <edges id="204" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="205" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.16"/>
+  <edges id="206" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="207" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.17"/>
+  <edges id="208" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="209" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.18"/>
+  <edges id="210" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="211" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.19"/>
+  <edges id="212" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="213" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.20"/>
+  <edges id="214" source_obj="//@regions.0/@basic_blocks.1/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="216" source_obj="//@regions.0/@basic_blocks.1/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="224" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="230" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="231" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="232" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.27"/>
+  <edges id="238" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="244" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="250" source_obj="//@regions.0/@basic_blocks.1/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="251" source_obj="//@regions.0/@basic_blocks.1/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.34"/>
+  <edges id="253" source_obj="//@regions.0/@basic_blocks.1/@node_objs.33" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.35"/>
+  <edges id="260" source_obj="//@regions.0/@basic_blocks.1/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="266" source_obj="//@regions.0/@basic_blocks.1/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="267" source_obj="//@regions.0/@basic_blocks.1/@node_objs.37" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.40"/>
+  <edges id="269" source_obj="//@regions.0/@basic_blocks.1/@node_objs.39" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.41"/>
+  <edges id="276" source_obj="//@regions.0/@basic_blocks.1/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.43"/>
+  <edges id="277" source_obj="//@regions.0/@basic_blocks.1/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.44"/>
+  <edges id="278" source_obj="//@regions.0/@basic_blocks.1/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.44"/>
+  <edges id="279" source_obj="//@regions.0/@basic_blocks.1/@node_objs.43" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.45"/>
+  <edges id="281" source_obj="//@regions.0/@basic_blocks.1/@node_objs.44" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.46"/>
+  <edges id="285" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.47"/>
+  <edges id="286" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.48"/>
+  <edges id="287" source_obj="//@regions.1/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="288" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0" is_back_edge="1"/>
+  <edges id="291" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.0"/>
+  <edges id="292" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.1"/>
+  <edges id="295" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.2"/>
+  <edges id="298" source_obj="//@regions.1/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="299" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="300" edge_type="CtrlEdge" source_obj="//@blocks.2" sink_obj="//@regions.1/@basic_blocks.0/@node_objs.3"/>
+  <edges id="324" source_obj="//@regions.1/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.5"/>
+  <edges id="330" source_obj="//@regions.1/@basic_blocks.1/@node_objs.6" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.7"/>
+  <edges id="332" source_obj="//@regions.1/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.8"/>
+  <edges id="334" source_obj="//@regions.1/@basic_blocks.1/@node_objs.3" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.9"/>
+  <edges id="336" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.10"/>
+  <edges id="466" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="467" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="468" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="469" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="470" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.1/@basic_blocks.0"/>
+  <edges id="471" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@blocks.2"/>
+  <edges id="472" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.0" sink_obj="//@regions.1/@basic_blocks.1"/>
+  <edges id="473" edge_type="CtrlEdge" source_obj="//@regions.1/@basic_blocks.1" sink_obj="//@regions.1/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="2147483647" source_obj="//@regions.1/@basic_blocks.1/@node_objs.9" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.6" is_back_edge="1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.21"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.40"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.41"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.4"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.40"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.34"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.35"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.5"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.12"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.34"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.6"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.11"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.35"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.45"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.46"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.7"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.14"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.45"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.8"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.13"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.46"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.9"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.22"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.10"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.41"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.23"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.24"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.25"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.26"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.28"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.29"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.30"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.31"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.31" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.32"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.32" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.33"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.36"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.36" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.37"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.38"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.38" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.39"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.42"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.42" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.43"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.0"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.1"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.2"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.5"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.3"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.7"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.2"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.5"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.3"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.7"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.4"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.8"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.6"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.9"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.4"/>
+  <edges id="-1" source_obj="//@ports.0" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.8"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.6"/>
+  <edges id="-1" source_obj="//@ports.1" sink_obj="//@regions.1/@basic_blocks.1/@node_objs.9"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.3" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.21" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.4" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.40" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.12" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.34" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.6" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.11" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.35" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.7" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.14" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.45" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.8" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.13" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.46" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.9" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.22" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.10" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@regions.0/@basic_blocks.1/@node_objs.41" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.2" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.5" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.3" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.7" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.4" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.8" sink_obj="//@ports.0"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.6" sink_obj="//@ports.1"/>
+  <edges id="-1" source_obj="//@regions.1/@basic_blocks.1/@node_objs.9" sink_obj="//@ports.1"/>
+  <blocks id="14" name="meminst35.preheader" type="BlockType">
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>block_19</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="_ln44" lineNumber="44" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="br" m_display="0" m_delay="1.76" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="44" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+      <controlInputObjs>block_19</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="FFT_test_3/Reorder_FFT.cpp">
+      <validLinenumbers>44</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="103" name=".preheader.preheader" type="BlockType">
+    <controlInputObjs>block_19</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <controlOutputObjs>phi</controlOutputObjs>
+    <controlOutputObjs>.preheader</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="102" name="_ln94" lineNumber="94" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="br" nodeLabel="28.0" m_display="0" m_delay="1.76" m_topoIndex="83" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="94" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+      <controlInputObjs>.preheader</controlInputObjs>
+    </node_objs>
+    <fileValidLineNumbers fileName="FFT_test_3/Reorder_FFT.cpp">
+      <validLinenumbers>94</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <blocks id="135" name="block_135" type="BlockType">
+    <controlInputObjs>.preheader</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="134" name="_ln109" lineNumber="109" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="ret" nodeLabel="34.0" m_display="0" m_topoIndex="108" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="109" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="FFT_test_3/Reorder_FFT.cpp">
+      <validLinenumbers>109</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="10" typeName="Pipeline" id="629" pipe_depth="27" RegionName="Loop 1">
+    <basic_blocks id="19" name="block_19" type="BlockType">
+      <controlInputObjs>meminst35.preheader</controlInputObjs>
+      <controlInputObjs>hls_label_0</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.preheader.preheader</controlOutputObjs>
+      <controlOutputObjs>hls_label_0</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="15" name="c_0" originalName="c" bitwidth="11" opcode="phi" nodeLabel="1.0" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>or</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <controlInputObjs>meminst35.preheader</controlInputObjs>
+        <controlInputObjs>hls_label_0</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln44" lineNumber="44" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="44" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <controlInputObjs>hls_label_0</controlInputObjs>
+        <controlInputObjs>.preheader.preheader</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="FFT_test_3/Reorder_FFT.cpp">
+        <validLinenumbers>44</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="101" name="hls_label_0" type="BlockType">
+      <controlInputObjs>block_19</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_19</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="ind1" lineNumber="48" originalName="ind1" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="ind1_fu_289_p2" contextFuncName="Reorder_fft" bitwidth="10" opcode="or" nodeLabel="1.0" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="48" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="24" name="ind2" lineNumber="49" originalName="ind2" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="ind2_fu_307_p2" contextFuncName="Reorder_fft" bitwidth="10" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="49" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="ind3" lineNumber="50" originalName="ind3" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="ind3_fu_312_p2" contextFuncName="Reorder_fft" bitwidth="10" opcode="or" nodeLabel="2.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="50" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="RE_vec_128_a" lineNumber="52" originalName="RE_vec_128_a" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="52" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="RE_vec_128_b" lineNumber="53" originalName="RE_vec_128_b" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="1" m_delay="3.25" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="53" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="Real_load" lineNumber="54" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="54" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="Imag_load" lineNumber="55" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="1.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="55" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="Real_load_1" lineNumber="56" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="56" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="41" name="Imag_load_1" lineNumber="57" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="2.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="57" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="43" name="IM_vec_128_a" lineNumber="61" originalName="IM_vec_128_a" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="3.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="61" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="IM_vec_128_b" lineNumber="62" originalName="IM_vec_128_b" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="62" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="46" name="Imag_load_4" lineNumber="63" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="1" m_delay="3.25" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="34" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="63" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="47" name="Real_load_2" lineNumber="64" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="5.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="35" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="64" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="48" name="Imag_load_5" lineNumber="65" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="40" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="65" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="49" name="Real_load_3" lineNumber="66" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="6.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="41" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="66" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="50" name="tmp_1" lineNumber="77" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U1" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="4.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="77" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="51" name="tmp_3" lineNumber="78" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U1" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="6.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="42" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="78" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="52" name="tmp_5" lineNumber="79" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U1" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="11.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="59" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="79" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="53" name="tmp_7" lineNumber="83" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U2" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="6.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="43" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="83" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="tmp_9" lineNumber="84" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U1" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="8.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="48" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="84" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="tmp_4" lineNumber="85" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U1" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="13.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="64" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="85" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="Real_addr_write_ln87" lineNumber="87" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="store" nodeLabel="17.0" m_display="0" m_delay="3.25" m_topoIndex="73" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="87" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="Imag_addr_2_write_ln88" lineNumber="88" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="store" nodeLabel="18.0" m_display="0" m_delay="3.25" m_topoIndex="75" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="88" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="xor_ln77" lineNumber="77" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="xor_ln77_fu_332_p2" contextFuncName="Reorder_fft" bitwidth="32" opcode="xor" nodeLabel="4.0" m_display="0" m_delay="0.99" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="77" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="tmp_1_1" lineNumber="77" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U2" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="4.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="77" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="xor_ln78" lineNumber="78" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="xor_ln78_fu_347_p2" contextFuncName="Reorder_fft" bitwidth="32" opcode="xor" nodeLabel="5.0" m_display="0" m_delay="0.99" m_topoIndex="37" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="78" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="tmp_3_1" lineNumber="78" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U1" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="5.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="39" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="78" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="tmp_5_1" lineNumber="79" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U1" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="10.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="53" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="79" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="xor_ln83" lineNumber="83" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="xor_ln83_fu_362_p2" contextFuncName="Reorder_fft" bitwidth="32" opcode="xor" nodeLabel="7.0" m_display="0" m_delay="0.99" m_topoIndex="45" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="83" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="tmp_7_1" lineNumber="83" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U1" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="7.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="47" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="83" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="xor_ln84" lineNumber="84" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="xor_ln84_fu_376_p2" contextFuncName="Reorder_fft" bitwidth="32" opcode="xor" nodeLabel="8.0" m_display="0" m_delay="0.99" m_topoIndex="50" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="84" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="tmp_9_1" lineNumber="84" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U2" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="8.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="52" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="84" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <dataOutputObjs>xor</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="xor_ln85" lineNumber="85" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="xor_ln85_fu_425_p2" contextFuncName="Reorder_fft" bitwidth="32" opcode="xor" nodeLabel="13.0" m_display="0" m_delay="0.99" m_topoIndex="66" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="85" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="tmp_10_1" lineNumber="85" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U2" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="13.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="68" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="85" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="Real_addr_2_write_ln87" lineNumber="87" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="store" nodeLabel="18.0" m_display="0" m_delay="3.25" m_topoIndex="76" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="87" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="Imag_addr_write_ln88" lineNumber="88" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="store" nodeLabel="19.0" m_display="0" m_delay="3.25" m_topoIndex="77" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="88" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="xor_ln79" lineNumber="79" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="xor_ln79_fu_411_p2" contextFuncName="Reorder_fft" bitwidth="32" opcode="xor" nodeLabel="11.0" m_display="0" m_delay="0.99" m_topoIndex="61" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="79" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="tmp_5_2" lineNumber="79" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U2" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="11.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="63" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="79" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="xor_ln85_1" lineNumber="85" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="xor_ln85_1_fu_439_p2" contextFuncName="Reorder_fft" bitwidth="32" opcode="xor" nodeLabel="15.0" m_display="0" m_delay="0.99" m_topoIndex="70" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="85" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="88" name="tmp_10_2" lineNumber="85" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U2" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="15.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="72" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="85" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="89" name="Real_addr_1_write_ln87" lineNumber="87" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="store" nodeLabel="19.0" m_display="0" m_delay="3.25" m_topoIndex="78" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="87" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="90" name="Imag_addr_3_write_ln88" lineNumber="88" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="79" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="88" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="92" name="xor_ln79_1" lineNumber="79" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="xor_ln79_1_fu_391_p2" contextFuncName="Reorder_fft" bitwidth="32" opcode="xor" nodeLabel="10.0" m_display="0" m_delay="0.99" m_topoIndex="55" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="79" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataOutputObjs>fadd</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="94" name="tmp_5_3" lineNumber="79" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U2" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="10.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="57" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="79" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>xor</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="95" name="tmp_10_3" lineNumber="85" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="Reorder_fft_fadd_dEe_U2" contextFuncName="Reorder_fft" bitwidth="32" opcode="fadd" nodeLabel="17.0" nodeLatency="4" m_display="0" m_delay="7.25" m_topoIndex="74" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="85" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="96" name="Real_addr_3_write_ln87" lineNumber="87" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="store" nodeLabel="20.0" m_display="0" m_delay="3.25" m_topoIndex="80" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="87" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="97" name="Imag_addr_1_write_ln88" lineNumber="88" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="store" nodeLabel="27.0" m_display="0" m_delay="3.25" m_topoIndex="81" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="88" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>fadd</dataInputObjs>
+        <dataInputObjs>or</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="99" name="c" lineNumber="44" originalName="c" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="c_fu_402_p2" contextFuncName="Reorder_fft" bitwidth="11" opcode="add" nodeLabel="10.0" m_display="0" m_delay="1.63" m_topoIndex="58" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="44" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="100" name="_ln44" lineNumber="44" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="br" nodeLabel="27.0" m_display="0" m_topoIndex="82" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="44" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <controlInputObjs>block_19</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="FFT_test_3/Reorder_FFT.cpp">
+        <validLinenumbers>48</validLinenumbers>
+        <validLinenumbers>49</validLinenumbers>
+        <validLinenumbers>50</validLinenumbers>
+        <validLinenumbers>52</validLinenumbers>
+        <validLinenumbers>53</validLinenumbers>
+        <validLinenumbers>54</validLinenumbers>
+        <validLinenumbers>55</validLinenumbers>
+        <validLinenumbers>56</validLinenumbers>
+        <validLinenumbers>57</validLinenumbers>
+        <validLinenumbers>61</validLinenumbers>
+        <validLinenumbers>62</validLinenumbers>
+        <validLinenumbers>63</validLinenumbers>
+        <validLinenumbers>64</validLinenumbers>
+        <validLinenumbers>65</validLinenumbers>
+        <validLinenumbers>66</validLinenumbers>
+        <validLinenumbers>77</validLinenumbers>
+        <validLinenumbers>78</validLinenumbers>
+        <validLinenumbers>79</validLinenumbers>
+        <validLinenumbers>83</validLinenumbers>
+        <validLinenumbers>84</validLinenumbers>
+        <validLinenumbers>85</validLinenumbers>
+        <validLinenumbers>87</validLinenumbers>
+        <validLinenumbers>88</validLinenumbers>
+        <validLinenumbers>44</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <regions anchor_node="-1" region_type="8" interval="4" typeName="Pipeline" id="630" pipe_depth="5" RegionName="Loop 2">
+    <basic_blocks id="109" name=".preheader" type="BlockType">
+      <controlInputObjs>.preheader.preheader</controlInputObjs>
+      <controlInputObjs>hls_label_2</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>block_135</controlOutputObjs>
+      <controlOutputObjs>hls_label_2</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="104" name="i_0" originalName="i" bitwidth="9" opcode="phi" nodeLabel="29.0" m_display="0" m_topoIndex="84" m_clusterGroupNumber="-1">
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <controlInputObjs>hls_label_2</controlInputObjs>
+        <controlInputObjs>.preheader.preheader</controlInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="105" name="icmp_ln94" lineNumber="94" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="icmp_ln94_fu_450_p2" contextFuncName="Reorder_fft" bitwidth="1" opcode="icmp" nodeLabel="29.0" m_display="0" m_delay="1.66" m_topoIndex="85" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="94" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="107" name="i" lineNumber="94" originalName="i" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." rtlName="i_fu_456_p2" contextFuncName="Reorder_fft" bitwidth="9" opcode="add" nodeLabel="29.0" m_display="0" m_delay="1.82" m_topoIndex="86" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="94" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>phi</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="108" name="_ln94" lineNumber="94" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="br" nodeLabel="29.0" m_display="0" m_topoIndex="87" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="94" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>hls_label_2</controlInputObjs>
+        <controlInputObjs>block_135</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="FFT_test_3/Reorder_FFT.cpp">
+        <validLinenumbers>94</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="133" name="hls_label_2" type="BlockType">
+      <controlInputObjs>.preheader</controlInputObjs>
+      <controlOutputObjs>phi</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>.preheader</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="114" name="indexI" lineNumber="98" originalName="indexI" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="10" opcode="load" nodeLabel="29.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="90" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="98" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="116" name="indexJ" lineNumber="99" originalName="indexJ" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="10" opcode="load" nodeLabel="29.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="92" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="99" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>phi</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="119" name="tempr" lineNumber="101" originalName="tempr" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="30.0" nodeLatency="1" m_display="1" m_delay="3.25" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="95" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="101" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="121" name="tempi" lineNumber="102" originalName="tempi" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="30.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="97" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="102" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="124" name="Real_load_5" lineNumber="103" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="31.0" nodeLatency="1" m_display="0" m_delay="3.25" m_topoIndex="100" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="103" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="125" name="Real_addr_4_write_ln103" lineNumber="103" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="store" nodeLabel="32.0" m_display="0" m_delay="3.25" m_topoIndex="103" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="103" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="127" name="Imag_load_7" lineNumber="104" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" bitwidth="32" opcode="load" nodeLabel="31.0" nodeLatency="1" m_display="1" m_delay="3.25" m_isLCDNode="true" m_isStartOfPath="true" m_topoIndex="102" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="104" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>store</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="128" name="Imag_addr_4_write_ln104" lineNumber="104" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="store" nodeLabel="32.0" m_display="1" m_delay="3.25" m_isLCDNode="true" m_topoIndex="104" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="104" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="129" name="Real_addr_5_write_ln105" lineNumber="105" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="store" nodeLabel="33.0" m_display="0" m_delay="3.25" m_topoIndex="105" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="105" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>Real_r</dataInputObjs>
+        <dataOutputObjs>Real_r</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="130" name="Imag_addr_5_write_ln106" lineNumber="106" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="store" nodeLabel="33.0" m_display="1" m_delay="3.25" m_isLCDNode="true" m_topoIndex="106" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="106" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>load</dataInputObjs>
+        <dataInputObjs>Imag</dataInputObjs>
+        <dataOutputObjs>load</dataOutputObjs>
+        <dataOutputObjs>Imag</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="132" name="_ln94" lineNumber="94" fileName="FFT_test_3/Reorder_FFT.cpp" fileDirectory=".." contextFuncName="Reorder_fft" opcode="br" nodeLabel="33.0" m_display="0" m_topoIndex="107" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="FFT_test_3/Reorder_FFT.cpp" linenumber="94" fileDirectory="C:\Users\wow_r\OneDrive\Escritorio\Maestria\HLS" functionName="Reorder_fft"/>
+        <controlInputObjs>.preheader</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="FFT_test_3/Reorder_FFT.cpp">
+        <validLinenumbers>98</validLinenumbers>
+        <validLinenumbers>99</validLinenumbers>
+        <validLinenumbers>101</validLinenumbers>
+        <validLinenumbers>102</validLinenumbers>
+        <validLinenumbers>103</validLinenumbers>
+        <validLinenumbers>104</validLinenumbers>
+        <validLinenumbers>105</validLinenumbers>
+        <validLinenumbers>106</validLinenumbers>
+        <validLinenumbers>94</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <ScheduleInfo time="8"/>
+  <ScheduleInfo time="9"/>
+  <ScheduleInfo time="10"/>
+  <ScheduleInfo time="11"/>
+  <ScheduleInfo time="12"/>
+  <ScheduleInfo time="13"/>
+  <ScheduleInfo time="14"/>
+  <ScheduleInfo time="15"/>
+  <ScheduleInfo time="16"/>
+  <ScheduleInfo time="17"/>
+  <ScheduleInfo time="18"/>
+  <ScheduleInfo time="19"/>
+  <ScheduleInfo time="20"/>
+  <ScheduleInfo time="21"/>
+  <ScheduleInfo time="22"/>
+  <ScheduleInfo time="23"/>
+  <ScheduleInfo time="24"/>
+  <ScheduleInfo time="25"/>
+  <ScheduleInfo time="26"/>
+  <ScheduleInfo time="27"/>
+  <ScheduleInfo time="28"/>
+  <ScheduleInfo time="29"/>
+  <ScheduleInfo time="30"/>
+  <ScheduleInfo time="31"/>
+  <ScheduleInfo time="32"/>
+  <ScheduleInfo time="33"/>
+  <ScheduleInfo time="34"/>
+  <regnodes realName="Real_load_3_reg_576">
+    <nodeIds>49</nodeIds>
+  </regnodes>
+  <regnodes realName="i_reg_659">
+    <nodeIds>107</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_1_1_reg_586">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln85_1_reg_635">
+    <nodeIds>77</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln79_1_reg_618">
+    <nodeIds>83</nodeIds>
+  </regnodes>
+  <regnodes realName="c_reg_608">
+    <nodeIds>99</nodeIds>
+  </regnodes>
+  <regnodes realName="Real_load_reg_535">
+    <nodeIds>34</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_3_reg_597">
+    <nodeIds>51</nodeIds>
+  </regnodes>
+  <regnodes realName="lut_reorder_I_addr_reg_664">
+    <nodeIds>113</nodeIds>
+  </regnodes>
+  <regnodes realName="Imag_load_5_reg_571">
+    <nodeIds>48</nodeIds>
+  </regnodes>
+  <regnodes realName="Real_addr_1_reg_509">
+    <nodeIds>30</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_251">
+    <nodeIds>50</nodeIds>
+    <nodeIds>52</nodeIds>
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_5_2_reg_645">
+    <nodeIds>84</nodeIds>
+  </regnodes>
+  <regnodes realName="Imag_addr_5_reg_694">
+    <nodeIds>126</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_259">
+    <nodeIds>65</nodeIds>
+    <nodeIds>66</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln44_reg_483">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <regnodes realName="Real_addr_2_reg_494">
+    <nodeIds>33</nodeIds>
+  </regnodes>
+  <regnodes realName="Real_addr_3_reg_514">
+    <nodeIds>38</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln78_1_reg_556">
+    <nodeIds>64</nodeIds>
+  </regnodes>
+  <regnodes realName="Imag_addr_4_reg_684">
+    <nodeIds>120</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln94_reg_655">
+    <nodeIds>105</nodeIds>
+  </regnodes>
+  <regnodes realName="Imag_addr_reg_499">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_9_1_reg_629">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_7_1_reg_613">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_240">
+    <nodeIds>36</nodeIds>
+    <nodeIds>121</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln84_1_reg_592">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_6_reg_479">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="indexJ_reg_674">
+    <nodeIds>116</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_246">
+    <nodeIds>41</nodeIds>
+    <nodeIds>45</nodeIds>
+  </regnodes>
+  <regnodes realName="Real_addr_reg_489">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="Imag_addr_1_reg_519">
+    <nodeIds>40</nodeIds>
+  </regnodes>
+  <regnodes realName="lut_reorder_J_addr_reg_669">
+    <nodeIds>115</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_9_reg_623">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="Real_addr_5_reg_689">
+    <nodeIds>123</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_233">
+    <nodeIds>28</nodeIds>
+    <nodeIds>119</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln85_3_reg_650">
+    <nodeIds>87</nodeIds>
+  </regnodes>
+  <regnodes realName="c_0_reg_202">
+    <nodeIds>15</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_5_3_reg_640">
+    <nodeIds>94</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_272">
+    <nodeIds>78</nodeIds>
+    <nodeIds>95</nodeIds>
+  </regnodes>
+  <regnodes realName="IM_vec_128_a_reg_540">
+    <nodeIds>43</nodeIds>
+  </regnodes>
+  <regnodes realName="RE_vec_128_b_reg_529">
+    <nodeIds>31</nodeIds>
+  </regnodes>
+  <regnodes realName="Real_addr_4_reg_679">
+    <nodeIds>118</nodeIds>
+  </regnodes>
+  <regnodes realName="Real_load_2_reg_566">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln79_3_reg_603">
+    <nodeIds>93</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln83_1_reg_581">
+    <nodeIds>69</nodeIds>
+  </regnodes>
+  <regnodes realName="Imag_addr_3_reg_524">
+    <nodeIds>44</nodeIds>
+  </regnodes>
+  <regnodes realName="Imag_addr_2_reg_504">
+    <nodeIds>42</nodeIds>
+  </regnodes>
+  <regnodes realName="i_0_reg_214">
+    <nodeIds>104</nodeIds>
+  </regnodes>
+  <regnodes realName="reg_265">
+    <nodeIds>53</nodeIds>
+    <nodeIds>88</nodeIds>
+  </regnodes>
+  <regnodes realName="Imag_load_4_reg_561">
+    <nodeIds>46</nodeIds>
+  </regnodes>
+  <regnodes realName="bitcast_ln77_1_reg_546">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="Real_load_1_reg_551">
+    <nodeIds>39</nodeIds>
+  </regnodes>
+  <expressionNodes realName="bitcast_ln85_3_fu_445">
+    <nodeIds>87</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ind3_fu_312">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Imag_addr_4_gep_fu_176">
+    <nodeIds>120</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln85_1_fu_439">
+    <nodeIds>86</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln52_fu_295">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln77_1_fu_338">
+    <nodeIds>60</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln101_fu_468">
+    <nodeIds>117</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln78_1_fu_353">
+    <nodeIds>64</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_fu_402">
+    <nodeIds>99</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_456">
+    <nodeIds>107</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln79_1_fu_391">
+    <nodeIds>92</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln84_fu_373">
+    <nodeIds>71</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln78_fu_347">
+    <nodeIds>63</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Real_addr_4_gep_fu_168">
+    <nodeIds>118</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln85_2_fu_436">
+    <nodeIds>85</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln83_fu_362">
+    <nodeIds>68</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Imag_addr_1_gep_fu_127">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln56_fu_323">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln103_fu_474">
+    <nodeIds>122</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Real_addr_1_gep_fu_112">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ind1_fu_289">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="ind2_fu_307">
+    <nodeIds>24</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lut_reorder_I_addr_gep_fu_142">
+    <nodeIds>113</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Real_addr_gep_fu_72">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln94_fu_450">
+    <nodeIds>105</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Real_addr_3_gep_fu_120">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Imag_addr_2_gep_fu_105">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln79_2_fu_387">
+    <nodeIds>91</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln83_fu_358">
+    <nodeIds>67</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Real_addr_2_gep_fu_85">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln53_fu_317">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_0_phi_fu_218">
+    <nodeIds>104</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Imag_addr_3_gep_fu_135">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="c_0_phi_fu_206">
+    <nodeIds>15</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln79_1_fu_417">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln85_1_fu_431">
+    <nodeIds>77</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Real_addr_5_gep_fu_184">
+    <nodeIds>123</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln85_fu_425">
+    <nodeIds>76</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Imag_addr_gep_fu_92">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln79_fu_408">
+    <nodeIds>81</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln54_fu_301">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln79_3_fu_397">
+    <nodeIds>93</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln84_1_fu_382">
+    <nodeIds>73</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln83_1_fu_368">
+    <nodeIds>69</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln44_fu_285">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="Imag_addr_5_gep_fu_192">
+    <nodeIds>126</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln85_fu_422">
+    <nodeIds>75</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln77_fu_329">
+    <nodeIds>58</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="bitcast_ln78_fu_343">
+    <nodeIds>62</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="lut_reorder_J_addr_gep_fu_155">
+    <nodeIds>115</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_6_fu_277">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln77_fu_332">
+    <nodeIds>59</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln84_fu_376">
+    <nodeIds>72</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="zext_ln98_fu_462">
+    <nodeIds>112</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="xor_ln79_fu_411">
+    <nodeIds>82</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_229">
+    <nodeIds>61</nodeIds>
+    <nodeIds>53</nodeIds>
+    <nodeIds>74</nodeIds>
+    <nodeIds>94</nodeIds>
+    <nodeIds>84</nodeIds>
+    <nodeIds>78</nodeIds>
+    <nodeIds>88</nodeIds>
+    <nodeIds>95</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_225">
+    <nodeIds>50</nodeIds>
+    <nodeIds>65</nodeIds>
+    <nodeIds>51</nodeIds>
+    <nodeIds>70</nodeIds>
+    <nodeIds>54</nodeIds>
+    <nodeIds>66</nodeIds>
+    <nodeIds>52</nodeIds>
+    <nodeIds>55</nodeIds>
+  </moduleNodes>
+  <memoryPorts dataString="Imag">
+    <nodeIds>36</nodeIds>
+    <nodeIds>41</nodeIds>
+    <nodeIds>43</nodeIds>
+    <nodeIds>45</nodeIds>
+    <nodeIds>46</nodeIds>
+    <nodeIds>48</nodeIds>
+    <nodeIds>57</nodeIds>
+    <nodeIds>80</nodeIds>
+    <nodeIds>90</nodeIds>
+    <nodeIds>97</nodeIds>
+    <nodeIds>121</nodeIds>
+    <nodeIds>127</nodeIds>
+    <nodeIds>128</nodeIds>
+    <nodeIds>130</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="Real_r">
+    <nodeIds>28</nodeIds>
+    <nodeIds>31</nodeIds>
+    <nodeIds>34</nodeIds>
+    <nodeIds>39</nodeIds>
+    <nodeIds>47</nodeIds>
+    <nodeIds>49</nodeIds>
+    <nodeIds>56</nodeIds>
+    <nodeIds>79</nodeIds>
+    <nodeIds>89</nodeIds>
+    <nodeIds>96</nodeIds>
+    <nodeIds>119</nodeIds>
+    <nodeIds>124</nodeIds>
+    <nodeIds>125</nodeIds>
+    <nodeIds>129</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="lut_reorder_I">
+    <nodeIds>114</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="lut_reorder_J">
+    <nodeIds>116</nodeIds>
+  </memoryPorts>
+  <ioPorts name="Imag(p0)">
+    <contents name="load">
+      <nodeIds>36</nodeIds>
+      <nodeIds>41</nodeIds>
+      <nodeIds>43</nodeIds>
+      <nodeIds>45</nodeIds>
+      <nodeIds>46</nodeIds>
+      <nodeIds>48</nodeIds>
+      <nodeIds>121</nodeIds>
+      <nodeIds>127</nodeIds>
+    </contents>
+    <contents name="store">
+      <nodeIds>57</nodeIds>
+      <nodeIds>80</nodeIds>
+      <nodeIds>90</nodeIds>
+      <nodeIds>97</nodeIds>
+      <nodeIds>128</nodeIds>
+      <nodeIds>130</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="Real_r(p0)">
+    <contents name="load">
+      <nodeIds>28</nodeIds>
+      <nodeIds>31</nodeIds>
+      <nodeIds>34</nodeIds>
+      <nodeIds>39</nodeIds>
+      <nodeIds>47</nodeIds>
+      <nodeIds>49</nodeIds>
+      <nodeIds>119</nodeIds>
+      <nodeIds>124</nodeIds>
+    </contents>
+    <contents name="store">
+      <nodeIds>56</nodeIds>
+      <nodeIds>79</nodeIds>
+      <nodeIds>89</nodeIds>
+      <nodeIds>96</nodeIds>
+      <nodeIds>125</nodeIds>
+      <nodeIds>129</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="2" latency="2"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="2" latency="2"/>
+      <operations id="42" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="2"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="2" latency="2"/>
+      <operations id="36" stage="1" latency="2"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="2" latency="2"/>
+      <operations id="44" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="31" stage="1" latency="2"/>
+      <operations id="34" stage="2" latency="2"/>
+      <operations id="41" stage="1" latency="2"/>
+      <operations id="43" stage="2" latency="2"/>
+    </states>
+    <states id="5">
+      <operations id="34" stage="1" latency="2"/>
+      <operations id="39" stage="2" latency="2"/>
+      <operations id="43" stage="1" latency="2"/>
+      <operations id="45" stage="2" latency="2"/>
+      <operations id="50" stage="5" latency="5"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="1" latency="1"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="5" latency="5"/>
+    </states>
+    <states id="6">
+      <operations id="39" stage="1" latency="2"/>
+      <operations id="45" stage="1" latency="2"/>
+      <operations id="46" stage="2" latency="2"/>
+      <operations id="47" stage="2" latency="2"/>
+      <operations id="50" stage="4" latency="5"/>
+      <operations id="61" stage="4" latency="5"/>
+      <operations id="62" stage="1" latency="1"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="65" stage="5" latency="5"/>
+    </states>
+    <states id="7">
+      <operations id="46" stage="1" latency="2"/>
+      <operations id="47" stage="1" latency="2"/>
+      <operations id="48" stage="2" latency="2"/>
+      <operations id="49" stage="2" latency="2"/>
+      <operations id="50" stage="3" latency="5"/>
+      <operations id="51" stage="5" latency="5"/>
+      <operations id="53" stage="5" latency="5"/>
+      <operations id="61" stage="3" latency="5"/>
+      <operations id="65" stage="4" latency="5"/>
+    </states>
+    <states id="8">
+      <operations id="48" stage="1" latency="2"/>
+      <operations id="49" stage="1" latency="2"/>
+      <operations id="50" stage="2" latency="5"/>
+      <operations id="51" stage="4" latency="5"/>
+      <operations id="53" stage="4" latency="5"/>
+      <operations id="61" stage="2" latency="5"/>
+      <operations id="65" stage="3" latency="5"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="1" latency="1"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="5" latency="5"/>
+    </states>
+    <states id="9">
+      <operations id="50" stage="1" latency="5"/>
+      <operations id="51" stage="3" latency="5"/>
+      <operations id="53" stage="3" latency="5"/>
+      <operations id="54" stage="5" latency="5"/>
+      <operations id="61" stage="1" latency="5"/>
+      <operations id="65" stage="2" latency="5"/>
+      <operations id="70" stage="4" latency="5"/>
+      <operations id="71" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="5" latency="5"/>
+    </states>
+    <states id="10">
+      <operations id="51" stage="2" latency="5"/>
+      <operations id="53" stage="2" latency="5"/>
+      <operations id="54" stage="4" latency="5"/>
+      <operations id="65" stage="1" latency="5"/>
+      <operations id="70" stage="3" latency="5"/>
+      <operations id="74" stage="4" latency="5"/>
+    </states>
+    <states id="11">
+      <operations id="51" stage="1" latency="5"/>
+      <operations id="53" stage="1" latency="5"/>
+      <operations id="54" stage="3" latency="5"/>
+      <operations id="66" stage="5" latency="5"/>
+      <operations id="70" stage="2" latency="5"/>
+      <operations id="74" stage="3" latency="5"/>
+      <operations id="91" stage="1" latency="1"/>
+      <operations id="92" stage="1" latency="1"/>
+      <operations id="93" stage="1" latency="1"/>
+      <operations id="94" stage="5" latency="5"/>
+      <operations id="99" stage="1" latency="1"/>
+    </states>
+    <states id="12">
+      <operations id="52" stage="5" latency="5"/>
+      <operations id="54" stage="2" latency="5"/>
+      <operations id="66" stage="4" latency="5"/>
+      <operations id="70" stage="1" latency="5"/>
+      <operations id="74" stage="2" latency="5"/>
+      <operations id="81" stage="1" latency="1"/>
+      <operations id="82" stage="1" latency="1"/>
+      <operations id="83" stage="1" latency="1"/>
+      <operations id="84" stage="5" latency="5"/>
+      <operations id="94" stage="4" latency="5"/>
+    </states>
+    <states id="13">
+      <operations id="52" stage="4" latency="5"/>
+      <operations id="54" stage="1" latency="5"/>
+      <operations id="66" stage="3" latency="5"/>
+      <operations id="74" stage="1" latency="5"/>
+      <operations id="84" stage="4" latency="5"/>
+      <operations id="94" stage="3" latency="5"/>
+    </states>
+    <states id="14">
+      <operations id="52" stage="3" latency="5"/>
+      <operations id="55" stage="5" latency="5"/>
+      <operations id="66" stage="2" latency="5"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+      <operations id="77" stage="1" latency="1"/>
+      <operations id="78" stage="5" latency="5"/>
+      <operations id="84" stage="3" latency="5"/>
+      <operations id="94" stage="2" latency="5"/>
+    </states>
+    <states id="15">
+      <operations id="52" stage="2" latency="5"/>
+      <operations id="55" stage="4" latency="5"/>
+      <operations id="66" stage="1" latency="5"/>
+      <operations id="78" stage="4" latency="5"/>
+      <operations id="84" stage="2" latency="5"/>
+      <operations id="94" stage="1" latency="5"/>
+    </states>
+    <states id="16">
+      <operations id="52" stage="1" latency="5"/>
+      <operations id="55" stage="3" latency="5"/>
+      <operations id="78" stage="3" latency="5"/>
+      <operations id="84" stage="1" latency="5"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+      <operations id="87" stage="1" latency="1"/>
+      <operations id="88" stage="5" latency="5"/>
+    </states>
+    <states id="17">
+      <operations id="55" stage="2" latency="5"/>
+      <operations id="78" stage="2" latency="5"/>
+      <operations id="88" stage="4" latency="5"/>
+    </states>
+    <states id="18">
+      <operations id="55" stage="1" latency="5"/>
+      <operations id="56" stage="1" latency="1"/>
+      <operations id="78" stage="1" latency="5"/>
+      <operations id="88" stage="3" latency="5"/>
+      <operations id="95" stage="5" latency="5"/>
+    </states>
+    <states id="19">
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="79" stage="1" latency="1"/>
+      <operations id="88" stage="2" latency="5"/>
+      <operations id="95" stage="4" latency="5"/>
+    </states>
+    <states id="20">
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="88" stage="1" latency="5"/>
+      <operations id="89" stage="1" latency="1"/>
+      <operations id="95" stage="3" latency="5"/>
+    </states>
+    <states id="21">
+      <operations id="90" stage="1" latency="1"/>
+      <operations id="95" stage="2" latency="5"/>
+      <operations id="96" stage="1" latency="1"/>
+    </states>
+    <states id="22">
+      <operations id="95" stage="1" latency="5"/>
+    </states>
+    <states id="23"/>
+    <states id="24"/>
+    <states id="25"/>
+    <states id="26"/>
+    <states id="27"/>
+    <states id="28">
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="97" stage="1" latency="1"/>
+      <operations id="98" stage="1" latency="1"/>
+      <operations id="100" stage="1" latency="1"/>
+    </states>
+    <states id="29">
+      <operations id="102" stage="1" latency="1"/>
+    </states>
+    <states id="30">
+      <operations id="104" stage="1" latency="1"/>
+      <operations id="105" stage="1" latency="1"/>
+      <operations id="106" stage="1" latency="1"/>
+      <operations id="107" stage="1" latency="1"/>
+      <operations id="108" stage="1" latency="1"/>
+      <operations id="112" stage="1" latency="1"/>
+      <operations id="113" stage="1" latency="1"/>
+      <operations id="114" stage="2" latency="2"/>
+      <operations id="115" stage="1" latency="1"/>
+      <operations id="116" stage="2" latency="2"/>
+    </states>
+    <states id="31">
+      <operations id="114" stage="1" latency="2"/>
+      <operations id="116" stage="1" latency="2"/>
+      <operations id="117" stage="1" latency="1"/>
+      <operations id="118" stage="1" latency="1"/>
+      <operations id="119" stage="2" latency="2"/>
+      <operations id="120" stage="1" latency="1"/>
+      <operations id="121" stage="2" latency="2"/>
+    </states>
+    <states id="32">
+      <operations id="119" stage="1" latency="2"/>
+      <operations id="121" stage="1" latency="2"/>
+      <operations id="122" stage="1" latency="1"/>
+      <operations id="123" stage="1" latency="1"/>
+      <operations id="124" stage="2" latency="2"/>
+      <operations id="126" stage="1" latency="1"/>
+      <operations id="127" stage="2" latency="2"/>
+    </states>
+    <states id="33">
+      <operations id="124" stage="1" latency="2"/>
+      <operations id="125" stage="1" latency="1"/>
+      <operations id="127" stage="1" latency="2"/>
+      <operations id="128" stage="1" latency="1"/>
+    </states>
+    <states id="34">
+      <operations id="110" stage="1" latency="1"/>
+      <operations id="111" stage="1" latency="1"/>
+      <operations id="129" stage="1" latency="1"/>
+      <operations id="130" stage="1" latency="1"/>
+      <operations id="131" stage="1" latency="1"/>
+      <operations id="132" stage="1" latency="1"/>
+    </states>
+    <states id="35">
+      <operations id="134" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="29" outState="30">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="8" outState="9">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="9" outState="10">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="10" outState="11">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="11" outState="12">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="12" outState="13">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="13" outState="14">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="14" outState="15">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="15" outState="16">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="16" outState="17">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="17" outState="18">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="18" outState="19">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="19" outState="20">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="20" outState="21">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="21" outState="22">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="22" outState="23">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="23" outState="24">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="24" outState="25">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="25" outState="26">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="26" outState="27">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="27" outState="28">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="28" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="29">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="31" outState="32">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="32" outState="33">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="33" outState="34">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="34" outState="30">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="30" outState="35">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="30" outState="31">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="Reorder_fft" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="4500" mMaxLatency="4500">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <subRegions>5</subRegions>
+      <subRegions>6</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>14</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Loop 1" mII="10" mDepth="27" mMinTripCount="256" mMaxTripCount="256" mMinLatency="2576" mMaxLatency="2576" mType="1">
+      <basicBlocks>19</basicBlocks>
+      <basicBlocks>101</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Region 1" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>103</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="5" mTag="Loop 2" mII="4" mDepth="5" mMinTripCount="480" mMaxTripCount="480" mMinLatency="1920" mMaxLatency="1920" mType="1">
+      <basicBlocks>109</basicBlocks>
+      <basicBlocks>133</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="6" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>135</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

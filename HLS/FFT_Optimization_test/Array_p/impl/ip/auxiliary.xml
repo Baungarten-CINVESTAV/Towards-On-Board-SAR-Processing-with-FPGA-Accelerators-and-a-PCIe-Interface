@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="Reorder_fft" xd:componentRef="Reorder_fft" xd:initiationInterval="2704" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="Real_0_d0" xd:originalName="Real_0_d0" xd:direction="out" xd:interfaceRef="Real_0_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Real_0_q0" xd:originalName="Real_0_q0" xd:direction="in" xd:interfaceRef="Real_0_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Real_1_d0" xd:originalName="Real_1_d0" xd:direction="out" xd:interfaceRef="Real_1_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Real_1_q0" xd:originalName="Real_1_q0" xd:direction="in" xd:interfaceRef="Real_1_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Real_2_d0" xd:originalName="Real_2_d0" xd:direction="out" xd:interfaceRef="Real_2_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Real_2_q0" xd:originalName="Real_2_q0" xd:direction="in" xd:interfaceRef="Real_2_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Real_3_d0" xd:originalName="Real_3_d0" xd:direction="out" xd:interfaceRef="Real_3_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Real_3_q0" xd:originalName="Real_3_q0" xd:direction="in" xd:interfaceRef="Real_3_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Imag_0_d0" xd:originalName="Imag_0_d0" xd:direction="out" xd:interfaceRef="Imag_0_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Imag_0_q0" xd:originalName="Imag_0_q0" xd:direction="in" xd:interfaceRef="Imag_0_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Imag_1_d0" xd:originalName="Imag_1_d0" xd:direction="out" xd:interfaceRef="Imag_1_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Imag_1_q0" xd:originalName="Imag_1_q0" xd:direction="in" xd:interfaceRef="Imag_1_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Imag_2_d0" xd:originalName="Imag_2_d0" xd:direction="out" xd:interfaceRef="Imag_2_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Imag_2_q0" xd:originalName="Imag_2_q0" xd:direction="in" xd:interfaceRef="Imag_2_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Imag_3_d0" xd:originalName="Imag_3_d0" xd:direction="out" xd:interfaceRef="Imag_3_d0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:arg xd:name="Imag_3_q0" xd:originalName="Imag_3_q0" xd:direction="in" xd:interfaceRef="Imag_3_q0" xd:busTypeRef="ap_memory" xd:arraySize="1" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="2703" xd:worst-case="2703" xd:average-case="2703"/>
+  <xd:resourceEstimates xd:LUT="3717" xd:FF="2713" xd:BRAM="2" xd:DSP="12"/>
+</xd:acceleratorMap>

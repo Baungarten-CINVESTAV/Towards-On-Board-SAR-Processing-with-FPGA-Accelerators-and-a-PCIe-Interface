@@ -1,0 +1,790 @@
+
+
+================================================================
+== Vivado HLS Report for 'Reorder_fft'
+================================================================
+* Date:           Sun Mar 28 22:02:50 2021
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        FFR_Reorder_x_num
+* Solution:       With_array_P
+* Product family: zynq
+* Target device:  xc7z045ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   5.00|     4.320|        0.63|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+-------+----------+-----------+-----------+------------+----------+
+        |          |    Latency   | Iteration|  Initiation Interval  |    Trip    |          |
+        | Loop Name|  min |  max  |  Latency |  achieved |   target  |    Count   | Pipelined|
+        +----------+------+-------+----------+-----------+-----------+------------+----------+
+        |- Loop 1  |     ?|      ?|        20|          2|          1|           ?|    yes   |
+        |- Loop 2  |  1921|  32257|         6|          4|          1| 480 ~ 8064 |    yes   |
+        +----------+------+-------+----------+-----------+-----------+------------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 20
+  * Pipeline-1: initiation interval (II) = 4, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 30
+* Pipeline : 2
+  Pipeline-0 : II = 2, D = 20, States = { 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 }
+  Pipeline-1 : II = 4, D = 6, States = { 24 25 26 27 28 29 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	23  / (tmp_22)
+	4  / (!tmp_22)
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	3  / true
+23 --> 
+	24  / true
+24 --> 
+	30  / (exitcond)
+	25  / (!exitcond)
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	24  / true
+30 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.89>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%num_word_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %num_word)" [FFR_Reorder_x_num/Reorder_FFT.cpp:16]   --->   Operation 31 'read' 'num_word_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (1.89ns)   --->   "%p_neg = sub i32 -3, %num_word_read" [FFR_Reorder_x_num/Reorder_FFT.cpp:16]   --->   Operation 32 'sub' 'p_neg' <Predicate = true> <Delay = 1.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%p_lshr = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %p_neg, i32 2, i32 31)" [FFR_Reorder_x_num/Reorder_FFT.cpp:16]   --->   Operation 33 'partselect' 'p_lshr' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 3.35>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4096 x float]* %Imag_3), !map !7"   --->   Operation 34 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4096 x float]* %Imag_2), !map !13"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4096 x float]* %Imag_1), !map !19"   --->   Operation 36 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4096 x float]* %Imag_0), !map !25"   --->   Operation 37 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4096 x float]* %Real_3), !map !31"   --->   Operation 38 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4096 x float]* %Real_2), !map !35"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4096 x float]* %Real_1), !map !39"   --->   Operation 40 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([4096 x float]* %Real_0), !map !43"   --->   Operation 41 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %num_word) nounwind, !map !47"   --->   Operation 42 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([12 x i8]* @Reorder_fft_str) nounwind"   --->   Operation 43 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([4096 x float]* %Real_0, [4096 x float]* %Real_1, [4096 x float]* %Real_2, [4096 x float]* %Real_3, [1 x i8]* @p_str1, [12 x i8]* @p_str2, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [FFR_Reorder_x_num/Reorder_FFT.cpp:24]   --->   Operation 44 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([4096 x float]* %Imag_0, [4096 x float]* %Imag_1, [4096 x float]* %Imag_2, [4096 x float]* %Imag_3, [1 x i8]* @p_str1, [12 x i8]* @p_str2, [1 x i8]* @p_str1, i32 -1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1)" [FFR_Reorder_x_num/Reorder_FFT.cpp:25]   --->   Operation 45 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (1.96ns)   --->   "%tmp = icmp eq i32 %num_word_read, 1024" [FFR_Reorder_x_num/Reorder_FFT.cpp:53]   --->   Operation 46 'icmp' 'tmp' <Predicate = true> <Delay = 1.96> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 47 [1/1] (1.96ns)   --->   "%tmp_1 = icmp eq i32 %num_word_read, 4096" [FFR_Reorder_x_num/Reorder_FFT.cpp:58]   --->   Operation 47 'icmp' 'tmp_1' <Predicate = true> <Delay = 1.96> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 48 [1/1] (0.00ns) (grouped into LUT with out node leng_reorder_2)   --->   "%p_cast = select i1 %tmp, i12 480, i12 2016" [FFR_Reorder_x_num/Reorder_FFT.cpp:58]   --->   Operation 48 'select' 'p_cast' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 49 [1/1] (0.80ns)   --->   "%tmp_4 = or i1 %tmp, %tmp_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:58]   --->   Operation 49 'or' 'tmp_4' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 50 [1/1] (0.59ns) (out node of the LUT)   --->   "%leng_reorder_2 = select i1 %tmp_4, i12 %p_cast, i12 -128" [FFR_Reorder_x_num/Reorder_FFT.cpp:58]   --->   Operation 50 'select' 'leng_reorder_2' <Predicate = true> <Delay = 0.59> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 51 [1/1] (0.00ns) (grouped into LUT with out node tmp_20)   --->   "%tmp_2 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %num_word_read, i32 31)" [FFR_Reorder_x_num/Reorder_FFT.cpp:16]   --->   Operation 51 'bitselect' 'tmp_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 52 [1/1] (1.89ns)   --->   "%num_word_op_op = add i32 %num_word_read, 3" [FFR_Reorder_x_num/Reorder_FFT.cpp:16]   --->   Operation 52 'add' 'num_word_op_op' <Predicate = true> <Delay = 1.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 53 [1/1] (0.00ns) (grouped into LUT with out node tmp_20)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %num_word_op_op, i32 31)" [FFR_Reorder_x_num/Reorder_FFT.cpp:16]   --->   Operation 53 'bitselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (1.84ns)   --->   "%p_neg_t = sub i30 0, %p_lshr" [FFR_Reorder_x_num/Reorder_FFT.cpp:16]   --->   Operation 54 'sub' 'p_neg_t' <Predicate = true> <Delay = 1.84> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 55 [1/1] (0.00ns) (grouped into LUT with out node tmp_20)   --->   "%tmp_18 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %num_word_op_op, i32 2, i32 31)" [FFR_Reorder_x_num/Reorder_FFT.cpp:16]   --->   Operation 55 'partselect' 'tmp_18' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 56 [1/1] (0.00ns) (grouped into LUT with out node tmp_20)   --->   "%tmp_19 = select i1 %tmp_12, i30 %p_neg_t, i30 %tmp_18" [FFR_Reorder_x_num/Reorder_FFT.cpp:16]   --->   Operation 56 'select' 'tmp_19' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 57 [1/1] (0.72ns) (out node of the LUT)   --->   "%tmp_20 = select i1 %tmp_2, i30 0, i30 %tmp_19" [FFR_Reorder_x_num/Reorder_FFT.cpp:16]   --->   Operation 57 'select' 'tmp_20' <Predicate = true> <Delay = 0.72> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%tmp_21 = call i32 @_ssdm_op_BitConcatenate.i32.i30.i2(i30 %tmp_20, i2 0)" [FFR_Reorder_x_num/Reorder_FFT.cpp:16]   --->   Operation 58 'bitconcatenate' 'tmp_21' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (0.46ns)   --->   "br label %0" [FFR_Reorder_x_num/Reorder_FFT.cpp:72]   --->   Operation 59 'br' <Predicate = true> <Delay = 0.46>
+
+State 3 <SV = 2> <Delay = 2.77>
+ST_3 : Operation 60 [1/1] (0.00ns)   --->   "%c = phi i32 [ 0, %meminst36.preheader_ifconv ], [ %c_1, %branch20 ]"   --->   Operation 60 'phi' 'c' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 61 [1/1] (1.96ns)   --->   "%tmp_22 = icmp eq i32 %c, %tmp_21" [FFR_Reorder_x_num/Reorder_FFT.cpp:72]   --->   Operation 61 'icmp' 'tmp_22' <Predicate = true> <Delay = 1.96> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 62 [1/1] (0.00ns)   --->   "br i1 %tmp_22, label %.preheader.preheader, label %branch20" [FFR_Reorder_x_num/Reorder_FFT.cpp:72]   --->   Operation 62 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 63 [1/1] (0.00ns)   --->   "%newIndex = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %c, i32 2, i32 31)" [FFR_Reorder_x_num/Reorder_FFT.cpp:78]   --->   Operation 63 'partselect' 'newIndex' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_3 : Operation 64 [1/1] (0.00ns)   --->   "%newIndex1 = zext i30 %newIndex to i64" [FFR_Reorder_x_num/Reorder_FFT.cpp:78]   --->   Operation 64 'zext' 'newIndex1' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_3 : Operation 65 [1/1] (0.00ns)   --->   "%Real_0_addr = getelementptr [4096 x float]* %Real_0, i64 0, i64 %newIndex1" [FFR_Reorder_x_num/Reorder_FFT.cpp:78]   --->   Operation 65 'getelementptr' 'Real_0_addr' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_3 : Operation 66 [2/2] (2.77ns)   --->   "%RE_vec_128_a = load float* %Real_0_addr, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:78]   --->   Operation 66 'load' 'RE_vec_128_a' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_3 : Operation 67 [1/1] (0.00ns)   --->   "%Real_2_addr_3 = getelementptr [4096 x float]* %Real_2, i64 0, i64 %newIndex1" [FFR_Reorder_x_num/Reorder_FFT.cpp:79]   --->   Operation 67 'getelementptr' 'Real_2_addr_3' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_3 : Operation 68 [2/2] (2.77ns)   --->   "%RE_vec_128_b = load float* %Real_2_addr_3, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:79]   --->   Operation 68 'load' 'RE_vec_128_b' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_3 : Operation 69 [1/1] (0.00ns)   --->   "%Real_1_addr_3 = getelementptr [4096 x float]* %Real_1, i64 0, i64 %newIndex1" [FFR_Reorder_x_num/Reorder_FFT.cpp:80]   --->   Operation 69 'getelementptr' 'Real_1_addr_3' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_3 : Operation 70 [2/2] (2.77ns)   --->   "%Real_1_load = load float* %Real_1_addr_3, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:80]   --->   Operation 70 'load' 'Real_1_load' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_3 : Operation 71 [1/1] (0.00ns)   --->   "%Imag_1_addr_3 = getelementptr [4096 x float]* %Imag_1, i64 0, i64 %newIndex1" [FFR_Reorder_x_num/Reorder_FFT.cpp:81]   --->   Operation 71 'getelementptr' 'Imag_1_addr_3' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_3 : Operation 72 [2/2] (2.77ns)   --->   "%Imag_1_load = load float* %Imag_1_addr_3, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:81]   --->   Operation 72 'load' 'Imag_1_load' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%Real_3_addr_3 = getelementptr [4096 x float]* %Real_3, i64 0, i64 %newIndex1" [FFR_Reorder_x_num/Reorder_FFT.cpp:82]   --->   Operation 73 'getelementptr' 'Real_3_addr_3' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_3 : Operation 74 [2/2] (2.77ns)   --->   "%Real_3_load = load float* %Real_3_addr_3, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:82]   --->   Operation 74 'load' 'Real_3_load' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_3 : Operation 75 [1/1] (0.00ns)   --->   "%Imag_3_addr_3 = getelementptr [4096 x float]* %Imag_3, i64 0, i64 %newIndex1" [FFR_Reorder_x_num/Reorder_FFT.cpp:83]   --->   Operation 75 'getelementptr' 'Imag_3_addr_3' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_3 : Operation 76 [2/2] (2.77ns)   --->   "%Imag_3_load = load float* %Imag_3_addr_3, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:83]   --->   Operation 76 'load' 'Imag_3_load' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_3 : Operation 77 [1/1] (0.00ns)   --->   "%Imag_0_addr = getelementptr [4096 x float]* %Imag_0, i64 0, i64 %newIndex1" [FFR_Reorder_x_num/Reorder_FFT.cpp:87]   --->   Operation 77 'getelementptr' 'Imag_0_addr' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_3 : Operation 78 [2/2] (2.77ns)   --->   "%IM_vec_128_a = load float* %Imag_0_addr, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:87]   --->   Operation 78 'load' 'IM_vec_128_a' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%Imag_2_addr_3 = getelementptr [4096 x float]* %Imag_2, i64 0, i64 %newIndex1" [FFR_Reorder_x_num/Reorder_FFT.cpp:88]   --->   Operation 79 'getelementptr' 'Imag_2_addr_3' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_3 : Operation 80 [2/2] (2.77ns)   --->   "%IM_vec_128_b = load float* %Imag_2_addr_3, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:88]   --->   Operation 80 'load' 'IM_vec_128_b' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+
+State 4 <SV = 3> <Delay = 3.57>
+ST_4 : Operation 81 [1/2] (2.77ns)   --->   "%RE_vec_128_a = load float* %Real_0_addr, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:78]   --->   Operation 81 'load' 'RE_vec_128_a' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_4 : Operation 82 [1/2] (2.77ns)   --->   "%RE_vec_128_b = load float* %Real_2_addr_3, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:79]   --->   Operation 82 'load' 'RE_vec_128_b' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_4 : Operation 83 [1/2] (2.77ns)   --->   "%Real_1_load = load float* %Real_1_addr_3, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:80]   --->   Operation 83 'load' 'Real_1_load' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_4 : Operation 84 [1/2] (2.77ns)   --->   "%Imag_1_load = load float* %Imag_1_addr_3, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:81]   --->   Operation 84 'load' 'Imag_1_load' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_4 : Operation 85 [1/2] (2.77ns)   --->   "%Real_3_load = load float* %Real_3_addr_3, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:82]   --->   Operation 85 'load' 'Real_3_load' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_4 : Operation 86 [1/2] (2.77ns)   --->   "%Imag_3_load = load float* %Imag_3_addr_3, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:83]   --->   Operation 86 'load' 'Imag_3_load' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_4 : Operation 87 [1/2] (2.77ns)   --->   "%IM_vec_128_a = load float* %Imag_0_addr, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:87]   --->   Operation 87 'load' 'IM_vec_128_a' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_4 : Operation 88 [1/2] (2.77ns)   --->   "%IM_vec_128_b = load float* %Imag_2_addr_3, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:88]   --->   Operation 88 'load' 'IM_vec_128_b' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_4 : Operation 89 [1/1] (0.00ns)   --->   "%tmp_11_1_to_int = bitcast float %RE_vec_128_b to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 89 'bitcast' 'tmp_11_1_to_int' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_4 : Operation 90 [1/1] (0.80ns)   --->   "%tmp_11_1_neg = xor i32 %tmp_11_1_to_int, -2147483648" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 90 'xor' 'tmp_11_1_neg' <Predicate = (!tmp_22)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "%tmp_15_1_to_int = bitcast float %Imag_3_load to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 91 'bitcast' 'tmp_15_1_to_int' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (0.80ns)   --->   "%tmp_15_1_neg = xor i32 %tmp_15_1_to_int, -2147483648" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 92 'xor' 'tmp_15_1_neg' <Predicate = (!tmp_22)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "%tmp_19_1_to_int = bitcast float %IM_vec_128_b to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 93 'bitcast' 'tmp_19_1_to_int' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_4 : Operation 94 [1/1] (0.80ns)   --->   "%tmp_19_1_neg = xor i32 %tmp_19_1_to_int, -2147483648" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 94 'xor' 'tmp_19_1_neg' <Predicate = (!tmp_22)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 95 [1/1] (0.00ns)   --->   "%tmp_21_1_to_int = bitcast float %Real_3_load to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 95 'bitcast' 'tmp_21_1_to_int' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_4 : Operation 96 [1/1] (0.80ns)   --->   "%tmp_21_1_neg = xor i32 %tmp_21_1_to_int, -2147483648" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 96 'xor' 'tmp_21_1_neg' <Predicate = (!tmp_22)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 97 [1/1] (1.89ns)   --->   "%c_1 = add nsw i32 %c, 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:72]   --->   Operation 97 'add' 'c_1' <Predicate = (!tmp_22)> <Delay = 1.89> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 4.32>
+ST_5 : Operation 98 [8/8] (4.32ns)   --->   "%tmp_5 = fadd float %RE_vec_128_b, %RE_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 98 'fadd' 'tmp_5' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 99 [8/8] (4.32ns)   --->   "%tmp_6 = fadd float %Real_3_load, %Real_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 99 'fadd' 'tmp_6' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 100 [8/8] (4.32ns)   --->   "%tmp_9 = fadd float %IM_vec_128_b, %IM_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 100 'fadd' 'tmp_9' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 101 [8/8] (4.32ns)   --->   "%tmp_10 = fadd float %Imag_3_load, %Imag_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 101 'fadd' 'tmp_10' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 102 [1/1] (0.00ns)   --->   "%tmp_11_1 = bitcast i32 %tmp_11_1_neg to float" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 102 'bitcast' 'tmp_11_1' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_5 : Operation 103 [8/8] (4.32ns)   --->   "%tmp_12_1 = fadd float %RE_vec_128_a, %tmp_11_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 103 'fadd' 'tmp_12_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 104 [1/1] (0.00ns)   --->   "%tmp_15_1 = bitcast i32 %tmp_15_1_neg to float" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 104 'bitcast' 'tmp_15_1' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_5 : Operation 105 [8/8] (4.32ns)   --->   "%tmp_16_1 = fadd float %Imag_1_load, %tmp_15_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 105 'fadd' 'tmp_16_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 106 [1/1] (0.00ns)   --->   "%tmp_19_1 = bitcast i32 %tmp_19_1_neg to float" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 106 'bitcast' 'tmp_19_1' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_5 : Operation 107 [8/8] (4.32ns)   --->   "%tmp_20_1 = fadd float %IM_vec_128_a, %tmp_19_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 107 'fadd' 'tmp_20_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 108 [1/1] (0.00ns)   --->   "%tmp_21_1 = bitcast i32 %tmp_21_1_neg to float" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 108 'bitcast' 'tmp_21_1' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_5 : Operation 109 [8/8] (4.32ns)   --->   "%tmp_22_1 = fadd float %Real_1_load, %tmp_21_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 109 'fadd' 'tmp_22_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 4.32>
+ST_6 : Operation 110 [7/8] (4.32ns)   --->   "%tmp_5 = fadd float %RE_vec_128_b, %RE_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 110 'fadd' 'tmp_5' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 111 [7/8] (4.32ns)   --->   "%tmp_6 = fadd float %Real_3_load, %Real_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 111 'fadd' 'tmp_6' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 112 [7/8] (4.32ns)   --->   "%tmp_9 = fadd float %IM_vec_128_b, %IM_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 112 'fadd' 'tmp_9' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 113 [7/8] (4.32ns)   --->   "%tmp_10 = fadd float %Imag_3_load, %Imag_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 113 'fadd' 'tmp_10' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 114 [7/8] (4.32ns)   --->   "%tmp_12_1 = fadd float %RE_vec_128_a, %tmp_11_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 114 'fadd' 'tmp_12_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 115 [7/8] (4.32ns)   --->   "%tmp_16_1 = fadd float %Imag_1_load, %tmp_15_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 115 'fadd' 'tmp_16_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 116 [7/8] (4.32ns)   --->   "%tmp_20_1 = fadd float %IM_vec_128_a, %tmp_19_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 116 'fadd' 'tmp_20_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 117 [7/8] (4.32ns)   --->   "%tmp_22_1 = fadd float %Real_1_load, %tmp_21_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 117 'fadd' 'tmp_22_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 4.32>
+ST_7 : Operation 118 [6/8] (4.32ns)   --->   "%tmp_5 = fadd float %RE_vec_128_b, %RE_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 118 'fadd' 'tmp_5' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 119 [6/8] (4.32ns)   --->   "%tmp_6 = fadd float %Real_3_load, %Real_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 119 'fadd' 'tmp_6' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 120 [6/8] (4.32ns)   --->   "%tmp_9 = fadd float %IM_vec_128_b, %IM_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 120 'fadd' 'tmp_9' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 121 [6/8] (4.32ns)   --->   "%tmp_10 = fadd float %Imag_3_load, %Imag_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 121 'fadd' 'tmp_10' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 122 [6/8] (4.32ns)   --->   "%tmp_12_1 = fadd float %RE_vec_128_a, %tmp_11_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 122 'fadd' 'tmp_12_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 123 [6/8] (4.32ns)   --->   "%tmp_16_1 = fadd float %Imag_1_load, %tmp_15_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 123 'fadd' 'tmp_16_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 124 [6/8] (4.32ns)   --->   "%tmp_20_1 = fadd float %IM_vec_128_a, %tmp_19_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 124 'fadd' 'tmp_20_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 125 [6/8] (4.32ns)   --->   "%tmp_22_1 = fadd float %Real_1_load, %tmp_21_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 125 'fadd' 'tmp_22_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 4.32>
+ST_8 : Operation 126 [5/8] (4.32ns)   --->   "%tmp_5 = fadd float %RE_vec_128_b, %RE_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 126 'fadd' 'tmp_5' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 127 [5/8] (4.32ns)   --->   "%tmp_6 = fadd float %Real_3_load, %Real_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 127 'fadd' 'tmp_6' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 128 [5/8] (4.32ns)   --->   "%tmp_9 = fadd float %IM_vec_128_b, %IM_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 128 'fadd' 'tmp_9' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 129 [5/8] (4.32ns)   --->   "%tmp_10 = fadd float %Imag_3_load, %Imag_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 129 'fadd' 'tmp_10' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 130 [5/8] (4.32ns)   --->   "%tmp_12_1 = fadd float %RE_vec_128_a, %tmp_11_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 130 'fadd' 'tmp_12_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 131 [5/8] (4.32ns)   --->   "%tmp_16_1 = fadd float %Imag_1_load, %tmp_15_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 131 'fadd' 'tmp_16_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 132 [5/8] (4.32ns)   --->   "%tmp_20_1 = fadd float %IM_vec_128_a, %tmp_19_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 132 'fadd' 'tmp_20_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 133 [5/8] (4.32ns)   --->   "%tmp_22_1 = fadd float %Real_1_load, %tmp_21_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 133 'fadd' 'tmp_22_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 4.32>
+ST_9 : Operation 134 [4/8] (4.32ns)   --->   "%tmp_5 = fadd float %RE_vec_128_b, %RE_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 134 'fadd' 'tmp_5' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 135 [4/8] (4.32ns)   --->   "%tmp_6 = fadd float %Real_3_load, %Real_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 135 'fadd' 'tmp_6' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 136 [4/8] (4.32ns)   --->   "%tmp_9 = fadd float %IM_vec_128_b, %IM_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 136 'fadd' 'tmp_9' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 137 [4/8] (4.32ns)   --->   "%tmp_10 = fadd float %Imag_3_load, %Imag_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 137 'fadd' 'tmp_10' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 138 [4/8] (4.32ns)   --->   "%tmp_12_1 = fadd float %RE_vec_128_a, %tmp_11_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 138 'fadd' 'tmp_12_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 139 [4/8] (4.32ns)   --->   "%tmp_16_1 = fadd float %Imag_1_load, %tmp_15_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 139 'fadd' 'tmp_16_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 140 [4/8] (4.32ns)   --->   "%tmp_20_1 = fadd float %IM_vec_128_a, %tmp_19_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 140 'fadd' 'tmp_20_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 141 [4/8] (4.32ns)   --->   "%tmp_22_1 = fadd float %Real_1_load, %tmp_21_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 141 'fadd' 'tmp_22_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 4.32>
+ST_10 : Operation 142 [3/8] (4.32ns)   --->   "%tmp_5 = fadd float %RE_vec_128_b, %RE_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 142 'fadd' 'tmp_5' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 143 [3/8] (4.32ns)   --->   "%tmp_6 = fadd float %Real_3_load, %Real_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 143 'fadd' 'tmp_6' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 144 [3/8] (4.32ns)   --->   "%tmp_9 = fadd float %IM_vec_128_b, %IM_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 144 'fadd' 'tmp_9' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 145 [3/8] (4.32ns)   --->   "%tmp_10 = fadd float %Imag_3_load, %Imag_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 145 'fadd' 'tmp_10' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 146 [3/8] (4.32ns)   --->   "%tmp_12_1 = fadd float %RE_vec_128_a, %tmp_11_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 146 'fadd' 'tmp_12_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 147 [3/8] (4.32ns)   --->   "%tmp_16_1 = fadd float %Imag_1_load, %tmp_15_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 147 'fadd' 'tmp_16_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 148 [3/8] (4.32ns)   --->   "%tmp_20_1 = fadd float %IM_vec_128_a, %tmp_19_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 148 'fadd' 'tmp_20_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 149 [3/8] (4.32ns)   --->   "%tmp_22_1 = fadd float %Real_1_load, %tmp_21_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 149 'fadd' 'tmp_22_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 4.32>
+ST_11 : Operation 150 [2/8] (4.32ns)   --->   "%tmp_5 = fadd float %RE_vec_128_b, %RE_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 150 'fadd' 'tmp_5' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 151 [2/8] (4.32ns)   --->   "%tmp_6 = fadd float %Real_3_load, %Real_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 151 'fadd' 'tmp_6' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 152 [2/8] (4.32ns)   --->   "%tmp_9 = fadd float %IM_vec_128_b, %IM_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 152 'fadd' 'tmp_9' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 153 [2/8] (4.32ns)   --->   "%tmp_10 = fadd float %Imag_3_load, %Imag_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 153 'fadd' 'tmp_10' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 154 [2/8] (4.32ns)   --->   "%tmp_12_1 = fadd float %RE_vec_128_a, %tmp_11_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 154 'fadd' 'tmp_12_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 155 [2/8] (4.32ns)   --->   "%tmp_16_1 = fadd float %Imag_1_load, %tmp_15_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 155 'fadd' 'tmp_16_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 156 [2/8] (4.32ns)   --->   "%tmp_20_1 = fadd float %IM_vec_128_a, %tmp_19_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 156 'fadd' 'tmp_20_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 157 [2/8] (4.32ns)   --->   "%tmp_22_1 = fadd float %Real_1_load, %tmp_21_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 157 'fadd' 'tmp_22_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 4.32>
+ST_12 : Operation 158 [1/8] (4.32ns)   --->   "%tmp_5 = fadd float %RE_vec_128_b, %RE_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 158 'fadd' 'tmp_5' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 159 [1/8] (4.32ns)   --->   "%tmp_6 = fadd float %Real_3_load, %Real_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 159 'fadd' 'tmp_6' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 160 [1/8] (4.32ns)   --->   "%tmp_9 = fadd float %IM_vec_128_b, %IM_vec_128_a" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 160 'fadd' 'tmp_9' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 161 [1/8] (4.32ns)   --->   "%tmp_10 = fadd float %Imag_3_load, %Imag_1_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 161 'fadd' 'tmp_10' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 162 [1/8] (4.32ns)   --->   "%tmp_12_1 = fadd float %RE_vec_128_a, %tmp_11_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:101]   --->   Operation 162 'fadd' 'tmp_12_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 163 [1/8] (4.32ns)   --->   "%tmp_16_1 = fadd float %Imag_1_load, %tmp_15_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:102]   --->   Operation 163 'fadd' 'tmp_16_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 164 [1/8] (4.32ns)   --->   "%tmp_20_1 = fadd float %IM_vec_128_a, %tmp_19_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:107]   --->   Operation 164 'fadd' 'tmp_20_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 165 [1/8] (4.32ns)   --->   "%tmp_22_1 = fadd float %Real_1_load, %tmp_21_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:108]   --->   Operation 165 'fadd' 'tmp_22_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 0.80>
+ST_13 : Operation 166 [1/1] (0.00ns)   --->   "%tmp_23_1_to_int = bitcast float %tmp_22_1 to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 166 'bitcast' 'tmp_23_1_to_int' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_13 : Operation 167 [1/1] (0.80ns)   --->   "%tmp_23_1_neg = xor i32 %tmp_23_1_to_int, -2147483648" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 167 'xor' 'tmp_23_1_neg' <Predicate = (!tmp_22)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 168 [1/1] (0.00ns)   --->   "%tmp_17_2_to_int = bitcast float %tmp_6 to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 168 'bitcast' 'tmp_17_2_to_int' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_13 : Operation 169 [1/1] (0.80ns)   --->   "%tmp_17_2_neg = xor i32 %tmp_17_2_to_int, -2147483648" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 169 'xor' 'tmp_17_2_neg' <Predicate = (!tmp_22)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 170 [1/1] (0.00ns)   --->   "%tmp_23_2_to_int = bitcast float %tmp_10 to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 170 'bitcast' 'tmp_23_2_to_int' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_13 : Operation 171 [1/1] (0.80ns)   --->   "%tmp_23_2_neg = xor i32 %tmp_23_2_to_int, -2147483648" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 171 'xor' 'tmp_23_2_neg' <Predicate = (!tmp_22)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 172 [1/1] (0.00ns)   --->   "%tmp_17_3_to_int = bitcast float %tmp_16_1 to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 172 'bitcast' 'tmp_17_3_to_int' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_13 : Operation 173 [1/1] (0.80ns)   --->   "%tmp_17_3_neg = xor i32 %tmp_17_3_to_int, -2147483648" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 173 'xor' 'tmp_17_3_neg' <Predicate = (!tmp_22)> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 4.32>
+ST_14 : Operation 174 [8/8] (4.32ns)   --->   "%tmp_7 = fadd float %tmp_6, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 174 'fadd' 'tmp_7' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 175 [8/8] (4.32ns)   --->   "%tmp_11 = fadd float %tmp_10, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 175 'fadd' 'tmp_11' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 176 [8/8] (4.32ns)   --->   "%tmp_18_1 = fadd float %tmp_16_1, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 176 'fadd' 'tmp_18_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 177 [1/1] (0.00ns)   --->   "%tmp_23_1 = bitcast i32 %tmp_23_1_neg to float" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 177 'bitcast' 'tmp_23_1' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_14 : Operation 178 [8/8] (4.32ns)   --->   "%tmp_24_1 = fadd float %tmp_23_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 178 'fadd' 'tmp_24_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 179 [1/1] (0.00ns)   --->   "%tmp_17_2 = bitcast i32 %tmp_17_2_neg to float" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 179 'bitcast' 'tmp_17_2' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_14 : Operation 180 [8/8] (4.32ns)   --->   "%tmp_18_2 = fadd float %tmp_17_2, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 180 'fadd' 'tmp_18_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 181 [1/1] (0.00ns)   --->   "%tmp_23_2 = bitcast i32 %tmp_23_2_neg to float" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 181 'bitcast' 'tmp_23_2' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_14 : Operation 182 [8/8] (4.32ns)   --->   "%tmp_24_2 = fadd float %tmp_23_2, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 182 'fadd' 'tmp_24_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 183 [1/1] (0.00ns)   --->   "%tmp_17_3 = bitcast i32 %tmp_17_3_neg to float" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 183 'bitcast' 'tmp_17_3' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_14 : Operation 184 [8/8] (4.32ns)   --->   "%tmp_18_3 = fadd float %tmp_17_3, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 184 'fadd' 'tmp_18_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 185 [8/8] (4.32ns)   --->   "%tmp_24_3 = fadd float %tmp_22_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 185 'fadd' 'tmp_24_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 4.32>
+ST_15 : Operation 186 [7/8] (4.32ns)   --->   "%tmp_7 = fadd float %tmp_6, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 186 'fadd' 'tmp_7' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 187 [7/8] (4.32ns)   --->   "%tmp_11 = fadd float %tmp_10, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 187 'fadd' 'tmp_11' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 188 [7/8] (4.32ns)   --->   "%tmp_18_1 = fadd float %tmp_16_1, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 188 'fadd' 'tmp_18_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 189 [7/8] (4.32ns)   --->   "%tmp_24_1 = fadd float %tmp_23_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 189 'fadd' 'tmp_24_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 190 [7/8] (4.32ns)   --->   "%tmp_18_2 = fadd float %tmp_17_2, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 190 'fadd' 'tmp_18_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 191 [7/8] (4.32ns)   --->   "%tmp_24_2 = fadd float %tmp_23_2, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 191 'fadd' 'tmp_24_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 192 [7/8] (4.32ns)   --->   "%tmp_18_3 = fadd float %tmp_17_3, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 192 'fadd' 'tmp_18_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 193 [7/8] (4.32ns)   --->   "%tmp_24_3 = fadd float %tmp_22_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 193 'fadd' 'tmp_24_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 4.32>
+ST_16 : Operation 194 [6/8] (4.32ns)   --->   "%tmp_7 = fadd float %tmp_6, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 194 'fadd' 'tmp_7' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 195 [6/8] (4.32ns)   --->   "%tmp_11 = fadd float %tmp_10, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 195 'fadd' 'tmp_11' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 196 [6/8] (4.32ns)   --->   "%tmp_18_1 = fadd float %tmp_16_1, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 196 'fadd' 'tmp_18_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 197 [6/8] (4.32ns)   --->   "%tmp_24_1 = fadd float %tmp_23_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 197 'fadd' 'tmp_24_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 198 [6/8] (4.32ns)   --->   "%tmp_18_2 = fadd float %tmp_17_2, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 198 'fadd' 'tmp_18_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 199 [6/8] (4.32ns)   --->   "%tmp_24_2 = fadd float %tmp_23_2, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 199 'fadd' 'tmp_24_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 200 [6/8] (4.32ns)   --->   "%tmp_18_3 = fadd float %tmp_17_3, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 200 'fadd' 'tmp_18_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 201 [6/8] (4.32ns)   --->   "%tmp_24_3 = fadd float %tmp_22_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 201 'fadd' 'tmp_24_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 4.32>
+ST_17 : Operation 202 [5/8] (4.32ns)   --->   "%tmp_7 = fadd float %tmp_6, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 202 'fadd' 'tmp_7' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 203 [5/8] (4.32ns)   --->   "%tmp_11 = fadd float %tmp_10, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 203 'fadd' 'tmp_11' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 204 [5/8] (4.32ns)   --->   "%tmp_18_1 = fadd float %tmp_16_1, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 204 'fadd' 'tmp_18_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 205 [5/8] (4.32ns)   --->   "%tmp_24_1 = fadd float %tmp_23_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 205 'fadd' 'tmp_24_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 206 [5/8] (4.32ns)   --->   "%tmp_18_2 = fadd float %tmp_17_2, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 206 'fadd' 'tmp_18_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 207 [5/8] (4.32ns)   --->   "%tmp_24_2 = fadd float %tmp_23_2, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 207 'fadd' 'tmp_24_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 208 [5/8] (4.32ns)   --->   "%tmp_18_3 = fadd float %tmp_17_3, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 208 'fadd' 'tmp_18_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 209 [5/8] (4.32ns)   --->   "%tmp_24_3 = fadd float %tmp_22_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 209 'fadd' 'tmp_24_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 4.32>
+ST_18 : Operation 210 [4/8] (4.32ns)   --->   "%tmp_7 = fadd float %tmp_6, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 210 'fadd' 'tmp_7' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 211 [4/8] (4.32ns)   --->   "%tmp_11 = fadd float %tmp_10, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 211 'fadd' 'tmp_11' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 212 [4/8] (4.32ns)   --->   "%tmp_18_1 = fadd float %tmp_16_1, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 212 'fadd' 'tmp_18_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 213 [4/8] (4.32ns)   --->   "%tmp_24_1 = fadd float %tmp_23_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 213 'fadd' 'tmp_24_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 214 [4/8] (4.32ns)   --->   "%tmp_18_2 = fadd float %tmp_17_2, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 214 'fadd' 'tmp_18_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 215 [4/8] (4.32ns)   --->   "%tmp_24_2 = fadd float %tmp_23_2, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 215 'fadd' 'tmp_24_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 216 [4/8] (4.32ns)   --->   "%tmp_18_3 = fadd float %tmp_17_3, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 216 'fadd' 'tmp_18_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 217 [4/8] (4.32ns)   --->   "%tmp_24_3 = fadd float %tmp_22_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 217 'fadd' 'tmp_24_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 4.32>
+ST_19 : Operation 218 [3/8] (4.32ns)   --->   "%tmp_7 = fadd float %tmp_6, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 218 'fadd' 'tmp_7' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 219 [3/8] (4.32ns)   --->   "%tmp_11 = fadd float %tmp_10, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 219 'fadd' 'tmp_11' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 220 [3/8] (4.32ns)   --->   "%tmp_18_1 = fadd float %tmp_16_1, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 220 'fadd' 'tmp_18_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 221 [3/8] (4.32ns)   --->   "%tmp_24_1 = fadd float %tmp_23_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 221 'fadd' 'tmp_24_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 222 [3/8] (4.32ns)   --->   "%tmp_18_2 = fadd float %tmp_17_2, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 222 'fadd' 'tmp_18_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 223 [3/8] (4.32ns)   --->   "%tmp_24_2 = fadd float %tmp_23_2, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 223 'fadd' 'tmp_24_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 224 [3/8] (4.32ns)   --->   "%tmp_18_3 = fadd float %tmp_17_3, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 224 'fadd' 'tmp_18_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 225 [3/8] (4.32ns)   --->   "%tmp_24_3 = fadd float %tmp_22_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 225 'fadd' 'tmp_24_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 4.32>
+ST_20 : Operation 226 [2/8] (4.32ns)   --->   "%tmp_7 = fadd float %tmp_6, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 226 'fadd' 'tmp_7' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 227 [2/8] (4.32ns)   --->   "%tmp_11 = fadd float %tmp_10, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 227 'fadd' 'tmp_11' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 228 [2/8] (4.32ns)   --->   "%tmp_18_1 = fadd float %tmp_16_1, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 228 'fadd' 'tmp_18_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 229 [2/8] (4.32ns)   --->   "%tmp_24_1 = fadd float %tmp_23_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 229 'fadd' 'tmp_24_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 230 [2/8] (4.32ns)   --->   "%tmp_18_2 = fadd float %tmp_17_2, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 230 'fadd' 'tmp_18_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 231 [2/8] (4.32ns)   --->   "%tmp_24_2 = fadd float %tmp_23_2, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 231 'fadd' 'tmp_24_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 232 [2/8] (4.32ns)   --->   "%tmp_18_3 = fadd float %tmp_17_3, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 232 'fadd' 'tmp_18_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 233 [2/8] (4.32ns)   --->   "%tmp_24_3 = fadd float %tmp_22_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 233 'fadd' 'tmp_24_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 4.32>
+ST_21 : Operation 234 [1/8] (4.32ns)   --->   "%tmp_7 = fadd float %tmp_6, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 234 'fadd' 'tmp_7' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 235 [1/8] (4.32ns)   --->   "%tmp_11 = fadd float %tmp_10, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 235 'fadd' 'tmp_11' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 236 [1/8] (4.32ns)   --->   "%tmp_18_1 = fadd float %tmp_16_1, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 236 'fadd' 'tmp_18_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 237 [1/8] (4.32ns)   --->   "%tmp_24_1 = fadd float %tmp_23_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 237 'fadd' 'tmp_24_1' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 238 [1/8] (4.32ns)   --->   "%tmp_18_2 = fadd float %tmp_17_2, %tmp_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 238 'fadd' 'tmp_18_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 239 [1/8] (4.32ns)   --->   "%tmp_24_2 = fadd float %tmp_23_2, %tmp_9" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 239 'fadd' 'tmp_24_2' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 240 [1/8] (4.32ns)   --->   "%tmp_18_3 = fadd float %tmp_17_3, %tmp_12_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:103]   --->   Operation 240 'fadd' 'tmp_18_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 241 [1/8] (4.32ns)   --->   "%tmp_24_3 = fadd float %tmp_22_1, %tmp_20_1" [FFR_Reorder_x_num/Reorder_FFT.cpp:109]   --->   Operation 241 'fadd' 'tmp_24_3' <Predicate = (!tmp_22)> <Delay = 4.32> <Core = "FAddSub">   --->   Core 104 'FAddSub' <Latency = 7> <II = 1> <Delay = 4.32> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 2.77>
+ST_22 : Operation 242 [1/1] (0.00ns)   --->   "%tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str3) nounwind" [FFR_Reorder_x_num/Reorder_FFT.cpp:72]   --->   Operation 242 'specregionbegin' 'tmp_3' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_22 : Operation 243 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [FFR_Reorder_x_num/Reorder_FFT.cpp:73]   --->   Operation 243 'specpipeline' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_22 : Operation 244 [1/1] (2.77ns)   --->   "store volatile float %tmp_7, float* %Real_0_addr, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:111]   --->   Operation 244 'store' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_22 : Operation 245 [1/1] (2.77ns)   --->   "store volatile float %tmp_11, float* %Imag_0_addr, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:112]   --->   Operation 245 'store' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_22 : Operation 246 [1/1] (0.00ns)   --->   "%tmp_13 = sext i30 %newIndex to i62" [FFR_Reorder_x_num/Reorder_FFT.cpp:111]   --->   Operation 246 'sext' 'tmp_13' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_22 : Operation 247 [1/1] (0.00ns)   --->   "%newIndex2 = zext i62 %tmp_13 to i64" [FFR_Reorder_x_num/Reorder_FFT.cpp:111]   --->   Operation 247 'zext' 'newIndex2' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_22 : Operation 248 [1/1] (0.00ns)   --->   "%Real_1_addr = getelementptr [4096 x float]* %Real_1, i64 0, i64 %newIndex2" [FFR_Reorder_x_num/Reorder_FFT.cpp:111]   --->   Operation 248 'getelementptr' 'Real_1_addr' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_22 : Operation 249 [1/1] (2.77ns)   --->   "store volatile float %tmp_18_1, float* %Real_1_addr, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:111]   --->   Operation 249 'store' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_22 : Operation 250 [1/1] (0.00ns)   --->   "%Imag_1_addr = getelementptr [4096 x float]* %Imag_1, i64 0, i64 %newIndex2" [FFR_Reorder_x_num/Reorder_FFT.cpp:112]   --->   Operation 250 'getelementptr' 'Imag_1_addr' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_22 : Operation 251 [1/1] (2.77ns)   --->   "store volatile float %tmp_24_1, float* %Imag_1_addr, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:112]   --->   Operation 251 'store' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_22 : Operation 252 [1/1] (0.00ns)   --->   "%Real_2_addr = getelementptr [4096 x float]* %Real_2, i64 0, i64 %newIndex2" [FFR_Reorder_x_num/Reorder_FFT.cpp:111]   --->   Operation 252 'getelementptr' 'Real_2_addr' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_22 : Operation 253 [1/1] (2.77ns)   --->   "store volatile float %tmp_18_2, float* %Real_2_addr, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:111]   --->   Operation 253 'store' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_22 : Operation 254 [1/1] (0.00ns)   --->   "%Imag_2_addr = getelementptr [4096 x float]* %Imag_2, i64 0, i64 %newIndex2" [FFR_Reorder_x_num/Reorder_FFT.cpp:112]   --->   Operation 254 'getelementptr' 'Imag_2_addr' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_22 : Operation 255 [1/1] (2.77ns)   --->   "store volatile float %tmp_24_2, float* %Imag_2_addr, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:112]   --->   Operation 255 'store' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_22 : Operation 256 [1/1] (0.00ns)   --->   "%Real_3_addr = getelementptr [4096 x float]* %Real_3, i64 0, i64 %newIndex2" [FFR_Reorder_x_num/Reorder_FFT.cpp:111]   --->   Operation 256 'getelementptr' 'Real_3_addr' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_22 : Operation 257 [1/1] (2.77ns)   --->   "store volatile float %tmp_18_3, float* %Real_3_addr, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:111]   --->   Operation 257 'store' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_22 : Operation 258 [1/1] (0.00ns)   --->   "%Imag_3_addr = getelementptr [4096 x float]* %Imag_3, i64 0, i64 %newIndex2" [FFR_Reorder_x_num/Reorder_FFT.cpp:112]   --->   Operation 258 'getelementptr' 'Imag_3_addr' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_22 : Operation 259 [1/1] (2.77ns)   --->   "store volatile float %tmp_24_3, float* %Imag_3_addr, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:112]   --->   Operation 259 'store' <Predicate = (!tmp_22)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_22 : Operation 260 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str3, i32 %tmp_3) nounwind" [FFR_Reorder_x_num/Reorder_FFT.cpp:116]   --->   Operation 260 'specregionend' 'empty' <Predicate = (!tmp_22)> <Delay = 0.00>
+ST_22 : Operation 261 [1/1] (0.00ns)   --->   "br label %0" [FFR_Reorder_x_num/Reorder_FFT.cpp:72]   --->   Operation 261 'br' <Predicate = (!tmp_22)> <Delay = 0.00>
+
+State 23 <SV = 3> <Delay = 2.76>
+ST_23 : Operation 262 [1/1] (0.00ns)   --->   "%indexJ = alloca i32"   --->   Operation 262 'alloca' 'indexJ' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 263 [1/1] (0.00ns)   --->   "%indexI = alloca i32"   --->   Operation 263 'alloca' 'indexI' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 264 [1/1] (1.96ns)   --->   "%tmp_8 = icmp eq i32 %num_word_read, 16384" [FFR_Reorder_x_num/Reorder_FFT.cpp:133]   --->   Operation 264 'icmp' 'tmp_8' <Predicate = true> <Delay = 1.96> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 265 [1/1] (0.00ns)   --->   "%tmp_14 = sext i12 %leng_reorder_2 to i13" [FFR_Reorder_x_num/Reorder_FFT.cpp:58]   --->   Operation 265 'sext' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 266 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp2)   --->   "%sel_tmp1 = xor i1 %tmp, true" [FFR_Reorder_x_num/Reorder_FFT.cpp:53]   --->   Operation 266 'xor' 'sel_tmp1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 267 [1/1] (0.80ns) (out node of the LUT)   --->   "%sel_tmp2 = and i1 %tmp_1, %sel_tmp1" [FFR_Reorder_x_num/Reorder_FFT.cpp:128]   --->   Operation 267 'and' 'sel_tmp2' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 268 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp7)   --->   "%sel_tmp6 = xor i1 %tmp_4, true" [FFR_Reorder_x_num/Reorder_FFT.cpp:128]   --->   Operation 268 'xor' 'sel_tmp6' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 269 [1/1] (0.80ns) (out node of the LUT)   --->   "%sel_tmp7 = and i1 %tmp_8, %sel_tmp6" [FFR_Reorder_x_num/Reorder_FFT.cpp:133]   --->   Operation 269 'and' 'sel_tmp7' <Predicate = true> <Delay = 0.80> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 270 [1/1] (0.46ns)   --->   "br label %.preheader" [FFR_Reorder_x_num/Reorder_FFT.cpp:118]   --->   Operation 270 'br' <Predicate = true> <Delay = 0.46>
+
+State 24 <SV = 4> <Delay = 2.77>
+ST_24 : Operation 271 [1/1] (0.00ns)   --->   "%i = phi i13 [ %i_1, %._crit_edge52672 ], [ 0, %.preheader.preheader ]"   --->   Operation 271 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 272 [1/1] (0.00ns)   --->   "%empty_11 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 480, i64 8064, i64 0) nounwind"   --->   Operation 272 'speclooptripcount' 'empty_11' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 273 [1/1] (1.90ns)   --->   "%exitcond = icmp eq i13 %i, %tmp_14" [FFR_Reorder_x_num/Reorder_FFT.cpp:118]   --->   Operation 273 'icmp' 'exitcond' <Predicate = true> <Delay = 1.90> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.96> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 274 [1/1] (1.53ns)   --->   "%i_1 = add i13 %i, 1" [FFR_Reorder_x_num/Reorder_FFT.cpp:118]   --->   Operation 274 'add' 'i_1' <Predicate = true> <Delay = 1.53> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.84> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 275 [1/1] (0.00ns)   --->   "br i1 %exitcond, label %1, label %_ifconv" [FFR_Reorder_x_num/Reorder_FFT.cpp:118]   --->   Operation 275 'br' <Predicate = true> <Delay = 0.00>
+ST_24 : Operation 276 [1/1] (0.00ns)   --->   "%tmp_15 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str5) nounwind" [FFR_Reorder_x_num/Reorder_FFT.cpp:119]   --->   Operation 276 'specregionbegin' 'tmp_15' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_24 : Operation 277 [1/1] (0.00ns)   --->   "%tmp_s = zext i13 %i to i64" [FFR_Reorder_x_num/Reorder_FFT.cpp:125]   --->   Operation 277 'zext' 'tmp_s' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_24 : Operation 278 [1/1] (0.00ns)   --->   "%lut_reorder_I_1024_a = getelementptr [480 x i10]* @lut_reorder_I_1024, i64 0, i64 %tmp_s" [FFR_Reorder_x_num/Reorder_FFT.cpp:125]   --->   Operation 278 'getelementptr' 'lut_reorder_I_1024_a' <Predicate = (!exitcond & tmp & !sel_tmp2 & !sel_tmp7)> <Delay = 0.00>
+ST_24 : Operation 279 [2/2] (2.77ns)   --->   "%indexI_1 = load i10* %lut_reorder_I_1024_a, align 2" [FFR_Reorder_x_num/Reorder_FFT.cpp:125]   --->   Operation 279 'load' 'indexI_1' <Predicate = (!exitcond & tmp & !sel_tmp2 & !sel_tmp7)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 8064> <ROM>
+ST_24 : Operation 280 [1/1] (0.00ns)   --->   "%lut_reorder_J_1024_a = getelementptr [480 x i10]* @lut_reorder_J_1024, i64 0, i64 %tmp_s" [FFR_Reorder_x_num/Reorder_FFT.cpp:126]   --->   Operation 280 'getelementptr' 'lut_reorder_J_1024_a' <Predicate = (!exitcond & tmp & !sel_tmp2 & !sel_tmp7)> <Delay = 0.00>
+ST_24 : Operation 281 [2/2] (2.77ns)   --->   "%indexJ_1 = load i10* %lut_reorder_J_1024_a, align 2" [FFR_Reorder_x_num/Reorder_FFT.cpp:126]   --->   Operation 281 'load' 'indexJ_1' <Predicate = (!exitcond & tmp & !sel_tmp2 & !sel_tmp7)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 8064> <ROM>
+ST_24 : Operation 282 [1/1] (0.00ns)   --->   "%lut_reorder_I_4096_a = getelementptr [2016 x i10]* @lut_reorder_I_4096, i64 0, i64 %tmp_s" [FFR_Reorder_x_num/Reorder_FFT.cpp:130]   --->   Operation 282 'getelementptr' 'lut_reorder_I_4096_a' <Predicate = (!exitcond & sel_tmp2 & !sel_tmp7)> <Delay = 0.00>
+ST_24 : Operation 283 [2/2] (2.77ns)   --->   "%indexI_2 = load i10* %lut_reorder_I_4096_a, align 2" [FFR_Reorder_x_num/Reorder_FFT.cpp:130]   --->   Operation 283 'load' 'indexI_2' <Predicate = (!exitcond & sel_tmp2 & !sel_tmp7)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 8064> <ROM>
+ST_24 : Operation 284 [1/1] (0.00ns)   --->   "%lut_reorder_J_4096_a = getelementptr [2016 x i12]* @lut_reorder_J_4096, i64 0, i64 %tmp_s" [FFR_Reorder_x_num/Reorder_FFT.cpp:131]   --->   Operation 284 'getelementptr' 'lut_reorder_J_4096_a' <Predicate = (!exitcond & sel_tmp2 & !sel_tmp7)> <Delay = 0.00>
+ST_24 : Operation 285 [2/2] (2.77ns)   --->   "%indexJ_2 = load i12* %lut_reorder_J_4096_a, align 2" [FFR_Reorder_x_num/Reorder_FFT.cpp:131]   --->   Operation 285 'load' 'indexJ_2' <Predicate = (!exitcond & sel_tmp2 & !sel_tmp7)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 8064> <ROM>
+ST_24 : Operation 286 [1/1] (0.00ns)   --->   "%lut_reorder_I_16384_s = getelementptr [8064 x i9]* @lut_reorder_I_16384, i64 0, i64 %tmp_s" [FFR_Reorder_x_num/Reorder_FFT.cpp:135]   --->   Operation 286 'getelementptr' 'lut_reorder_I_16384_s' <Predicate = (!exitcond & sel_tmp7)> <Delay = 0.00>
+ST_24 : Operation 287 [2/2] (2.77ns)   --->   "%indexI_4 = load i9* %lut_reorder_I_16384_s, align 2" [FFR_Reorder_x_num/Reorder_FFT.cpp:135]   --->   Operation 287 'load' 'indexI_4' <Predicate = (!exitcond & sel_tmp7)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 8064> <ROM>
+ST_24 : Operation 288 [1/1] (0.00ns)   --->   "%lut_reorder_J_16384_s = getelementptr [8064 x i14]* @lut_reorder_J_16384, i64 0, i64 %tmp_s" [FFR_Reorder_x_num/Reorder_FFT.cpp:136]   --->   Operation 288 'getelementptr' 'lut_reorder_J_16384_s' <Predicate = (!exitcond & sel_tmp7)> <Delay = 0.00>
+ST_24 : Operation 289 [2/2] (2.77ns)   --->   "%indexJ_4 = load i14* %lut_reorder_J_16384_s, align 2" [FFR_Reorder_x_num/Reorder_FFT.cpp:136]   --->   Operation 289 'load' 'indexJ_4' <Predicate = (!exitcond & sel_tmp7)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 8064> <ROM>
+ST_24 : Operation 290 [1/1] (0.00ns)   --->   "%empty_12 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str5, i32 %tmp_15) nounwind" [FFR_Reorder_x_num/Reorder_FFT.cpp:146]   --->   Operation 290 'specregionend' 'empty_12' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_24 : Operation 291 [1/1] (0.00ns)   --->   "br label %.preheader" [FFR_Reorder_x_num/Reorder_FFT.cpp:118]   --->   Operation 291 'br' <Predicate = (!exitcond)> <Delay = 0.00>
+
+State 25 <SV = 5> <Delay = 4.18>
+ST_25 : Operation 292 [1/1] (0.00ns)   --->   "%indexJ_load = load i32* %indexJ"   --->   Operation 292 'load' 'indexJ_load' <Predicate = (!exitcond & !tmp & !sel_tmp2 & !sel_tmp7)> <Delay = 0.00>
+ST_25 : Operation 293 [1/2] (2.77ns)   --->   "%indexI_1 = load i10* %lut_reorder_I_1024_a, align 2" [FFR_Reorder_x_num/Reorder_FFT.cpp:125]   --->   Operation 293 'load' 'indexI_1' <Predicate = (!exitcond & tmp & !sel_tmp2 & !sel_tmp7)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 8064> <ROM>
+ST_25 : Operation 294 [1/2] (2.77ns)   --->   "%indexJ_1 = load i10* %lut_reorder_J_1024_a, align 2" [FFR_Reorder_x_num/Reorder_FFT.cpp:126]   --->   Operation 294 'load' 'indexJ_1' <Predicate = (!exitcond & tmp & !sel_tmp2 & !sel_tmp7)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 8064> <ROM>
+ST_25 : Operation 295 [1/1] (0.00ns) (grouped into LUT with out node indexJ_6)   --->   "%indexJ_1_cast = zext i10 %indexJ_1 to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:126]   --->   Operation 295 'zext' 'indexJ_1_cast' <Predicate = (!exitcond & tmp & !sel_tmp2 & !sel_tmp7)> <Delay = 0.00>
+ST_25 : Operation 296 [1/2] (2.77ns)   --->   "%indexI_2 = load i10* %lut_reorder_I_4096_a, align 2" [FFR_Reorder_x_num/Reorder_FFT.cpp:130]   --->   Operation 296 'load' 'indexI_2' <Predicate = (!exitcond & sel_tmp2 & !sel_tmp7)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 8064> <ROM>
+ST_25 : Operation 297 [1/2] (2.77ns)   --->   "%indexJ_2 = load i12* %lut_reorder_J_4096_a, align 2" [FFR_Reorder_x_num/Reorder_FFT.cpp:131]   --->   Operation 297 'load' 'indexJ_2' <Predicate = (!exitcond & sel_tmp2 & !sel_tmp7)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 8064> <ROM>
+ST_25 : Operation 298 [1/1] (0.00ns) (grouped into LUT with out node indexJ_6)   --->   "%indexJ_2_cast = zext i12 %indexJ_2 to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:131]   --->   Operation 298 'zext' 'indexJ_2_cast' <Predicate = (!exitcond & sel_tmp2 & !sel_tmp7)> <Delay = 0.00>
+ST_25 : Operation 299 [1/2] (2.77ns)   --->   "%indexI_4 = load i9* %lut_reorder_I_16384_s, align 2" [FFR_Reorder_x_num/Reorder_FFT.cpp:135]   --->   Operation 299 'load' 'indexI_4' <Predicate = (!exitcond & sel_tmp7)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 8064> <ROM>
+ST_25 : Operation 300 [1/2] (2.77ns)   --->   "%indexJ_4 = load i14* %lut_reorder_J_16384_s, align 2" [FFR_Reorder_x_num/Reorder_FFT.cpp:136]   --->   Operation 300 'load' 'indexJ_4' <Predicate = (!exitcond & sel_tmp7)> <Delay = 2.77> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 14> <Depth = 8064> <ROM>
+ST_25 : Operation 301 [1/1] (0.00ns) (grouped into LUT with out node indexJ_3)   --->   "%indexJ_4_cast = zext i14 %indexJ_4 to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:136]   --->   Operation 301 'zext' 'indexJ_4_cast' <Predicate = (!exitcond & sel_tmp7)> <Delay = 0.00>
+ST_25 : Operation 302 [1/1] (0.00ns) (grouped into LUT with out node indexJ_6)   --->   "%indexJ_5 = select i1 %tmp, i32 %indexJ_1_cast, i32 %indexJ_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:53]   --->   Operation 302 'select' 'indexJ_5' <Predicate = (!exitcond & !sel_tmp2 & !sel_tmp7)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_25 : Operation 303 [1/1] (0.70ns) (out node of the LUT)   --->   "%indexJ_6 = select i1 %sel_tmp2, i32 %indexJ_2_cast, i32 %indexJ_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:128]   --->   Operation 303 'select' 'indexJ_6' <Predicate = (!exitcond & !sel_tmp7)> <Delay = 0.70> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_25 : Operation 304 [1/1] (0.70ns) (out node of the LUT)   --->   "%indexJ_3 = select i1 %sel_tmp7, i32 %indexJ_4_cast, i32 %indexJ_6" [FFR_Reorder_x_num/Reorder_FFT.cpp:133]   --->   Operation 304 'select' 'indexJ_3' <Predicate = (!exitcond)> <Delay = 0.70> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_25 : Operation 305 [1/1] (0.00ns)   --->   "%tmp_24 = trunc i32 %indexJ_3 to i2" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 305 'trunc' 'tmp_24' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_25 : Operation 306 [1/1] (0.00ns)   --->   "%newIndex5 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %indexJ_3, i32 2, i32 31)" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 306 'partselect' 'newIndex5' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_25 : Operation 307 [1/1] (0.00ns)   --->   "store i32 %indexJ_3, i32* %indexJ" [FFR_Reorder_x_num/Reorder_FFT.cpp:133]   --->   Operation 307 'store' <Predicate = (!exitcond)> <Delay = 0.00>
+
+State 26 <SV = 6> <Delay = 2.77>
+ST_26 : Operation 308 [1/1] (0.00ns)   --->   "%newIndex6 = zext i30 %newIndex5 to i64" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 308 'zext' 'newIndex6' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_26 : Operation 309 [1/1] (0.00ns)   --->   "%Real_0_addr_2 = getelementptr [4096 x float]* %Real_0, i64 0, i64 %newIndex6" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 309 'getelementptr' 'Real_0_addr_2' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_26 : Operation 310 [1/1] (0.00ns)   --->   "%Real_1_addr_2 = getelementptr [4096 x float]* %Real_1, i64 0, i64 %newIndex6" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 310 'getelementptr' 'Real_1_addr_2' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_26 : Operation 311 [1/1] (0.00ns)   --->   "%Real_2_addr_2 = getelementptr [4096 x float]* %Real_2, i64 0, i64 %newIndex6" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 311 'getelementptr' 'Real_2_addr_2' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_26 : Operation 312 [1/1] (0.00ns)   --->   "%Real_3_addr_2 = getelementptr [4096 x float]* %Real_3, i64 0, i64 %newIndex6" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 312 'getelementptr' 'Real_3_addr_2' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_26 : Operation 313 [2/2] (2.77ns)   --->   "%Real_0_load_1 = load float* %Real_0_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 313 'load' 'Real_0_load_1' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_26 : Operation 314 [2/2] (2.77ns)   --->   "%Real_1_load_2 = load float* %Real_1_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 314 'load' 'Real_1_load_2' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_26 : Operation 315 [2/2] (2.77ns)   --->   "%Real_2_load_1 = load float* %Real_2_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 315 'load' 'Real_2_load_1' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_26 : Operation 316 [2/2] (2.77ns)   --->   "%Real_3_load_2 = load float* %Real_3_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 316 'load' 'Real_3_load_2' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_26 : Operation 317 [1/1] (0.00ns)   --->   "%Imag_0_addr_2 = getelementptr [4096 x float]* %Imag_0, i64 0, i64 %newIndex6" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 317 'getelementptr' 'Imag_0_addr_2' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_26 : Operation 318 [1/1] (0.00ns)   --->   "%Imag_1_addr_2 = getelementptr [4096 x float]* %Imag_1, i64 0, i64 %newIndex6" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 318 'getelementptr' 'Imag_1_addr_2' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_26 : Operation 319 [1/1] (0.00ns)   --->   "%Imag_2_addr_2 = getelementptr [4096 x float]* %Imag_2, i64 0, i64 %newIndex6" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 319 'getelementptr' 'Imag_2_addr_2' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_26 : Operation 320 [1/1] (0.00ns)   --->   "%Imag_3_addr_2 = getelementptr [4096 x float]* %Imag_3, i64 0, i64 %newIndex6" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 320 'getelementptr' 'Imag_3_addr_2' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_26 : Operation 321 [2/2] (2.77ns)   --->   "%Imag_0_load_1 = load float* %Imag_0_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 321 'load' 'Imag_0_load_1' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_26 : Operation 322 [2/2] (2.77ns)   --->   "%Imag_1_load_2 = load float* %Imag_1_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 322 'load' 'Imag_1_load_2' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_26 : Operation 323 [2/2] (2.77ns)   --->   "%Imag_2_load_1 = load float* %Imag_2_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 323 'load' 'Imag_2_load_1' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_26 : Operation 324 [2/2] (2.77ns)   --->   "%Imag_3_load_2 = load float* %Imag_3_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 324 'load' 'Imag_3_load_2' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_26 : Operation 325 [1/1] (0.96ns)   --->   "switch i2 %tmp_24, label %branch15 [
+    i2 0, label %branch12
+    i2 1, label %branch13
+    i2 -2, label %branch14
+  ]" [FFR_Reorder_x_num/Reorder_FFT.cpp:144]   --->   Operation 325 'switch' <Predicate = (!exitcond)> <Delay = 0.96>
+ST_26 : Operation 326 [1/1] (0.96ns)   --->   "switch i2 %tmp_24, label %branch1176 [
+    i2 0, label %branch873
+    i2 1, label %branch974
+    i2 -2, label %branch1075
+  ]" [FFR_Reorder_x_num/Reorder_FFT.cpp:145]   --->   Operation 326 'switch' <Predicate = (!exitcond)> <Delay = 0.96>
+
+State 27 <SV = 7> <Delay = 4.19>
+ST_27 : Operation 327 [1/1] (0.00ns)   --->   "%indexI_load = load i32* %indexI"   --->   Operation 327 'load' 'indexI_load' <Predicate = (!exitcond & !tmp & !sel_tmp2 & !sel_tmp7)> <Delay = 0.00>
+ST_27 : Operation 328 [1/1] (0.00ns) (grouped into LUT with out node indexI_6)   --->   "%indexI_1_cast = zext i10 %indexI_1 to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:125]   --->   Operation 328 'zext' 'indexI_1_cast' <Predicate = (!exitcond & tmp & !sel_tmp2 & !sel_tmp7)> <Delay = 0.00>
+ST_27 : Operation 329 [1/1] (0.00ns) (grouped into LUT with out node indexI_6)   --->   "%indexI_2_cast = zext i10 %indexI_2 to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:130]   --->   Operation 329 'zext' 'indexI_2_cast' <Predicate = (!exitcond & sel_tmp2 & !sel_tmp7)> <Delay = 0.00>
+ST_27 : Operation 330 [1/1] (0.00ns) (grouped into LUT with out node indexI_3)   --->   "%indexI_4_cast = zext i9 %indexI_4 to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:135]   --->   Operation 330 'zext' 'indexI_4_cast' <Predicate = (!exitcond & sel_tmp7)> <Delay = 0.00>
+ST_27 : Operation 331 [1/1] (0.00ns) (grouped into LUT with out node indexI_6)   --->   "%indexI_5 = select i1 %tmp, i32 %indexI_1_cast, i32 %indexI_load" [FFR_Reorder_x_num/Reorder_FFT.cpp:53]   --->   Operation 331 'select' 'indexI_5' <Predicate = (!exitcond & !sel_tmp2 & !sel_tmp7)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 332 [1/1] (0.70ns) (out node of the LUT)   --->   "%indexI_6 = select i1 %sel_tmp2, i32 %indexI_2_cast, i32 %indexI_5" [FFR_Reorder_x_num/Reorder_FFT.cpp:128]   --->   Operation 332 'select' 'indexI_6' <Predicate = (!exitcond & !sel_tmp7)> <Delay = 0.70> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 333 [1/1] (0.70ns) (out node of the LUT)   --->   "%indexI_3 = select i1 %sel_tmp7, i32 %indexI_4_cast, i32 %indexI_6" [FFR_Reorder_x_num/Reorder_FFT.cpp:133]   --->   Operation 333 'select' 'indexI_3' <Predicate = (!exitcond)> <Delay = 0.70> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 334 [1/1] (0.00ns)   --->   "%tmp_23 = trunc i32 %indexI_3 to i2" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 334 'trunc' 'tmp_23' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_27 : Operation 335 [1/1] (0.00ns)   --->   "%newIndex3 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %indexI_3, i32 2, i32 31)" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 335 'partselect' 'newIndex3' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_27 : Operation 336 [1/1] (0.00ns)   --->   "%newIndex4 = zext i30 %newIndex3 to i64" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 336 'zext' 'newIndex4' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_27 : Operation 337 [1/1] (0.00ns)   --->   "%Real_0_addr_1 = getelementptr [4096 x float]* %Real_0, i64 0, i64 %newIndex4" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 337 'getelementptr' 'Real_0_addr_1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_27 : Operation 338 [1/1] (0.00ns)   --->   "%Real_1_addr_1 = getelementptr [4096 x float]* %Real_1, i64 0, i64 %newIndex4" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 338 'getelementptr' 'Real_1_addr_1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_27 : Operation 339 [1/1] (0.00ns)   --->   "%Real_2_addr_1 = getelementptr [4096 x float]* %Real_2, i64 0, i64 %newIndex4" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 339 'getelementptr' 'Real_2_addr_1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_27 : Operation 340 [1/1] (0.00ns)   --->   "%Real_3_addr_1 = getelementptr [4096 x float]* %Real_3, i64 0, i64 %newIndex4" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 340 'getelementptr' 'Real_3_addr_1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_27 : Operation 341 [2/2] (2.77ns)   --->   "%Real_0_load = load float* %Real_0_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 341 'load' 'Real_0_load' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 342 [2/2] (2.77ns)   --->   "%Real_1_load_1 = load float* %Real_1_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 342 'load' 'Real_1_load_1' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 343 [2/2] (2.77ns)   --->   "%Real_2_load = load float* %Real_2_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 343 'load' 'Real_2_load' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 344 [2/2] (2.77ns)   --->   "%Real_3_load_1 = load float* %Real_3_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 344 'load' 'Real_3_load_1' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 345 [1/1] (0.00ns)   --->   "%Imag_0_addr_1 = getelementptr [4096 x float]* %Imag_0, i64 0, i64 %newIndex4" [FFR_Reorder_x_num/Reorder_FFT.cpp:141]   --->   Operation 345 'getelementptr' 'Imag_0_addr_1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_27 : Operation 346 [1/1] (0.00ns)   --->   "%Imag_1_addr_1 = getelementptr [4096 x float]* %Imag_1, i64 0, i64 %newIndex4" [FFR_Reorder_x_num/Reorder_FFT.cpp:141]   --->   Operation 346 'getelementptr' 'Imag_1_addr_1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_27 : Operation 347 [1/1] (0.00ns)   --->   "%Imag_2_addr_1 = getelementptr [4096 x float]* %Imag_2, i64 0, i64 %newIndex4" [FFR_Reorder_x_num/Reorder_FFT.cpp:141]   --->   Operation 347 'getelementptr' 'Imag_2_addr_1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_27 : Operation 348 [1/1] (0.00ns)   --->   "%Imag_3_addr_1 = getelementptr [4096 x float]* %Imag_3, i64 0, i64 %newIndex4" [FFR_Reorder_x_num/Reorder_FFT.cpp:141]   --->   Operation 348 'getelementptr' 'Imag_3_addr_1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_27 : Operation 349 [2/2] (2.77ns)   --->   "%Imag_0_load = load float* %Imag_0_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:141]   --->   Operation 349 'load' 'Imag_0_load' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 350 [2/2] (2.77ns)   --->   "%Imag_1_load_1 = load float* %Imag_1_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:141]   --->   Operation 350 'load' 'Imag_1_load_1' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 351 [2/2] (2.77ns)   --->   "%Imag_2_load = load float* %Imag_2_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:141]   --->   Operation 351 'load' 'Imag_2_load' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 352 [2/2] (2.77ns)   --->   "%Imag_3_load_1 = load float* %Imag_3_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:141]   --->   Operation 352 'load' 'Imag_3_load_1' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 353 [1/1] (0.00ns)   --->   "%arrayNo1 = zext i2 %tmp_24 to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 353 'zext' 'arrayNo1' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_27 : Operation 354 [1/2] (2.77ns)   --->   "%Real_0_load_1 = load float* %Real_0_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 354 'load' 'Real_0_load_1' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 355 [1/2] (2.77ns)   --->   "%Real_1_load_2 = load float* %Real_1_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 355 'load' 'Real_1_load_2' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 356 [1/2] (2.77ns)   --->   "%Real_2_load_1 = load float* %Real_2_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 356 'load' 'Real_2_load_1' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 357 [1/2] (2.77ns)   --->   "%Real_3_load_2 = load float* %Real_3_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 357 'load' 'Real_3_load_2' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 358 [1/1] (1.42ns)   --->   "%tmp_16 = call float @_ssdm_op_Mux.ap_auto.4float.i32(float %Real_0_load_1, float %Real_1_load_2, float %Real_2_load_1, float %Real_3_load_2, i32 %arrayNo1)" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 358 'mux' 'tmp_16' <Predicate = (!exitcond)> <Delay = 1.42> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 359 [1/1] (0.00ns)   --->   "store i32 %indexI_3, i32* %indexI" [FFR_Reorder_x_num/Reorder_FFT.cpp:133]   --->   Operation 359 'store' <Predicate = (!exitcond)> <Delay = 0.00>
+ST_27 : Operation 360 [1/2] (2.77ns)   --->   "%Imag_0_load_1 = load float* %Imag_0_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 360 'load' 'Imag_0_load_1' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 361 [1/2] (2.77ns)   --->   "%Imag_1_load_2 = load float* %Imag_1_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 361 'load' 'Imag_1_load_2' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 362 [1/2] (2.77ns)   --->   "%Imag_2_load_1 = load float* %Imag_2_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 362 'load' 'Imag_2_load_1' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 363 [1/2] (2.77ns)   --->   "%Imag_3_load_2 = load float* %Imag_3_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 363 'load' 'Imag_3_load_2' <Predicate = (!exitcond)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_27 : Operation 364 [1/1] (1.42ns)   --->   "%tmp_17 = call float @_ssdm_op_Mux.ap_auto.4float.i32(float %Imag_0_load_1, float %Imag_1_load_2, float %Imag_2_load_1, float %Imag_3_load_2, i32 %arrayNo1)" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 364 'mux' 'tmp_17' <Predicate = (!exitcond)> <Delay = 1.42> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 365 [1/1] (0.96ns)   --->   "switch i2 %tmp_23, label %branch760 [
+    i2 0, label %branch457
+    i2 1, label %branch558
+    i2 -2, label %branch659
+  ]" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 365 'switch' <Predicate = (!exitcond)> <Delay = 0.96>
+
+State 28 <SV = 8> <Delay = 4.19>
+ST_28 : Operation 366 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [FFR_Reorder_x_num/Reorder_FFT.cpp:120]   --->   Operation 366 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 367 [1/1] (0.00ns)   --->   "%arrayNo = zext i2 %tmp_23 to i32" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 367 'zext' 'arrayNo' <Predicate = true> <Delay = 0.00>
+ST_28 : Operation 368 [1/2] (2.77ns)   --->   "%Real_0_load = load float* %Real_0_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 368 'load' 'Real_0_load' <Predicate = true> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 369 [1/2] (2.77ns)   --->   "%Real_1_load_1 = load float* %Real_1_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 369 'load' 'Real_1_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 370 [1/2] (2.77ns)   --->   "%Real_2_load = load float* %Real_2_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 370 'load' 'Real_2_load' <Predicate = true> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 371 [1/2] (2.77ns)   --->   "%Real_3_load_1 = load float* %Real_3_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 371 'load' 'Real_3_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 372 [1/1] (1.42ns)   --->   "%tempr = call float @_ssdm_op_Mux.ap_auto.4float.i32(float %Real_0_load, float %Real_1_load_1, float %Real_2_load, float %Real_3_load_1, i32 %arrayNo)" [FFR_Reorder_x_num/Reorder_FFT.cpp:140]   --->   Operation 372 'mux' 'tempr' <Predicate = true> <Delay = 1.42> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 373 [1/2] (2.77ns)   --->   "%Imag_0_load = load float* %Imag_0_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:141]   --->   Operation 373 'load' 'Imag_0_load' <Predicate = true> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 374 [1/2] (2.77ns)   --->   "%Imag_1_load_1 = load float* %Imag_1_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:141]   --->   Operation 374 'load' 'Imag_1_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 375 [1/2] (2.77ns)   --->   "%Imag_2_load = load float* %Imag_2_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:141]   --->   Operation 375 'load' 'Imag_2_load' <Predicate = true> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 376 [1/2] (2.77ns)   --->   "%Imag_3_load_1 = load float* %Imag_3_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:141]   --->   Operation 376 'load' 'Imag_3_load_1' <Predicate = true> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 377 [1/1] (1.42ns)   --->   "%tempi = call float @_ssdm_op_Mux.ap_auto.4float.i32(float %Imag_0_load, float %Imag_1_load_1, float %Imag_2_load, float %Imag_3_load_1, i32 %arrayNo)" [FFR_Reorder_x_num/Reorder_FFT.cpp:141]   --->   Operation 377 'mux' 'tempi' <Predicate = true> <Delay = 1.42> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.42> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 378 [1/1] (0.96ns)   --->   "switch i2 %tmp_23, label %branch19 [
+    i2 0, label %branch16
+    i2 1, label %branch17
+    i2 -2, label %branch18
+  ]" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 378 'switch' <Predicate = true> <Delay = 0.96>
+ST_28 : Operation 379 [1/1] (2.77ns)   --->   "store volatile float %tmp_16, float* %Real_2_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 379 'store' <Predicate = (tmp_23 == 2)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 380 [1/1] (0.00ns)   --->   "br label %._crit_edge535" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 380 'br' <Predicate = (tmp_23 == 2)> <Delay = 0.00>
+ST_28 : Operation 381 [1/1] (2.77ns)   --->   "store volatile float %tmp_16, float* %Real_1_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 381 'store' <Predicate = (tmp_23 == 1)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 382 [1/1] (0.00ns)   --->   "br label %._crit_edge535" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 382 'br' <Predicate = (tmp_23 == 1)> <Delay = 0.00>
+ST_28 : Operation 383 [1/1] (2.77ns)   --->   "store volatile float %tmp_16, float* %Real_0_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 383 'store' <Predicate = (tmp_23 == 0)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 384 [1/1] (0.00ns)   --->   "br label %._crit_edge535" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 384 'br' <Predicate = (tmp_23 == 0)> <Delay = 0.00>
+ST_28 : Operation 385 [1/1] (2.77ns)   --->   "store volatile float %tmp_16, float* %Real_3_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 385 'store' <Predicate = (tmp_23 == 3)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 386 [1/1] (0.00ns)   --->   "br label %._crit_edge535" [FFR_Reorder_x_num/Reorder_FFT.cpp:142]   --->   Operation 386 'br' <Predicate = (tmp_23 == 3)> <Delay = 0.00>
+ST_28 : Operation 387 [1/1] (2.77ns)   --->   "store volatile float %tmp_17, float* %Imag_2_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 387 'store' <Predicate = (tmp_23 == 2)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 388 [1/1] (0.00ns)   --->   "br label %._crit_edge53556" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 388 'br' <Predicate = (tmp_23 == 2)> <Delay = 0.00>
+ST_28 : Operation 389 [1/1] (2.77ns)   --->   "store volatile float %tmp_17, float* %Imag_1_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 389 'store' <Predicate = (tmp_23 == 1)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 390 [1/1] (0.00ns)   --->   "br label %._crit_edge53556" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 390 'br' <Predicate = (tmp_23 == 1)> <Delay = 0.00>
+ST_28 : Operation 391 [1/1] (2.77ns)   --->   "store volatile float %tmp_17, float* %Imag_0_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 391 'store' <Predicate = (tmp_23 == 0)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 392 [1/1] (0.00ns)   --->   "br label %._crit_edge53556" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 392 'br' <Predicate = (tmp_23 == 0)> <Delay = 0.00>
+ST_28 : Operation 393 [1/1] (2.77ns)   --->   "store volatile float %tmp_17, float* %Imag_3_addr_1, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 393 'store' <Predicate = (tmp_23 == 3)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_28 : Operation 394 [1/1] (0.00ns)   --->   "br label %._crit_edge53556" [FFR_Reorder_x_num/Reorder_FFT.cpp:143]   --->   Operation 394 'br' <Predicate = (tmp_23 == 3)> <Delay = 0.00>
+
+State 29 <SV = 9> <Delay = 2.77>
+ST_29 : Operation 395 [1/1] (2.77ns)   --->   "store volatile float %tempr, float* %Real_2_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:144]   --->   Operation 395 'store' <Predicate = (tmp_24 == 2)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_29 : Operation 396 [1/1] (0.00ns)   --->   "br label %._crit_edge526" [FFR_Reorder_x_num/Reorder_FFT.cpp:144]   --->   Operation 396 'br' <Predicate = (tmp_24 == 2)> <Delay = 0.00>
+ST_29 : Operation 397 [1/1] (2.77ns)   --->   "store volatile float %tempr, float* %Real_1_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:144]   --->   Operation 397 'store' <Predicate = (tmp_24 == 1)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_29 : Operation 398 [1/1] (0.00ns)   --->   "br label %._crit_edge526" [FFR_Reorder_x_num/Reorder_FFT.cpp:144]   --->   Operation 398 'br' <Predicate = (tmp_24 == 1)> <Delay = 0.00>
+ST_29 : Operation 399 [1/1] (2.77ns)   --->   "store volatile float %tempr, float* %Real_0_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:144]   --->   Operation 399 'store' <Predicate = (tmp_24 == 0)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_29 : Operation 400 [1/1] (0.00ns)   --->   "br label %._crit_edge526" [FFR_Reorder_x_num/Reorder_FFT.cpp:144]   --->   Operation 400 'br' <Predicate = (tmp_24 == 0)> <Delay = 0.00>
+ST_29 : Operation 401 [1/1] (2.77ns)   --->   "store volatile float %tempr, float* %Real_3_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:144]   --->   Operation 401 'store' <Predicate = (tmp_24 == 3)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_29 : Operation 402 [1/1] (0.00ns)   --->   "br label %._crit_edge526" [FFR_Reorder_x_num/Reorder_FFT.cpp:144]   --->   Operation 402 'br' <Predicate = (tmp_24 == 3)> <Delay = 0.00>
+ST_29 : Operation 403 [1/1] (2.77ns)   --->   "store volatile float %tempi, float* %Imag_2_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:145]   --->   Operation 403 'store' <Predicate = (tmp_24 == 2)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_29 : Operation 404 [1/1] (0.00ns)   --->   "br label %._crit_edge52672" [FFR_Reorder_x_num/Reorder_FFT.cpp:145]   --->   Operation 404 'br' <Predicate = (tmp_24 == 2)> <Delay = 0.00>
+ST_29 : Operation 405 [1/1] (2.77ns)   --->   "store volatile float %tempi, float* %Imag_1_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:145]   --->   Operation 405 'store' <Predicate = (tmp_24 == 1)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_29 : Operation 406 [1/1] (0.00ns)   --->   "br label %._crit_edge52672" [FFR_Reorder_x_num/Reorder_FFT.cpp:145]   --->   Operation 406 'br' <Predicate = (tmp_24 == 1)> <Delay = 0.00>
+ST_29 : Operation 407 [1/1] (2.77ns)   --->   "store volatile float %tempi, float* %Imag_0_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:145]   --->   Operation 407 'store' <Predicate = (tmp_24 == 0)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_29 : Operation 408 [1/1] (0.00ns)   --->   "br label %._crit_edge52672" [FFR_Reorder_x_num/Reorder_FFT.cpp:145]   --->   Operation 408 'br' <Predicate = (tmp_24 == 0)> <Delay = 0.00>
+ST_29 : Operation 409 [1/1] (2.77ns)   --->   "store volatile float %tempi, float* %Imag_3_addr_2, align 4" [FFR_Reorder_x_num/Reorder_FFT.cpp:145]   --->   Operation 409 'store' <Predicate = (tmp_24 == 3)> <Delay = 2.77> <Core = "RAM_1P_BRAM">   --->   Core 46 'RAM_1P_BRAM' <Latency = 1> <II = 1> <Delay = 2.77> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 32> <Depth = 4096> <RAM>
+ST_29 : Operation 410 [1/1] (0.00ns)   --->   "br label %._crit_edge52672" [FFR_Reorder_x_num/Reorder_FFT.cpp:145]   --->   Operation 410 'br' <Predicate = (tmp_24 == 3)> <Delay = 0.00>
+
+State 30 <SV = 5> <Delay = 0.00>
+ST_30 : Operation 411 [1/1] (0.00ns)   --->   "ret void" [FFR_Reorder_x_num/Reorder_FFT.cpp:148]   --->   Operation 411 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5ns, clock uncertainty: 0.625ns.
+
+ <State 1>: 1.9ns
+The critical path consists of the following:
+	wire read on port 'num_word' (FFR_Reorder_x_num/Reorder_FFT.cpp:16) [26]  (0 ns)
+	'sub' operation ('p_neg', FFR_Reorder_x_num/Reorder_FFT.cpp:16) [37]  (1.9 ns)
+
+ <State 2>: 3.36ns
+The critical path consists of the following:
+	'icmp' operation ('tmp', FFR_Reorder_x_num/Reorder_FFT.cpp:53) [29]  (1.97 ns)
+	'or' operation ('tmp_4', FFR_Reorder_x_num/Reorder_FFT.cpp:58) [32]  (0.8 ns)
+	'select' operation ('leng_reorder_2', FFR_Reorder_x_num/Reorder_FFT.cpp:58) [33]  (0.59 ns)
+
+ <State 3>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('c') with incoming values : ('c', FFR_Reorder_x_num/Reorder_FFT.cpp:72) [46]  (0 ns)
+	'getelementptr' operation ('Real_0_addr', FFR_Reorder_x_num/Reorder_FFT.cpp:78) [54]  (0 ns)
+	'load' operation ('RE_vec_128_a', FFR_Reorder_x_num/Reorder_FFT.cpp:78) on array 'Real_0' [55]  (2.77 ns)
+
+ <State 4>: 3.58ns
+The critical path consists of the following:
+	'load' operation ('RE_vec_128_b', FFR_Reorder_x_num/Reorder_FFT.cpp:79) on array 'Real_2' [57]  (2.77 ns)
+	'xor' operation ('tmp_11_1_neg', FFR_Reorder_x_num/Reorder_FFT.cpp:101) [79]  (0.808 ns)
+
+ <State 5>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', FFR_Reorder_x_num/Reorder_FFT.cpp:101) [70]  (4.32 ns)
+
+ <State 6>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', FFR_Reorder_x_num/Reorder_FFT.cpp:101) [70]  (4.32 ns)
+
+ <State 7>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', FFR_Reorder_x_num/Reorder_FFT.cpp:101) [70]  (4.32 ns)
+
+ <State 8>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', FFR_Reorder_x_num/Reorder_FFT.cpp:101) [70]  (4.32 ns)
+
+ <State 9>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', FFR_Reorder_x_num/Reorder_FFT.cpp:101) [70]  (4.32 ns)
+
+ <State 10>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', FFR_Reorder_x_num/Reorder_FFT.cpp:101) [70]  (4.32 ns)
+
+ <State 11>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', FFR_Reorder_x_num/Reorder_FFT.cpp:101) [70]  (4.32 ns)
+
+ <State 12>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', FFR_Reorder_x_num/Reorder_FFT.cpp:101) [70]  (4.32 ns)
+
+ <State 13>: 0.808ns
+The critical path consists of the following:
+	'xor' operation ('tmp_23_1_neg', FFR_Reorder_x_num/Reorder_FFT.cpp:109) [96]  (0.808 ns)
+
+ <State 14>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_7', FFR_Reorder_x_num/Reorder_FFT.cpp:103) [72]  (4.32 ns)
+
+ <State 15>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_7', FFR_Reorder_x_num/Reorder_FFT.cpp:103) [72]  (4.32 ns)
+
+ <State 16>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_7', FFR_Reorder_x_num/Reorder_FFT.cpp:103) [72]  (4.32 ns)
+
+ <State 17>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_7', FFR_Reorder_x_num/Reorder_FFT.cpp:103) [72]  (4.32 ns)
+
+ <State 18>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_7', FFR_Reorder_x_num/Reorder_FFT.cpp:103) [72]  (4.32 ns)
+
+ <State 19>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_7', FFR_Reorder_x_num/Reorder_FFT.cpp:103) [72]  (4.32 ns)
+
+ <State 20>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_7', FFR_Reorder_x_num/Reorder_FFT.cpp:103) [72]  (4.32 ns)
+
+ <State 21>: 4.32ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_7', FFR_Reorder_x_num/Reorder_FFT.cpp:103) [72]  (4.32 ns)
+
+ <State 22>: 2.77ns
+The critical path consists of the following:
+	'store' operation (FFR_Reorder_x_num/Reorder_FFT.cpp:111) of variable 'tmp_7', FFR_Reorder_x_num/Reorder_FFT.cpp:103 on array 'Real_0' [76]  (2.77 ns)
+
+ <State 23>: 2.77ns
+The critical path consists of the following:
+	'icmp' operation ('tmp_8', FFR_Reorder_x_num/Reorder_FFT.cpp:133) [132]  (1.97 ns)
+	'and' operation ('sel_tmp7', FFR_Reorder_x_num/Reorder_FFT.cpp:133) [137]  (0.8 ns)
+
+ <State 24>: 2.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', FFR_Reorder_x_num/Reorder_FFT.cpp:118) [140]  (0 ns)
+	'getelementptr' operation ('lut_reorder_I_1024_a', FFR_Reorder_x_num/Reorder_FFT.cpp:125) [151]  (0 ns)
+	'load' operation ('indexI', FFR_Reorder_x_num/Reorder_FFT.cpp:125) on array 'lut_reorder_I_1024' [152]  (2.77 ns)
+
+ <State 25>: 4.18ns
+The critical path consists of the following:
+	'load' operation ('indexJ', FFR_Reorder_x_num/Reorder_FFT.cpp:126) on array 'lut_reorder_J_1024' [155]  (2.77 ns)
+	'select' operation ('indexJ', FFR_Reorder_x_num/Reorder_FFT.cpp:53) [172]  (0 ns)
+	'select' operation ('indexJ', FFR_Reorder_x_num/Reorder_FFT.cpp:128) [173]  (0.705 ns)
+	'select' operation ('indexJ', FFR_Reorder_x_num/Reorder_FFT.cpp:133) [174]  (0.705 ns)
+
+ <State 26>: 2.77ns
+The critical path consists of the following:
+	'getelementptr' operation ('Imag_0_addr_2', FFR_Reorder_x_num/Reorder_FFT.cpp:143) [226]  (0 ns)
+	'load' operation ('Imag_0_load_1', FFR_Reorder_x_num/Reorder_FFT.cpp:143) on array 'Imag_0' [230]  (2.77 ns)
+
+ <State 27>: 4.19ns
+The critical path consists of the following:
+	'load' operation ('Real_0_load_1', FFR_Reorder_x_num/Reorder_FFT.cpp:142) on array 'Real_0' [205]  (2.77 ns)
+	'mux' operation ('tmp_16', FFR_Reorder_x_num/Reorder_FFT.cpp:142) [209]  (1.42 ns)
+
+ <State 28>: 4.19ns
+The critical path consists of the following:
+	'load' operation ('Real_0_load', FFR_Reorder_x_num/Reorder_FFT.cpp:140) on array 'Real_0' [183]  (2.77 ns)
+	'mux' operation ('tempr', FFR_Reorder_x_num/Reorder_FFT.cpp:140) [187]  (1.42 ns)
+
+ <State 29>: 2.77ns
+The critical path consists of the following:
+	'store' operation (FFR_Reorder_x_num/Reorder_FFT.cpp:144) of variable 'tempr', FFR_Reorder_x_num/Reorder_FFT.cpp:140 on array 'Real_2' [251]  (2.77 ns)
+
+ <State 30>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

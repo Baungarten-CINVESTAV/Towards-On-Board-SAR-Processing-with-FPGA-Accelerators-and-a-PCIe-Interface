@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.3 (64-bit)
+# SW Build 2644227 on Wed Sep  4 09:45:24 MDT 2019
+# IP Build 2633630 on Wed Sep  4 12:30:14 MDT 2019
+# Start of session at: Tue Nov 10 10:17:29 2020
+# Process ID: 18680
+# Current directory: C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Pipeline_unroll/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Command line: vivado.exe -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file: C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Pipeline_unroll/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file: C:/Users/wow_r/OneDrive/Escritorio/Maestria/HLS/FFT_test_3/Pipeline_unroll/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source bd_0_hls_inst_0.tcl -notrace

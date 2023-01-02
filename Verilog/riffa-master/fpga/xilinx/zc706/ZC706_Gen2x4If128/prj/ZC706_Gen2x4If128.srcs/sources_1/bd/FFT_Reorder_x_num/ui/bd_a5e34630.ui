@@ -1,0 +1,103 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port ap_ready_0 -pg 1 -y 10 -defaultsOSRD
+preplace port ap_idle_0 -pg 1 -y -290 -defaultsOSRD
+preplace port Real_2_ce0_0 -pg 1 -y -200 -defaultsOSRD
+preplace port Real_1_ce0_0 -pg 1 -y -350 -defaultsOSRD
+preplace port ap_done_0 -pg 1 -y -320 -defaultsOSRD
+preplace port Imag_1_ce0_0 -pg 1 -y -80 -defaultsOSRD
+preplace port ap_start_0 -pg 1 -y -80 -defaultsOSRD
+preplace port Real_2_we0_0 -pg 1 -y -230 -defaultsOSRD
+preplace port Imag_0_we0_0 -pg 1 -y -50 -defaultsOSRD
+preplace port Imag_2_we0_0 -pg 1 -y 150 -defaultsOSRD
+preplace port ap_clk_0 -pg 1 -y -50 -defaultsOSRD
+preplace port Imag_3_we0_0 -pg 1 -y 90 -defaultsOSRD
+preplace port Imag_2_ce0_0 -pg 1 -y 60 -defaultsOSRD
+preplace port Imag_1_we0_0 -pg 1 -y -20 -defaultsOSRD
+preplace port Imag_0_ce0_0 -pg 1 -y -110 -defaultsOSRD
+preplace port Real_0_ce0_0 -pg 1 -y -380 -defaultsOSRD
+preplace port Imag_3_ce0_0 -pg 1 -y 180 -defaultsOSRD
+preplace port Real_0_we0_0 -pg 1 -y -410 -defaultsOSRD
+preplace port ap_rst_0 -pg 1 -y 0 -defaultsOSRD
+preplace port Real_1_we0_0 -pg 1 -y -260 -defaultsOSRD
+preplace port Real_3_we0_0 -pg 1 -y -140 -defaultsOSRD
+preplace port Real_3_ce0_0 -pg 1 -y -170 -defaultsOSRD
+preplace portBus Imag_2_q0_0 -pg 1 -y 240 -defaultsOSRD
+preplace portBus Real_3_d0_0 -pg 1 -y 570 -defaultsOSRD
+preplace portBus Imag_2_d0_0 -pg 1 -y 450 -defaultsOSRD
+preplace portBus Imag_1_address0_0 -pg 1 -y 510 -defaultsOSRD
+preplace portBus Imag_0_d0_0 -pg 1 -y 480 -defaultsOSRD
+preplace portBus Real_0_address0_0 -pg 1 -y 120 -defaultsOSRD
+preplace portBus num_word_0 -pg 1 -y 30 -defaultsOSRD
+preplace portBus Imag_2_address0_0 -pg 1 -y 540 -defaultsOSRD
+preplace portBus Imag_0_address0_0 -pg 1 -y 630 -defaultsOSRD
+preplace portBus Imag_0_q0_0 -pg 1 -y 180 -defaultsOSRD
+preplace portBus Real_2_address0_0 -pg 1 -y 330 -defaultsOSRD
+preplace portBus Real_2_d0_0 -pg 1 -y 300 -defaultsOSRD
+preplace portBus Imag_1_d0_0 -pg 1 -y 360 -defaultsOSRD
+preplace portBus Real_1_q0_0 -pg 1 -y 120 -defaultsOSRD
+preplace portBus Real_1_address0_0 -pg 1 -y 240 -defaultsOSRD
+preplace portBus Imag_3_d0_0 -pg 1 -y 390 -defaultsOSRD
+preplace portBus Real_1_d0_0 -pg 1 -y 270 -defaultsOSRD
+preplace portBus Real_0_d0_0 -pg 1 -y 210 -defaultsOSRD
+preplace portBus Imag_3_q0_0 -pg 1 -y 290 -defaultsOSRD
+preplace portBus Real_0_q0_0 -pg 1 -y 90 -defaultsOSRD
+preplace portBus Real_2_q0_0 -pg 1 -y 60 -defaultsOSRD
+preplace portBus Real_3_q0_0 -pg 1 -y 150 -defaultsOSRD
+preplace portBus Imag_1_q0_0 -pg 1 -y 210 -defaultsOSRD
+preplace portBus Real_3_address0_0 -pg 1 -y 420 -defaultsOSRD
+preplace portBus Imag_3_address0_0 -pg 1 -y 600 -defaultsOSRD
+preplace inst Reorder_fft_0 -pg 1 -lvl 1 -y 80 -defaultsOSRD
+preplace netloc Imag_1_q0_0_1 1 0 1 -40J
+preplace netloc Reorder_fft_0_Imag_2_d0 1 1 1 450J
+preplace netloc Reorder_fft_0_Imag_1_we0 1 1 1 520J
+preplace netloc ap_clk_0_1 1 0 1 -20J
+preplace netloc Reorder_fft_0_Real_1_address0 1 1 1 540J
+preplace netloc Reorder_fft_0_Imag_3_we0 1 1 1 580J
+preplace netloc Reorder_fft_0_Imag_3_ce0 1 1 1 570J
+preplace netloc Reorder_fft_0_Real_2_d0 1 1 1 510J
+preplace netloc Reorder_fft_0_Real_0_address0 1 1 1 560J
+preplace netloc Imag_3_q0_0_1 1 0 1 20J
+preplace netloc Reorder_fft_0_Imag_0_address0 1 1 1 440J
+preplace netloc Real_2_q0_0_1 1 0 1 -50J
+preplace netloc Reorder_fft_0_Real_1_ce0 1 1 1 520J
+preplace netloc Real_0_q0_0_1 1 0 1 NJ
+preplace netloc ap_rst_0_1 1 0 1 -30J
+preplace netloc Reorder_fft_0_ap_idle 1 0 2 10 -300 620J
+preplace netloc Reorder_fft_0_Imag_0_we0 1 1 1 NJ
+preplace netloc Reorder_fft_0_Real_2_ce0 1 1 1 550J
+preplace netloc Reorder_fft_0_Real_2_we0 1 1 1 540J
+preplace netloc Imag_0_q0_0_1 1 0 1 -20J
+preplace netloc Real_3_q0_0_1 1 0 1 NJ
+preplace netloc num_word_0_1 1 0 1 -40J
+preplace netloc Reorder_fft_0_Real_1_we0 1 1 1 530J
+preplace netloc Reorder_fft_0_Imag_0_ce0 1 1 1 590J
+preplace netloc Reorder_fft_0_Real_3_we0 1 1 1 570J
+preplace netloc Reorder_fft_0_ap_done 1 0 2 0 -320 NJ
+preplace netloc Reorder_fft_0_Imag_1_ce0 1 1 1 600J
+preplace netloc Reorder_fft_0_Imag_2_address0 1 1 1 430J
+preplace netloc Reorder_fft_0_Imag_3_address0 1 1 1 420J
+preplace netloc Reorder_fft_0_ap_ready 1 0 2 20 -290 610J
+preplace netloc Reorder_fft_0_Imag_2_we0 1 1 1 590J
+preplace netloc Reorder_fft_0_Imag_0_d0 1 1 1 480J
+preplace netloc Reorder_fft_0_Real_0_we0 1 1 1 470J
+preplace netloc Reorder_fft_0_Real_3_address0 1 1 1 500J
+preplace netloc Reorder_fft_0_Imag_3_d0 1 1 1 NJ
+preplace netloc Reorder_fft_0_Real_0_ce0 1 1 1 500J
+preplace netloc Imag_2_q0_0_1 1 0 1 -10J
+preplace netloc Real_1_q0_0_1 1 0 1 -10J
+preplace netloc Reorder_fft_0_Imag_1_address0 1 1 1 460J
+preplace netloc Reorder_fft_0_Real_3_d0 1 1 1 470J
+preplace netloc ap_start_0_1 1 0 1 -10J
+preplace netloc Reorder_fft_0_Imag_1_d0 1 1 1 490J
+preplace netloc Reorder_fft_0_Real_1_d0 1 1 1 530J
+preplace netloc Reorder_fft_0_Real_2_address0 1 1 1 520J
+preplace netloc Reorder_fft_0_Real_0_d0 1 1 1 550J
+preplace netloc Reorder_fft_0_Imag_2_ce0 1 1 1 600J
+preplace netloc Reorder_fft_0_Real_3_ce0 1 1 1 560J
+levelinfo -pg 1 -70 230 670 -top -470 -bot 750
+"
+}
+

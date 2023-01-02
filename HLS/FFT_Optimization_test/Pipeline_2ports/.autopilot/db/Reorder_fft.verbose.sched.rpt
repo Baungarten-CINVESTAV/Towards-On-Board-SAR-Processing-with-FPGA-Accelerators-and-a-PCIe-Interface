@@ -1,0 +1,536 @@
+
+
+================================================================
+== Vivado HLS Report for 'Reorder_fft'
+================================================================
+* Date:           Tue Nov 10 09:08:14 2020
+
+* Version:        2019.1.3 (Build 2642998 on Wed Sep 04 10:25:22 MDT 2019)
+* Project:        FFT_test_3
+* Solution:       Pipeline_2ports
+* Product family: zynq
+* Target device:  xc7z010-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.249|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  2738|  2738|  2738|  2738|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |- Loop 1  |  1294|  1294|        20|          5|          1|   256|    yes   |
+        |- Loop 2  |  1440|  1440|         4|          3|          1|   480|    yes   |
+        +----------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 5, depth = 20
+  * Pipeline-1: initiation interval (II) = 3, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 27
+* Pipeline : 2
+  Pipeline-0 : II = 5, D = 20, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 }
+  Pipeline-1 : II = 3, D = 4, States = { 23 24 25 26 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 22 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 2 
+22 --> 23 
+23 --> 27 24 
+24 --> 25 
+25 --> 26 
+26 --> 23 
+27 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1024 x float]* %Real_r) nounwind, !map !7"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1024 x float]* %Imag) nounwind, !map !13"   --->   Operation 29 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([12 x i8]* @Reorder_fft_str) nounwind"   --->   Operation 30 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [FFT_test_3/Reorder_FFT.cpp:7]   --->   Operation 31 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([1024 x float]* %Real_r, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [FFT_test_3/Reorder_FFT.cpp:9]   --->   Operation 32 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([1024 x float]* %Imag, [5 x i8]* @p_str2, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [FFT_test_3/Reorder_FFT.cpp:10]   --->   Operation 33 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (1.76ns)   --->   "br label %0" [FFT_test_3/Reorder_FFT.cpp:41]   --->   Operation 34 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%c_0 = phi i11 [ 0, %meminst35.preheader ], [ %c, %hls_label_0 ]"   --->   Operation 35 'phi' 'c_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_6 = call i1 @_ssdm_op_BitSelect.i1.i11.i32(i11 %c_0, i32 10)" [FFT_test_3/Reorder_FFT.cpp:41]   --->   Operation 36 'bitselect' 'tmp_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256) nounwind"   --->   Operation 37 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "br i1 %tmp_6, label %.preheader.preheader, label %hls_label_0" [FFT_test_3/Reorder_FFT.cpp:41]   --->   Operation 38 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%trunc_ln41 = trunc i11 %c_0 to i10" [FFT_test_3/Reorder_FFT.cpp:41]   --->   Operation 39 'trunc' 'trunc_ln41' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%ind1 = or i10 %trunc_ln41, 1" [FFT_test_3/Reorder_FFT.cpp:43]   --->   Operation 40 'or' 'ind1' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%ind2 = or i10 %trunc_ln41, 2" [FFT_test_3/Reorder_FFT.cpp:44]   --->   Operation 41 'or' 'ind2' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%ind3 = or i10 %trunc_ln41, 3" [FFT_test_3/Reorder_FFT.cpp:45]   --->   Operation 42 'or' 'ind3' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%zext_ln47 = zext i11 %c_0 to i64" [FFT_test_3/Reorder_FFT.cpp:47]   --->   Operation 43 'zext' 'zext_ln47' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%Real_addr = getelementptr [1024 x float]* %Real_r, i64 0, i64 %zext_ln47" [FFT_test_3/Reorder_FFT.cpp:47]   --->   Operation 44 'getelementptr' 'Real_addr' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 45 [2/2] (3.25ns)   --->   "%RE_vec_128_a = load volatile float* %Real_addr, align 4" [FFT_test_3/Reorder_FFT.cpp:47]   --->   Operation 45 'load' 'RE_vec_128_a' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%zext_ln48 = zext i10 %ind2 to i64" [FFT_test_3/Reorder_FFT.cpp:48]   --->   Operation 46 'zext' 'zext_ln48' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%Real_addr_1 = getelementptr [1024 x float]* %Real_r, i64 0, i64 %zext_ln48" [FFT_test_3/Reorder_FFT.cpp:48]   --->   Operation 47 'getelementptr' 'Real_addr_1' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 48 [2/2] (3.25ns)   --->   "%RE_vec_128_b = load volatile float* %Real_addr_1, align 4" [FFT_test_3/Reorder_FFT.cpp:48]   --->   Operation 48 'load' 'RE_vec_128_b' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%zext_ln49 = zext i10 %ind1 to i64" [FFT_test_3/Reorder_FFT.cpp:49]   --->   Operation 49 'zext' 'zext_ln49' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%Real_addr_2 = getelementptr [1024 x float]* %Real_r, i64 0, i64 %zext_ln49" [FFT_test_3/Reorder_FFT.cpp:49]   --->   Operation 50 'getelementptr' 'Real_addr_2' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "%Imag_addr = getelementptr [1024 x float]* %Imag, i64 0, i64 %zext_ln49" [FFT_test_3/Reorder_FFT.cpp:50]   --->   Operation 51 'getelementptr' 'Imag_addr' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 52 [2/2] (3.25ns)   --->   "%Imag_load = load volatile float* %Imag_addr, align 4" [FFT_test_3/Reorder_FFT.cpp:50]   --->   Operation 52 'load' 'Imag_load' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%zext_ln51 = zext i10 %ind3 to i64" [FFT_test_3/Reorder_FFT.cpp:51]   --->   Operation 53 'zext' 'zext_ln51' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%Real_addr_3 = getelementptr [1024 x float]* %Real_r, i64 0, i64 %zext_ln51" [FFT_test_3/Reorder_FFT.cpp:51]   --->   Operation 54 'getelementptr' 'Real_addr_3' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (0.00ns)   --->   "%Imag_addr_1 = getelementptr [1024 x float]* %Imag, i64 0, i64 %zext_ln51" [FFT_test_3/Reorder_FFT.cpp:52]   --->   Operation 55 'getelementptr' 'Imag_addr_1' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 56 [2/2] (3.25ns)   --->   "%Imag_load_1 = load volatile float* %Imag_addr_1, align 4" [FFT_test_3/Reorder_FFT.cpp:52]   --->   Operation 56 'load' 'Imag_load_1' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%Imag_addr_2 = getelementptr [1024 x float]* %Imag, i64 0, i64 %zext_ln47" [FFT_test_3/Reorder_FFT.cpp:56]   --->   Operation 57 'getelementptr' 'Imag_addr_2' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%Imag_addr_3 = getelementptr [1024 x float]* %Imag, i64 0, i64 %zext_ln48" [FFT_test_3/Reorder_FFT.cpp:57]   --->   Operation 58 'getelementptr' 'Imag_addr_3' <Predicate = (!tmp_6)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 59 [1/2] (3.25ns)   --->   "%RE_vec_128_a = load volatile float* %Real_addr, align 4" [FFT_test_3/Reorder_FFT.cpp:47]   --->   Operation 59 'load' 'RE_vec_128_a' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 60 [1/2] (3.25ns)   --->   "%RE_vec_128_b = load volatile float* %Real_addr_1, align 4" [FFT_test_3/Reorder_FFT.cpp:48]   --->   Operation 60 'load' 'RE_vec_128_b' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 61 [2/2] (3.25ns)   --->   "%Real_load = load volatile float* %Real_addr_2, align 4" [FFT_test_3/Reorder_FFT.cpp:49]   --->   Operation 61 'load' 'Real_load' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 62 [1/2] (3.25ns)   --->   "%Imag_load = load volatile float* %Imag_addr, align 4" [FFT_test_3/Reorder_FFT.cpp:50]   --->   Operation 62 'load' 'Imag_load' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 63 [2/2] (3.25ns)   --->   "%Real_load_1 = load volatile float* %Real_addr_3, align 4" [FFT_test_3/Reorder_FFT.cpp:51]   --->   Operation 63 'load' 'Real_load_1' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 64 [1/2] (3.25ns)   --->   "%Imag_load_1 = load volatile float* %Imag_addr_1, align 4" [FFT_test_3/Reorder_FFT.cpp:52]   --->   Operation 64 'load' 'Imag_load_1' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 65 [2/2] (3.25ns)   --->   "%IM_vec_128_a = load volatile float* %Imag_addr_2, align 4" [FFT_test_3/Reorder_FFT.cpp:56]   --->   Operation 65 'load' 'IM_vec_128_a' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 66 [2/2] (3.25ns)   --->   "%IM_vec_128_b = load volatile float* %Imag_addr_3, align 4" [FFT_test_3/Reorder_FFT.cpp:57]   --->   Operation 66 'load' 'IM_vec_128_b' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+
+State 4 <SV = 3> <Delay = 8.24>
+ST_4 : Operation 67 [1/2] (3.25ns)   --->   "%Real_load = load volatile float* %Real_addr_2, align 4" [FFT_test_3/Reorder_FFT.cpp:49]   --->   Operation 67 'load' 'Real_load' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 68 [1/2] (3.25ns)   --->   "%Real_load_1 = load volatile float* %Real_addr_3, align 4" [FFT_test_3/Reorder_FFT.cpp:51]   --->   Operation 68 'load' 'Real_load_1' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 69 [1/2] (3.25ns)   --->   "%IM_vec_128_a = load volatile float* %Imag_addr_2, align 4" [FFT_test_3/Reorder_FFT.cpp:56]   --->   Operation 69 'load' 'IM_vec_128_a' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 70 [1/2] (3.25ns)   --->   "%IM_vec_128_b = load volatile float* %Imag_addr_3, align 4" [FFT_test_3/Reorder_FFT.cpp:57]   --->   Operation 70 'load' 'IM_vec_128_b' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 71 [2/2] (3.25ns)   --->   "%Imag_load_4 = load volatile float* %Imag_addr, align 4" [FFT_test_3/Reorder_FFT.cpp:58]   --->   Operation 71 'load' 'Imag_load_4' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 72 [2/2] (3.25ns)   --->   "%Real_load_2 = load volatile float* %Real_addr_2, align 4" [FFT_test_3/Reorder_FFT.cpp:59]   --->   Operation 72 'load' 'Real_load_2' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 73 [2/2] (3.25ns)   --->   "%Imag_load_5 = load volatile float* %Imag_addr_1, align 4" [FFT_test_3/Reorder_FFT.cpp:60]   --->   Operation 73 'load' 'Imag_load_5' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 74 [2/2] (3.25ns)   --->   "%Real_load_3 = load volatile float* %Real_addr_3, align 4" [FFT_test_3/Reorder_FFT.cpp:61]   --->   Operation 74 'load' 'Real_load_3' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 75 [5/5] (7.25ns)   --->   "%tmp_1 = fadd float %RE_vec_128_b, %RE_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:74]   --->   Operation 75 'fadd' 'tmp_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 76 [1/1] (0.00ns)   --->   "%bitcast_ln74 = bitcast float %RE_vec_128_b to i32" [FFT_test_3/Reorder_FFT.cpp:74]   --->   Operation 76 'bitcast' 'bitcast_ln74' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_4 : Operation 77 [1/1] (0.99ns)   --->   "%xor_ln74 = xor i32 %bitcast_ln74, -2147483648" [FFT_test_3/Reorder_FFT.cpp:74]   --->   Operation 77 'xor' 'xor_ln74' <Predicate = (!tmp_6)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 78 [1/1] (0.00ns)   --->   "%bitcast_ln74_1 = bitcast i32 %xor_ln74 to float" [FFT_test_3/Reorder_FFT.cpp:74]   --->   Operation 78 'bitcast' 'bitcast_ln74_1' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_4 : Operation 79 [5/5] (7.25ns)   --->   "%tmp_1_1 = fadd float %bitcast_ln74_1, %RE_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:74]   --->   Operation 79 'fadd' 'tmp_1_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 80 [1/1] (0.00ns)   --->   "%bitcast_ln75 = bitcast float %Imag_load_1 to i32" [FFT_test_3/Reorder_FFT.cpp:75]   --->   Operation 80 'bitcast' 'bitcast_ln75' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_4 : Operation 81 [1/1] (0.99ns)   --->   "%xor_ln75 = xor i32 %bitcast_ln75, -2147483648" [FFT_test_3/Reorder_FFT.cpp:75]   --->   Operation 81 'xor' 'xor_ln75' <Predicate = (!tmp_6)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 82 [1/1] (0.00ns)   --->   "%bitcast_ln75_1 = bitcast i32 %xor_ln75 to float" [FFT_test_3/Reorder_FFT.cpp:75]   --->   Operation 82 'bitcast' 'bitcast_ln75_1' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_4 : Operation 83 [5/5] (7.25ns)   --->   "%tmp_3_1 = fadd float %bitcast_ln75_1, %Imag_load" [FFT_test_3/Reorder_FFT.cpp:75]   --->   Operation 83 'fadd' 'tmp_3_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 8.24>
+ST_5 : Operation 84 [1/2] (3.25ns)   --->   "%Imag_load_4 = load volatile float* %Imag_addr, align 4" [FFT_test_3/Reorder_FFT.cpp:58]   --->   Operation 84 'load' 'Imag_load_4' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 85 [1/2] (3.25ns)   --->   "%Real_load_2 = load volatile float* %Real_addr_2, align 4" [FFT_test_3/Reorder_FFT.cpp:59]   --->   Operation 85 'load' 'Real_load_2' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 86 [1/2] (3.25ns)   --->   "%Imag_load_5 = load volatile float* %Imag_addr_1, align 4" [FFT_test_3/Reorder_FFT.cpp:60]   --->   Operation 86 'load' 'Imag_load_5' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 87 [1/2] (3.25ns)   --->   "%Real_load_3 = load volatile float* %Real_addr_3, align 4" [FFT_test_3/Reorder_FFT.cpp:61]   --->   Operation 87 'load' 'Real_load_3' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 88 [4/5] (7.25ns)   --->   "%tmp_1 = fadd float %RE_vec_128_b, %RE_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:74]   --->   Operation 88 'fadd' 'tmp_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 89 [5/5] (7.25ns)   --->   "%tmp_3 = fadd float %Real_load_1, %Real_load" [FFT_test_3/Reorder_FFT.cpp:75]   --->   Operation 89 'fadd' 'tmp_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 90 [5/5] (7.25ns)   --->   "%tmp_7 = fadd float %IM_vec_128_b, %IM_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:80]   --->   Operation 90 'fadd' 'tmp_7' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 91 [4/5] (7.25ns)   --->   "%tmp_1_1 = fadd float %bitcast_ln74_1, %RE_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:74]   --->   Operation 91 'fadd' 'tmp_1_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 92 [4/5] (7.25ns)   --->   "%tmp_3_1 = fadd float %bitcast_ln75_1, %Imag_load" [FFT_test_3/Reorder_FFT.cpp:75]   --->   Operation 92 'fadd' 'tmp_3_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 93 [1/1] (0.00ns)   --->   "%bitcast_ln80 = bitcast float %IM_vec_128_b to i32" [FFT_test_3/Reorder_FFT.cpp:80]   --->   Operation 93 'bitcast' 'bitcast_ln80' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_5 : Operation 94 [1/1] (0.99ns)   --->   "%xor_ln80 = xor i32 %bitcast_ln80, -2147483648" [FFT_test_3/Reorder_FFT.cpp:80]   --->   Operation 94 'xor' 'xor_ln80' <Predicate = (!tmp_6)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 95 [1/1] (0.00ns)   --->   "%bitcast_ln80_1 = bitcast i32 %xor_ln80 to float" [FFT_test_3/Reorder_FFT.cpp:80]   --->   Operation 95 'bitcast' 'bitcast_ln80_1' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_5 : Operation 96 [5/5] (7.25ns)   --->   "%tmp_7_1 = fadd float %bitcast_ln80_1, %IM_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:80]   --->   Operation 96 'fadd' 'tmp_7_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 8.24>
+ST_6 : Operation 97 [3/5] (7.25ns)   --->   "%tmp_1 = fadd float %RE_vec_128_b, %RE_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:74]   --->   Operation 97 'fadd' 'tmp_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 98 [4/5] (7.25ns)   --->   "%tmp_3 = fadd float %Real_load_1, %Real_load" [FFT_test_3/Reorder_FFT.cpp:75]   --->   Operation 98 'fadd' 'tmp_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 99 [4/5] (7.25ns)   --->   "%tmp_7 = fadd float %IM_vec_128_b, %IM_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:80]   --->   Operation 99 'fadd' 'tmp_7' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 100 [5/5] (7.25ns)   --->   "%tmp_9 = fadd float %Imag_load_5, %Imag_load_4" [FFT_test_3/Reorder_FFT.cpp:81]   --->   Operation 100 'fadd' 'tmp_9' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 101 [3/5] (7.25ns)   --->   "%tmp_1_1 = fadd float %bitcast_ln74_1, %RE_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:74]   --->   Operation 101 'fadd' 'tmp_1_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 102 [3/5] (7.25ns)   --->   "%tmp_3_1 = fadd float %bitcast_ln75_1, %Imag_load" [FFT_test_3/Reorder_FFT.cpp:75]   --->   Operation 102 'fadd' 'tmp_3_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 103 [4/5] (7.25ns)   --->   "%tmp_7_1 = fadd float %bitcast_ln80_1, %IM_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:80]   --->   Operation 103 'fadd' 'tmp_7_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 104 [1/1] (0.00ns)   --->   "%bitcast_ln81 = bitcast float %Real_load_3 to i32" [FFT_test_3/Reorder_FFT.cpp:81]   --->   Operation 104 'bitcast' 'bitcast_ln81' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_6 : Operation 105 [1/1] (0.99ns)   --->   "%xor_ln81 = xor i32 %bitcast_ln81, -2147483648" [FFT_test_3/Reorder_FFT.cpp:81]   --->   Operation 105 'xor' 'xor_ln81' <Predicate = (!tmp_6)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 106 [1/1] (0.00ns)   --->   "%bitcast_ln81_1 = bitcast i32 %xor_ln81 to float" [FFT_test_3/Reorder_FFT.cpp:81]   --->   Operation 106 'bitcast' 'bitcast_ln81_1' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_6 : Operation 107 [5/5] (7.25ns)   --->   "%tmp_9_1 = fadd float %bitcast_ln81_1, %Real_load_2" [FFT_test_3/Reorder_FFT.cpp:81]   --->   Operation 107 'fadd' 'tmp_9_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 108 [1/1] (1.63ns)   --->   "%c = add i11 4, %c_0" [FFT_test_3/Reorder_FFT.cpp:41]   --->   Operation 108 'add' 'c' <Predicate = (!tmp_6)> <Delay = 1.63> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.25>
+ST_7 : Operation 109 [2/5] (7.25ns)   --->   "%tmp_1 = fadd float %RE_vec_128_b, %RE_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:74]   --->   Operation 109 'fadd' 'tmp_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 110 [3/5] (7.25ns)   --->   "%tmp_3 = fadd float %Real_load_1, %Real_load" [FFT_test_3/Reorder_FFT.cpp:75]   --->   Operation 110 'fadd' 'tmp_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 111 [3/5] (7.25ns)   --->   "%tmp_7 = fadd float %IM_vec_128_b, %IM_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:80]   --->   Operation 111 'fadd' 'tmp_7' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 112 [4/5] (7.25ns)   --->   "%tmp_9 = fadd float %Imag_load_5, %Imag_load_4" [FFT_test_3/Reorder_FFT.cpp:81]   --->   Operation 112 'fadd' 'tmp_9' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 113 [2/5] (7.25ns)   --->   "%tmp_1_1 = fadd float %bitcast_ln74_1, %RE_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:74]   --->   Operation 113 'fadd' 'tmp_1_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 114 [2/5] (7.25ns)   --->   "%tmp_3_1 = fadd float %bitcast_ln75_1, %Imag_load" [FFT_test_3/Reorder_FFT.cpp:75]   --->   Operation 114 'fadd' 'tmp_3_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 115 [3/5] (7.25ns)   --->   "%tmp_7_1 = fadd float %bitcast_ln80_1, %IM_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:80]   --->   Operation 115 'fadd' 'tmp_7_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 116 [4/5] (7.25ns)   --->   "%tmp_9_1 = fadd float %bitcast_ln81_1, %Real_load_2" [FFT_test_3/Reorder_FFT.cpp:81]   --->   Operation 116 'fadd' 'tmp_9_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.25>
+ST_8 : Operation 117 [1/5] (7.25ns)   --->   "%tmp_1 = fadd float %RE_vec_128_b, %RE_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:74]   --->   Operation 117 'fadd' 'tmp_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 118 [2/5] (7.25ns)   --->   "%tmp_3 = fadd float %Real_load_1, %Real_load" [FFT_test_3/Reorder_FFT.cpp:75]   --->   Operation 118 'fadd' 'tmp_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 119 [2/5] (7.25ns)   --->   "%tmp_7 = fadd float %IM_vec_128_b, %IM_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:80]   --->   Operation 119 'fadd' 'tmp_7' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 120 [3/5] (7.25ns)   --->   "%tmp_9 = fadd float %Imag_load_5, %Imag_load_4" [FFT_test_3/Reorder_FFT.cpp:81]   --->   Operation 120 'fadd' 'tmp_9' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 121 [1/5] (7.25ns)   --->   "%tmp_1_1 = fadd float %bitcast_ln74_1, %RE_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:74]   --->   Operation 121 'fadd' 'tmp_1_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 122 [1/5] (7.25ns)   --->   "%tmp_3_1 = fadd float %bitcast_ln75_1, %Imag_load" [FFT_test_3/Reorder_FFT.cpp:75]   --->   Operation 122 'fadd' 'tmp_3_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 123 [2/5] (7.25ns)   --->   "%tmp_7_1 = fadd float %bitcast_ln80_1, %IM_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:80]   --->   Operation 123 'fadd' 'tmp_7_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 124 [3/5] (7.25ns)   --->   "%tmp_9_1 = fadd float %bitcast_ln81_1, %Real_load_2" [FFT_test_3/Reorder_FFT.cpp:81]   --->   Operation 124 'fadd' 'tmp_9_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.25>
+ST_9 : Operation 125 [1/5] (7.25ns)   --->   "%tmp_3 = fadd float %Real_load_1, %Real_load" [FFT_test_3/Reorder_FFT.cpp:75]   --->   Operation 125 'fadd' 'tmp_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 126 [1/5] (7.25ns)   --->   "%tmp_7 = fadd float %IM_vec_128_b, %IM_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:80]   --->   Operation 126 'fadd' 'tmp_7' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 127 [2/5] (7.25ns)   --->   "%tmp_9 = fadd float %Imag_load_5, %Imag_load_4" [FFT_test_3/Reorder_FFT.cpp:81]   --->   Operation 127 'fadd' 'tmp_9' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 128 [5/5] (7.25ns)   --->   "%tmp_5_1 = fadd float %tmp_3_1, %tmp_1_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 128 'fadd' 'tmp_5_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 129 [1/5] (7.25ns)   --->   "%tmp_7_1 = fadd float %bitcast_ln80_1, %IM_vec_128_a" [FFT_test_3/Reorder_FFT.cpp:80]   --->   Operation 129 'fadd' 'tmp_7_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 130 [2/5] (7.25ns)   --->   "%tmp_9_1 = fadd float %bitcast_ln81_1, %Real_load_2" [FFT_test_3/Reorder_FFT.cpp:81]   --->   Operation 130 'fadd' 'tmp_9_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.25>
+ST_10 : Operation 131 [5/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_3, %tmp_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 131 'fadd' 'tmp_5' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 132 [1/5] (7.25ns)   --->   "%tmp_9 = fadd float %Imag_load_5, %Imag_load_4" [FFT_test_3/Reorder_FFT.cpp:81]   --->   Operation 132 'fadd' 'tmp_9' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 133 [4/5] (7.25ns)   --->   "%tmp_5_1 = fadd float %tmp_3_1, %tmp_1_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 133 'fadd' 'tmp_5_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 134 [1/5] (7.25ns)   --->   "%tmp_9_1 = fadd float %bitcast_ln81_1, %Real_load_2" [FFT_test_3/Reorder_FFT.cpp:81]   --->   Operation 134 'fadd' 'tmp_9_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 8.24>
+ST_11 : Operation 135 [4/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_3, %tmp_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 135 'fadd' 'tmp_5' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 136 [5/5] (7.25ns)   --->   "%tmp_4 = fadd float %tmp_9, %tmp_7" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 136 'fadd' 'tmp_4' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 137 [3/5] (7.25ns)   --->   "%tmp_5_1 = fadd float %tmp_3_1, %tmp_1_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 137 'fadd' 'tmp_5_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 138 [1/1] (0.00ns)   --->   "%bitcast_ln82 = bitcast float %tmp_9_1 to i32" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 138 'bitcast' 'bitcast_ln82' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_11 : Operation 139 [1/1] (0.99ns)   --->   "%xor_ln82 = xor i32 %bitcast_ln82, -2147483648" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 139 'xor' 'xor_ln82' <Predicate = (!tmp_6)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 140 [1/1] (0.00ns)   --->   "%bitcast_ln82_1 = bitcast i32 %xor_ln82 to float" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 140 'bitcast' 'bitcast_ln82_1' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_11 : Operation 141 [5/5] (7.25ns)   --->   "%tmp_10_1 = fadd float %bitcast_ln82_1, %tmp_7_1" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 141 'fadd' 'tmp_10_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 8.24>
+ST_12 : Operation 142 [3/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_3, %tmp_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 142 'fadd' 'tmp_5' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 143 [4/5] (7.25ns)   --->   "%tmp_4 = fadd float %tmp_9, %tmp_7" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 143 'fadd' 'tmp_4' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 144 [2/5] (7.25ns)   --->   "%tmp_5_1 = fadd float %tmp_3_1, %tmp_1_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 144 'fadd' 'tmp_5_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 145 [4/5] (7.25ns)   --->   "%tmp_10_1 = fadd float %bitcast_ln82_1, %tmp_7_1" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 145 'fadd' 'tmp_10_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 146 [1/1] (0.00ns)   --->   "%bitcast_ln76 = bitcast float %tmp_3 to i32" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 146 'bitcast' 'bitcast_ln76' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_12 : Operation 147 [1/1] (0.99ns)   --->   "%xor_ln76 = xor i32 %bitcast_ln76, -2147483648" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 147 'xor' 'xor_ln76' <Predicate = (!tmp_6)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 148 [1/1] (0.00ns)   --->   "%bitcast_ln76_1 = bitcast i32 %xor_ln76 to float" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 148 'bitcast' 'bitcast_ln76_1' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_12 : Operation 149 [5/5] (7.25ns)   --->   "%tmp_5_2 = fadd float %bitcast_ln76_1, %tmp_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 149 'fadd' 'tmp_5_2' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 150 [1/1] (0.00ns)   --->   "%bitcast_ln82_2 = bitcast float %tmp_9 to i32" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 150 'bitcast' 'bitcast_ln82_2' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_12 : Operation 151 [1/1] (0.99ns)   --->   "%xor_ln82_1 = xor i32 %bitcast_ln82_2, -2147483648" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 151 'xor' 'xor_ln82_1' <Predicate = (!tmp_6)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 152 [1/1] (0.00ns)   --->   "%bitcast_ln82_3 = bitcast i32 %xor_ln82_1 to float" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 152 'bitcast' 'bitcast_ln82_3' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_12 : Operation 153 [5/5] (7.25ns)   --->   "%tmp_10_2 = fadd float %bitcast_ln82_3, %tmp_7" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 153 'fadd' 'tmp_10_2' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 154 [1/1] (0.00ns)   --->   "%bitcast_ln76_2 = bitcast float %tmp_3_1 to i32" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 154 'bitcast' 'bitcast_ln76_2' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_12 : Operation 155 [1/1] (0.99ns)   --->   "%xor_ln76_1 = xor i32 %bitcast_ln76_2, -2147483648" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 155 'xor' 'xor_ln76_1' <Predicate = (!tmp_6)> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 156 [1/1] (0.00ns)   --->   "%bitcast_ln76_3 = bitcast i32 %xor_ln76_1 to float" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 156 'bitcast' 'bitcast_ln76_3' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_12 : Operation 157 [5/5] (7.25ns)   --->   "%tmp_5_3 = fadd float %bitcast_ln76_3, %tmp_1_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 157 'fadd' 'tmp_5_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 158 [5/5] (7.25ns)   --->   "%tmp_10_3 = fadd float %tmp_9_1, %tmp_7_1" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 158 'fadd' 'tmp_10_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 7.25>
+ST_13 : Operation 159 [2/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_3, %tmp_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 159 'fadd' 'tmp_5' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 160 [3/5] (7.25ns)   --->   "%tmp_4 = fadd float %tmp_9, %tmp_7" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 160 'fadd' 'tmp_4' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 161 [1/5] (7.25ns)   --->   "%tmp_5_1 = fadd float %tmp_3_1, %tmp_1_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 161 'fadd' 'tmp_5_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 162 [3/5] (7.25ns)   --->   "%tmp_10_1 = fadd float %bitcast_ln82_1, %tmp_7_1" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 162 'fadd' 'tmp_10_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 163 [4/5] (7.25ns)   --->   "%tmp_5_2 = fadd float %bitcast_ln76_1, %tmp_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 163 'fadd' 'tmp_5_2' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 164 [4/5] (7.25ns)   --->   "%tmp_10_2 = fadd float %bitcast_ln82_3, %tmp_7" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 164 'fadd' 'tmp_10_2' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 165 [4/5] (7.25ns)   --->   "%tmp_5_3 = fadd float %bitcast_ln76_3, %tmp_1_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 165 'fadd' 'tmp_5_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 166 [4/5] (7.25ns)   --->   "%tmp_10_3 = fadd float %tmp_9_1, %tmp_7_1" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 166 'fadd' 'tmp_10_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 7.25>
+ST_14 : Operation 167 [1/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_3, %tmp_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 167 'fadd' 'tmp_5' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 168 [2/5] (7.25ns)   --->   "%tmp_4 = fadd float %tmp_9, %tmp_7" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 168 'fadd' 'tmp_4' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 169 [2/5] (7.25ns)   --->   "%tmp_10_1 = fadd float %bitcast_ln82_1, %tmp_7_1" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 169 'fadd' 'tmp_10_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 170 [3/5] (7.25ns)   --->   "%tmp_5_2 = fadd float %bitcast_ln76_1, %tmp_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 170 'fadd' 'tmp_5_2' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 171 [3/5] (7.25ns)   --->   "%tmp_10_2 = fadd float %bitcast_ln82_3, %tmp_7" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 171 'fadd' 'tmp_10_2' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 172 [3/5] (7.25ns)   --->   "%tmp_5_3 = fadd float %bitcast_ln76_3, %tmp_1_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 172 'fadd' 'tmp_5_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 173 [3/5] (7.25ns)   --->   "%tmp_10_3 = fadd float %tmp_9_1, %tmp_7_1" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 173 'fadd' 'tmp_10_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 7.25>
+ST_15 : Operation 174 [1/5] (7.25ns)   --->   "%tmp_4 = fadd float %tmp_9, %tmp_7" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 174 'fadd' 'tmp_4' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 175 [1/1] (3.25ns)   --->   "store volatile float %tmp_5, float* %Real_addr, align 4" [FFT_test_3/Reorder_FFT.cpp:84]   --->   Operation 175 'store' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_15 : Operation 176 [1/5] (7.25ns)   --->   "%tmp_10_1 = fadd float %bitcast_ln82_1, %tmp_7_1" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 176 'fadd' 'tmp_10_1' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 177 [1/1] (3.25ns)   --->   "store volatile float %tmp_5_1, float* %Real_addr_2, align 4" [FFT_test_3/Reorder_FFT.cpp:84]   --->   Operation 177 'store' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_15 : Operation 178 [2/5] (7.25ns)   --->   "%tmp_5_2 = fadd float %bitcast_ln76_1, %tmp_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 178 'fadd' 'tmp_5_2' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 179 [2/5] (7.25ns)   --->   "%tmp_10_2 = fadd float %bitcast_ln82_3, %tmp_7" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 179 'fadd' 'tmp_10_2' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 180 [2/5] (7.25ns)   --->   "%tmp_5_3 = fadd float %bitcast_ln76_3, %tmp_1_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 180 'fadd' 'tmp_5_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 181 [2/5] (7.25ns)   --->   "%tmp_10_3 = fadd float %tmp_9_1, %tmp_7_1" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 181 'fadd' 'tmp_10_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 7.25>
+ST_16 : Operation 182 [1/1] (3.25ns)   --->   "store volatile float %tmp_4, float* %Imag_addr_2, align 4" [FFT_test_3/Reorder_FFT.cpp:85]   --->   Operation 182 'store' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_16 : Operation 183 [1/1] (3.25ns)   --->   "store volatile float %tmp_10_1, float* %Imag_addr, align 4" [FFT_test_3/Reorder_FFT.cpp:85]   --->   Operation 183 'store' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_16 : Operation 184 [1/5] (7.25ns)   --->   "%tmp_5_2 = fadd float %bitcast_ln76_1, %tmp_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 184 'fadd' 'tmp_5_2' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 185 [1/5] (7.25ns)   --->   "%tmp_10_2 = fadd float %bitcast_ln82_3, %tmp_7" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 185 'fadd' 'tmp_10_2' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 186 [1/5] (7.25ns)   --->   "%tmp_5_3 = fadd float %bitcast_ln76_3, %tmp_1_1" [FFT_test_3/Reorder_FFT.cpp:76]   --->   Operation 186 'fadd' 'tmp_5_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 187 [1/5] (7.25ns)   --->   "%tmp_10_3 = fadd float %tmp_9_1, %tmp_7_1" [FFT_test_3/Reorder_FFT.cpp:82]   --->   Operation 187 'fadd' 'tmp_10_3' <Predicate = (!tmp_6)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 0.00>
+
+State 18 <SV = 17> <Delay = 0.00>
+
+State 19 <SV = 18> <Delay = 0.00>
+
+State 20 <SV = 19> <Delay = 3.25>
+ST_20 : Operation 188 [1/1] (3.25ns)   --->   "store volatile float %tmp_10_2, float* %Imag_addr_3, align 4" [FFT_test_3/Reorder_FFT.cpp:85]   --->   Operation 188 'store' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_20 : Operation 189 [1/1] (3.25ns)   --->   "store volatile float %tmp_10_3, float* %Imag_addr_1, align 4" [FFT_test_3/Reorder_FFT.cpp:85]   --->   Operation 189 'store' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+
+State 21 <SV = 20> <Delay = 3.25>
+ST_21 : Operation 190 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str3) nounwind" [FFT_test_3/Reorder_FFT.cpp:41]   --->   Operation 190 'specregionbegin' 'tmp' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_21 : Operation 191 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [FFT_test_3/Reorder_FFT.cpp:42]   --->   Operation 191 'specpipeline' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_21 : Operation 192 [1/1] (3.25ns)   --->   "store volatile float %tmp_5_2, float* %Real_addr_1, align 4" [FFT_test_3/Reorder_FFT.cpp:84]   --->   Operation 192 'store' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_21 : Operation 193 [1/1] (3.25ns)   --->   "store volatile float %tmp_5_3, float* %Real_addr_3, align 4" [FFT_test_3/Reorder_FFT.cpp:84]   --->   Operation 193 'store' <Predicate = (!tmp_6)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_21 : Operation 194 [1/1] (0.00ns)   --->   "%empty_5 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str3, i32 %tmp) nounwind" [FFT_test_3/Reorder_FFT.cpp:89]   --->   Operation 194 'specregionend' 'empty_5' <Predicate = (!tmp_6)> <Delay = 0.00>
+ST_21 : Operation 195 [1/1] (0.00ns)   --->   "br label %0" [FFT_test_3/Reorder_FFT.cpp:41]   --->   Operation 195 'br' <Predicate = (!tmp_6)> <Delay = 0.00>
+
+State 22 <SV = 2> <Delay = 1.76>
+ST_22 : Operation 196 [1/1] (1.76ns)   --->   "br label %.preheader" [FFT_test_3/Reorder_FFT.cpp:91]   --->   Operation 196 'br' <Predicate = true> <Delay = 1.76>
+
+State 23 <SV = 3> <Delay = 3.25>
+ST_23 : Operation 197 [1/1] (0.00ns)   --->   "%i_0 = phi i9 [ %i, %hls_label_2 ], [ 0, %.preheader.preheader ]"   --->   Operation 197 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 198 [1/1] (1.66ns)   --->   "%icmp_ln91 = icmp eq i9 %i_0, -32" [FFT_test_3/Reorder_FFT.cpp:91]   --->   Operation 198 'icmp' 'icmp_ln91' <Predicate = true> <Delay = 1.66> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 199 [1/1] (0.00ns)   --->   "%empty_6 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 480, i64 480, i64 480) nounwind"   --->   Operation 199 'speclooptripcount' 'empty_6' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 200 [1/1] (1.82ns)   --->   "%i = add i9 %i_0, 1" [FFT_test_3/Reorder_FFT.cpp:91]   --->   Operation 200 'add' 'i' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.82> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 201 [1/1] (0.00ns)   --->   "br i1 %icmp_ln91, label %1, label %hls_label_2" [FFT_test_3/Reorder_FFT.cpp:91]   --->   Operation 201 'br' <Predicate = true> <Delay = 0.00>
+ST_23 : Operation 202 [1/1] (0.00ns)   --->   "%zext_ln96 = zext i9 %i_0 to i64" [FFT_test_3/Reorder_FFT.cpp:96]   --->   Operation 202 'zext' 'zext_ln96' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_23 : Operation 203 [1/1] (0.00ns)   --->   "%lut_reorder_I_addr = getelementptr [480 x i10]* @lut_reorder_I, i64 0, i64 %zext_ln96" [FFT_test_3/Reorder_FFT.cpp:96]   --->   Operation 203 'getelementptr' 'lut_reorder_I_addr' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_23 : Operation 204 [2/2] (3.25ns)   --->   "%indexI = load i10* %lut_reorder_I_addr, align 2" [FFT_test_3/Reorder_FFT.cpp:96]   --->   Operation 204 'load' 'indexI' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 480> <ROM>
+ST_23 : Operation 205 [1/1] (0.00ns)   --->   "%lut_reorder_J_addr = getelementptr [480 x i10]* @lut_reorder_J, i64 0, i64 %zext_ln96" [FFT_test_3/Reorder_FFT.cpp:97]   --->   Operation 205 'getelementptr' 'lut_reorder_J_addr' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_23 : Operation 206 [2/2] (3.25ns)   --->   "%indexJ = load i10* %lut_reorder_J_addr, align 2" [FFT_test_3/Reorder_FFT.cpp:97]   --->   Operation 206 'load' 'indexJ' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 480> <ROM>
+
+State 24 <SV = 4> <Delay = 6.50>
+ST_24 : Operation 207 [1/2] (3.25ns)   --->   "%indexI = load i10* %lut_reorder_I_addr, align 2" [FFT_test_3/Reorder_FFT.cpp:96]   --->   Operation 207 'load' 'indexI' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 480> <ROM>
+ST_24 : Operation 208 [1/2] (3.25ns)   --->   "%indexJ = load i10* %lut_reorder_J_addr, align 2" [FFT_test_3/Reorder_FFT.cpp:97]   --->   Operation 208 'load' 'indexJ' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 10> <Depth = 480> <ROM>
+ST_24 : Operation 209 [1/1] (0.00ns)   --->   "%zext_ln99 = zext i10 %indexI to i64" [FFT_test_3/Reorder_FFT.cpp:99]   --->   Operation 209 'zext' 'zext_ln99' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_24 : Operation 210 [1/1] (0.00ns)   --->   "%Real_addr_4 = getelementptr [1024 x float]* %Real_r, i64 0, i64 %zext_ln99" [FFT_test_3/Reorder_FFT.cpp:99]   --->   Operation 210 'getelementptr' 'Real_addr_4' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_24 : Operation 211 [2/2] (3.25ns)   --->   "%tempr = load volatile float* %Real_addr_4, align 4" [FFT_test_3/Reorder_FFT.cpp:99]   --->   Operation 211 'load' 'tempr' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_24 : Operation 212 [1/1] (0.00ns)   --->   "%Imag_addr_4 = getelementptr [1024 x float]* %Imag, i64 0, i64 %zext_ln99" [FFT_test_3/Reorder_FFT.cpp:100]   --->   Operation 212 'getelementptr' 'Imag_addr_4' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_24 : Operation 213 [2/2] (3.25ns)   --->   "%tempi = load volatile float* %Imag_addr_4, align 4" [FFT_test_3/Reorder_FFT.cpp:100]   --->   Operation 213 'load' 'tempi' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_24 : Operation 214 [1/1] (0.00ns)   --->   "%zext_ln101 = zext i10 %indexJ to i64" [FFT_test_3/Reorder_FFT.cpp:101]   --->   Operation 214 'zext' 'zext_ln101' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_24 : Operation 215 [1/1] (0.00ns)   --->   "%Real_addr_5 = getelementptr [1024 x float]* %Real_r, i64 0, i64 %zext_ln101" [FFT_test_3/Reorder_FFT.cpp:101]   --->   Operation 215 'getelementptr' 'Real_addr_5' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_24 : Operation 216 [2/2] (3.25ns)   --->   "%Real_load_5 = load volatile float* %Real_addr_5, align 4" [FFT_test_3/Reorder_FFT.cpp:101]   --->   Operation 216 'load' 'Real_load_5' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_24 : Operation 217 [1/1] (0.00ns)   --->   "%Imag_addr_5 = getelementptr [1024 x float]* %Imag, i64 0, i64 %zext_ln101" [FFT_test_3/Reorder_FFT.cpp:102]   --->   Operation 217 'getelementptr' 'Imag_addr_5' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_24 : Operation 218 [2/2] (3.25ns)   --->   "%Imag_load_7 = load volatile float* %Imag_addr_5, align 4" [FFT_test_3/Reorder_FFT.cpp:102]   --->   Operation 218 'load' 'Imag_load_7' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+
+State 25 <SV = 5> <Delay = 6.50>
+ST_25 : Operation 219 [1/2] (3.25ns)   --->   "%tempr = load volatile float* %Real_addr_4, align 4" [FFT_test_3/Reorder_FFT.cpp:99]   --->   Operation 219 'load' 'tempr' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_25 : Operation 220 [1/2] (3.25ns)   --->   "%tempi = load volatile float* %Imag_addr_4, align 4" [FFT_test_3/Reorder_FFT.cpp:100]   --->   Operation 220 'load' 'tempi' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_25 : Operation 221 [1/2] (3.25ns)   --->   "%Real_load_5 = load volatile float* %Real_addr_5, align 4" [FFT_test_3/Reorder_FFT.cpp:101]   --->   Operation 221 'load' 'Real_load_5' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_25 : Operation 222 [1/1] (3.25ns)   --->   "store volatile float %Real_load_5, float* %Real_addr_4, align 4" [FFT_test_3/Reorder_FFT.cpp:101]   --->   Operation 222 'store' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_25 : Operation 223 [1/2] (3.25ns)   --->   "%Imag_load_7 = load volatile float* %Imag_addr_5, align 4" [FFT_test_3/Reorder_FFT.cpp:102]   --->   Operation 223 'load' 'Imag_load_7' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_25 : Operation 224 [1/1] (3.25ns)   --->   "store volatile float %Imag_load_7, float* %Imag_addr_4, align 4" [FFT_test_3/Reorder_FFT.cpp:102]   --->   Operation 224 'store' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+
+State 26 <SV = 6> <Delay = 3.25>
+ST_26 : Operation 225 [1/1] (0.00ns)   --->   "%tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str5) nounwind" [FFT_test_3/Reorder_FFT.cpp:92]   --->   Operation 225 'specregionbegin' 'tmp_2' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_26 : Operation 226 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str1) nounwind" [FFT_test_3/Reorder_FFT.cpp:93]   --->   Operation 226 'specpipeline' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_26 : Operation 227 [1/1] (3.25ns)   --->   "store volatile float %tempr, float* %Real_addr_5, align 4" [FFT_test_3/Reorder_FFT.cpp:103]   --->   Operation 227 'store' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_26 : Operation 228 [1/1] (3.25ns)   --->   "store volatile float %tempi, float* %Imag_addr_5, align 4" [FFT_test_3/Reorder_FFT.cpp:104]   --->   Operation 228 'store' <Predicate = (!icmp_ln91)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_26 : Operation 229 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str5, i32 %tmp_2) nounwind" [FFT_test_3/Reorder_FFT.cpp:105]   --->   Operation 229 'specregionend' 'empty_7' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+ST_26 : Operation 230 [1/1] (0.00ns)   --->   "br label %.preheader" [FFT_test_3/Reorder_FFT.cpp:91]   --->   Operation 230 'br' <Predicate = (!icmp_ln91)> <Delay = 0.00>
+
+State 27 <SV = 4> <Delay = 0.00>
+ST_27 : Operation 231 [1/1] (0.00ns)   --->   "ret void" [FFT_test_3/Reorder_FFT.cpp:107]   --->   Operation 231 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('c') with incoming values : ('c', FFT_test_3/Reorder_FFT.cpp:41) [13]  (1.77 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('c') with incoming values : ('c', FFT_test_3/Reorder_FFT.cpp:41) [13]  (0 ns)
+	'getelementptr' operation ('Real_addr', FFT_test_3/Reorder_FFT.cpp:47) [25]  (0 ns)
+	'load' operation ('RE_vec_128_a', FFT_test_3/Reorder_FFT.cpp:47) on array 'Real_r' [26]  (3.25 ns)
+
+ <State 3>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('RE_vec_128_a', FFT_test_3/Reorder_FFT.cpp:47) on array 'Real_r' [26]  (3.25 ns)
+
+ <State 4>: 8.25ns
+The critical path consists of the following:
+	'xor' operation ('xor_ln74', FFT_test_3/Reorder_FFT.cpp:74) [57]  (0.993 ns)
+	'fadd' operation ('tmp_1_1', FFT_test_3/Reorder_FFT.cpp:74) [59]  (7.26 ns)
+
+ <State 5>: 8.25ns
+The critical path consists of the following:
+	'xor' operation ('xor_ln80', FFT_test_3/Reorder_FFT.cpp:80) [66]  (0.993 ns)
+	'fadd' operation ('tmp_7_1', FFT_test_3/Reorder_FFT.cpp:80) [68]  (7.26 ns)
+
+ <State 6>: 8.25ns
+The critical path consists of the following:
+	'xor' operation ('xor_ln81', FFT_test_3/Reorder_FFT.cpp:81) [70]  (0.993 ns)
+	'fadd' operation ('tmp_9_1', FFT_test_3/Reorder_FFT.cpp:81) [72]  (7.26 ns)
+
+ <State 7>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', FFT_test_3/Reorder_FFT.cpp:74) [48]  (7.26 ns)
+
+ <State 8>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_1', FFT_test_3/Reorder_FFT.cpp:74) [48]  (7.26 ns)
+
+ <State 9>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_3', FFT_test_3/Reorder_FFT.cpp:75) [49]  (7.26 ns)
+
+ <State 10>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', FFT_test_3/Reorder_FFT.cpp:76) [50]  (7.26 ns)
+
+ <State 11>: 8.25ns
+The critical path consists of the following:
+	'xor' operation ('xor_ln82', FFT_test_3/Reorder_FFT.cpp:82) [74]  (0.993 ns)
+	'fadd' operation ('tmp_10_1', FFT_test_3/Reorder_FFT.cpp:82) [76]  (7.26 ns)
+
+ <State 12>: 8.25ns
+The critical path consists of the following:
+	'xor' operation ('xor_ln76', FFT_test_3/Reorder_FFT.cpp:76) [80]  (0.993 ns)
+	'fadd' operation ('tmp_5_2', FFT_test_3/Reorder_FFT.cpp:76) [82]  (7.26 ns)
+
+ <State 13>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', FFT_test_3/Reorder_FFT.cpp:76) [50]  (7.26 ns)
+
+ <State 14>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5', FFT_test_3/Reorder_FFT.cpp:76) [50]  (7.26 ns)
+
+ <State 15>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_4', FFT_test_3/Reorder_FFT.cpp:82) [53]  (7.26 ns)
+
+ <State 16>: 7.26ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_5_2', FFT_test_3/Reorder_FFT.cpp:76) [82]  (7.26 ns)
+
+ <State 17>: 0ns
+The critical path consists of the following:
+
+ <State 18>: 0ns
+The critical path consists of the following:
+
+ <State 19>: 0ns
+The critical path consists of the following:
+
+ <State 20>: 3.25ns
+The critical path consists of the following:
+	'store' operation ('store_ln85', FFT_test_3/Reorder_FFT.cpp:85) of variable 'tmp_10_2', FFT_test_3/Reorder_FFT.cpp:82 on array 'Imag' [88]  (3.25 ns)
+
+ <State 21>: 3.25ns
+The critical path consists of the following:
+	'store' operation ('store_ln84', FFT_test_3/Reorder_FFT.cpp:84) of variable 'tmp_5_2', FFT_test_3/Reorder_FFT.cpp:76 on array 'Real_r' [87]  (3.25 ns)
+
+ <State 22>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', FFT_test_3/Reorder_FFT.cpp:91) [102]  (1.77 ns)
+
+ <State 23>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', FFT_test_3/Reorder_FFT.cpp:91) [102]  (0 ns)
+	'getelementptr' operation ('lut_reorder_I_addr', FFT_test_3/Reorder_FFT.cpp:96) [111]  (0 ns)
+	'load' operation ('indexI', FFT_test_3/Reorder_FFT.cpp:96) on array 'lut_reorder_I' [112]  (3.25 ns)
+
+ <State 24>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('indexI', FFT_test_3/Reorder_FFT.cpp:96) on array 'lut_reorder_I' [112]  (3.25 ns)
+	'getelementptr' operation ('Real_addr_4', FFT_test_3/Reorder_FFT.cpp:99) [116]  (0 ns)
+	'load' operation ('tempr', FFT_test_3/Reorder_FFT.cpp:99) on array 'Real_r' [117]  (3.25 ns)
+
+ <State 25>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('Real_load_5', FFT_test_3/Reorder_FFT.cpp:101) on array 'Real_r' [122]  (3.25 ns)
+	'store' operation ('store_ln101', FFT_test_3/Reorder_FFT.cpp:101) of variable 'Real_load_5', FFT_test_3/Reorder_FFT.cpp:101 on array 'Real_r' [123]  (3.25 ns)
+
+ <State 26>: 3.25ns
+The critical path consists of the following:
+	'store' operation ('store_ln103', FFT_test_3/Reorder_FFT.cpp:103) of variable 'tempr', FFT_test_3/Reorder_FFT.cpp:99 on array 'Real_r' [127]  (3.25 ns)
+
+ <State 27>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

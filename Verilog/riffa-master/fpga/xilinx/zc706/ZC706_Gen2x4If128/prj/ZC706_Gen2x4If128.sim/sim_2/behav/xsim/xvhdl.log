@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.srcs/sources_1/bd/HLS_FFT/ipshared/00df/hdl/ip/Reorder_fft_ap_fadd_6_full_dsp_32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Reorder_fft_ap_fadd_6_full_dsp_32'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/EMILIO/Desktop/Nueva carpeta/riffa-master_6/fpga/xilinx/zc706/ZC706_Gen2x4If128/prj/ZC706_Gen2x4If128.ip_user_files/bd/HLS_FFT/ip/HLS_FFT_Reorder_fft_0_0/sim/HLS_FFT_Reorder_fft_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'HLS_FFT_Reorder_fft_0_0'

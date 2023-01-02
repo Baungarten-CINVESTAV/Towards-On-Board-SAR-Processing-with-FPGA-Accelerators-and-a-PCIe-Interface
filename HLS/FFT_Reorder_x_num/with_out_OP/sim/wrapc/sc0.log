@@ -1,0 +1,5 @@
+   Build using "C:/Xilinx_2018/Vivado/2018.3/msys64/mingw64/bin/g++"
+   Compiling Reorder_FFT.cpp_pre.cpp.tb.cpp
+   Compiling apatb_Reorder_fft.cpp
+   Compiling Reorder_FFT_test.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
