@@ -17,6 +17,12 @@ The Schematic of the system that performs data re-ordering of 1024, 4096, or 163
 The repository consists of three main folders:
 ### HLS:
 This folder contains the HLS files of the optimization test comparison and the FFT re-ordering implementation for multiple sizes.
-- [FFT_Optimization_test]() has the scripts and the reports of the different HLS optimizations.
+- [FFT_Optimization_test](https://github.com/Baungarten-CINVESTAV/Towards-On-Board-SAR-Processing-with-FPGA-Accelerators-and-a-PCIe-Interface/tree/main/HLS/FFT_Optimization_test) has the scripts and the reports of the different HLS optimizations.
+  - [Reorder_FFT.cpp](https://github.com/Baungarten-CINVESTAV/Towards-On-Board-SAR-Processing-with-FPGA-Accelerators-and-a-PCIe-Interface/blob/main/HLS/FFT_Optimization_test/Reorder_FFT.cpp) contains the C code used to develop the VEC-FTT re-order with the diference optimizations, e.g. ```#pragma HLS PIPELINE```.
+  - [Reorder_FFT_test.cpp](https://github.com/Baungarten-CINVESTAV/Towards-On-Board-SAR-Processing-with-FPGA-Accelerators-and-a-PCIe-Interface/blob/main/HLS/FFT_Optimization_test/Reorder_FFT_test.cpp) contains the validation code of the implemented IP. It consists in comparing the results retrieved by the IP with a gold bench variable, by in-stance, the VEC-FFT output. A tolerance of 1e-5 is set, meaning a difference between both attained results of ± 0.00001.
 
-- [FFT_Reorder_x_num]() has the scripts and the reports of the FFT re-ordering function for different sizes, using best attained optimization. These results are presesnted in Table 6, inside the manuscript.
+- [FFT_Reorder_x_num](https://github.com/Baungarten-CINVESTAV/Towards-On-Board-SAR-Processing-with-FPGA-Accelerators-and-a-PCIe-Interface/tree/main/HLS/FFT_Reorder_x_num) has the scripts and the reports of the FFT re-ordering function for different sizes, using best attained optimization. These results are presesnted in Table 6, inside the manuscript.
+  - [Reorder_FFT.cpp](https://github.com/Baungarten-CINVESTAV/Towards-On-Board-SAR-Processing-with-FPGA-Accelerators-and-a-PCIe-Interface/blob/main/HLS/FFT_Reorder_x_num/Reorder_FFT.cpp) contains the C code used to develop the VEC-FTT re-order with the diference sizes, e.g. 1024, 4096, and 16384, usign array partition optimization (```#pragma HLS array_partition variable=Real cyclic factor=4```).
+  - [Reorder_FFT_test.cpp](https://github.com/Baungarten-CINVESTAV/Towards-On-Board-SAR-Processing-with-FPGA-Accelerators-and-a-PCIe-Interface/blob/main/HLS/FFT_Reorder_x_num/Reorder_FFT_test.cpp) contains the validation code of the implemented IP. It consists in comparing the results retrieved by the IP with a gold bench variable, by in-stance, the VEC-FFT output. A tolerance of 1e-5 is set, meaning a difference between both attained results of ± 0.00001.
+  
+**It is recommended to use Vivado HL to have a better visualization of the data.**
